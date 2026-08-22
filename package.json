@@ -1,12 +1,11 @@
-﻿{
+{
   "name": "blue-ants-corporate-gifting",
   "version": "1.0.0",
   "private": true,
   "description": "The Blue Ants — Premium Corporate Gifting Solutions",
   "scripts": {
     "dev": "npx serve .",
-    "start": "npx serve .",
-    "build": "echo 'Static build ready'"
+    "start": "npx serve ."
   },
   "keywords": [
     "corporate-gifting",
