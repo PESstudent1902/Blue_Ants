@@ -1,0 +1,12 @@
+﻿# Dependencies & Build
+node_modules/
+.vercel
+.env
+.env.local
+.env.*.local
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.mp4.tmp
