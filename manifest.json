@@ -1,10 +1,10 @@
 {
-  "name": "The Blue Ants — Premium Corporate Gifting",
-  "short_name": "Blue Ants",
+  "name": "The Blue Ants — Haute Corporate Gifting",
+  "short_name": "The Blue Ants",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#080a0f",
-  "theme_color": "#080a0f",
+  "background_color": "#07090e",
+  "theme_color": "#07090e",
   "description": "Bespoke luxury gifts and curated corporate packages for companies and executive teams.",
   "icons": [
     {

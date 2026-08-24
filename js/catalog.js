@@ -8,7 +8,7 @@ const PRODUCTS = [
     id: 'prod-1',
     name: 'The Sovereign: Executive Leather Suite',
     category: 'executive',
-    categoryLabel: 'Executive & VIP',
+    categoryLabel: 'Executive VIP Suites',
     price: 95.00,
     moq: 25,
     rating: 4.9,
@@ -44,7 +44,7 @@ const PRODUCTS = [
     id: 'prod-2',
     name: 'The Barista Reserve: Pour-Over Craft Kit',
     category: 'gourmet',
-    categoryLabel: 'Gourmet & Coffee',
+    categoryLabel: 'Gourmet Connoisseur Hampers',
     price: 68.00,
     moq: 30,
     rating: 4.8,
@@ -79,8 +79,8 @@ const PRODUCTS = [
   {
     id: 'prod-3',
     name: 'The Tech Nomad: ANC & Titanium Power Suite',
-    category: 'tech',
-    categoryLabel: 'Tech & Gadgets',
+    category: 'welcome',
+    categoryLabel: 'Welcome & Onboarding Kits',
     price: 145.00,
     moq: 15,
     rating: 4.95,
@@ -115,8 +115,8 @@ const PRODUCTS = [
   {
     id: 'prod-4',
     name: 'Serenity: Botanical Corporate Wellness Box',
-    category: 'wellness',
-    categoryLabel: 'Wellness & Spa',
+    category: 'welcome',
+    categoryLabel: 'Welcome & Onboarding Kits',
     price: 58.00,
     moq: 40,
     rating: 4.85,
@@ -151,8 +151,8 @@ const PRODUCTS = [
   {
     id: 'prod-5',
     name: 'The Highland Connoisseur: Decanter & Chilling Stones',
-    category: 'connoisseur',
-    categoryLabel: 'Spirits & Barware',
+    category: 'executive',
+    categoryLabel: 'Executive VIP Suites',
     price: 120.00,
     moq: 20,
     rating: 4.92,
@@ -189,7 +189,7 @@ const PRODUCTS = [
     id: 'prod-6',
     name: 'Terra: Eco-Luxe Sustainable Onboarding Set',
     category: 'eco-luxe',
-    categoryLabel: 'Sustainable & Onboarding',
+    categoryLabel: 'Sustainable Eco-Luxe',
     price: 48.00,
     moq: 50,
     rating: 4.88,
@@ -225,7 +225,7 @@ const PRODUCTS = [
     id: 'prod-7',
     name: 'Chronos: Milestone Executive Award Timepiece',
     category: 'executive',
-    categoryLabel: 'Executive & VIP',
+    categoryLabel: 'Executive VIP Suites',
     price: 185.00,
     moq: 10,
     rating: 4.97,
@@ -261,7 +261,7 @@ const PRODUCTS = [
     id: 'prod-8',
     name: 'Grand Cru: 24k Gold Truffles & Raw Honey',
     category: 'gourmet',
-    categoryLabel: 'Gourmet & Treats',
+    categoryLabel: 'Gourmet Connoisseur Hampers',
     price: 52.00,
     moq: 35,
     rating: 4.89,
@@ -316,6 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupModalListeners();
   setupDrawerListeners();
   setupScrollReveal();
+  setupMobileDockObserver();
 });
 
 function renderProducts() {
@@ -328,7 +329,7 @@ function renderProducts() {
       const q = filterState.searchQuery.toLowerCase();
       const matchTitle = p.name.toLowerCase().includes(q);
       const matchDesc = p.description.toLowerCase().includes(q);
-      const matchCat = p.categoryLabel.toLowerCase().includes(q);
+      const matchCat = p.categoryLabel.toLowerCase().includes(q) || p.category.toLowerCase().includes(q);
       if (!matchTitle && !matchDesc && !matchCat) return false;
     }
 
@@ -465,6 +466,10 @@ function setupFilterListeners() {
       pills.forEach(p => p.classList.remove('active'));
       pill.classList.add('active');
       filterState.category = pill.dataset.category || 'all';
+      const searchDept = document.getElementById('searchDeptSelect');
+      if (searchDept) {
+        searchDept.value = filterState.category;
+      }
       renderProducts();
     });
   });
@@ -528,6 +533,58 @@ function setupFilterListeners() {
   });
 }
 
+function setupSearchListeners() {
+  const searchInput = document.getElementById('amazonSearchInput');
+  const searchBtn = document.getElementById('amazonSearchBtn');
+  const searchDept = document.getElementById('searchDeptSelect');
+
+  const executeSearch = () => {
+    if (searchInput) {
+      filterState.searchQuery = searchInput.value.trim();
+    }
+    renderProducts();
+  };
+
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      executeSearch();
+    });
+    searchInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        executeSearch();
+      }
+    });
+  }
+
+  if (searchBtn) {
+    searchBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      executeSearch();
+    });
+  }
+
+  if (searchDept) {
+    searchDept.addEventListener('change', (e) => {
+      const selectedDept = e.target.value;
+      filterState.category = selectedDept;
+      
+      // Synchronize category pills
+      const pills = document.querySelectorAll('.category-pill');
+      pills.forEach(pill => {
+        const cat = pill.dataset.category || 'all';
+        if (cat === selectedDept) {
+          pill.classList.add('active');
+        } else {
+          pill.classList.remove('active');
+        }
+      });
+
+      renderProducts();
+    });
+  }
+}
+
 function openMobileFilters() {
   const modal = document.getElementById('mobileFilterModal');
   if (modal) modal.classList.add('active');
@@ -572,6 +629,15 @@ function resetFilters() {
 
   const searchInput = document.getElementById('amazonSearchInput');
   if (searchInput) searchInput.value = '';
+
+  const searchDept = document.getElementById('searchDeptSelect');
+  if (searchDept) searchDept.value = 'all';
+
+  const sortSelect = document.getElementById('sortBySelect');
+  if (sortSelect) sortSelect.value = 'featured';
+
+  const mobileSortSelect = document.getElementById('mobileSortBySelect');
+  if (mobileSortSelect) mobileSortSelect.value = 'featured';
 
   document.querySelectorAll('input[type="checkbox"]').forEach(c => c.checked = false);
   document.querySelectorAll('input[name="ratingFilter"]').forEach(c => c.checked = false);
@@ -648,32 +714,37 @@ function openQuickView(prodId) {
           </ul>
         </div>
 
-        <!-- Volume Calculator -->
+        <!-- Volume Pricing & Loss Aversion Calculator -->
         <div class="bg-gray-950 p-4 rounded-xl border border-amber-500/30 mb-6">
           <div class="flex items-center justify-between mb-2">
-            <span class="text-xs font-bold text-amber-300 uppercase">
-              <i class="fas fa-calculator mr-1"></i> Volume Pricing Calculator:
+            <span class="text-xs font-bold text-amber-300 uppercase flex items-center gap-1.5">
+              <i class="fas fa-calculator"></i> Volume Pricing Calculator:
             </span>
             <span class="text-xs text-blue-400 font-semibold" id="qvDiscountBadge">Base Rate</span>
           </div>
 
-          <div class="flex items-center gap-3 my-3">
-            <button onclick="adjustQvQty(-10)" class="px-3 py-1.5 bg-gray-900 border border-gray-700 text-white rounded hover:bg-gray-800">-</button>
-            <input type="number" id="qvQtyInput" value="${product.moq}" min="${product.moq}" step="5"
-                   class="w-20 bg-gray-900 border border-gray-700 text-center text-white font-bold text-sm py-1.5 rounded outline-none">
-            <button onclick="adjustQvQty(10)" class="px-3 py-1.5 bg-gray-900 border border-gray-700 text-white rounded hover:bg-gray-800">+</button>
+          <div class="flex flex-wrap items-center gap-3 my-3">
+            <div class="flex items-center">
+              <button onclick="adjustQvQty(-10)" class="w-12 h-12 min-w-[48px] min-h-[48px] flex items-center justify-center text-lg bg-gray-900 border border-gray-700 text-white rounded-l-lg hover:bg-gray-800 transition-colors touch-manipulation" aria-label="Decrease quantity">-</button>
+              <input type="number" id="qvQtyInput" value="${product.moq}" min="${product.moq}" step="5"
+                     class="w-20 h-12 bg-gray-900 border-y border-gray-700 text-center text-white font-bold text-sm outline-none">
+              <button onclick="adjustQvQty(10)" class="w-12 h-12 min-w-[48px] min-h-[48px] flex items-center justify-center text-lg bg-gray-900 border border-gray-700 text-white rounded-r-lg hover:bg-gray-800 transition-colors touch-manipulation" aria-label="Increase quantity">+</button>
+            </div>
             
-            <div class="flex gap-1.5 ml-auto">
-              <button onclick="setQvQty(50)" class="text-xs px-2.5 py-1 rounded bg-gray-800 text-gray-300 hover:text-white">50 pk</button>
-              <button onclick="setQvQty(100)" class="text-xs px-2.5 py-1 rounded bg-gray-800 text-gray-300 hover:text-white">100 pk</button>
-              <button onclick="setQvQty(250)" class="text-xs px-2.5 py-1 rounded bg-gray-800 text-gray-300 hover:text-white">250 pk</button>
+            <div class="flex flex-wrap gap-1.5 ml-auto">
+              <button onclick="setQvQty(${product.moq})" class="text-xs px-2.5 py-1.5 rounded-lg bg-gray-800/90 border border-white/[0.08] text-gray-300 hover:text-white hover:border-amber-400/50 transition-colors font-medium">MOQ (${product.moq})</button>
+              <button onclick="setQvQty(${product.moq * 2})" class="text-xs px-2.5 py-1.5 rounded-lg bg-gray-800/90 border border-white/[0.08] text-gray-300 hover:text-white hover:border-amber-400/50 transition-colors font-medium">2x MOQ (${product.moq * 2})</button>
+              <button onclick="setQvQty(${product.moq * 5})" class="text-xs px-2.5 py-1.5 rounded-lg bg-gray-800/90 border border-white/[0.08] text-gray-300 hover:text-white hover:border-amber-400/50 transition-colors font-medium">5x MOQ (${product.moq * 5})</button>
+              <button onclick="setQvQty(50)" class="text-xs px-2.5 py-1.5 rounded-lg bg-gray-800/90 border border-white/[0.08] text-gray-300 hover:text-white hover:border-amber-400/50 transition-colors font-medium">50 pk</button>
+              <button onclick="setQvQty(100)" class="text-xs px-2.5 py-1.5 rounded-lg bg-gray-800/90 border border-white/[0.08] text-gray-300 hover:text-white hover:border-amber-400/50 transition-colors font-medium">100 pk</button>
+              <button onclick="setQvQty(250)" class="text-xs px-2.5 py-1.5 rounded-lg bg-gray-800/90 border border-white/[0.08] text-gray-300 hover:text-white hover:border-amber-400/50 transition-colors font-medium">250 pk</button>
             </div>
           </div>
 
           <div class="pt-3 border-t border-gray-800 flex items-center justify-between text-xs">
             <div>
-              <div class="text-gray-400">Unit Price: <strong class="text-white" id="qvUnitPrice">$${product.price.toFixed(2)}</strong></div>
-              <div class="text-emerald-400 font-semibold" id="qvSavingsTotal">Base Tier</div>
+              <div class="text-gray-400">Unit Price: <strong class="text-white font-mono" id="qvUnitPrice">$${product.price.toFixed(2)}</strong></div>
+              <div class="text-emerald-400 font-bold tracking-wide mt-0.5" id="qvSavingsTotal">Base Tier</div>
             </div>
             <div class="text-right">
               <div class="text-gray-400">Estimated Total:</div>
@@ -704,7 +775,8 @@ function openQuickView(prodId) {
 function adjustQvQty(delta) {
   const input = document.getElementById('qvQtyInput');
   if (!input || !currentProduct) return;
-  let val = parseInt(input.value) || currentProduct.moq;
+  let val = parseInt(input.value);
+  if (isNaN(val) || val <= 0) val = currentProduct.moq;
   val = Math.max(currentProduct.moq, val + delta);
   input.value = val;
   updateQvCalculations();
@@ -726,7 +798,9 @@ function updateQvCalculations() {
   const savingsEl = document.getElementById('qvSavingsTotal');
   if (!input || !unitPriceEl || !totalPriceEl) return;
 
-  const qty = parseInt(input.value) || currentProduct.moq;
+  const rawVal = parseInt(input.value);
+  const qty = (!isNaN(rawVal) && rawVal > 0) ? Math.max(currentProduct.moq, rawVal) : currentProduct.moq;
+  
   let appliedTier = currentProduct.bulkTiers[0];
   for (let t of currentProduct.bulkTiers) {
     if (qty >= t.min) appliedTier = t;
@@ -740,7 +814,11 @@ function updateQvCalculations() {
   unitPriceEl.textContent = `$${unitPrice.toFixed(2)}`;
   totalPriceEl.textContent = `$${total.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
   if (discountBadgeEl) discountBadgeEl.textContent = appliedTier.discount === '0%' ? 'Base Volume Rate' : `Volume Discount: ${appliedTier.discount}`;
-  if (savingsEl) savingsEl.textContent = saved > 0 ? `Total Bulk Savings: $${saved.toFixed(2)}` : 'Base MOQ Tier';
+  if (savingsEl) {
+    savingsEl.textContent = saved > 0 
+      ? `Save $${saved.toFixed(2)} on this order with Bulk Tiering` 
+      : 'Base MOQ Tier';
+  }
 }
 
 function inquireProductWhatsapp(prodId) {
@@ -748,7 +826,8 @@ function inquireProductWhatsapp(prodId) {
   if (!product) return;
 
   const input = document.getElementById('qvQtyInput');
-  const qty = parseInt(input?.value) || product.moq;
+  const rawVal = parseInt(input?.value);
+  const qty = (!isNaN(rawVal) && rawVal > 0) ? Math.max(product.moq, rawVal) : product.moq;
 
   let appliedTier = product.bulkTiers[0];
   for (let t of product.bulkTiers) {
@@ -817,24 +896,49 @@ function setupModalListeners() {
     }
   });
 
-  // Android Mobile Bottom Sheet drag-to-close touch gesture
+  // Mobile Material Bottom Sheet touch-drag gesture listeners
   const addSwipeDownToClose = (el, closeFn) => {
     if (!el) return;
     let startY = 0;
     let currentY = 0;
+    let isDragging = false;
 
     el.addEventListener('touchstart', (e) => {
+      if (el.scrollTop > 5) return;
       startY = e.touches[0].clientY;
       currentY = startY;
+      isDragging = true;
+      el.style.transition = 'none';
     }, { passive: true });
 
     el.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
       currentY = e.touches[0].clientY;
+      const delta = currentY - startY;
+      if (delta > 0 && el.scrollTop <= 0) {
+        el.style.transform = `translateY(${delta}px)`;
+      }
     }, { passive: true });
 
     el.addEventListener('touchend', () => {
+      if (!isDragging) return;
+      isDragging = false;
       if (currentY - startY > 100) {
-        closeFn();
+        el.style.transition = 'transform 0.3s cubic-bezier(0.16, 1, 0.3, 1)';
+        el.style.transform = 'translateY(100%)';
+        setTimeout(() => {
+          closeFn();
+          el.style.transform = '';
+          el.style.transition = '';
+        }, 280);
+      } else {
+        // Fluid spring reset on canceled drag
+        el.style.transition = 'transform 0.3s cubic-bezier(0.16, 1, 0.3, 1)';
+        el.style.transform = 'translateY(0)';
+        setTimeout(() => {
+          el.style.transform = '';
+          el.style.transition = '';
+        }, 300);
       }
     }, { passive: true });
   };
@@ -891,6 +995,7 @@ function adjustRfpItemQty(prodId, delta) {
 function updateRfpBadge() {
   const badge = document.getElementById('rfpCartCount');
   const dockBadge = document.getElementById('mobileDockBadge');
+  const dockQuoteBadge = document.getElementById('mobileDockQuoteBadge');
   const count = rfpCart.length;
 
   if (badge) {
@@ -901,6 +1006,11 @@ function updateRfpBadge() {
   if (dockBadge) {
     dockBadge.textContent = count;
     dockBadge.style.display = count > 0 ? 'flex' : 'none';
+  }
+
+  if (dockQuoteBadge && dockQuoteBadge !== dockBadge) {
+    dockQuoteBadge.textContent = count;
+    dockQuoteBadge.style.display = count > 0 ? 'flex' : 'none';
   }
 }
 
@@ -944,13 +1054,13 @@ function renderRfpDrawer() {
           <div class="text-[11px] text-amber-300 mt-0.5">$${appliedTier.price.toFixed(2)}/unit • ${appliedTier.discount !== '0%' ? `Save ${appliedTier.discount}` : 'Base rate'}</div>
           
           <div class="flex items-center gap-2 mt-2">
-            <div class="flex items-center border border-gray-700 rounded bg-gray-950">
-              <button onclick="adjustRfpItemQty('${item.id}', -10)" class="px-2 py-0.5 text-xs text-gray-400 hover:text-white">-</button>
-              <span class="px-2 text-xs font-bold text-white font-mono">${item.qty}</span>
-              <button onclick="adjustRfpItemQty('${item.id}', 10)" class="px-2 py-0.5 text-xs text-gray-400 hover:text-white">+</button>
+            <div class="flex items-center border border-gray-700 rounded-lg bg-gray-950">
+              <button onclick="adjustRfpItemQty('${item.id}', -10)" class="w-10 h-10 min-w-[40px] min-h-[40px] flex items-center justify-center text-xs text-gray-400 hover:text-white touch-manipulation" aria-label="Decrease quantity">-</button>
+              <span class="px-2.5 text-xs font-bold text-white font-mono">${item.qty}</span>
+              <button onclick="adjustRfpItemQty('${item.id}', 10)" class="w-10 h-10 min-w-[40px] min-h-[40px] flex items-center justify-center text-xs text-gray-400 hover:text-white touch-manipulation" aria-label="Increase quantity">+</button>
             </div>
             <span class="text-xs text-gray-400 font-mono font-semibold ml-auto">$${itemTotal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
-            <button onclick="removeFromRfp('${item.id}')" class="text-gray-500 hover:text-rose-400 p-1 text-xs">
+            <button onclick="removeFromRfp('${item.id}')" class="text-gray-500 hover:text-rose-400 w-10 h-10 min-w-[40px] min-h-[40px] flex items-center justify-center text-xs touch-manipulation" aria-label="Remove item">
               <i class="fas fa-trash-can"></i>
             </button>
           </div>
@@ -1000,6 +1110,16 @@ function setupDrawerListeners() {
       const company = document.getElementById('rfpCompanyName')?.value.trim() || 'Corporate Client';
       const notes = document.getElementById('rfpCustomNotes')?.value.trim() || 'Standard corporate dispatch';
 
+      // Check corporate options
+      const sampleBox = document.getElementById('rfpOptionSampleBox')?.checked;
+      const gstInvoice = document.getElementById('rfpOptionGstInvoice')?.checked;
+      const multiAddress = document.getElementById('rfpOptionMultiAddress')?.checked;
+
+      const selectedOptions = [];
+      if (sampleBox) selectedOptions.push('Physical Pre-Production Sample Box Requested');
+      if (gstInvoice) selectedOptions.push('GST / Tax Invoice Required');
+      if (multiAddress) selectedOptions.push('Multi-Address Employee Drop-Shipping');
+
       let grandTotal = 0;
       let standardGrandTotal = 0;
 
@@ -1017,6 +1137,11 @@ function setupDrawerListeners() {
 
       const savings = standardGrandTotal - grandTotal;
 
+      let optionsSection = '';
+      if (selectedOptions.length > 0) {
+        optionsSection = `*Corporate Options:*\n${selectedOptions.map(opt => `• ${opt}`).join('\n')}\n━━━━━━━━━━━━━━━━━━━━\n`;
+      }
+
       const message = 
         `*NEW CORPORATE QUOTE REQUEST — THE BLUE ANTS*\n` +
         `━━━━━━━━━━━━━━━━━━━━\n` +
@@ -1029,6 +1154,7 @@ function setupDrawerListeners() {
         `*Estimated Quotation Total:* $${grandTotal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}\n` +
         `*Total Bulk Savings:* $${savings > 0 ? savings.toFixed(2) : '0.00'}\n` +
         `━━━━━━━━━━━━━━━━━━━━\n` +
+        `${optionsSection}` +
         `Please share formal PDF quote, branding mockups, and bulk delivery schedule.`;
 
       const waUrl = `https://wa.me/919916418879?text=${encodeURIComponent(message)}`;
@@ -1104,4 +1230,60 @@ function setupCardTilt() {
     });
   });
 }
+
+// Mobile Thumb Navigation Dock Active State Synchronization
+function setupMobileDockObserver() {
+  const dockItems = document.querySelectorAll('.mobile-dock-item[data-dock-target]');
+  if (!dockItems || dockItems.length === 0) return;
+
+  const sections = [
+    { id: 'scrollHeroContainer', el: document.getElementById('scrollHeroContainer') },
+    { id: 'catalogSection', el: document.getElementById('catalogSection') },
+    { id: 'aboutSection', el: document.getElementById('aboutSection') }
+  ];
+
+  const updateActiveDock = (activeId) => {
+    dockItems.forEach(item => {
+      const target = item.getAttribute('data-dock-target');
+      if (target === activeId) {
+        item.classList.add('active');
+      } else {
+        item.classList.remove('active');
+      }
+    });
+  };
+
+  if ('IntersectionObserver' in window) {
+    try {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            updateActiveDock(entry.target.id);
+          }
+        });
+      }, {
+        threshold: 0.2,
+        rootMargin: '-10% 0px -40% 0px'
+      });
+
+      sections.forEach(s => {
+        if (s.el) observer.observe(s.el);
+      });
+    } catch (e) {
+      // Fallback
+    }
+  }
+
+  window.addEventListener('scroll', () => {
+    const scrollPos = window.scrollY + 220;
+    let currentSecId = 'scrollHeroContainer';
+    for (const s of sections) {
+      if (s.el && s.el.offsetTop <= scrollPos) {
+        currentSecId = s.id;
+      }
+    }
+    updateActiveDock(currentSecId);
+  }, { passive: true });
+}
+
 

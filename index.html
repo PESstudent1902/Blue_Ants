@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-  <title>The Blue Ants | Premium Corporate Gifting Solutions</title>
-  <meta name="description" content="Blue Ants is a corporate gifting business that sells bespoke luxury gifts and curated packages to corporations.">
+  <title>The Blue Ants | Haute Corporate Gifting &amp; Curated Bespoke Suites</title>
+  <meta name="description" content="The Blue Ants delivers bespoke luxury corporate gifting suites, master-crafted personalization, and dedicated concierge stewardship for distinguished enterprises.">
 
   <!-- Android & Mobile PWA Optimization -->
-  <meta name="theme-color" content="#080a0f">
+  <meta name="theme-color" content="#07090e">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="manifest" href="manifest.json">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -21,11 +25,7 @@
   <!-- Custom Styles -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-[#080a0f] text-slate-100 antialiased selection:bg-amber-500/30 selection:text-amber-200 has-bottom-dock">
-
-  <!-- Ambient Luxury Background Glow Orbs -->
-  <div class="ambient-glow ambient-glow-top" aria-hidden="true"></div>
-  <div class="ambient-glow ambient-glow-bottom" aria-hidden="true"></div>
+<body class="bg-[#07090e] text-slate-100 antialiased selection:bg-amber-500/20 selection:text-amber-200 has-bottom-dock">
 
   <!-- =========================================================================
        GLOBAL BRAND NAVIGATION HEADER
@@ -37,86 +37,83 @@
         <div class="font-cinzel text-sm sm:text-base font-bold tracking-wider text-white truncate">
           THE BLUE ANTS
         </div>
-        <div class="text-[9px] sm:text-[10px] tracking-wider uppercase text-amber-400/90 font-medium truncate hidden min-[380px]:block">Corporate Gifting Solutions</div>
+        <div class="text-[9px] sm:text-[10px] tracking-widest uppercase text-amber-300/90 font-medium truncate hidden min-[380px]:block">Haute Corporate Gifting</div>
       </div>
     </a>
 
     <nav class="hidden md:flex items-center gap-1.5">
-      <a href="#scrollHeroContainer" class="nav-link">Unboxing Experience</a>
-      <a href="#catalogSection" class="nav-link">Corporate Catalog</a>
-      <a href="#aboutSection" class="nav-link">Corporate Solutions</a>
+      <a href="#scrollHeroContainer" class="nav-link">Unboxing Ritual</a>
+      <a href="#catalogSection" class="nav-link">Curated Catalog</a>
+      <a href="#aboutSection" class="nav-link">Bespoke Solutions</a>
       <a href="tel:+919916418879" class="nav-link text-amber-300 hover:text-amber-200">
-        <i class="fas fa-phone-volume text-amber-400 mr-1"></i> +91 9916418879
+        <i class="fas fa-phone-volume text-amber-400 mr-1.5 text-xs"></i> +91 9916418879
       </a>
     </nav>
 
     <div class="flex items-center gap-2 sm:gap-3">
       <!-- Direct WhatsApp Action -->
-      <a href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants%20team,%20I%20would%20like%20to%20inquire%20about%20corporate%20gifting%20solutions%20for%20my%20company." 
+      <a href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants%20team,%20I%20would%20like%20to%20inquire%20about%20bespoke%20corporate%20gifting%20suites%20for%20my%20company." 
          target="_blank" rel="noopener" 
-         class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-xs font-bold text-emerald-300 hover:bg-emerald-500/25 transition-all shadow-sm">
+         class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-emerald-500/10 border border-emerald-500/25 text-xs font-semibold text-emerald-300 hover:bg-emerald-500/20 transition-all shadow-sm">
         <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
         <span>WhatsApp</span>
       </a>
 
-      <a href="#catalogSection" class="hidden lg:inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white/5 border border-white/10 hover:border-amber-400 text-xs font-semibold text-gray-200 transition-all">
-        <i class="fas fa-search text-amber-400"></i> Browse Products
+      <a href="#catalogSection" class="hidden lg:inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white/[0.04] border border-white/[0.08] hover:border-amber-400/50 text-xs font-medium text-gray-200 transition-all">
+        <i class="fas fa-search text-amber-400/90 text-xs"></i> Browse Suites
       </a>
 
-      <button id="openRfpCartBtn" class="btn-primary-gold relative py-2 px-3 sm:px-4 shadow-lg shadow-amber-500/20">
-        <i class="fas fa-file-invoice-dollar"></i>
-        <span class="hidden sm:inline">Request Quote</span>
-        <span class="sm:hidden">Quote</span>
-        <span id="rfpCartCount" class="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-amber-400 text-black text-[11px] font-extrabold flex items-center justify-center border-2 border-[#080a0f]" style="display: none;">0</span>
+      <button id="openRfpCartBtn" class="btn-primary-gold relative py-2 px-3 sm:px-4">
+        <i class="fas fa-file-invoice-dollar text-xs"></i>
+        <span class="hidden sm:inline font-semibold">Request Quote</span>
+        <span class="sm:hidden font-semibold">Quote</span>
+        <span id="rfpCartCount" class="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-amber-400 text-black text-[10px] font-extrabold flex items-center justify-center border-2 border-[#07090e]" style="display: none;">0</span>
       </button>
     </div>
   </header>
 
   <!-- =========================================================================
-       HERO: 60FPS CANVAS SCROLL-TRIGGER UNBOXING WITH DYNAMIC GLASS BLUR WINGS
-       Eliminates side empty pillarboxes with synchronized mirror-blur canvas
-       and luxury frosted glass info flanks.
+       HERO: 60FPS CANVAS SCROLL-TRIGGER UNBOXING EXPERIENCE
+       Dual Canvas Viewport with Synchronized Ambient Mirror-Blur & Crisp Foreground
        ========================================================================= -->
   <section id="scrollHeroContainer" class="scroll-hero-container">
     <div class="scroll-hero-sticky">
       
-      <!-- Dual Canvas Viewport: Background Blur + Foreground Sharp -->
+      <!-- Dual Canvas Viewport -->
       <div class="canvas-wrapper">
         <canvas id="heroBlurCanvas" class="hero-blur-canvas" aria-hidden="true"></canvas>
         <canvas id="heroCanvas" class="hero-sharp-canvas"></canvas>
       </div>
 
-
-
-      <!-- Minimalist Clean Intro (Safe-Zone Flank) -->
+      <!-- Minimalist Editorial Intro Overlay -->
       <div class="hero-minimal-overlay">
         
         <div id="heroIntroBox" class="hero-intro-box">
-          <div class="hero-glass-pill animate-pulse-subtle">
-            <i class="fas fa-award text-amber-400"></i> Corporate Gifting Business
+          <div class="hero-glass-pill">
+            <i class="fas fa-gem text-amber-400 text-xs"></i> Haute Corporate Gifting
           </div>
-          <h1 class="font-cinzel text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
-            Premium Gifting <br>
-            <span class="gold-gradient-text">For Big Corporations</span>
+          <h1 class="font-cinzel text-2xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+            The Pinnacle of <br>
+            <span class="gold-gradient-text">Corporate Appreciation</span>
           </h1>
           <p class="text-slate-300 text-xs sm:text-sm mt-3 leading-relaxed max-w-md">
-            Blue Ants specializes in curated, high-end corporate gifts and bespoke packages designed for companies, executive partners, and team celebrations.
+            Bespoke gift suites crafted with artisanal precision, master packaging, and private concierge stewardship for visionary enterprises.
           </p>
 
-          <div class="flex flex-wrap items-center gap-3 mt-4">
-            <a href="#catalogSection" class="btn-primary-gold text-xs py-2.5 px-4 shadow-lg shadow-amber-500/20">
-              <i class="fas fa-boxes-stacked mr-1"></i> Explore Catalog
+          <div class="flex flex-wrap items-center gap-3 mt-5">
+            <a href="#catalogSection" class="btn-primary-gold text-xs py-2.5 px-4 font-semibold">
+              <i class="fas fa-boxes-stacked mr-1"></i> Explore Curated Catalog
             </a>
-            <a href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants%20team,%20I%20would%20like%20to%20inquire%20about%20corporate%20gifting%20solutions." 
+            <a href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants%20team,%20I%20would%20like%20to%20inquire%20about%20bespoke%20corporate%20gifting%20suites." 
                target="_blank" rel="noopener"
-               class="btn-secondary-outline text-xs py-2.5 px-4 bg-emerald-950/40 border-emerald-500/40 text-emerald-300 hover:bg-emerald-900/50">
-              <i class="fa-brands fa-whatsapp text-emerald-400 mr-1"></i> WhatsApp Concierge
+               class="btn-secondary-outline text-xs py-2.5 px-4 bg-emerald-950/30 border-emerald-500/30 text-emerald-300 hover:bg-emerald-900/40">
+              <i class="fa-brands fa-whatsapp text-emerald-400 mr-1 text-sm"></i> WhatsApp Concierge
             </a>
           </div>
 
           <div class="hero-scroll-indicator">
             <i class="fas fa-arrow-down-long text-amber-400 animate-bounce"></i>
-            <span>Scroll down to unbox &amp; explore</span>
+            <span>Scroll down to unbox the suite</span>
           </div>
         </div>
 
@@ -128,23 +125,21 @@
           <div class="flex items-center justify-between text-[11px] text-gray-300 w-full gap-2">
             <span class="flex items-center gap-1.5 font-semibold text-white">
               <i class="fas fa-box-open text-amber-400 text-xs"></i>
-              <span id="unboxingProgressText">Unboxing: 0%</span>
+              <span id="unboxingProgressText">Unboxing Suite: 0%</span>
             </span>
             <a href="#catalogSection" class="text-amber-400 hover:underline font-bold text-[11px] whitespace-nowrap">
-              Skip to Catalog <i class="fas fa-chevron-down text-[9px] ml-0.5"></i>
+              Explore Catalog <i class="fas fa-chevron-down text-[9px] ml-0.5"></i>
             </a>
           </div>
         </div>
 
         <!-- Catalog Jump CTA that appears when unboxing finishes -->
         <div id="unboxedCta" class="unboxed-cta-wrap">
-          <a href="#catalogSection" class="btn-primary-gold px-7 py-3.5 text-xs sm:text-sm rounded-full shadow-2xl shadow-amber-500/30 font-bold">
-            <span>Explore Corporate Gift Catalog</span>
+          <a href="#catalogSection" class="btn-primary-gold px-8 py-3.5 text-xs sm:text-sm rounded-full font-bold">
+            <span>Explore Curated Corporate Catalog</span>
             <i class="fas fa-chevron-down ml-2 animate-bounce"></i>
           </a>
         </div>
-      </div>
-
       </div>
 
     </div>
@@ -155,48 +150,46 @@
        ========================================================================= -->
   <div class="luxury-marquee-wrap">
     <div class="marquee-track">
-      <div class="marquee-item"><i class="fas fa-stamp text-amber-400"></i> Bespoke Logo Foil Stamping &amp; Laser Engraving</div>
-      <div class="marquee-item"><i class="fas fa-truck-fast text-amber-400"></i> Pan-India &amp; Global Express Logistics</div>
-      <div class="marquee-item"><i class="fas fa-headset text-amber-400"></i> Dedicated Corporate Concierge: <a href="tel:+919916418879" class="text-white hover:underline">+91 9916418879</a></div>
-      <div class="marquee-item"><i class="fas fa-percent text-amber-400"></i> Tiered Volume Bulk Savings Up To 40%</div>
-      <div class="marquee-item"><i class="fa-brands fa-whatsapp text-emerald-400"></i> Instant Quote Inquiries via WhatsApp</div>
+      <div class="marquee-item"><i class="fas fa-stamp text-amber-400"></i> Bespoke 24k Gold Foil Stamping &amp; Master Engraving</div>
+      <div class="marquee-item"><i class="fas fa-truck-fast text-amber-400"></i> Pan-India White-Glove &amp; Global Express Delivery</div>
+      <div class="marquee-item"><i class="fas fa-headset text-amber-400"></i> Dedicated Executive Concierge: <a href="tel:+919916418879" class="text-white hover:underline">+91 9916418879</a></div>
+      <div class="marquee-item"><i class="fas fa-percent text-amber-400"></i> Tiered Enterprise Volume Privileges Up To 40%</div>
+      <div class="marquee-item"><i class="fa-brands fa-whatsapp text-emerald-400"></i> Instant Executive Inquiries via WhatsApp Desk</div>
       
       <!-- Duplicate for seamless infinite loop -->
-      <div class="marquee-item"><i class="fas fa-stamp text-amber-400"></i> Bespoke Logo Foil Stamping &amp; Laser Engraving</div>
-      <div class="marquee-item"><i class="fas fa-truck-fast text-amber-400"></i> Pan-India &amp; Global Express Logistics</div>
-      <div class="marquee-item"><i class="fas fa-headset text-amber-400"></i> Dedicated Corporate Concierge: <a href="tel:+919916418879" class="text-white hover:underline">+91 9916418879</a></div>
-      <div class="marquee-item"><i class="fas fa-percent text-amber-400"></i> Tiered Volume Bulk Savings Up To 40%</div>
-      <div class="marquee-item"><i class="fa-brands fa-whatsapp text-emerald-400"></i> Instant Quote Inquiries via WhatsApp</div>
+      <div class="marquee-item"><i class="fas fa-stamp text-amber-400"></i> Bespoke 24k Gold Foil Stamping &amp; Master Engraving</div>
+      <div class="marquee-item"><i class="fas fa-truck-fast text-amber-400"></i> Pan-India White-Glove &amp; Global Express Delivery</div>
+      <div class="marquee-item"><i class="fas fa-headset text-amber-400"></i> Dedicated Executive Concierge: <a href="tel:+919916418879" class="text-white hover:underline">+91 9916418879</a></div>
+      <div class="marquee-item"><i class="fas fa-percent text-amber-400"></i> Tiered Enterprise Volume Privileges Up To 40%</div>
+      <div class="marquee-item"><i class="fa-brands fa-whatsapp text-emerald-400"></i> Instant Executive Inquiries via WhatsApp Desk</div>
     </div>
   </div>
 
   <!-- =========================================================================
-       AMAZON-STYLE CORPORATE PRODUCT CATALOG
+       CORPORATE PRODUCT CATALOG & SELECTION ARCHITECTURE
        ========================================================================= -->
   <section id="catalogSection" class="catalog-section">
 
-    <!-- Amazon Search & Subnav Bar -->
+    <!-- Search & Subnav Bar -->
     <div class="amazon-subnav">
       <div class="flex items-center gap-2.5 text-xs text-gray-300">
         <i class="fas fa-building text-amber-400 text-base"></i>
         <div>
-          <div class="text-[10px] text-gray-400 uppercase tracking-wider leading-none">Corporate Orders</div>
-          <div class="font-bold text-white text-xs mt-0.5">Bulk Gifting &amp; Custom Packaging</div>
+          <div class="text-[10px] text-gray-400 uppercase tracking-widest leading-none font-semibold">Enterprise Suites</div>
+          <div class="font-bold text-white text-xs mt-0.5">Bulk Gifting &amp; Bespoke Packaging</div>
         </div>
       </div>
 
-      <!-- Amazon Search Console -->
+      <!-- Search Console -->
       <div class="search-bar-container">
         <select id="searchDeptSelect" class="search-dept-select" aria-label="Select Department">
           <option value="all">All Categories</option>
-          <option value="executive">Executive &amp; VIP</option>
-          <option value="tech">Tech &amp; Gadgets</option>
-          <option value="gourmet">Gourmet &amp; Beverage</option>
-          <option value="wellness">Wellness &amp; Spa</option>
+          <option value="executive">Executive VIP Suites</option>
+          <option value="welcome">Welcome &amp; Onboarding Kits</option>
           <option value="eco-luxe">Sustainable Eco-Luxe</option>
-          <option value="connoisseur">Spirits &amp; Barware</option>
+          <option value="gourmet">Gourmet Connoisseur Hampers</option>
         </select>
-        <input type="text" id="amazonSearchInput" class="search-input-field" placeholder="Search executive gifts, welcome kits, hampers, tech sets..." aria-label="Search catalog">
+        <input type="text" id="amazonSearchInput" class="search-input-field" placeholder="Search executive suites, welcome kits, hampers, tech sets..." aria-label="Search catalog">
         <button id="amazonSearchBtn" class="search-btn" title="Search">
           <i class="fas fa-search"></i>
         </button>
@@ -223,7 +216,7 @@
       </div>
 
       <div class="hidden lg:flex items-center gap-4 text-xs text-gray-300">
-        <span class="text-amber-400"><i class="fas fa-circle-check mr-1"></i> Custom Branding Available</span>
+        <span class="text-amber-400"><i class="fas fa-circle-check mr-1"></i> Bespoke Branding Included</span>
         <a href="tel:+919916418879" class="text-gray-300 hover:text-amber-300 flex items-center gap-1">
           <i class="fas fa-phone text-amber-400 text-[11px]"></i> +91 9916418879
         </a>
@@ -232,13 +225,11 @@
 
     <!-- Category Pills Strip -->
     <div class="category-pills-strip">
-      <button class="category-pill active" data-category="all"><i class="fas fa-border-all mr-1.5 text-xs"></i> All Products (8)</button>
-      <button class="category-pill" data-category="executive"><i class="fas fa-crown mr-1.5 text-xs"></i> Executive &amp; VIP (2)</button>
-      <button class="category-pill" data-category="tech"><i class="fas fa-microchip mr-1.5 text-xs"></i> Tech &amp; Gadgets (1)</button>
-      <button class="category-pill" data-category="gourmet"><i class="fas fa-mug-hot mr-1.5 text-xs"></i> Gourmet &amp; Treats (2)</button>
-      <button class="category-pill" data-category="wellness"><i class="fas fa-spa mr-1.5 text-xs"></i> Wellness &amp; Care (1)</button>
+      <button class="category-pill active" data-category="all"><i class="fas fa-border-all mr-1.5 text-xs"></i> All Suites (8)</button>
+      <button class="category-pill" data-category="executive"><i class="fas fa-crown mr-1.5 text-xs"></i> Executive VIP (3)</button>
+      <button class="category-pill" data-category="welcome"><i class="fas fa-box-open mr-1.5 text-xs"></i> Welcome Kits (2)</button>
       <button class="category-pill" data-category="eco-luxe"><i class="fas fa-leaf mr-1.5 text-xs"></i> Sustainable Eco-Luxe (1)</button>
-      <button class="category-pill" data-category="connoisseur"><i class="fas fa-wine-glass mr-1.5 text-xs"></i> Spirits &amp; Barware (1)</button>
+      <button class="category-pill" data-category="gourmet"><i class="fas fa-champagne-glasses mr-1.5 text-xs"></i> Gourmet Connoisseur (2)</button>
     </div>
 
     <!-- Catalog Main Layout (Sidebar on desktop, clean full width on mobile) -->
@@ -247,8 +238,8 @@
       <!-- Left Faceted Filters (Desktop Only - Mobile uses Bottom Sheet) -->
       <aside class="catalog-sidebar hidden lg:block">
         
-        <div class="flex items-center justify-between mb-4 pb-3 border-b border-gray-800">
-          <h3 class="text-xs font-bold uppercase tracking-wider text-white flex items-center gap-2">
+        <div class="flex items-center justify-between mb-4 pb-3 border-b border-white/[0.06]">
+          <h3 class="text-xs font-bold uppercase tracking-widest text-white flex items-center gap-2">
             <i class="fas fa-sliders text-amber-400"></i> Filters
           </h3>
           <button onclick="resetFilters()" class="text-xs text-amber-400 hover:underline">Clear All</button>
@@ -258,28 +249,20 @@
         <div class="filter-group">
           <div class="filter-title">Category</div>
           <label class="checkbox-label">
-            <span class="flex items-center gap-2"><input type="checkbox" name="catFilter" value="executive"> Executive &amp; VIP</span>
+            <span class="flex items-center gap-2"><input type="checkbox" name="catFilter" value="executive"> Executive VIP Suites</span>
+            <span class="text-xs text-gray-500">(3)</span>
+          </label>
+          <label class="checkbox-label">
+            <span class="flex items-center gap-2"><input type="checkbox" name="catFilter" value="welcome"> Welcome &amp; Onboarding Kits</span>
             <span class="text-xs text-gray-500">(2)</span>
-          </label>
-          <label class="checkbox-label">
-            <span class="flex items-center gap-2"><input type="checkbox" name="catFilter" value="tech"> Tech &amp; Gadgets</span>
-            <span class="text-xs text-gray-500">(1)</span>
-          </label>
-          <label class="checkbox-label">
-            <span class="flex items-center gap-2"><input type="checkbox" name="catFilter" value="gourmet"> Gourmet &amp; Coffee</span>
-            <span class="text-xs text-gray-500">(2)</span>
-          </label>
-          <label class="checkbox-label">
-            <span class="flex items-center gap-2"><input type="checkbox" name="catFilter" value="wellness"> Wellness &amp; Care</span>
-            <span class="text-xs text-gray-500">(1)</span>
           </label>
           <label class="checkbox-label">
             <span class="flex items-center gap-2"><input type="checkbox" name="catFilter" value="eco-luxe"> Sustainable Eco-Luxe</span>
             <span class="text-xs text-gray-500">(1)</span>
           </label>
           <label class="checkbox-label">
-            <span class="flex items-center gap-2"><input type="checkbox" name="catFilter" value="connoisseur"> Spirits &amp; Barware</span>
-            <span class="text-xs text-gray-500">(1)</span>
+            <span class="flex items-center gap-2"><input type="checkbox" name="catFilter" value="gourmet"> Gourmet Connoisseur Hampers</span>
+            <span class="text-xs text-gray-500">(2)</span>
           </label>
         </div>
 
@@ -362,10 +345,10 @@
         <div class="sidebar-concierge-card">
           <div class="flex items-center gap-2 mb-1.5">
             <i class="fas fa-headset text-amber-400 text-sm"></i>
-            <span class="text-xs font-bold text-white uppercase">Corporate Concierge</span>
+            <span class="text-xs font-bold text-white uppercase tracking-wider">Executive Concierge</span>
           </div>
-          <p class="text-[11px] text-gray-400 leading-snug">
-            Need custom quotes, physical samples, or bulk billing? Reach us directly:
+          <p class="text-[11px] text-gray-400 leading-relaxed">
+            Need tailored curation, physical samples, or bulk billing? Reach our executive desk directly:
           </p>
           <div class="mt-2 text-xs font-bold text-amber-300 flex items-center gap-1.5">
             <i class="fas fa-phone text-[10px]"></i> +91 9916418879
@@ -382,15 +365,15 @@
       <!-- Right Products Content -->
       <main class="flex flex-col">
         
-        <div class="flex flex-wrap items-center justify-between gap-4 p-4 rounded-xl bg-gray-900/70 border border-gray-800 mb-6 backdrop-blur-md">
+        <div class="flex flex-wrap items-center justify-between gap-4 p-4 sm:p-5 rounded-xl bg-[#10141d]/90 border border-white/[0.06] mb-6 backdrop-blur-md">
           <div>
-            <div id="productResultsCount" class="text-sm font-semibold text-white">Showing 1–8 of 8 corporate gift sets</div>
-            <div class="text-xs text-gray-400 mt-0.5">Includes luxury gift packaging and custom corporate branding options</div>
+            <div id="productResultsCount" class="text-sm font-semibold text-white">Showing 1–8 of 8 bespoke corporate suites</div>
+            <div class="text-xs text-gray-400 mt-0.5">Includes luxury gift presentation casing and custom corporate branding options</div>
           </div>
 
           <div class="flex items-center gap-2 text-xs">
             <label for="sortBySelect" class="text-gray-400">Sort by:</label>
-            <select id="sortBySelect" class="bg-gray-950 border border-gray-700 text-gray-200 text-xs rounded-lg px-3 py-1.5 outline-none focus:border-amber-400">
+            <select id="sortBySelect" class="bg-[#090c13] border border-white/[0.1] text-gray-200 text-xs rounded-lg px-3 py-1.5 outline-none focus:border-amber-400">
               <option value="featured">Featured</option>
               <option value="price-low">Price: Low to High</option>
               <option value="price-high">Price: High to Low</option>
@@ -414,61 +397,62 @@
   <!-- =========================================================================
        ABOUT SECTION & DIRECT CORPORATE CONCIERGE
        ========================================================================= -->
-  <section id="aboutSection" class="py-16 px-6 bg-[#0a0d14] border-t border-gray-800 relative">
+  <section id="aboutSection" class="py-20 sm:py-24 px-6 bg-[#090c13] border-t border-white/[0.06] relative">
     <div class="max-w-6xl mx-auto">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <h2 class="font-cinzel text-2xl sm:text-3xl font-bold text-white">
-          Corporate Gifting Made Simple
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <div class="eyebrow-tag mb-2">Bespoke Stewardship</div>
+        <h2 class="font-cinzel text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+          The Art of Thoughtful Enterprise Gifting
         </h2>
-        <p class="text-gray-400 text-xs sm:text-sm mt-2">
-          Blue Ants delivers end-to-end corporate gifting solutions for companies of all sizes with zero bureaucratic hurdles.
+        <p class="text-gray-400 text-xs sm:text-sm mt-3 leading-relaxed">
+          Elevating professional relationships through exceptional craftsmanship, tactile unboxing rituals, and white-glove corporate stewardship.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-        <div class="p-6 rounded-xl bg-gray-900/80 border border-gray-800 hover:border-amber-500/30 transition-all">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div class="p-7 rounded-xl bg-[#10141d] border border-white/[0.06] hover:border-amber-500/30 transition-all shadow-lg">
           <div class="w-12 h-12 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4 border border-amber-500/20">
             <i class="fas fa-layer-group"></i>
           </div>
-          <h3 class="font-bold text-white text-base mb-1">Curated Gift Collections</h3>
+          <h3 class="font-bold text-white text-base mb-1.5">Bespoke Curated Collections</h3>
           <p class="text-gray-400 text-xs leading-relaxed">
-            Handcrafted luxury gift boxes tailored for employee appreciation, client gifting, onboarding, and executive milestones.
+            Exclusively sourced luxury gift suites tailored for executive milestones, client appreciation, leadership summits, and distinguished team celebrations.
           </p>
         </div>
 
-        <div class="p-6 rounded-xl bg-gray-900/80 border border-gray-800 hover:border-amber-500/30 transition-all">
+        <div class="p-7 rounded-xl bg-[#10141d] border border-white/[0.06] hover:border-amber-500/30 transition-all shadow-lg">
           <div class="w-12 h-12 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4 border border-amber-500/20">
             <i class="fas fa-stamp"></i>
           </div>
-          <h3 class="font-bold text-white text-base mb-1">Custom Company Branding</h3>
+          <h3 class="font-bold text-white text-base mb-1.5">Master Artisan Branding</h3>
           <p class="text-gray-400 text-xs leading-relaxed">
-            Add your company logo with laser engraving, leather debossing, custom ribbon colors, or personalized greeting cards.
+            Seamlessly incorporate your company emblem with 24k gold foil debossing, precision laser etching, custom-dyed silk ribbons, and calligraphic stationery.
           </p>
         </div>
 
-        <div class="p-6 rounded-xl bg-gray-900/80 border border-gray-800 hover:border-amber-500/30 transition-all">
+        <div class="p-7 rounded-xl bg-[#10141d] border border-white/[0.06] hover:border-amber-500/30 transition-all shadow-lg">
           <div class="w-12 h-12 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4 border border-amber-500/20">
             <i class="fas fa-truck-fast"></i>
           </div>
-          <h3 class="font-bold text-white text-base mb-1">Direct Delivery &amp; Logistics</h3>
+          <h3 class="font-bold text-white text-base mb-1.5">White-Glove Global Logistics</h3>
           <p class="text-gray-400 text-xs leading-relaxed">
-            We handle bulk shipments directly to your office or individual deliveries sent to remote employees and partners globally.
+            End-to-end enterprise logistics from coordinated boardroom consignments to individualized domestic and international deliveries with real-time tracking.
           </p>
         </div>
       </div>
 
       <!-- Dedicated Direct Concierge Callout Banner -->
       <div class="concierge-highlight-banner">
-        <div class="flex flex-col md:flex-row items-center justify-between gap-6 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-gray-900 via-[#131926] to-gray-900 border border-amber-500/30 shadow-2xl">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-[#10141d] via-[#141924] to-[#10141d] border border-amber-500/25 shadow-2xl">
           <div class="space-y-2 text-center md:text-left">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs font-semibold uppercase">
-              <i class="fas fa-headset"></i> Direct Concierge Desk
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs font-semibold uppercase tracking-wider">
+              <i class="fas fa-headset"></i> Private Executive Concierge Desk
             </div>
             <h3 class="font-cinzel text-xl sm:text-2xl font-bold text-white">
-              Speak Directly with Our Corporate Gifting Specialists
+              Direct Consultation with Our Gifting Directors
             </h3>
-            <p class="text-gray-300 text-xs sm:text-sm max-w-xl">
-              No forms or CRM delays. Call or WhatsApp our executive gifting team at <strong class="text-amber-300">+91 9916418879</strong> for instant custom curation, samples, and volume discounts.
+            <p class="text-gray-300 text-xs sm:text-sm max-w-xl leading-relaxed">
+              No automated queues or ticket delays. Connect directly with our executive gifting specialists at <strong class="text-amber-300 font-semibold">+91 9916418879</strong> for custom curation, physical sample evaluations, and tailored enterprise terms.
             </p>
           </div>
 
@@ -479,7 +463,7 @@
             <a href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants%20team,%20I'd%20like%20to%20discuss%20corporate%20gifting%20packages%20for%20our%20company." 
                target="_blank" rel="noopener" 
                class="btn-whatsapp text-xs py-3 px-6 justify-center">
-              <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp Inquiry
+              <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp Executive Desk
             </a>
           </div>
         </div>
@@ -491,20 +475,20 @@
   <!-- =========================================================================
        FOOTER
        ========================================================================= -->
-  <footer class="bg-[#05070a] border-t border-gray-800 py-10 px-6 text-xs text-gray-500">
+  <footer class="bg-[#07090e] border-t border-white/[0.06] py-12 px-6 text-xs text-gray-500">
     <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-2">
+      <div class="flex items-center gap-2.5">
         <div class="logo-badge" style="width: 26px; height: 26px; font-size: 11px;">BA</div>
         <div>
-          <span class="font-bold text-white">THE BLUE ANTS</span> &copy; 2026. Premium Corporate Gifting Solutions.
+          <span class="font-bold text-white">THE BLUE ANTS</span> &copy; 2026. Haute Corporate Gifting &amp; Curated Bespoke Suites.
         </div>
       </div>
 
       <div class="flex flex-wrap items-center gap-6">
-        <a href="#catalogSection" class="text-gray-400 hover:text-amber-300">Catalog</a>
-        <a href="#aboutSection" class="text-gray-400 hover:text-amber-300">About</a>
-        <a href="tel:+919916418879" class="text-amber-300 hover:text-amber-200 font-semibold"><i class="fas fa-phone text-xs mr-1"></i> +91 9916418879</a>
-        <a href="#" onclick="openRfpDrawer(); return false;" class="text-gray-400 hover:text-amber-300">Request a Quote</a>
+        <a href="#catalogSection" class="text-gray-400 hover:text-amber-300 transition-colors">Catalog</a>
+        <a href="#aboutSection" class="text-gray-400 hover:text-amber-300 transition-colors">About</a>
+        <a href="tel:+919916418879" class="text-amber-300 hover:text-amber-200 font-semibold transition-colors"><i class="fas fa-phone text-xs mr-1"></i> +91 9916418879</a>
+        <a href="#" onclick="openRfpDrawer(); return false;" class="text-gray-400 hover:text-amber-300 transition-colors">Request a Quote</a>
       </div>
     </div>
   </footer>
@@ -515,7 +499,7 @@
   <div id="quickViewModal" class="modal-overlay">
     <div class="modal-dialog">
       <div class="bottom-sheet-handle lg:hidden"></div>
-      <button onclick="closeQuickView()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-lg z-20 w-8 h-8 rounded-full bg-gray-800/80 flex items-center justify-center" aria-label="Close modal">
+      <button onclick="closeQuickView()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-lg z-20 w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-[#10141d]/90 flex items-center justify-center border border-white/[0.08] p-2.5 transition-colors touch-manipulation" aria-label="Close modal">
         <i class="fas fa-xmark"></i>
       </button>
       <div id="quickViewContent"></div>
@@ -528,14 +512,14 @@
   <div id="mobileFilterModal" class="modal-overlay">
     <div class="mobile-filter-dialog">
       <div class="bottom-sheet-handle"></div>
-      <div class="p-4 border-b border-gray-800 flex items-center justify-between bg-gray-900 sticky top-0 z-10">
+      <div class="p-4 border-b border-white/[0.06] flex items-center justify-between bg-[#090c13] sticky top-0 z-10">
         <div class="flex items-center gap-2">
           <i class="fas fa-sliders text-amber-400"></i>
           <h3 class="text-sm font-bold text-white uppercase tracking-wider">Filter Catalog</h3>
         </div>
         <div class="flex items-center gap-3">
           <button onclick="resetFilters()" class="text-xs text-amber-400 font-semibold hover:underline">Clear All</button>
-          <button onclick="closeMobileFilters()" class="w-8 h-8 rounded-full bg-gray-800 text-gray-300 flex items-center justify-center" aria-label="Close filters">
+          <button onclick="closeMobileFilters()" class="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-[#10141d] text-gray-300 flex items-center justify-center border border-white/[0.08] p-2.5 transition-colors touch-manipulation" aria-label="Close filters">
             <i class="fas fa-xmark"></i>
           </button>
         </div>
@@ -548,28 +532,20 @@
           <div class="filter-title">Category</div>
           <div class="grid grid-cols-1 gap-2.5">
             <label class="mobile-checkbox-label">
-              <span class="flex items-center gap-2.5"><input type="checkbox" name="catFilterMobile" value="executive"> Executive &amp; VIP</span>
+              <span class="flex items-center gap-2.5"><input type="checkbox" name="catFilterMobile" value="executive"> Executive VIP Suites</span>
+              <span class="text-xs text-gray-500">(3)</span>
+            </label>
+            <label class="mobile-checkbox-label">
+              <span class="flex items-center gap-2.5"><input type="checkbox" name="catFilterMobile" value="welcome"> Welcome &amp; Onboarding Kits</span>
               <span class="text-xs text-gray-500">(2)</span>
-            </label>
-            <label class="mobile-checkbox-label">
-              <span class="flex items-center gap-2.5"><input type="checkbox" name="catFilterMobile" value="tech"> Tech &amp; Gadgets</span>
-              <span class="text-xs text-gray-500">(1)</span>
-            </label>
-            <label class="mobile-checkbox-label">
-              <span class="flex items-center gap-2.5"><input type="checkbox" name="catFilterMobile" value="gourmet"> Gourmet &amp; Treats</span>
-              <span class="text-xs text-gray-500">(2)</span>
-            </label>
-            <label class="mobile-checkbox-label">
-              <span class="flex items-center gap-2.5"><input type="checkbox" name="catFilterMobile" value="wellness"> Wellness &amp; Spa</span>
-              <span class="text-xs text-gray-500">(1)</span>
             </label>
             <label class="mobile-checkbox-label">
               <span class="flex items-center gap-2.5"><input type="checkbox" name="catFilterMobile" value="eco-luxe"> Sustainable Eco-Luxe</span>
               <span class="text-xs text-gray-500">(1)</span>
             </label>
             <label class="mobile-checkbox-label">
-              <span class="flex items-center gap-2.5"><input type="checkbox" name="catFilterMobile" value="connoisseur"> Spirits &amp; Barware</span>
-              <span class="text-xs text-gray-500">(1)</span>
+              <span class="flex items-center gap-2.5"><input type="checkbox" name="catFilterMobile" value="gourmet"> Gourmet Connoisseur Hampers</span>
+              <span class="text-xs text-gray-500">(2)</span>
             </label>
           </div>
         </div>
@@ -624,8 +600,8 @@
       </div>
 
       <!-- Sticky Mobile Apply Button -->
-      <div class="p-4 border-t border-gray-800 bg-gray-950 sticky bottom-0 z-10">
-        <button onclick="closeMobileFilters()" class="btn-primary-gold w-full py-3.5 text-sm font-bold shadow-lg shadow-amber-500/20">
+      <div class="p-4 border-t border-white/[0.06] bg-[#07090e] sticky bottom-0 z-10">
+        <button onclick="closeMobileFilters()" class="btn-primary-gold w-full py-3.5 text-sm font-bold">
           <span>Apply Filters</span>
         </button>
       </div>
@@ -638,14 +614,14 @@
   <div id="rfpBackdrop" class="modal-overlay"></div>
   <aside id="rfpDrawer" class="rfp-drawer">
     <div class="bottom-sheet-handle lg:hidden"></div>
-    <div class="p-4 sm:p-5 border-b border-gray-800 flex items-center justify-between bg-gray-900">
+    <div class="p-4 sm:p-5 border-b border-white/[0.06] flex items-center justify-between bg-[#090c13]">
       <div>
-        <h3 class="text-sm font-bold text-white uppercase flex items-center gap-2">
+        <h3 class="text-sm font-bold text-white uppercase flex items-center gap-2 tracking-wider">
           <i class="fas fa-file-invoice text-amber-400"></i> Corporate Quote Request
         </h3>
-        <div class="text-[11px] text-gray-400">Direct Concierge Quote Dispatch</div>
+        <div class="text-[11px] text-gray-400 mt-0.5">Direct Executive Concierge Dispatch</div>
       </div>
-      <button id="closeRfpDrawerBtn" class="text-gray-400 hover:text-white text-lg w-8 h-8 flex items-center justify-center rounded hover:bg-gray-800" aria-label="Close quote drawer">
+      <button id="closeRfpDrawerBtn" class="text-gray-400 hover:text-white text-lg w-11 h-11 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-white/[0.05] p-2.5 transition-colors touch-manipulation" aria-label="Close quote drawer">
         <i class="fas fa-xmark"></i>
       </button>
     </div>
@@ -654,37 +630,56 @@
     <div id="rfpDrawerItems" class="flex-1 overflow-y-auto p-4 space-y-3"></div>
 
     <!-- Submission Area -->
-    <div class="p-4 sm:p-5 border-t border-gray-800 bg-gray-950 space-y-4 safe-bottom">
+    <div class="p-4 sm:p-5 border-t border-white/[0.06] bg-[#07090e] space-y-4 safe-bottom">
       <div class="space-y-1 text-xs">
         <div class="flex justify-between text-gray-400">
           <span>Estimated Total:</span>
           <span id="rfpDrawerTotal" class="text-base font-bold text-amber-300 font-mono">$0.00</span>
         </div>
         <div class="flex justify-between text-emerald-400 text-[11px]">
-          <span>Applied Bulk Savings:</span>
+          <span>Applied Volume Privileges:</span>
           <span id="rfpDrawerSavings">$0.00</span>
         </div>
       </div>
 
       <!-- Concierge Notice -->
-      <div class="p-3 rounded-lg bg-gray-900/90 border border-amber-500/20 text-xs">
+      <div class="p-3 rounded-lg bg-[#10141d] border border-amber-500/20 text-xs">
         <div class="text-amber-300 font-bold flex items-center gap-1.5 mb-0.5">
           <i class="fas fa-headset text-amber-400"></i> Direct Concierge Desk
         </div>
-        <div class="text-[11px] text-gray-400">
-          Quotes are delivered instantly via WhatsApp or direct call with our gifting specialists at <strong class="text-slate-200">+91 9916418879</strong>.
+        <div class="text-[11px] text-gray-400 leading-relaxed">
+          Quotes are delivered promptly via WhatsApp or direct consultation with our gifting directors at <strong class="text-slate-200">+91 9916418879</strong>.
         </div>
+      </div>
+
+      <!-- Corporate Quotation Options -->
+      <div class="space-y-2 pt-2 border-t border-white/[0.06]">
+        <div class="text-[11px] font-semibold uppercase tracking-wider text-amber-300 flex items-center gap-1.5 mb-1.5">
+          <i class="fas fa-check-double text-amber-400"></i> Corporate Quotation Options:
+        </div>
+        <label class="flex items-center gap-2.5 text-xs text-gray-300 cursor-pointer hover:text-white select-none">
+          <input type="checkbox" id="rfpOptionSampleBox" class="w-4 h-4 rounded border-gray-700 bg-gray-900 text-amber-500 focus:ring-0 cursor-pointer">
+          <span>Request Physical Sample Box</span>
+        </label>
+        <label class="flex items-center gap-2.5 text-xs text-gray-300 cursor-pointer hover:text-white select-none">
+          <input type="checkbox" id="rfpOptionGstInvoice" class="w-4 h-4 rounded border-gray-700 bg-gray-900 text-amber-500 focus:ring-0 cursor-pointer">
+          <span>GST / Tax Invoice Required</span>
+        </label>
+        <label class="flex items-center gap-2.5 text-xs text-gray-300 cursor-pointer hover:text-white select-none">
+          <input type="checkbox" id="rfpOptionMultiAddress" class="w-4 h-4 rounded border-gray-700 bg-gray-900 text-amber-500 focus:ring-0 cursor-pointer">
+          <span>Multi-Address Employee Drop-Shipping</span>
+        </label>
       </div>
 
       <div class="space-y-2 pt-1">
         <input type="text" id="rfpCompanyName" placeholder="Company Name (Optional)" 
-               class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2.5 text-xs text-white outline-none focus:border-amber-400 input-mobile-safe">
+               class="w-full bg-[#10141d] border border-white/[0.1] rounded-lg px-3 py-2.5 text-xs text-white outline-none focus:border-amber-400 input-mobile-safe">
         <input type="text" id="rfpCustomNotes" placeholder="Special requirements / target delivery date (Optional)" 
-               class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2.5 text-xs text-white outline-none focus:border-amber-400 input-mobile-safe">
+               class="w-full bg-[#10141d] border border-white/[0.1] rounded-lg px-3 py-2.5 text-xs text-white outline-none focus:border-amber-400 input-mobile-safe">
       </div>
 
       <div class="space-y-2 pt-1">
-        <button id="submitRfpWhatsappBtn" class="btn-whatsapp w-full py-3.5 text-xs font-bold shadow-lg shadow-emerald-950">
+        <button id="submitRfpWhatsappBtn" class="btn-whatsapp w-full py-3.5 text-xs font-bold">
           <i class="fa-brands fa-whatsapp text-base"></i> Send Quote Inquiry on WhatsApp
         </button>
         <a href="tel:+919916418879" class="btn-secondary-outline w-full py-2.5 text-xs justify-center">
@@ -698,7 +693,7 @@
        FLOATING WHATSAPP CONCIERGE WIDGET
        ========================================================================= -->
   <div id="floatingWhatsappWidget" class="floating-whatsapp-wrap">
-    <a href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants%20team,%20I%20would%20like%20to%20inquire%20about%20corporate%20gifting%20solutions%20for%20my%20company." 
+    <a href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants%20team,%20I%20would%20like%20to%20inquire%20about%20bespoke%20corporate%20gifting%20suites%20for%20my%20company." 
        target="_blank" rel="noopener" 
        class="floating-whatsapp-btn" 
        aria-label="Chat with Corporate Concierge on WhatsApp">
@@ -708,16 +703,23 @@
   </div>
 
   <!-- =========================================================================
-       MOBILE QUICK ACTIONS DOCK (Android Native Bottom Navigation Bar)
+       MOBILE QUICK ACTIONS DOCK (Native Bottom Navigation Bar)
        ========================================================================= -->
   <nav class="mobile-bottom-dock md:hidden" aria-label="Mobile Navigation Dock">
-    <a href="#scrollHeroContainer" class="mobile-dock-item">
+    <a href="#scrollHeroContainer" class="mobile-dock-item" data-dock-target="scrollHeroContainer">
       <i class="fas fa-box-open"></i>
       <span>Unboxing</span>
+      <span class="dock-active-dot"></span>
     </a>
-    <a href="#catalogSection" class="mobile-dock-item active">
+    <a href="#catalogSection" class="mobile-dock-item active" data-dock-target="catalogSection">
       <i class="fas fa-boxes-stacked"></i>
       <span>Catalog</span>
+      <span class="dock-active-dot"></span>
+    </a>
+    <a href="#aboutSection" class="mobile-dock-item" data-dock-target="aboutSection">
+      <i class="fas fa-shield-halved"></i>
+      <span>Solutions</span>
+      <span class="dock-active-dot"></span>
     </a>
     <a href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants%20team,%20I%20would%20like%20to%20inquire%20about%20corporate%20gifting%20solutions." 
        target="_blank" rel="noopener" 
@@ -725,10 +727,11 @@
       <i class="fa-brands fa-whatsapp text-lg"></i>
       <span>WhatsApp</span>
     </a>
-    <button onclick="openRfpDrawer()" class="mobile-dock-item relative text-amber-300">
+    <button onclick="openRfpDrawer()" class="mobile-dock-item relative text-amber-300" aria-label="View quotation drawer">
       <i class="fas fa-file-invoice-dollar text-base"></i>
       <span>Quote</span>
       <span id="mobileDockBadge" class="mobile-dock-cart-badge" style="display: none;">0</span>
+      <span id="mobileDockQuoteBadge" class="mobile-dock-cart-badge" style="display: none;">0</span>
     </button>
   </nav>
 

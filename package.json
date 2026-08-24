@@ -5,7 +5,8 @@
   "description": "The Blue Ants — Premium Corporate Gifting Solutions",
   "scripts": {
     "dev": "npx serve .",
-    "start": "npx serve ."
+    "start": "npx serve .",
+    "test": "node tests/e2e_runner.js"
   },
   "keywords": [
     "corporate-gifting",
