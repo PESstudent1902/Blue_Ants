@@ -117,23 +117,23 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 70px;
-  background: rgba(8, 10, 15, 0.82);
-  backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
-  border-bottom: 1px solid var(--border-subtle);
+  height: 76px;
+  background: rgba(8, 10, 15, 0.85);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2.5rem;
+  padding: 0 3.5rem;
   transition: all 0.3s ease;
 }
 
 .brand-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   text-decoration: none;
   transition: transform 0.2s ease;
 }
@@ -143,15 +143,15 @@ body {
 }
 
 .logo-badge {
-  width: 34px;
-  height: 34px;
-  border-radius: 8px;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
   background: linear-gradient(135deg, #f5d77f 0%, #aa820a 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #080a0f;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 800;
   box-shadow: 0 0 18px var(--gold-glow);
   transition: box-shadow 0.3s ease;
@@ -164,10 +164,10 @@ body {
 .nav-link {
   color: var(--text-secondary);
   text-decoration: none;
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  padding: 6px 14px;
-  border-radius: 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
   transition: all 0.2s ease;
   display: inline-flex;
   align-items: center;
@@ -392,23 +392,27 @@ body {
    AMAZON-STYLE CORPORATE PRODUCT CATALOG
    ========================================================================== */
 
+/* ==========================================================================
+   AMAZON-STYLE CORPORATE PRODUCT CATALOG (Spacious Luxury Design)
+   ========================================================================== */
+
 .catalog-section {
   position: relative;
   z-index: 30;
   background-color: var(--bg-noir);
   min-height: 100vh;
-  border-top: 1px solid var(--border-gold);
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
 }
 
 /* Amazon Search Bar */
 .amazon-subnav {
   background-color: var(--bg-surface);
   border-bottom: 1px solid var(--border-subtle);
-  padding: 12px 2.5rem;
+  padding: 16px 3.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 24px;
   flex-wrap: wrap;
 }
 
@@ -417,7 +421,7 @@ body {
   align-items: center;
   background: #090c12;
   border: 1px solid var(--border-gold);
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
   flex: 1;
   max-width: 680px;
@@ -426,14 +430,14 @@ body {
 
 .search-bar-container:focus-within {
   border-color: var(--gold-primary);
-  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.25);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
 }
 
 .search-dept-select {
   background: #141924;
   color: var(--text-secondary);
   border: none;
-  padding: 10px 14px;
+  padding: 12px 16px;
   font-size: 0.85rem;
   outline: none;
   border-right: 1px solid var(--border-subtle);
@@ -444,7 +448,7 @@ body {
   flex: 1;
   background: transparent;
   border: none;
-  padding: 10px 16px;
+  padding: 12px 18px;
   color: var(--text-primary);
   font-size: 0.9rem;
   outline: none;
@@ -454,7 +458,7 @@ body {
   background: var(--gold-gradient);
   color: #080a0f;
   border: none;
-  padding: 10px 22px;
+  padding: 12px 24px;
   font-weight: 700;
   cursor: pointer;
   display: flex;
@@ -470,18 +474,23 @@ body {
 /* Category Pills Strip */
 .category-pills-strip {
   display: flex;
-  gap: 10px;
-  padding: 14px 2.5rem;
+  gap: 12px;
+  padding: 16px 3.5rem;
   background: #0b0e15;
   border-bottom: 1px solid var(--border-subtle);
   overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.category-pills-strip::-webkit-scrollbar {
+  display: none;
 }
 
 .category-pill {
   display: inline-flex;
   align-items: center;
-  padding: 8px 18px;
-  border-radius: 20px;
+  padding: 9px 20px;
+  border-radius: 22px;
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   color: var(--text-secondary);
@@ -499,31 +508,34 @@ body {
   color: var(--gold-light);
 }
 
-/* Two-Column Layout */
+/* Spacious Catalog Layout */
 .catalog-main-layout {
   display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 28px;
-  padding: 2rem 2.5rem;
-  max-width: 1720px;
+  grid-template-columns: 290px 1fr;
+  gap: 40px;
+  padding: 3.5rem 3.5rem;
+  max-width: 1680px;
   margin: 0 auto;
 }
 
 /* Left Sidebar Filter */
 .catalog-sidebar {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: 12px;
-  padding: 20px;
+  background: rgba(14, 18, 27, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 24px;
   height: fit-content;
   position: sticky;
-  top: 90px;
+  top: 100px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
 .filter-group {
-  margin-bottom: 22px;
-  padding-bottom: 18px;
-  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 26px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .filter-group:last-child {
@@ -533,21 +545,22 @@ body {
 }
 
 .filter-title {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   color: var(--gold-light);
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .checkbox-label {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   color: var(--text-secondary);
-  margin-bottom: 9px;
+  padding: 5px 0;
+  margin-bottom: 6px;
   cursor: pointer;
   transition: color 0.15s;
 }
@@ -559,47 +572,48 @@ body {
 .checkbox-label input[type="checkbox"],
 .checkbox-label input[type="radio"] {
   accent-color: var(--gold-primary);
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   cursor: pointer;
 }
 
 .sidebar-concierge-card {
-  margin-top: 18px;
-  padding: 14px;
-  border-radius: 10px;
-  background: rgba(10, 14, 22, 0.9);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  margin-top: 22px;
+  padding: 16px;
+  border-radius: 12px;
+  background: rgba(10, 14, 22, 0.95);
+  border: 1px solid rgba(212, 175, 55, 0.25);
 }
 
-/* Product Cards Grid */
+/* Product Cards Grid - Spacious & Breathing */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 32px;
 }
 
 .product-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: 14px;
+  background: #0e121b;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 18px;
   overflow: hidden;
   transition: transform 0.35s var(--ease-smooth), border-color 0.35s ease, box-shadow 0.35s ease;
   display: flex;
   flex-direction: column;
   position: relative;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
 }
 
 .product-card:hover {
-  border-color: var(--border-gold);
+  border-color: rgba(212, 175, 55, 0.45);
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75), 0 0 25px var(--gold-glow);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 25px var(--gold-glow);
 }
 
 .product-image-container {
   position: relative;
   width: 100%;
-  padding-top: 86%;
+  padding-top: 80%;
   background: #0a0d14;
   overflow: hidden;
   cursor: pointer;
@@ -616,76 +630,81 @@ body {
 }
 
 .product-card:hover .product-image-container img {
-  transform: scale(1.07);
+  transform: scale(1.06);
 }
 
 .card-badge-choice {
   position: absolute;
-  top: 12px;
-  left: 12px;
-  background: #1c2433;
+  top: 14px;
+  left: 14px;
+  background: rgba(15, 20, 30, 0.9);
+  backdrop-filter: blur(8px);
   border-left: 3px solid var(--gold-primary);
   color: #fff;
   font-size: 0.72rem;
   font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 0 4px 4px 0;
+  padding: 5px 12px;
+  border-radius: 0 6px 6px 0;
   z-index: 2;
   display: inline-flex;
   align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 .card-badge-bestseller {
   position: absolute;
-  top: 12px;
-  left: 12px;
-  background: #c25e00;
+  top: 14px;
+  left: 14px;
+  background: linear-gradient(135deg, #c25e00 0%, #8a3f00 100%);
   color: #fff;
   font-size: 0.72rem;
   font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 4px;
+  padding: 5px 12px;
+  border-radius: 6px;
   z-index: 2;
   display: inline-flex;
   align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 .card-moq-pill {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 14px;
+  right: 14px;
   background: rgba(8, 10, 15, 0.88);
+  backdrop-filter: blur(8px);
   border: 1px solid var(--border-gold);
   color: var(--gold-light);
   font-size: 0.72rem;
   font-weight: 600;
-  padding: 4px 10px;
-  border-radius: 16px;
+  padding: 5px 12px;
+  border-radius: 20px;
   z-index: 2;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 .product-info-wrap {
-  padding: 18px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: 10px;
 }
 
 .product-cat-label {
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   color: var(--gold-primary);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 600;
+  letter-spacing: 0.06em;
+  font-weight: 700;
 }
 
 .product-card-title {
-  font-size: 1.08rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--text-primary);
-  line-height: 1.35;
+  line-height: 1.4;
   cursor: pointer;
+  margin-bottom: 6px;
   transition: color 0.2s;
 }
 
@@ -693,22 +712,14 @@ body {
   color: var(--gold-light);
 }
 
-.price-card-box {
-  margin: 6px 0;
-  padding: 10px 12px;
-  background: rgba(8, 10, 15, 0.6);
-  border-radius: 8px;
-  border: 1px dashed var(--border-gold);
-}
-
 /* Card Buttons */
 .btn-primary-gold {
   background: var(--gold-gradient);
   color: #080a0f;
   font-weight: 700;
-  font-size: 0.82rem;
-  padding: 10px 14px;
-  border-radius: 8px;
+  font-size: 0.84rem;
+  padding: 12px 18px;
+  border-radius: 10px;
   border: none;
   cursor: pointer;
   display: flex;
@@ -717,12 +728,12 @@ body {
   gap: 6px;
   text-decoration: none;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.15);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.18);
 }
 
 .btn-primary-gold:hover {
   filter: brightness(1.15);
-  box-shadow: 0 6px 20px var(--gold-glow);
+  box-shadow: 0 6px 22px var(--gold-glow);
   transform: translateY(-1px);
 }
 
@@ -731,9 +742,9 @@ body {
   color: var(--text-primary);
   border: 1px solid rgba(255, 255, 255, 0.16);
   font-weight: 600;
-  font-size: 0.82rem;
-  padding: 10px 14px;
-  border-radius: 8px;
+  font-size: 0.84rem;
+  padding: 12px 18px;
+  border-radius: 10px;
   cursor: pointer;
   display: flex;
   align-items: center;

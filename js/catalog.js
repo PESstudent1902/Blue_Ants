@@ -404,53 +404,49 @@ function renderProducts() {
   container.innerHTML = filtered.map((p, idx) => {
     const lowestTier = p.bulkTiers[p.bulkTiers.length - 1];
     const badgeHtml = p.badgeType === 'choice' 
-      ? `<span class="card-badge-choice"><i class="fas fa-certificate text-amber-400 mr-1"></i> ${p.badge}</span>`
-      : `<span class="card-badge-bestseller"><i class="fas fa-fire mr-1"></i> ${p.badge}</span>`;
+      ? `<span class="card-badge-choice"><i class="fas fa-certificate text-amber-400 mr-1.5"></i> ${p.badge}</span>`
+      : `<span class="card-badge-bestseller"><i class="fas fa-fire mr-1.5"></i> ${p.badge}</span>`;
 
     return `
-      <div class="product-card reveal-on-scroll is-revealed" data-id="${p.id}" style="transition-delay: ${idx * 60}ms;">
+      <div class="product-card reveal-on-scroll is-revealed" data-id="${p.id}" style="transition-delay: ${idx * 50}ms;">
         <div class="product-image-container" onclick="openQuickView('${p.id}')">
           ${badgeHtml}
           <span class="card-moq-pill">MOQ ${p.moq} units</span>
           <img src="${p.image}" alt="${p.name}" loading="lazy">
         </div>
+        
         <div class="product-info-wrap">
-          <div class="flex items-center justify-between">
+          <div class="flex items-center justify-between text-xs mb-1">
             <span class="product-cat-label">${p.categoryLabel}</span>
-            <span class="text-xs text-gray-400"><i class="fas fa-truck-fast text-emerald-400 mr-1"></i>${p.leadTimeLabel}</span>
+            <span class="text-gray-400 flex items-center gap-1"><i class="fas fa-truck-fast text-emerald-400 text-[11px]"></i> ${p.leadTimeLabel}</span>
           </div>
+
           <h3 class="product-card-title" onclick="openQuickView('${p.id}')">${p.name}</h3>
           
-          <div class="flex items-center gap-1.5 text-xs">
-            <span class="text-amber-400 text-[11px] inline-flex gap-0.5">
+          <div class="flex items-center gap-2 text-xs mb-3">
+            <span class="text-amber-400 inline-flex gap-0.5 text-[11px]">
               <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </span>
             <span class="font-bold text-white">${p.rating}</span>
-            <span class="text-gray-400">(${p.reviews})</span>
+            <span class="text-gray-500 font-normal">(${p.reviews} reviews)</span>
           </div>
 
-          <div class="price-card-box">
-            <div class="flex items-baseline gap-1">
-              <span class="text-sm text-amber-300 font-bold">$</span>
-              <span class="text-2xl font-extrabold text-white">${p.price.toFixed(2)}</span>
+          <div class="price-section mb-5">
+            <div class="flex items-baseline gap-1.5">
+              <span class="text-2xl font-extrabold text-white font-mono">$${p.price.toFixed(2)}</span>
               <span class="text-xs text-gray-400">/ unit</span>
             </div>
-            <div class="text-[11px] text-sky-400 mt-1 flex items-center gap-1">
-              <i class="fas fa-layer-group text-[10px]"></i>
-              <span>Bulk from <strong>$${lowestTier.price.toFixed(2)}</strong> for ${lowestTier.min}+ units (Save ${lowestTier.discount})</span>
+            <div class="text-[12px] text-emerald-400 font-medium mt-1.5 flex items-center gap-1.5">
+              <i class="fas fa-tags text-[11px] text-emerald-400"></i>
+              <span>From <strong>$${lowestTier.price.toFixed(2)}</strong> for ${lowestTier.min}+ units (Save ${lowestTier.discount})</span>
             </div>
           </div>
 
-          <ul class="text-xs text-gray-400 space-y-1 my-1">
-            <li class="flex items-center gap-1.5"><i class="fas fa-check text-emerald-400 text-[10px]"></i> ${p.features[0]}</li>
-            <li class="flex items-center gap-1.5"><i class="fas fa-check text-emerald-400 text-[10px]"></i> ${p.features[1]}</li>
-          </ul>
-
-          <div class="grid grid-cols-2 gap-2 mt-auto pt-2">
-            <button class="btn-secondary-outline text-xs" onclick="openQuickView('${p.id}')">
+          <div class="grid grid-cols-2 gap-3 mt-auto pt-3 border-t border-gray-800/80">
+            <button class="btn-secondary-outline" onclick="openQuickView('${p.id}')">
               Quick View
             </button>
-            <button class="btn-primary-gold text-xs" onclick="addToRfp('${p.id}')">
+            <button class="btn-primary-gold" onclick="addToRfp('${p.id}')">
               <i class="fas fa-plus mr-1"></i> Add to Quote
             </button>
           </div>
