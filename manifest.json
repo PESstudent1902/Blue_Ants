@@ -1,0 +1,17 @@
+{
+  "name": "The Blue Ants — Premium Corporate Gifting",
+  "short_name": "Blue Ants",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080a0f",
+  "theme_color": "#080a0f",
+  "description": "Bespoke luxury gifts and curated corporate packages for companies and executive teams.",
+  "icons": [
+    {
+      "src": "assets/products/blueants_exec_leather.jpg",
+      "sizes": "192x192 512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}

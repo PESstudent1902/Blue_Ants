@@ -2,9 +2,16 @@
 <html lang="en" class="dark">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
   <title>The Blue Ants | Premium Corporate Gifting Solutions</title>
   <meta name="description" content="Blue Ants is a corporate gifting business that sells bespoke luxury gifts and curated packages to corporations.">
+
+  <!-- Android & Mobile PWA Optimization -->
+  <meta name="theme-color" content="#080a0f">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.json">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -14,7 +21,7 @@
   <!-- Custom Styles -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-[#080a0f] text-slate-100 antialiased selection:bg-amber-500/30 selection:text-amber-200">
+<body class="bg-[#080a0f] text-slate-100 antialiased selection:bg-amber-500/30 selection:text-amber-200 has-bottom-dock">
 
   <!-- Ambient Luxury Background Glow Orbs -->
   <div class="ambient-glow ambient-glow-top" aria-hidden="true"></div>
@@ -26,11 +33,11 @@
   <header class="brand-header">
     <a href="#" class="brand-logo">
       <div class="logo-badge">BA</div>
-      <div>
-        <div class="font-cinzel text-base font-bold tracking-wider text-white flex items-center gap-2">
+      <div class="min-w-0">
+        <div class="font-cinzel text-sm sm:text-base font-bold tracking-wider text-white truncate">
           THE BLUE ANTS
         </div>
-        <div class="text-[10px] tracking-widest uppercase text-amber-400/90 font-medium">Premium Corporate Gifting Solutions</div>
+        <div class="text-[9px] sm:text-[10px] tracking-wider uppercase text-amber-400/90 font-medium truncate hidden min-[380px]:block">Corporate Gifting Solutions</div>
       </div>
     </a>
 
@@ -43,7 +50,7 @@
       </a>
     </nav>
 
-    <div class="flex items-center gap-2.5 sm:gap-3">
+    <div class="flex items-center gap-2 sm:gap-3">
       <!-- Direct WhatsApp Action -->
       <a href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants%20team,%20I%20would%20like%20to%20inquire%20about%20corporate%20gifting%20solutions%20for%20my%20company." 
          target="_blank" rel="noopener" 
@@ -56,9 +63,10 @@
         <i class="fas fa-search text-amber-400"></i> Browse Products
       </a>
 
-      <button id="openRfpCartBtn" class="btn-primary-gold relative py-2 px-4 shadow-lg shadow-amber-500/20">
+      <button id="openRfpCartBtn" class="btn-primary-gold relative py-2 px-3 sm:px-4 shadow-lg shadow-amber-500/20">
         <i class="fas fa-file-invoice-dollar"></i>
-        <span>Request Quote</span>
+        <span class="hidden sm:inline">Request Quote</span>
+        <span class="sm:hidden">Quote</span>
         <span id="rfpCartCount" class="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-amber-400 text-black text-[11px] font-extrabold flex items-center justify-center border-2 border-[#080a0f]" style="display: none;">0</span>
       </button>
     </div>
@@ -177,6 +185,26 @@
         </button>
       </div>
 
+      <!-- Mobile Filter & Sort Control Bar -->
+      <div class="mobile-filter-bar lg:hidden flex items-center justify-between gap-2.5 w-full pt-1">
+        <button id="openMobileFilterBtn" onclick="openMobileFilters()" class="mobile-filter-btn" aria-label="Open Filters">
+          <i class="fas fa-sliders text-amber-400"></i>
+          <span>Filters</span>
+          <span id="mobileFilterBadge" class="filter-count-badge" style="display: none;">0</span>
+        </button>
+
+        <div class="flex items-center gap-1.5 flex-1 max-w-[210px] ml-auto">
+          <span class="text-[11px] text-gray-400 whitespace-nowrap">Sort:</span>
+          <select id="mobileSortBySelect" class="mobile-sort-select" aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="price-low">Price: Low</option>
+            <option value="price-high">Price: High</option>
+            <option value="rating">Rating</option>
+            <option value="moq">Lowest MOQ</option>
+          </select>
+        </div>
+      </div>
+
       <div class="hidden lg:flex items-center gap-4 text-xs text-gray-300">
         <span class="text-amber-400"><i class="fas fa-circle-check mr-1"></i> Custom Branding Available</span>
         <a href="tel:+919916418879" class="text-gray-300 hover:text-amber-300 flex items-center gap-1">
@@ -196,11 +224,11 @@
       <button class="category-pill" data-category="connoisseur"><i class="fas fa-wine-glass mr-1.5 text-xs"></i> Spirits &amp; Barware (1)</button>
     </div>
 
-    <!-- Catalog Main 2-Column Layout -->
+    <!-- Catalog Main Layout (Sidebar on desktop, clean full width on mobile) -->
     <div class="catalog-main-layout">
       
-      <!-- Left Faceted Filters (Amazon-Style) -->
-      <aside class="catalog-sidebar">
+      <!-- Left Faceted Filters (Desktop Only - Mobile uses Bottom Sheet) -->
+      <aside class="catalog-sidebar hidden lg:block">
         
         <div class="flex items-center justify-between mb-4 pb-3 border-b border-gray-800">
           <h3 class="text-xs font-bold uppercase tracking-wider text-white flex items-center gap-2">
@@ -465,14 +493,125 @@
   </footer>
 
   <!-- =========================================================================
-       QUICK VIEW MODAL
+       QUICK VIEW MODAL (Responsive Center Dialog on Desktop / Bottom Sheet on Mobile)
        ========================================================================= -->
   <div id="quickViewModal" class="modal-overlay">
     <div class="modal-dialog">
-      <button onclick="closeQuickView()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-lg z-20 w-8 h-8 rounded-full bg-gray-800/80 flex items-center justify-center">
+      <div class="bottom-sheet-handle lg:hidden"></div>
+      <button onclick="closeQuickView()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-lg z-20 w-8 h-8 rounded-full bg-gray-800/80 flex items-center justify-center" aria-label="Close modal">
         <i class="fas fa-xmark"></i>
       </button>
       <div id="quickViewContent"></div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MOBILE FILTER BOTTOM SHEET MODAL
+       ========================================================================= -->
+  <div id="mobileFilterModal" class="modal-overlay">
+    <div class="mobile-filter-dialog">
+      <div class="bottom-sheet-handle"></div>
+      <div class="p-4 border-b border-gray-800 flex items-center justify-between bg-gray-900 sticky top-0 z-10">
+        <div class="flex items-center gap-2">
+          <i class="fas fa-sliders text-amber-400"></i>
+          <h3 class="text-sm font-bold text-white uppercase tracking-wider">Filter Catalog</h3>
+        </div>
+        <div class="flex items-center gap-3">
+          <button onclick="resetFilters()" class="text-xs text-amber-400 font-semibold hover:underline">Clear All</button>
+          <button onclick="closeMobileFilters()" class="w-8 h-8 rounded-full bg-gray-800 text-gray-300 flex items-center justify-center" aria-label="Close filters">
+            <i class="fas fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Filter Groups -->
+      <div class="p-5 space-y-6 overflow-y-auto flex-1 max-h-[65vh]">
+        <!-- Category -->
+        <div class="mobile-filter-group">
+          <div class="filter-title">Category</div>
+          <div class="grid grid-cols-1 gap-2.5">
+            <label class="mobile-checkbox-label">
+              <span class="flex items-center gap-2.5"><input type="checkbox" name="catFilterMobile" value="executive"> Executive &amp; VIP</span>
+              <span class="text-xs text-gray-500">(2)</span>
+            </label>
+            <label class="mobile-checkbox-label">
+              <span class="flex items-center gap-2.5"><input type="checkbox" name="catFilterMobile" value="tech"> Tech &amp; Gadgets</span>
+              <span class="text-xs text-gray-500">(1)</span>
+            </label>
+            <label class="mobile-checkbox-label">
+              <span class="flex items-center gap-2.5"><input type="checkbox" name="catFilterMobile" value="gourmet"> Gourmet &amp; Treats</span>
+              <span class="text-xs text-gray-500">(2)</span>
+            </label>
+            <label class="mobile-checkbox-label">
+              <span class="flex items-center gap-2.5"><input type="checkbox" name="catFilterMobile" value="wellness"> Wellness &amp; Spa</span>
+              <span class="text-xs text-gray-500">(1)</span>
+            </label>
+            <label class="mobile-checkbox-label">
+              <span class="flex items-center gap-2.5"><input type="checkbox" name="catFilterMobile" value="eco-luxe"> Sustainable Eco-Luxe</span>
+              <span class="text-xs text-gray-500">(1)</span>
+            </label>
+            <label class="mobile-checkbox-label">
+              <span class="flex items-center gap-2.5"><input type="checkbox" name="catFilterMobile" value="connoisseur"> Spirits &amp; Barware</span>
+              <span class="text-xs text-gray-500">(1)</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Price -->
+        <div class="mobile-filter-group">
+          <div class="filter-title">Price Range</div>
+          <div class="grid grid-cols-1 gap-2.5">
+            <label class="mobile-checkbox-label">
+              <span class="flex items-center gap-2.5"><input type="checkbox" name="priceFilterMobile" value="under50"> Under $50</span>
+            </label>
+            <label class="mobile-checkbox-label">
+              <span class="flex items-center gap-2.5"><input type="checkbox" name="priceFilterMobile" value="50to100"> $50 to $100</span>
+            </label>
+            <label class="mobile-checkbox-label">
+              <span class="flex items-center gap-2.5"><input type="checkbox" name="priceFilterMobile" value="100to150"> $100 to $150</span>
+            </label>
+            <label class="mobile-checkbox-label">
+              <span class="flex items-center gap-2.5"><input type="checkbox" name="priceFilterMobile" value="over150"> Over $150</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- MOQ -->
+        <div class="mobile-filter-group">
+          <div class="filter-title">Minimum Order Qty (MOQ)</div>
+          <div class="grid grid-cols-1 gap-2.5">
+            <label class="mobile-checkbox-label">
+              <span class="flex items-center gap-2.5"><input type="checkbox" name="moqFilterMobile" value="under25"> &le; 25 units</span>
+            </label>
+            <label class="mobile-checkbox-label">
+              <span class="flex items-center gap-2.5"><input type="checkbox" name="moqFilterMobile" value="25to50"> 25 – 50 units</span>
+            </label>
+            <label class="mobile-checkbox-label">
+              <span class="flex items-center gap-2.5"><input type="checkbox" name="moqFilterMobile" value="50plus"> 50+ units</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Lead Time -->
+        <div class="mobile-filter-group">
+          <div class="filter-title">Fulfillment Speed</div>
+          <div class="grid grid-cols-1 gap-2.5">
+            <label class="mobile-checkbox-label">
+              <span class="flex items-center gap-2.5"><input type="checkbox" name="leadTimeFilterMobile" value="express"> <i class="fas fa-bolt text-amber-400"></i> 48h Express Ready</span>
+            </label>
+            <label class="mobile-checkbox-label">
+              <span class="flex items-center gap-2.5"><input type="checkbox" name="leadTimeFilterMobile" value="standard"> <i class="fas fa-truck text-gray-400"></i> 5-7 Days Standard</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sticky Mobile Apply Button -->
+      <div class="p-4 border-t border-gray-800 bg-gray-950 sticky bottom-0 z-10">
+        <button onclick="closeMobileFilters()" class="btn-primary-gold w-full py-3.5 text-sm font-bold shadow-lg shadow-amber-500/20">
+          <span>Apply Filters</span>
+        </button>
+      </div>
     </div>
   </div>
 
@@ -481,14 +620,15 @@
        ========================================================================= -->
   <div id="rfpBackdrop" class="modal-overlay"></div>
   <aside id="rfpDrawer" class="rfp-drawer">
-    <div class="p-5 border-b border-gray-800 flex items-center justify-between bg-gray-900">
+    <div class="bottom-sheet-handle lg:hidden"></div>
+    <div class="p-4 sm:p-5 border-b border-gray-800 flex items-center justify-between bg-gray-900">
       <div>
         <h3 class="text-sm font-bold text-white uppercase flex items-center gap-2">
           <i class="fas fa-file-invoice text-amber-400"></i> Corporate Quote Request
         </h3>
         <div class="text-[11px] text-gray-400">Direct Concierge Quote Dispatch</div>
       </div>
-      <button id="closeRfpDrawerBtn" class="text-gray-400 hover:text-white text-lg w-8 h-8 flex items-center justify-center rounded hover:bg-gray-800">
+      <button id="closeRfpDrawerBtn" class="text-gray-400 hover:text-white text-lg w-8 h-8 flex items-center justify-center rounded hover:bg-gray-800" aria-label="Close quote drawer">
         <i class="fas fa-xmark"></i>
       </button>
     </div>
@@ -497,7 +637,7 @@
     <div id="rfpDrawerItems" class="flex-1 overflow-y-auto p-4 space-y-3"></div>
 
     <!-- Submission Area -->
-    <div class="p-5 border-t border-gray-800 bg-gray-950 space-y-4">
+    <div class="p-4 sm:p-5 border-t border-gray-800 bg-gray-950 space-y-4 safe-bottom">
       <div class="space-y-1 text-xs">
         <div class="flex justify-between text-gray-400">
           <span>Estimated Total:</span>
@@ -521,13 +661,13 @@
 
       <div class="space-y-2 pt-1">
         <input type="text" id="rfpCompanyName" placeholder="Company Name (Optional)" 
-               class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2.5 text-xs text-white outline-none focus:border-amber-400">
+               class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2.5 text-xs text-white outline-none focus:border-amber-400 input-mobile-safe">
         <input type="text" id="rfpCustomNotes" placeholder="Special requirements / target delivery date (Optional)" 
-               class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2.5 text-xs text-white outline-none focus:border-amber-400">
+               class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2.5 text-xs text-white outline-none focus:border-amber-400 input-mobile-safe">
       </div>
 
       <div class="space-y-2 pt-1">
-        <button id="submitRfpWhatsappBtn" class="btn-whatsapp w-full py-3 text-xs font-bold shadow-lg shadow-emerald-950">
+        <button id="submitRfpWhatsappBtn" class="btn-whatsapp w-full py-3.5 text-xs font-bold shadow-lg shadow-emerald-950">
           <i class="fa-brands fa-whatsapp text-base"></i> Send Quote Inquiry on WhatsApp
         </button>
         <a href="tel:+919916418879" class="btn-secondary-outline w-full py-2.5 text-xs justify-center">
@@ -549,6 +689,31 @@
       <span class="whatsapp-ping"></span>
     </a>
   </div>
+
+  <!-- =========================================================================
+       MOBILE QUICK ACTIONS DOCK (Android Native Bottom Navigation Bar)
+       ========================================================================= -->
+  <nav class="mobile-bottom-dock md:hidden" aria-label="Mobile Navigation Dock">
+    <a href="#scrollHeroContainer" class="mobile-dock-item">
+      <i class="fas fa-box-open"></i>
+      <span>Unboxing</span>
+    </a>
+    <a href="#catalogSection" class="mobile-dock-item active">
+      <i class="fas fa-boxes-stacked"></i>
+      <span>Catalog</span>
+    </a>
+    <a href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants%20team,%20I%20would%20like%20to%20inquire%20about%20corporate%20gifting%20solutions." 
+       target="_blank" rel="noopener" 
+       class="mobile-dock-item text-emerald-400">
+      <i class="fa-brands fa-whatsapp text-lg"></i>
+      <span>WhatsApp</span>
+    </a>
+    <button onclick="openRfpDrawer()" class="mobile-dock-item relative text-amber-300">
+      <i class="fas fa-file-invoice-dollar text-base"></i>
+      <span>Quote</span>
+      <span id="mobileDockBadge" class="mobile-dock-cart-badge" style="display: none;">0</span>
+    </button>
+  </nav>
 
   <!-- Scripts -->
   <script src="js/video-scroll.js"></script>

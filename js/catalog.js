@@ -474,88 +474,90 @@ function setupFilterListeners() {
   });
 
   const sortSelect = document.getElementById('sortBySelect');
+  const mobileSortSelect = document.getElementById('mobileSortBySelect');
+
   if (sortSelect) {
     sortSelect.addEventListener('change', (e) => {
       filterState.sortBy = e.target.value;
+      if (mobileSortSelect) mobileSortSelect.value = e.target.value;
       renderProducts();
     });
   }
 
-  document.querySelectorAll('input[name="catFilter"]').forEach(cb => {
-    cb.addEventListener('change', () => {
-      filterState.selectedCategories = Array.from(document.querySelectorAll('input[name="catFilter"]:checked')).map(c => c.value);
+  if (mobileSortSelect) {
+    mobileSortSelect.addEventListener('change', (e) => {
+      filterState.sortBy = e.target.value;
+      if (sortSelect) sortSelect.value = e.target.value;
       renderProducts();
     });
-  });
+  }
 
-  document.querySelectorAll('input[name="priceFilter"]').forEach(cb => {
-    cb.addEventListener('change', () => {
-      filterState.priceRanges = Array.from(document.querySelectorAll('input[name="priceFilter"]:checked')).map(c => c.value);
-      renderProducts();
-    });
-  });
+  // Desktop + Mobile Checkbox Syncing
+  const syncCheckboxes = (nameDesktop, nameMobile, stateKey) => {
+    const handler = (sourceName, targetName) => {
+      const checked = Array.from(document.querySelectorAll(`input[name="${sourceName}"]:checked`)).map(c => c.value);
+      filterState[stateKey] = checked;
+      
+      // Mirror to the other checkboxes
+      document.querySelectorAll(`input[name="${targetName}"]`).forEach(cb => {
+        cb.checked = checked.includes(cb.value);
+      });
 
-  document.querySelectorAll('input[name="moqFilter"]').forEach(cb => {
-    cb.addEventListener('change', () => {
-      filterState.moqFilters = Array.from(document.querySelectorAll('input[name="moqFilter"]:checked')).map(c => c.value);
+      updateMobileFilterBadge();
       renderProducts();
-    });
-  });
+    };
 
-  document.querySelectorAll('input[name="brandingFilter"]').forEach(cb => {
-    cb.addEventListener('change', () => {
-      filterState.brandingFilters = Array.from(document.querySelectorAll('input[name="brandingFilter"]:checked')).map(c => c.value);
-      renderProducts();
+    document.querySelectorAll(`input[name="${nameDesktop}"]`).forEach(cb => {
+      cb.addEventListener('change', () => handler(nameDesktop, nameMobile));
     });
-  });
 
-  document.querySelectorAll('input[name="leadTimeFilter"]').forEach(cb => {
-    cb.addEventListener('change', () => {
-      filterState.leadTimeFilters = Array.from(document.querySelectorAll('input[name="leadTimeFilter"]:checked')).map(c => c.value);
-      renderProducts();
+    document.querySelectorAll(`input[name="${nameMobile}"]`).forEach(cb => {
+      cb.addEventListener('change', () => handler(nameMobile, nameDesktop));
     });
-  });
+  };
+
+  syncCheckboxes('catFilter', 'catFilterMobile', 'selectedCategories');
+  syncCheckboxes('priceFilter', 'priceFilterMobile', 'priceRanges');
+  syncCheckboxes('moqFilter', 'moqFilterMobile', 'moqFilters');
+  syncCheckboxes('brandingFilter', 'brandingFilterMobile', 'brandingFilters');
+  syncCheckboxes('leadTimeFilter', 'leadTimeFilterMobile', 'leadTimeFilters');
 
   document.querySelectorAll('input[name="ratingFilter"]').forEach(cb => {
     cb.addEventListener('change', () => {
       const checked = document.querySelector('input[name="ratingFilter"]:checked');
       filterState.minRating = checked ? parseFloat(checked.value) : 0;
+      updateMobileFilterBadge();
       renderProducts();
     });
   });
 }
 
-function setupSearchListeners() {
-  const searchInput = document.getElementById('amazonSearchInput');
-  const searchBtn = document.getElementById('amazonSearchBtn');
-  const deptSelect = document.getElementById('searchDeptSelect');
+function openMobileFilters() {
+  const modal = document.getElementById('mobileFilterModal');
+  if (modal) modal.classList.add('active');
+}
 
-  if (searchInput) {
-    searchInput.addEventListener('input', (e) => {
-      filterState.searchQuery = e.target.value.trim();
-      renderProducts();
-    });
-  }
+function closeMobileFilters() {
+  const modal = document.getElementById('mobileFilterModal');
+  if (modal) modal.classList.remove('active');
+}
 
-  if (searchBtn) {
-    searchBtn.addEventListener('click', () => {
-      if (searchInput) filterState.searchQuery = searchInput.value.trim();
-      renderProducts();
-    });
-  }
+function updateMobileFilterBadge() {
+  const badge = document.getElementById('mobileFilterBadge');
+  if (!badge) return;
 
-  if (deptSelect) {
-    deptSelect.addEventListener('change', (e) => {
-      filterState.category = e.target.value;
-      document.querySelectorAll('.category-pill').forEach(p => {
-        if (p.dataset.category === e.target.value) {
-          p.classList.add('active');
-        } else {
-          p.classList.remove('active');
-        }
-      });
-      renderProducts();
-    });
+  const totalActive = (filterState.selectedCategories?.length || 0) +
+                      (filterState.priceRanges?.length || 0) +
+                      (filterState.moqFilters?.length || 0) +
+                      (filterState.brandingFilters?.length || 0) +
+                      (filterState.leadTimeFilters?.length || 0) +
+                      (filterState.minRating > 0 ? 1 : 0);
+
+  if (totalActive > 0) {
+    badge.textContent = totalActive;
+    badge.style.display = 'inline-flex';
+  } else {
+    badge.style.display = 'none';
   }
 }
 
@@ -582,6 +584,7 @@ function resetFilters() {
     else p.classList.remove('active');
   });
 
+  updateMobileFilterBadge();
   renderProducts();
   showToast('Filters cleared.');
 }
@@ -791,9 +794,24 @@ function closeQuickView() {
 
 function setupModalListeners() {
   const modal = document.getElementById('quickViewModal');
+  const filterModal = document.getElementById('mobileFilterModal');
+  const rfpBackdrop = document.getElementById('rfpBackdrop');
+
   if (modal) {
     modal.addEventListener('click', (e) => {
       if (e.target === modal) closeQuickView();
+    });
+  }
+
+  if (filterModal) {
+    filterModal.addEventListener('click', (e) => {
+      if (e.target === filterModal) closeMobileFilters();
+    });
+  }
+
+  if (rfpBackdrop) {
+    rfpBackdrop.addEventListener('click', () => {
+      closeRfpDrawer();
     });
   }
 
@@ -802,6 +820,32 @@ function setupModalListeners() {
       updateQvCalculations();
     }
   });
+
+  // Android Mobile Bottom Sheet drag-to-close touch gesture
+  const addSwipeDownToClose = (el, closeFn) => {
+    if (!el) return;
+    let startY = 0;
+    let currentY = 0;
+
+    el.addEventListener('touchstart', (e) => {
+      startY = e.touches[0].clientY;
+      currentY = startY;
+    }, { passive: true });
+
+    el.addEventListener('touchmove', (e) => {
+      currentY = e.touches[0].clientY;
+    }, { passive: true });
+
+    el.addEventListener('touchend', () => {
+      if (currentY - startY > 100) {
+        closeFn();
+      }
+    }, { passive: true });
+  };
+
+  addSwipeDownToClose(document.querySelector('#quickViewModal .modal-dialog'), closeQuickView);
+  addSwipeDownToClose(document.querySelector('#mobileFilterModal .mobile-filter-dialog'), closeMobileFilters);
+  addSwipeDownToClose(document.getElementById('rfpDrawer'), closeRfpDrawer);
 }
 
 // RFP Cart & Drawer
@@ -850,10 +894,17 @@ function adjustRfpItemQty(prodId, delta) {
 
 function updateRfpBadge() {
   const badge = document.getElementById('rfpCartCount');
+  const dockBadge = document.getElementById('mobileDockBadge');
   const count = rfpCart.length;
+
   if (badge) {
     badge.textContent = count;
     badge.style.display = count > 0 ? 'flex' : 'none';
+  }
+
+  if (dockBadge) {
+    dockBadge.textContent = count;
+    dockBadge.style.display = count > 0 ? 'flex' : 'none';
   }
 }
 
