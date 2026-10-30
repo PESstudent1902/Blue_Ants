@@ -419,31 +419,31 @@ function renderProducts() {
         <div class="product-info-wrap">
           <div class="flex items-center justify-between text-xs mb-1">
             <span class="product-cat-label">${p.categoryLabel}</span>
-            <span class="text-gray-400 flex items-center gap-1"><i class="fas fa-truck-fast text-emerald-400 text-[11px]"></i> ${p.leadTimeLabel}</span>
+            <span class="text-[#8c8c8c] flex items-center gap-1"><i class="fas fa-truck-fast text-[#7fa894] text-[11px]"></i> ${p.leadTimeLabel}</span>
           </div>
 
           <h3 class="product-card-title" onclick="openQuickView('${p.id}')">${p.name}</h3>
           
           <div class="flex items-center gap-2 text-xs mb-3">
-            <span class="text-amber-400 inline-flex gap-0.5 text-[11px]">
+            <span class="text-[#7fa894] inline-flex gap-0.5 text-[11px]">
               <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </span>
-            <span class="font-bold text-white">${p.rating}</span>
-            <span class="text-gray-500 font-normal">(${p.reviews} reviews)</span>
+            <span class="font-bold text-[#1a1a1a]">${p.rating}</span>
+            <span class="text-[#8c8c8c] font-normal">(${p.reviews} reviews)</span>
           </div>
 
           <div class="price-section mb-5">
             <div class="flex items-baseline gap-1.5">
-              <span class="text-2xl font-extrabold text-white font-mono">$${p.price.toFixed(2)}</span>
-              <span class="text-xs text-gray-400">/ unit</span>
+              <span class="text-2xl font-bold text-[#1a1a1a] font-serif">$${p.price.toFixed(2)}</span>
+              <span class="text-xs text-[#8c8c8c]">/ unit</span>
             </div>
-            <div class="text-[12px] text-emerald-400 font-medium mt-1.5 flex items-center gap-1.5">
-              <i class="fas fa-tags text-[11px] text-emerald-400"></i>
+            <div class="text-[12px] text-[#7fa894] font-medium mt-1.5 flex items-center gap-1.5">
+              <i class="fas fa-tags text-[11px] text-[#7fa894]"></i>
               <span>From <strong>$${lowestTier.price.toFixed(2)}</strong> for ${lowestTier.min}+ units (Save ${lowestTier.discount})</span>
             </div>
           </div>
 
-          <div class="grid grid-cols-2 gap-3 mt-auto pt-3 border-t border-gray-800/80">
+          <div class="grid grid-cols-2 gap-3 mt-auto pt-3 border-t border-[#dcdcdc]">
             <button class="btn-secondary-outline" onclick="openQuickView('${p.id}')">
               Quick View
             </button>
@@ -693,62 +693,62 @@ function openQuickView(prodId) {
           </span>
         </div>
 
-        <h2 class="text-2xl font-bold text-white mt-2">${product.name}</h2>
+        <h2 class="text-2xl font-bold text-[#1a1a1a] mt-2 font-serif">${product.name}</h2>
 
         <div class="flex items-center gap-2 text-xs my-2">
-          <span class="text-amber-400 text-xs inline-flex gap-0.5">
+          <span class="text-[#7fa894] text-xs inline-flex gap-0.5">
             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
           </span>
-          <span class="font-bold text-white">${product.rating}</span>
-          <span class="text-gray-400">(${product.reviews} reviews)</span>
+          <span class="font-bold text-[#1a1a1a]">${product.rating}</span>
+          <span class="text-[#8c8c8c]">(${product.reviews} reviews)</span>
         </div>
 
-        <p class="text-gray-300 text-xs leading-relaxed my-3">${product.description}</p>
+        <p class="text-[#6b6b6b] text-xs leading-relaxed my-3">${product.description}</p>
 
-        <div class="mb-4 bg-gray-900/60 p-4 rounded-xl border border-gray-800">
-          <h4 class="text-xs font-bold uppercase tracking-wider text-amber-300 mb-2">
-            <i class="fas fa-gift text-amber-400 mr-1"></i> Included in Box:
+        <div class="mb-4 bg-[#f5f2ed] p-4 rounded-xl border border-[#dcdcdc]">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-[#7fa894] mb-2">
+            <i class="fas fa-gift text-[#7fa894] mr-1"></i> Included in Box:
           </h4>
-          <ul class="text-xs text-gray-300 space-y-1 list-disc list-inside">
+          <ul class="text-xs text-[#6b6b6b] space-y-1 list-disc list-inside">
             ${product.boxContents.map(item => `<li>${item}</li>`).join('')}
           </ul>
         </div>
 
         <!-- Volume Pricing & Loss Aversion Calculator -->
-        <div class="bg-gray-950 p-4 rounded-xl border border-amber-500/30 mb-6">
+        <div class="bg-white p-4 rounded-xl border border-[#c8dcc8] mb-6 shadow-sm">
           <div class="flex items-center justify-between mb-2">
-            <span class="text-xs font-bold text-amber-300 uppercase flex items-center gap-1.5">
-              <i class="fas fa-calculator"></i> Volume Pricing Calculator:
+            <span class="text-xs font-bold text-[#1a1a1a] uppercase flex items-center gap-1.5">
+              <i class="fas fa-calculator text-[#7fa894]"></i> Volume Pricing Calculator:
             </span>
-            <span class="text-xs text-blue-400 font-semibold" id="qvDiscountBadge">Base Rate</span>
+            <span class="text-xs text-[#7fa894] font-semibold" id="qvDiscountBadge">Base Rate</span>
           </div>
 
           <div class="flex flex-wrap items-center gap-3 my-3">
-            <div class="flex items-center">
-              <button onclick="adjustQvQty(-10)" class="w-12 h-12 min-w-[48px] min-h-[48px] flex items-center justify-center text-lg bg-gray-900 border border-gray-700 text-white rounded-l-lg hover:bg-gray-800 transition-colors touch-manipulation" aria-label="Decrease quantity">-</button>
+            <div class="flex items-center border border-[#dcdcdc] rounded-lg overflow-hidden">
+              <button onclick="adjustQvQty(-10)" class="w-12 h-12 min-w-[48px] min-h-[48px] flex items-center justify-center text-lg bg-[#f5f2ed] text-[#1a1a1a] hover:bg-[#eceae5] transition-colors touch-manipulation" aria-label="Decrease quantity">-</button>
               <input type="number" id="qvQtyInput" value="${product.moq}" min="${product.moq}" step="5"
-                     class="w-20 h-12 bg-gray-900 border-y border-gray-700 text-center text-white font-bold text-sm outline-none">
-              <button onclick="adjustQvQty(10)" class="w-12 h-12 min-w-[48px] min-h-[48px] flex items-center justify-center text-lg bg-gray-900 border border-gray-700 text-white rounded-r-lg hover:bg-gray-800 transition-colors touch-manipulation" aria-label="Increase quantity">+</button>
+                     class="w-20 h-12 bg-white text-center text-[#1a1a1a] font-bold text-sm outline-none border-x border-[#dcdcdc]">
+              <button onclick="adjustQvQty(10)" class="w-12 h-12 min-w-[48px] min-h-[48px] flex items-center justify-center text-lg bg-[#f5f2ed] text-[#1a1a1a] hover:bg-[#eceae5] transition-colors touch-manipulation" aria-label="Increase quantity">+</button>
             </div>
             
             <div class="flex flex-wrap gap-1.5 ml-auto">
-              <button onclick="setQvQty(${product.moq})" class="text-xs px-2.5 py-1.5 rounded-lg bg-gray-800/90 border border-white/[0.08] text-gray-300 hover:text-white hover:border-amber-400/50 transition-colors font-medium">MOQ (${product.moq})</button>
-              <button onclick="setQvQty(${product.moq * 2})" class="text-xs px-2.5 py-1.5 rounded-lg bg-gray-800/90 border border-white/[0.08] text-gray-300 hover:text-white hover:border-amber-400/50 transition-colors font-medium">2x MOQ (${product.moq * 2})</button>
-              <button onclick="setQvQty(${product.moq * 5})" class="text-xs px-2.5 py-1.5 rounded-lg bg-gray-800/90 border border-white/[0.08] text-gray-300 hover:text-white hover:border-amber-400/50 transition-colors font-medium">5x MOQ (${product.moq * 5})</button>
-              <button onclick="setQvQty(50)" class="text-xs px-2.5 py-1.5 rounded-lg bg-gray-800/90 border border-white/[0.08] text-gray-300 hover:text-white hover:border-amber-400/50 transition-colors font-medium">50 pk</button>
-              <button onclick="setQvQty(100)" class="text-xs px-2.5 py-1.5 rounded-lg bg-gray-800/90 border border-white/[0.08] text-gray-300 hover:text-white hover:border-amber-400/50 transition-colors font-medium">100 pk</button>
-              <button onclick="setQvQty(250)" class="text-xs px-2.5 py-1.5 rounded-lg bg-gray-800/90 border border-white/[0.08] text-gray-300 hover:text-white hover:border-amber-400/50 transition-colors font-medium">250 pk</button>
+              <button onclick="setQvQty(${product.moq})" class="text-xs px-2.5 py-1.5 rounded-lg bg-[#f5f2ed] border border-[#dcdcdc] text-[#2c2c2c] hover:border-[#7fa894] transition-colors font-medium">MOQ (${product.moq})</button>
+              <button onclick="setQvQty(${product.moq * 2})" class="text-xs px-2.5 py-1.5 rounded-lg bg-[#f5f2ed] border border-[#dcdcdc] text-[#2c2c2c] hover:border-[#7fa894] transition-colors font-medium">2x MOQ (${product.moq * 2})</button>
+              <button onclick="setQvQty(${product.moq * 5})" class="text-xs px-2.5 py-1.5 rounded-lg bg-[#f5f2ed] border border-[#dcdcdc] text-[#2c2c2c] hover:border-[#7fa894] transition-colors font-medium">5x MOQ (${product.moq * 5})</button>
+              <button onclick="setQvQty(50)" class="text-xs px-2.5 py-1.5 rounded-lg bg-[#f5f2ed] border border-[#dcdcdc] text-[#2c2c2c] hover:border-[#7fa894] transition-colors font-medium">50 pk</button>
+              <button onclick="setQvQty(100)" class="text-xs px-2.5 py-1.5 rounded-lg bg-[#f5f2ed] border border-[#dcdcdc] text-[#2c2c2c] hover:border-[#7fa894] transition-colors font-medium">100 pk</button>
+              <button onclick="setQvQty(250)" class="text-xs px-2.5 py-1.5 rounded-lg bg-[#f5f2ed] border border-[#dcdcdc] text-[#2c2c2c] hover:border-[#7fa894] transition-colors font-medium">250 pk</button>
             </div>
           </div>
 
-          <div class="pt-3 border-t border-gray-800 flex items-center justify-between text-xs">
+          <div class="pt-3 border-t border-[#dcdcdc] flex items-center justify-between text-xs">
             <div>
-              <div class="text-gray-400">Unit Price: <strong class="text-white font-mono" id="qvUnitPrice">$${product.price.toFixed(2)}</strong></div>
-              <div class="text-emerald-400 font-bold tracking-wide mt-0.5" id="qvSavingsTotal">Base Tier</div>
+              <div class="text-[#8c8c8c]">Unit Price: <strong class="text-[#1a1a1a] font-serif" id="qvUnitPrice">$${product.price.toFixed(2)}</strong></div>
+              <div class="text-[#7fa894] font-bold tracking-wide mt-0.5" id="qvSavingsTotal">Base Tier</div>
             </div>
             <div class="text-right">
-              <div class="text-gray-400">Estimated Total:</div>
-              <div class="text-2xl font-bold text-amber-300 font-mono" id="qvTotalPrice">$${(product.price * product.moq).toFixed(2)}</div>
+              <div class="text-[#8c8c8c]">Estimated Total:</div>
+              <div class="text-2xl font-bold text-[#1a1a1a] font-serif" id="qvTotalPrice">$${(product.price * product.moq).toFixed(2)}</div>
             </div>
           </div>
         </div>
@@ -1022,10 +1022,10 @@ function renderRfpDrawer() {
 
   if (rfpCart.length === 0) {
     container.innerHTML = `
-      <div class="py-16 text-center text-gray-400 text-xs">
-        <i class="fas fa-box-open text-4xl text-gray-600 mb-3"></i>
-        <h4 class="text-sm font-bold text-gray-200">Your Quote Request is Empty</h4>
-        <p class="text-gray-500 mt-1">Select corporate gift sets from the catalog to build a quotation.</p>
+      <div class="py-16 text-center text-[#8c8c8c] text-xs">
+        <i class="fas fa-box-open text-4xl text-[#7fa894]/50 mb-3"></i>
+        <h4 class="text-sm font-bold text-[#1a1a1a]">Your Quote Request is Empty</h4>
+        <p class="text-[#8c8c8c] mt-1">Select corporate gift sets from the catalog to build a quotation.</p>
       </div>
     `;
     if (totalDisplay) totalDisplay.textContent = '$0.00';
@@ -1047,20 +1047,20 @@ function renderRfpDrawer() {
     standardGrandTotal += item.basePrice * item.qty;
 
     return `
-      <div class="p-3 rounded-xl bg-gray-900 border border-gray-800 flex gap-3 items-center">
-        <img src="${item.image}" alt="${item.name}" class="w-14 h-14 rounded-lg object-cover border border-gray-700">
+      <div class="p-3 rounded-xl bg-white border border-[#dcdcdc] flex gap-3 items-center shadow-sm">
+        <img src="${item.image}" alt="${item.name}" class="w-14 h-14 rounded-lg object-cover border border-[#dcdcdc]">
         <div class="flex-1 min-w-0">
-          <h4 class="text-xs font-bold text-white truncate">${item.name}</h4>
-          <div class="text-[11px] text-amber-300 mt-0.5">$${appliedTier.price.toFixed(2)}/unit • ${appliedTier.discount !== '0%' ? `Save ${appliedTier.discount}` : 'Base rate'}</div>
+          <h4 class="text-xs font-bold text-[#1a1a1a] truncate">${item.name}</h4>
+          <div class="text-[11px] text-[#7fa894] mt-0.5">$${appliedTier.price.toFixed(2)}/unit • ${appliedTier.discount !== '0%' ? `Save ${appliedTier.discount}` : 'Base rate'}</div>
           
           <div class="flex items-center gap-2 mt-2">
-            <div class="flex items-center border border-gray-700 rounded-lg bg-gray-950">
-              <button onclick="adjustRfpItemQty('${item.id}', -10)" class="w-10 h-10 min-w-[40px] min-h-[40px] flex items-center justify-center text-xs text-gray-400 hover:text-white touch-manipulation" aria-label="Decrease quantity">-</button>
-              <span class="px-2.5 text-xs font-bold text-white font-mono">${item.qty}</span>
-              <button onclick="adjustRfpItemQty('${item.id}', 10)" class="w-10 h-10 min-w-[40px] min-h-[40px] flex items-center justify-center text-xs text-gray-400 hover:text-white touch-manipulation" aria-label="Increase quantity">+</button>
+            <div class="flex items-center border border-[#dcdcdc] rounded-lg bg-[#f5f2ed]">
+              <button onclick="adjustRfpItemQty('${item.id}', -10)" class="w-10 h-10 min-w-[40px] min-h-[40px] flex items-center justify-center text-xs text-[#2c2c2c] hover:bg-[#eceae5] touch-manipulation" aria-label="Decrease quantity">-</button>
+              <span class="px-2.5 text-xs font-bold text-[#1a1a1a] font-serif">${item.qty}</span>
+              <button onclick="adjustRfpItemQty('${item.id}', 10)" class="w-10 h-10 min-w-[40px] min-h-[40px] flex items-center justify-center text-xs text-[#2c2c2c] hover:bg-[#eceae5] touch-manipulation" aria-label="Increase quantity">+</button>
             </div>
-            <span class="text-xs text-gray-400 font-mono font-semibold ml-auto">$${itemTotal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
-            <button onclick="removeFromRfp('${item.id}')" class="text-gray-500 hover:text-rose-400 w-10 h-10 min-w-[40px] min-h-[40px] flex items-center justify-center text-xs touch-manipulation" aria-label="Remove item">
+            <span class="text-xs text-[#1a1a1a] font-serif font-semibold ml-auto">$${itemTotal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+            <button onclick="removeFromRfp('${item.id}')" class="text-[#8c8c8c] hover:text-rose-600 w-10 h-10 min-w-[40px] min-h-[40px] flex items-center justify-center text-xs touch-manipulation" aria-label="Remove item">
               <i class="fas fa-trash-can"></i>
             </button>
           </div>

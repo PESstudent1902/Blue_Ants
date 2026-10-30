@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-  <title>The Blue Ants | Haute Corporate Gifting &amp; Curated Bespoke Suites</title>
-  <meta name="description" content="The Blue Ants delivers bespoke luxury corporate gifting suites, master-crafted personalization, and dedicated concierge stewardship for distinguished enterprises.">
+  <title>The Blue Ants | Curated Corporate Gifting</title>
+  <meta name="description" content="The Blue Ants curates distinguished corporate gift collections with bespoke packaging, artisan branding, and dedicated concierge service.">
 
   <!-- Android & Mobile PWA Optimization -->
-  <meta name="theme-color" content="#07090e">
+  <meta name="theme-color" content="#ffffff">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <link rel="manifest" href="manifest.json">
 
-  <!-- Google Fonts Preconnect -->
+  <!-- Google Fonts Preconnect & Imports -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -25,7 +26,7 @@
   <!-- Custom Styles -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-[#07090e] text-slate-100 antialiased selection:bg-amber-500/20 selection:text-amber-200 has-bottom-dock">
+<body class="bg-[#f7f4ef] text-[#2c2c2c] antialiased selection:bg-[#c8dcc8]/40 selection:text-[#1a1a1a] has-bottom-dock">
 
   <!-- =========================================================================
        GLOBAL BRAND NAVIGATION HEADER
@@ -34,10 +35,10 @@
     <a href="#" class="brand-logo">
       <div class="logo-badge">BA</div>
       <div class="min-w-0">
-        <div class="font-cinzel text-sm sm:text-base font-bold tracking-wider text-white truncate">
+        <div class="font-cinzel text-sm sm:text-base font-bold tracking-wider text-[#1a1a1a] truncate">
           THE BLUE ANTS
         </div>
-        <div class="text-[9px] sm:text-[10px] tracking-widest uppercase text-amber-300/90 font-medium truncate hidden min-[380px]:block">Haute Corporate Gifting</div>
+        <div class="text-[9px] sm:text-[10px] tracking-widest uppercase text-[#7fa894] font-medium truncate hidden min-[380px]:block">Curated Corporate Gifting</div>
       </div>
     </a>
 
@@ -45,8 +46,8 @@
       <a href="#scrollHeroContainer" class="nav-link">Unboxing Ritual</a>
       <a href="#catalogSection" class="nav-link">Curated Catalog</a>
       <a href="#aboutSection" class="nav-link">Bespoke Solutions</a>
-      <a href="tel:+919916418879" class="nav-link text-amber-300 hover:text-amber-200">
-        <i class="fas fa-phone-volume text-amber-400 mr-1.5 text-xs"></i> +91 9916418879
+      <a href="tel:+919916418879" class="nav-link text-[#7fa894] hover:text-[#5a8a76]">
+        <i class="fas fa-phone-volume text-[#7fa894] mr-1.5 text-xs"></i> +91 9916418879
       </a>
     </nav>
 
@@ -54,20 +55,20 @@
       <!-- Direct WhatsApp Action -->
       <a href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants%20team,%20I%20would%20like%20to%20inquire%20about%20bespoke%20corporate%20gifting%20suites%20for%20my%20company." 
          target="_blank" rel="noopener" 
-         class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-emerald-500/10 border border-emerald-500/25 text-xs font-semibold text-emerald-300 hover:bg-emerald-500/20 transition-all shadow-sm">
-        <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
+         class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-emerald-50 border border-emerald-200 text-xs font-semibold text-emerald-700 hover:bg-emerald-100 transition-all shadow-sm">
+        <i class="fa-brands fa-whatsapp text-emerald-600 text-sm"></i>
         <span>WhatsApp</span>
       </a>
 
-      <a href="#catalogSection" class="hidden lg:inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white/[0.04] border border-white/[0.08] hover:border-amber-400/50 text-xs font-medium text-gray-200 transition-all">
-        <i class="fas fa-search text-amber-400/90 text-xs"></i> Browse Suites
+      <a href="#catalogSection" class="hidden lg:inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-[#f5f2ed] border border-[#dcdcdc] hover:border-[#7fa894] text-xs font-medium text-[#2c2c2c] transition-all">
+        <i class="fas fa-search text-[#7fa894] text-xs"></i> Browse Suites
       </a>
 
       <button id="openRfpCartBtn" class="btn-primary-gold relative py-2 px-3 sm:px-4">
         <i class="fas fa-file-invoice-dollar text-xs"></i>
         <span class="hidden sm:inline font-semibold">Request Quote</span>
         <span class="sm:hidden font-semibold">Quote</span>
-        <span id="rfpCartCount" class="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-amber-400 text-black text-[10px] font-extrabold flex items-center justify-center border-2 border-[#07090e]" style="display: none;">0</span>
+        <span id="rfpCartCount" class="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-[#7fa894] text-white text-[10px] font-extrabold flex items-center justify-center border-2 border-white" style="display: none;">0</span>
       </button>
     </div>
   </header>
@@ -90,13 +91,13 @@
         
         <div id="heroIntroBox" class="hero-intro-box">
           <div class="hero-glass-pill">
-            <i class="fas fa-gem text-amber-400 text-xs"></i> Haute Corporate Gifting
+            <i class="fas fa-gem text-[#7fa894] text-xs"></i> Curated Corporate Gifting
           </div>
-          <h1 class="font-cinzel text-2xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+          <h1 class="font-cinzel text-2xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a1a] leading-tight">
             The Pinnacle of <br>
             <span class="gold-gradient-text">Corporate Appreciation</span>
           </h1>
-          <p class="text-slate-300 text-xs sm:text-sm mt-3 leading-relaxed max-w-md">
+          <p class="text-[#6b6b6b] text-xs sm:text-sm mt-3 leading-relaxed max-w-md">
             Bespoke gift suites crafted with artisanal precision, master packaging, and private concierge stewardship for visionary enterprises.
           </p>
 
@@ -106,13 +107,13 @@
             </a>
             <a href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants%20team,%20I%20would%20like%20to%20inquire%20about%20bespoke%20corporate%20gifting%20suites." 
                target="_blank" rel="noopener"
-               class="btn-secondary-outline text-xs py-2.5 px-4 bg-emerald-950/30 border-emerald-500/30 text-emerald-300 hover:bg-emerald-900/40">
-              <i class="fa-brands fa-whatsapp text-emerald-400 mr-1 text-sm"></i> WhatsApp Concierge
+               class="btn-secondary-outline text-xs py-2.5 px-4 bg-emerald-50 border border-emerald-200 text-emerald-700 hover:bg-emerald-100">
+              <i class="fa-brands fa-whatsapp text-emerald-600 mr-1 text-sm"></i> WhatsApp Concierge
             </a>
           </div>
 
           <div class="hero-scroll-indicator">
-            <i class="fas fa-arrow-down-long text-amber-400 animate-bounce"></i>
+            <i class="fas fa-arrow-down-long text-[#7fa894] animate-bounce"></i>
             <span>Scroll down to unbox the suite</span>
           </div>
         </div>
@@ -122,12 +123,12 @@
           <div class="unboxing-progress-bar-track">
             <div id="unboxingProgressBar" class="unboxing-progress-bar-fill" style="width: 0%;"></div>
           </div>
-          <div class="flex items-center justify-between text-[11px] text-gray-300 w-full gap-2">
-            <span class="flex items-center gap-1.5 font-semibold text-white">
-              <i class="fas fa-box-open text-amber-400 text-xs"></i>
+          <div class="flex items-center justify-between text-[11px] text-[#6b6b6b] w-full gap-2">
+            <span class="flex items-center gap-1.5 font-semibold text-[#1a1a1a]">
+              <i class="fas fa-box-open text-[#7fa894] text-xs"></i>
               <span id="unboxingProgressText">Unboxing Suite: 0%</span>
             </span>
-            <a href="#catalogSection" class="text-amber-400 hover:underline font-bold text-[11px] whitespace-nowrap">
+            <a href="#catalogSection" class="text-[#7fa894] hover:underline font-bold text-[11px] whitespace-nowrap">
               Explore Catalog <i class="fas fa-chevron-down text-[9px] ml-0.5"></i>
             </a>
           </div>
@@ -150,18 +151,18 @@
        ========================================================================= -->
   <div class="luxury-marquee-wrap">
     <div class="marquee-track">
-      <div class="marquee-item"><i class="fas fa-stamp text-amber-400"></i> Bespoke 24k Gold Foil Stamping &amp; Master Engraving</div>
-      <div class="marquee-item"><i class="fas fa-truck-fast text-amber-400"></i> Pan-India White-Glove &amp; Global Express Delivery</div>
-      <div class="marquee-item"><i class="fas fa-headset text-amber-400"></i> Dedicated Executive Concierge: <a href="tel:+919916418879" class="text-white hover:underline">+91 9916418879</a></div>
-      <div class="marquee-item"><i class="fas fa-percent text-amber-400"></i> Tiered Enterprise Volume Privileges Up To 40%</div>
-      <div class="marquee-item"><i class="fa-brands fa-whatsapp text-emerald-400"></i> Instant Executive Inquiries via WhatsApp Desk</div>
+      <div class="marquee-item"><i class="fas fa-stamp text-[#7fa894]"></i> Bespoke 24k Gold Foil Stamping &amp; Master Engraving</div>
+      <div class="marquee-item"><i class="fas fa-truck-fast text-[#7fa894]"></i> Pan-India White-Glove &amp; Global Express Delivery</div>
+      <div class="marquee-item"><i class="fas fa-headset text-[#7fa894]"></i> Dedicated Executive Concierge: <a href="tel:+919916418879" class="text-[#1a1a1a] hover:text-[#7fa894] hover:underline">+91 9916418879</a></div>
+      <div class="marquee-item"><i class="fas fa-percent text-[#7fa894]"></i> Tiered Enterprise Volume Privileges Up To 40%</div>
+      <div class="marquee-item"><i class="fa-brands fa-whatsapp text-emerald-600"></i> Instant Executive Inquiries via WhatsApp Desk</div>
       
       <!-- Duplicate for seamless infinite loop -->
-      <div class="marquee-item"><i class="fas fa-stamp text-amber-400"></i> Bespoke 24k Gold Foil Stamping &amp; Master Engraving</div>
-      <div class="marquee-item"><i class="fas fa-truck-fast text-amber-400"></i> Pan-India White-Glove &amp; Global Express Delivery</div>
-      <div class="marquee-item"><i class="fas fa-headset text-amber-400"></i> Dedicated Executive Concierge: <a href="tel:+919916418879" class="text-white hover:underline">+91 9916418879</a></div>
-      <div class="marquee-item"><i class="fas fa-percent text-amber-400"></i> Tiered Enterprise Volume Privileges Up To 40%</div>
-      <div class="marquee-item"><i class="fa-brands fa-whatsapp text-emerald-400"></i> Instant Executive Inquiries via WhatsApp Desk</div>
+      <div class="marquee-item"><i class="fas fa-stamp text-[#7fa894]"></i> Bespoke 24k Gold Foil Stamping &amp; Master Engraving</div>
+      <div class="marquee-item"><i class="fas fa-truck-fast text-[#7fa894]"></i> Pan-India White-Glove &amp; Global Express Delivery</div>
+      <div class="marquee-item"><i class="fas fa-headset text-[#7fa894]"></i> Dedicated Executive Concierge: <a href="tel:+919916418879" class="text-[#1a1a1a] hover:text-[#7fa894] hover:underline">+91 9916418879</a></div>
+      <div class="marquee-item"><i class="fas fa-percent text-[#7fa894]"></i> Tiered Enterprise Volume Privileges Up To 40%</div>
+      <div class="marquee-item"><i class="fa-brands fa-whatsapp text-emerald-600"></i> Instant Executive Inquiries via WhatsApp Desk</div>
     </div>
   </div>
 
@@ -172,11 +173,11 @@
 
     <!-- Search & Subnav Bar -->
     <div class="amazon-subnav">
-      <div class="flex items-center gap-2.5 text-xs text-gray-300">
-        <i class="fas fa-building text-amber-400 text-base"></i>
+      <div class="flex items-center gap-2.5 text-xs text-[#2c2c2c]">
+        <i class="fas fa-building text-[#7fa894] text-base"></i>
         <div>
-          <div class="text-[10px] text-gray-400 uppercase tracking-widest leading-none font-semibold">Enterprise Suites</div>
-          <div class="font-bold text-white text-xs mt-0.5">Bulk Gifting &amp; Bespoke Packaging</div>
+          <div class="text-[10px] text-[#8c8c8c] uppercase tracking-widest leading-none font-semibold">Enterprise Suites</div>
+          <div class="font-bold text-[#1a1a1a] text-xs mt-0.5">Bulk Gifting &amp; Bespoke Packaging</div>
         </div>
       </div>
 
@@ -198,13 +199,13 @@
       <!-- Mobile Filter & Sort Control Bar -->
       <div class="mobile-filter-bar lg:hidden flex items-center justify-between gap-2.5 w-full pt-1">
         <button id="openMobileFilterBtn" onclick="openMobileFilters()" class="mobile-filter-btn" aria-label="Open Filters">
-          <i class="fas fa-sliders text-amber-400"></i>
+          <i class="fas fa-sliders text-[#7fa894]"></i>
           <span>Filters</span>
           <span id="mobileFilterBadge" class="filter-count-badge" style="display: none;">0</span>
         </button>
 
         <div class="flex items-center gap-1.5 flex-1 max-w-[210px] ml-auto">
-          <span class="text-[11px] text-gray-400 whitespace-nowrap">Sort:</span>
+          <span class="text-[11px] text-[#8c8c8c] whitespace-nowrap">Sort:</span>
           <select id="mobileSortBySelect" class="mobile-sort-select" aria-label="Sort products">
             <option value="featured">Featured</option>
             <option value="price-low">Price: Low</option>
@@ -215,10 +216,10 @@
         </div>
       </div>
 
-      <div class="hidden lg:flex items-center gap-4 text-xs text-gray-300">
-        <span class="text-amber-400"><i class="fas fa-circle-check mr-1"></i> Bespoke Branding Included</span>
-        <a href="tel:+919916418879" class="text-gray-300 hover:text-amber-300 flex items-center gap-1">
-          <i class="fas fa-phone text-amber-400 text-[11px]"></i> +91 9916418879
+      <div class="hidden lg:flex items-center gap-4 text-xs text-[#2c2c2c]">
+        <span class="text-[#7fa894]"><i class="fas fa-circle-check mr-1"></i> Bespoke Branding Included</span>
+        <a href="tel:+919916418879" class="text-[#6b6b6b] hover:text-[#7fa894] flex items-center gap-1">
+          <i class="fas fa-phone text-[#7fa894] text-[11px]"></i> +91 9916418879
         </a>
       </div>
     </div>
@@ -238,11 +239,11 @@
       <!-- Left Faceted Filters (Desktop Only - Mobile uses Bottom Sheet) -->
       <aside class="catalog-sidebar hidden lg:block">
         
-        <div class="flex items-center justify-between mb-4 pb-3 border-b border-white/[0.06]">
-          <h3 class="text-xs font-bold uppercase tracking-widest text-white flex items-center gap-2">
-            <i class="fas fa-sliders text-amber-400"></i> Filters
+        <div class="flex items-center justify-between mb-4 pb-3 border-b border-[#dcdcdc]">
+          <h3 class="text-xs font-bold uppercase tracking-widest text-[#1a1a1a] flex items-center gap-2">
+            <i class="fas fa-sliders text-[#7fa894]"></i> Filters
           </h3>
-          <button onclick="resetFilters()" class="text-xs text-amber-400 hover:underline">Clear All</button>
+          <button onclick="resetFilters()" class="text-xs text-[#7fa894] hover:underline font-semibold">Clear All</button>
         </div>
 
         <!-- Filter 1: Category -->
@@ -250,19 +251,19 @@
           <div class="filter-title">Category</div>
           <label class="checkbox-label">
             <span class="flex items-center gap-2"><input type="checkbox" name="catFilter" value="executive"> Executive VIP Suites</span>
-            <span class="text-xs text-gray-500">(3)</span>
+            <span class="text-xs text-[#8c8c8c]">(3)</span>
           </label>
           <label class="checkbox-label">
             <span class="flex items-center gap-2"><input type="checkbox" name="catFilter" value="welcome"> Welcome &amp; Onboarding Kits</span>
-            <span class="text-xs text-gray-500">(2)</span>
+            <span class="text-xs text-[#8c8c8c]">(2)</span>
           </label>
           <label class="checkbox-label">
             <span class="flex items-center gap-2"><input type="checkbox" name="catFilter" value="eco-luxe"> Sustainable Eco-Luxe</span>
-            <span class="text-xs text-gray-500">(1)</span>
+            <span class="text-xs text-[#8c8c8c]">(1)</span>
           </label>
           <label class="checkbox-label">
             <span class="flex items-center gap-2"><input type="checkbox" name="catFilter" value="gourmet"> Gourmet Connoisseur Hampers</span>
-            <span class="text-xs text-gray-500">(2)</span>
+            <span class="text-xs text-[#8c8c8c]">(2)</span>
           </label>
         </div>
 
@@ -271,19 +272,19 @@
           <div class="filter-title">Price Per Unit</div>
           <label class="checkbox-label">
             <span class="flex items-center gap-2"><input type="checkbox" name="priceFilter" value="under50"> Under $50</span>
-            <span class="text-xs text-gray-500">(1)</span>
+            <span class="text-xs text-[#8c8c8c]">(1)</span>
           </label>
           <label class="checkbox-label">
             <span class="flex items-center gap-2"><input type="checkbox" name="priceFilter" value="50to100"> $50 &ndash; $100</span>
-            <span class="text-xs text-gray-500">(4)</span>
+            <span class="text-xs text-[#8c8c8c]">(4)</span>
           </label>
           <label class="checkbox-label">
             <span class="flex items-center gap-2"><input type="checkbox" name="priceFilter" value="100to150"> $100 &ndash; $150</span>
-            <span class="text-xs text-gray-500">(2)</span>
+            <span class="text-xs text-[#8c8c8c]">(2)</span>
           </label>
           <label class="checkbox-label">
             <span class="flex items-center gap-2"><input type="checkbox" name="priceFilter" value="over150"> $150+ Executive VIP</span>
-            <span class="text-xs text-gray-500">(1)</span>
+            <span class="text-xs text-[#8c8c8c]">(1)</span>
           </label>
         </div>
 
@@ -292,15 +293,15 @@
           <div class="filter-title">Minimum Order (MOQ)</div>
           <label class="checkbox-label">
             <span class="flex items-center gap-2"><input type="checkbox" name="moqFilter" value="under25"> &le; 25 units</span>
-            <span class="text-xs text-gray-500">(4)</span>
+            <span class="text-xs text-[#8c8c8c]">(4)</span>
           </label>
           <label class="checkbox-label">
             <span class="flex items-center gap-2"><input type="checkbox" name="moqFilter" value="25to50"> 25 &ndash; 50 units</span>
-            <span class="text-xs text-gray-500">(3)</span>
+            <span class="text-xs text-[#8c8c8c]">(3)</span>
           </label>
           <label class="checkbox-label">
             <span class="flex items-center gap-2"><input type="checkbox" name="moqFilter" value="50plus"> 50+ units</span>
-            <span class="text-xs text-gray-500">(1)</span>
+            <span class="text-xs text-[#8c8c8c]">(1)</span>
           </label>
         </div>
 
@@ -325,7 +326,7 @@
             <span class="flex items-center gap-2">
               <input type="radio" name="ratingFilter" value="4.9"> 
               <span>4.9 &amp; Up</span>
-              <span class="text-amber-400 text-xs inline-flex gap-0.5 ml-1">
+              <span class="text-[#7fa894] text-xs inline-flex gap-0.5 ml-1">
                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </span>
             </span>
@@ -334,7 +335,7 @@
             <span class="flex items-center gap-2">
               <input type="radio" name="ratingFilter" value="4.8"> 
               <span>4.8 &amp; Up</span>
-              <span class="text-amber-400 text-xs inline-flex gap-0.5 ml-1">
+              <span class="text-[#7fa894] text-xs inline-flex gap-0.5 ml-1">
                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i>
               </span>
             </span>
@@ -344,13 +345,13 @@
         <!-- Concierge Direct Helpline Box in Sidebar -->
         <div class="sidebar-concierge-card">
           <div class="flex items-center gap-2 mb-1.5">
-            <i class="fas fa-headset text-amber-400 text-sm"></i>
-            <span class="text-xs font-bold text-white uppercase tracking-wider">Executive Concierge</span>
+            <i class="fas fa-headset text-[#7fa894] text-sm"></i>
+            <span class="text-xs font-bold text-[#1a1a1a] uppercase tracking-wider">Executive Concierge</span>
           </div>
-          <p class="text-[11px] text-gray-400 leading-relaxed">
+          <p class="text-[11px] text-[#6b6b6b] leading-relaxed">
             Need tailored curation, physical samples, or bulk billing? Reach our executive desk directly:
           </p>
-          <div class="mt-2 text-xs font-bold text-amber-300 flex items-center gap-1.5">
+          <div class="mt-2 text-xs font-bold text-[#7fa894] flex items-center gap-1.5">
             <i class="fas fa-phone text-[10px]"></i> +91 9916418879
           </div>
           <a href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants%20team,%20I'd%20like%20to%20discuss%20custom%20corporate%20gifting%20options." 
@@ -365,15 +366,15 @@
       <!-- Right Products Content -->
       <main class="flex flex-col">
         
-        <div class="flex flex-wrap items-center justify-between gap-4 p-4 sm:p-5 rounded-xl bg-[#10141d]/90 border border-white/[0.06] mb-6 backdrop-blur-md">
+        <div class="flex flex-wrap items-center justify-between gap-4 p-4 sm:p-5 rounded-xl bg-white border border-[#dcdcdc] mb-6 shadow-sm">
           <div>
-            <div id="productResultsCount" class="text-sm font-semibold text-white">Showing 1–8 of 8 bespoke corporate suites</div>
-            <div class="text-xs text-gray-400 mt-0.5">Includes luxury gift presentation casing and custom corporate branding options</div>
+            <div id="productResultsCount" class="text-sm font-semibold text-[#1a1a1a]">Showing 1–8 of 8 bespoke corporate suites</div>
+            <div class="text-xs text-[#8c8c8c] mt-0.5">Includes luxury gift presentation casing and custom corporate branding options</div>
           </div>
 
           <div class="flex items-center gap-2 text-xs">
-            <label for="sortBySelect" class="text-gray-400">Sort by:</label>
-            <select id="sortBySelect" class="bg-[#090c13] border border-white/[0.1] text-gray-200 text-xs rounded-lg px-3 py-1.5 outline-none focus:border-amber-400">
+            <label for="sortBySelect" class="text-[#8c8c8c]">Sort by:</label>
+            <select id="sortBySelect" class="bg-white border border-[#dcdcdc] text-[#2c2c2c] text-xs rounded-lg px-3 py-1.5 outline-none focus:border-[#7fa894]">
               <option value="featured">Featured</option>
               <option value="price-low">Price: Low to High</option>
               <option value="price-high">Price: High to Low</option>
@@ -397,45 +398,45 @@
   <!-- =========================================================================
        ABOUT SECTION & DIRECT CORPORATE CONCIERGE
        ========================================================================= -->
-  <section id="aboutSection" class="py-20 sm:py-24 px-6 bg-[#090c13] border-t border-white/[0.06] relative">
+  <section id="aboutSection" class="py-20 sm:py-24 px-6 bg-[#f7f4ef] border-t border-[#dcdcdc] relative">
     <div class="max-w-6xl mx-auto">
       <div class="text-center max-w-2xl mx-auto mb-14">
         <div class="eyebrow-tag mb-2">Bespoke Stewardship</div>
-        <h2 class="font-cinzel text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+        <h2 class="font-cinzel text-2xl sm:text-3xl lg:text-4xl font-bold text-[#1a1a1a]">
           The Art of Thoughtful Enterprise Gifting
         </h2>
-        <p class="text-gray-400 text-xs sm:text-sm mt-3 leading-relaxed">
+        <p class="text-[#6b6b6b] text-xs sm:text-sm mt-3 leading-relaxed">
           Elevating professional relationships through exceptional craftsmanship, tactile unboxing rituals, and white-glove corporate stewardship.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-        <div class="p-7 rounded-xl bg-[#10141d] border border-white/[0.06] hover:border-amber-500/30 transition-all shadow-lg">
-          <div class="w-12 h-12 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4 border border-amber-500/20">
+        <div class="p-7 rounded-xl bg-white border border-[#dcdcdc] hover:border-[#7fa894]/40 transition-all shadow-sm hover:shadow-md">
+          <div class="w-12 h-12 rounded-lg bg-[#c8dcc8]/30 text-[#7fa894] flex items-center justify-center text-xl mb-4 border border-[#c8dcc8]/50">
             <i class="fas fa-layer-group"></i>
           </div>
-          <h3 class="font-bold text-white text-base mb-1.5">Bespoke Curated Collections</h3>
-          <p class="text-gray-400 text-xs leading-relaxed">
+          <h3 class="font-bold text-[#1a1a1a] text-base mb-1.5">Bespoke Curated Collections</h3>
+          <p class="text-[#6b6b6b] text-xs leading-relaxed">
             Exclusively sourced luxury gift suites tailored for executive milestones, client appreciation, leadership summits, and distinguished team celebrations.
           </p>
         </div>
 
-        <div class="p-7 rounded-xl bg-[#10141d] border border-white/[0.06] hover:border-amber-500/30 transition-all shadow-lg">
-          <div class="w-12 h-12 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4 border border-amber-500/20">
+        <div class="p-7 rounded-xl bg-white border border-[#dcdcdc] hover:border-[#7fa894]/40 transition-all shadow-sm hover:shadow-md">
+          <div class="w-12 h-12 rounded-lg bg-[#c8dcc8]/30 text-[#7fa894] flex items-center justify-center text-xl mb-4 border border-[#c8dcc8]/50">
             <i class="fas fa-stamp"></i>
           </div>
-          <h3 class="font-bold text-white text-base mb-1.5">Master Artisan Branding</h3>
-          <p class="text-gray-400 text-xs leading-relaxed">
+          <h3 class="font-bold text-[#1a1a1a] text-base mb-1.5">Master Artisan Branding</h3>
+          <p class="text-[#6b6b6b] text-xs leading-relaxed">
             Seamlessly incorporate your company emblem with 24k gold foil debossing, precision laser etching, custom-dyed silk ribbons, and calligraphic stationery.
           </p>
         </div>
 
-        <div class="p-7 rounded-xl bg-[#10141d] border border-white/[0.06] hover:border-amber-500/30 transition-all shadow-lg">
-          <div class="w-12 h-12 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4 border border-amber-500/20">
+        <div class="p-7 rounded-xl bg-white border border-[#dcdcdc] hover:border-[#7fa894]/40 transition-all shadow-sm hover:shadow-md">
+          <div class="w-12 h-12 rounded-lg bg-[#c8dcc8]/30 text-[#7fa894] flex items-center justify-center text-xl mb-4 border border-[#c8dcc8]/50">
             <i class="fas fa-truck-fast"></i>
           </div>
-          <h3 class="font-bold text-white text-base mb-1.5">White-Glove Global Logistics</h3>
-          <p class="text-gray-400 text-xs leading-relaxed">
+          <h3 class="font-bold text-[#1a1a1a] text-base mb-1.5">White-Glove Global Logistics</h3>
+          <p class="text-[#6b6b6b] text-xs leading-relaxed">
             End-to-end enterprise logistics from coordinated boardroom consignments to individualized domestic and international deliveries with real-time tracking.
           </p>
         </div>
@@ -443,22 +444,22 @@
 
       <!-- Dedicated Direct Concierge Callout Banner -->
       <div class="concierge-highlight-banner">
-        <div class="flex flex-col md:flex-row items-center justify-between gap-6 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-[#10141d] via-[#141924] to-[#10141d] border border-amber-500/25 shadow-2xl">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6 p-6 sm:p-8 rounded-2xl bg-[#c8dcc8]/40 border border-[#c8dcc8] shadow-md">
           <div class="space-y-2 text-center md:text-left">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs font-semibold uppercase tracking-wider">
-              <i class="fas fa-headset"></i> Private Executive Concierge Desk
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/80 border border-[#7fa894]/30 text-[#1a1a1a] text-xs font-semibold uppercase tracking-wider">
+              <i class="fas fa-headset text-[#7fa894]"></i> Private Executive Concierge Desk
             </div>
-            <h3 class="font-cinzel text-xl sm:text-2xl font-bold text-white">
+            <h3 class="font-cinzel text-xl sm:text-2xl font-bold text-[#1a1a1a]">
               Direct Consultation with Our Gifting Directors
             </h3>
-            <p class="text-gray-300 text-xs sm:text-sm max-w-xl leading-relaxed">
-              No automated queues or ticket delays. Connect directly with our executive gifting specialists at <strong class="text-amber-300 font-semibold">+91 9916418879</strong> for custom curation, physical sample evaluations, and tailored enterprise terms.
+            <p class="text-[#2c2c2c] text-xs sm:text-sm max-w-xl leading-relaxed">
+              No automated queues or ticket delays. Connect directly with our executive gifting specialists at <strong class="text-[#1a1a1a] font-bold">+91 9916418879</strong> for custom curation, physical sample evaluations, and tailored enterprise terms.
             </p>
           </div>
 
           <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto shrink-0">
-            <a href="tel:+919916418879" class="btn-secondary-outline text-xs py-3 px-5 justify-center">
-              <i class="fas fa-phone-volume text-amber-400"></i> Call +91 9916418879
+            <a href="tel:+919916418879" class="btn-secondary-outline text-xs py-3 px-5 justify-center bg-white border-[#dcdcdc] text-[#1a1a1a] hover:border-[#7fa894]">
+              <i class="fas fa-phone-volume text-[#7fa894]"></i> Call +91 9916418879
             </a>
             <a href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants%20team,%20I'd%20like%20to%20discuss%20corporate%20gifting%20packages%20for%20our%20company." 
                target="_blank" rel="noopener" 
@@ -475,20 +476,20 @@
   <!-- =========================================================================
        FOOTER
        ========================================================================= -->
-  <footer class="bg-[#07090e] border-t border-white/[0.06] py-12 px-6 text-xs text-gray-500">
+  <footer class="bg-[#f0ede8] border-t border-[#dcdcdc] py-12 px-6 text-xs text-[#8c8c8c]">
     <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-2.5">
         <div class="logo-badge" style="width: 26px; height: 26px; font-size: 11px;">BA</div>
         <div>
-          <span class="font-bold text-white">THE BLUE ANTS</span> &copy; 2026. Haute Corporate Gifting &amp; Curated Bespoke Suites.
+          <span class="font-bold text-[#1a1a1a]">THE BLUE ANTS</span> &copy; 2026. Curated Corporate Gifting &amp; Bespoke Suites.
         </div>
       </div>
 
       <div class="flex flex-wrap items-center gap-6">
-        <a href="#catalogSection" class="text-gray-400 hover:text-amber-300 transition-colors">Catalog</a>
-        <a href="#aboutSection" class="text-gray-400 hover:text-amber-300 transition-colors">About</a>
-        <a href="tel:+919916418879" class="text-amber-300 hover:text-amber-200 font-semibold transition-colors"><i class="fas fa-phone text-xs mr-1"></i> +91 9916418879</a>
-        <a href="#" onclick="openRfpDrawer(); return false;" class="text-gray-400 hover:text-amber-300 transition-colors">Request a Quote</a>
+        <a href="#catalogSection" class="text-[#6b6b6b] hover:text-[#7fa894] transition-colors">Catalog</a>
+        <a href="#aboutSection" class="text-[#6b6b6b] hover:text-[#7fa894] transition-colors">About</a>
+        <a href="tel:+919916418879" class="text-[#7fa894] hover:text-[#5a8a76] font-semibold transition-colors"><i class="fas fa-phone text-xs mr-1"></i> +91 9916418879</a>
+        <a href="#" onclick="openRfpDrawer(); return false;" class="text-[#6b6b6b] hover:text-[#7fa894] transition-colors">Request a Quote</a>
       </div>
     </div>
   </footer>
@@ -499,7 +500,7 @@
   <div id="quickViewModal" class="modal-overlay">
     <div class="modal-dialog">
       <div class="bottom-sheet-handle lg:hidden"></div>
-      <button onclick="closeQuickView()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-lg z-20 w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-[#10141d]/90 flex items-center justify-center border border-white/[0.08] p-2.5 transition-colors touch-manipulation" aria-label="Close modal">
+      <button onclick="closeQuickView()" class="absolute top-4 right-4 text-[#8c8c8c] hover:text-[#1a1a1a] text-lg z-20 w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-white/90 flex items-center justify-center border border-[#dcdcdc] p-2.5 transition-colors touch-manipulation shadow-sm" aria-label="Close modal">
         <i class="fas fa-xmark"></i>
       </button>
       <div id="quickViewContent"></div>
@@ -512,40 +513,40 @@
   <div id="mobileFilterModal" class="modal-overlay">
     <div class="mobile-filter-dialog">
       <div class="bottom-sheet-handle"></div>
-      <div class="p-4 border-b border-white/[0.06] flex items-center justify-between bg-[#090c13] sticky top-0 z-10">
+      <div class="p-4 border-b border-[#dcdcdc] flex items-center justify-between bg-white sticky top-0 z-10">
         <div class="flex items-center gap-2">
-          <i class="fas fa-sliders text-amber-400"></i>
-          <h3 class="text-sm font-bold text-white uppercase tracking-wider">Filter Catalog</h3>
+          <i class="fas fa-sliders text-[#7fa894]"></i>
+          <h3 class="text-sm font-bold text-[#1a1a1a] uppercase tracking-wider">Filter Catalog</h3>
         </div>
         <div class="flex items-center gap-3">
-          <button onclick="resetFilters()" class="text-xs text-amber-400 font-semibold hover:underline">Clear All</button>
-          <button onclick="closeMobileFilters()" class="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-[#10141d] text-gray-300 flex items-center justify-center border border-white/[0.08] p-2.5 transition-colors touch-manipulation" aria-label="Close filters">
+          <button onclick="resetFilters()" class="text-xs text-[#7fa894] font-semibold hover:underline">Clear All</button>
+          <button onclick="closeMobileFilters()" class="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-[#f5f2ed] text-[#2c2c2c] flex items-center justify-center border border-[#dcdcdc] p-2.5 transition-colors touch-manipulation" aria-label="Close filters">
             <i class="fas fa-xmark"></i>
           </button>
         </div>
       </div>
 
       <!-- Mobile Filter Groups -->
-      <div class="p-5 space-y-6 overflow-y-auto flex-1 max-h-[65vh]">
+      <div class="p-5 space-y-6 overflow-y-auto flex-1 max-h-[65vh] bg-white">
         <!-- Category -->
         <div class="mobile-filter-group">
           <div class="filter-title">Category</div>
           <div class="grid grid-cols-1 gap-2.5">
             <label class="mobile-checkbox-label">
               <span class="flex items-center gap-2.5"><input type="checkbox" name="catFilterMobile" value="executive"> Executive VIP Suites</span>
-              <span class="text-xs text-gray-500">(3)</span>
+              <span class="text-xs text-[#8c8c8c]">(3)</span>
             </label>
             <label class="mobile-checkbox-label">
               <span class="flex items-center gap-2.5"><input type="checkbox" name="catFilterMobile" value="welcome"> Welcome &amp; Onboarding Kits</span>
-              <span class="text-xs text-gray-500">(2)</span>
+              <span class="text-xs text-[#8c8c8c]">(2)</span>
             </label>
             <label class="mobile-checkbox-label">
               <span class="flex items-center gap-2.5"><input type="checkbox" name="catFilterMobile" value="eco-luxe"> Sustainable Eco-Luxe</span>
-              <span class="text-xs text-gray-500">(1)</span>
+              <span class="text-xs text-[#8c8c8c]">(1)</span>
             </label>
             <label class="mobile-checkbox-label">
               <span class="flex items-center gap-2.5"><input type="checkbox" name="catFilterMobile" value="gourmet"> Gourmet Connoisseur Hampers</span>
-              <span class="text-xs text-gray-500">(2)</span>
+              <span class="text-xs text-[#8c8c8c]">(2)</span>
             </label>
           </div>
         </div>
@@ -590,17 +591,17 @@
           <div class="filter-title">Fulfillment Speed</div>
           <div class="grid grid-cols-1 gap-2.5">
             <label class="mobile-checkbox-label">
-              <span class="flex items-center gap-2.5"><input type="checkbox" name="leadTimeFilterMobile" value="express"> <i class="fas fa-bolt text-amber-400"></i> 48h Express Ready</span>
+              <span class="flex items-center gap-2.5"><input type="checkbox" name="leadTimeFilterMobile" value="express"> <i class="fas fa-bolt text-[#7fa894]"></i> 48h Express Ready</span>
             </label>
             <label class="mobile-checkbox-label">
-              <span class="flex items-center gap-2.5"><input type="checkbox" name="leadTimeFilterMobile" value="standard"> <i class="fas fa-truck text-gray-400"></i> 5-7 Days Standard</span>
+              <span class="flex items-center gap-2.5"><input type="checkbox" name="leadTimeFilterMobile" value="standard"> <i class="fas fa-truck text-[#8c8c8c]"></i> 5-7 Days Standard</span>
             </label>
           </div>
         </div>
       </div>
 
       <!-- Sticky Mobile Apply Button -->
-      <div class="p-4 border-t border-white/[0.06] bg-[#07090e] sticky bottom-0 z-10">
+      <div class="p-4 border-t border-[#dcdcdc] bg-white sticky bottom-0 z-10">
         <button onclick="closeMobileFilters()" class="btn-primary-gold w-full py-3.5 text-sm font-bold">
           <span>Apply Filters</span>
         </button>
@@ -614,76 +615,76 @@
   <div id="rfpBackdrop" class="modal-overlay"></div>
   <aside id="rfpDrawer" class="rfp-drawer">
     <div class="bottom-sheet-handle lg:hidden"></div>
-    <div class="p-4 sm:p-5 border-b border-white/[0.06] flex items-center justify-between bg-[#090c13]">
+    <div class="p-4 sm:p-5 border-b border-[#dcdcdc] flex items-center justify-between bg-white">
       <div>
-        <h3 class="text-sm font-bold text-white uppercase flex items-center gap-2 tracking-wider">
-          <i class="fas fa-file-invoice text-amber-400"></i> Corporate Quote Request
+        <h3 class="text-sm font-bold text-[#1a1a1a] uppercase flex items-center gap-2 tracking-wider">
+          <i class="fas fa-file-invoice text-[#7fa894]"></i> Corporate Quote Request
         </h3>
-        <div class="text-[11px] text-gray-400 mt-0.5">Direct Executive Concierge Dispatch</div>
+        <div class="text-[11px] text-[#8c8c8c] mt-0.5">Direct Executive Concierge Dispatch</div>
       </div>
-      <button id="closeRfpDrawerBtn" class="text-gray-400 hover:text-white text-lg w-11 h-11 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-white/[0.05] p-2.5 transition-colors touch-manipulation" aria-label="Close quote drawer">
+      <button id="closeRfpDrawerBtn" class="text-[#8c8c8c] hover:text-[#1a1a1a] text-lg w-11 h-11 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-black/[0.05] p-2.5 transition-colors touch-manipulation" aria-label="Close quote drawer">
         <i class="fas fa-xmark"></i>
       </button>
     </div>
 
     <!-- Items List -->
-    <div id="rfpDrawerItems" class="flex-1 overflow-y-auto p-4 space-y-3"></div>
+    <div id="rfpDrawerItems" class="flex-1 overflow-y-auto p-4 space-y-3 bg-[#f7f4ef]"></div>
 
     <!-- Submission Area -->
-    <div class="p-4 sm:p-5 border-t border-white/[0.06] bg-[#07090e] space-y-4 safe-bottom">
+    <div class="p-4 sm:p-5 border-t border-[#dcdcdc] bg-[#f7f4ef] space-y-4 safe-bottom">
       <div class="space-y-1 text-xs">
-        <div class="flex justify-between text-gray-400">
+        <div class="flex justify-between text-[#6b6b6b]">
           <span>Estimated Total:</span>
-          <span id="rfpDrawerTotal" class="text-base font-bold text-amber-300 font-mono">$0.00</span>
+          <span id="rfpDrawerTotal" class="text-base font-bold text-[#7fa894] font-mono">$0.00</span>
         </div>
-        <div class="flex justify-between text-emerald-400 text-[11px]">
+        <div class="flex justify-between text-emerald-600 text-[11px]">
           <span>Applied Volume Privileges:</span>
           <span id="rfpDrawerSavings">$0.00</span>
         </div>
       </div>
 
       <!-- Concierge Notice -->
-      <div class="p-3 rounded-lg bg-[#10141d] border border-amber-500/20 text-xs">
-        <div class="text-amber-300 font-bold flex items-center gap-1.5 mb-0.5">
-          <i class="fas fa-headset text-amber-400"></i> Direct Concierge Desk
+      <div class="p-3 rounded-lg bg-white border border-[#c8dcc8] text-xs shadow-sm">
+        <div class="text-[#7fa894] font-bold flex items-center gap-1.5 mb-0.5">
+          <i class="fas fa-headset text-[#7fa894]"></i> Direct Concierge Desk
         </div>
-        <div class="text-[11px] text-gray-400 leading-relaxed">
-          Quotes are delivered promptly via WhatsApp or direct consultation with our gifting directors at <strong class="text-slate-200">+91 9916418879</strong>.
+        <div class="text-[11px] text-[#6b6b6b] leading-relaxed">
+          Quotes are delivered promptly via WhatsApp or direct consultation with our gifting directors at <strong class="text-[#1a1a1a]">+91 9916418879</strong>.
         </div>
       </div>
 
       <!-- Corporate Quotation Options -->
-      <div class="space-y-2 pt-2 border-t border-white/[0.06]">
-        <div class="text-[11px] font-semibold uppercase tracking-wider text-amber-300 flex items-center gap-1.5 mb-1.5">
-          <i class="fas fa-check-double text-amber-400"></i> Corporate Quotation Options:
+      <div class="space-y-2 pt-2 border-t border-[#dcdcdc]">
+        <div class="text-[11px] font-semibold uppercase tracking-wider text-[#7fa894] flex items-center gap-1.5 mb-1.5">
+          <i class="fas fa-check-double text-[#7fa894]"></i> Corporate Quotation Options:
         </div>
-        <label class="flex items-center gap-2.5 text-xs text-gray-300 cursor-pointer hover:text-white select-none">
-          <input type="checkbox" id="rfpOptionSampleBox" class="w-4 h-4 rounded border-gray-700 bg-gray-900 text-amber-500 focus:ring-0 cursor-pointer">
+        <label class="flex items-center gap-2.5 text-xs text-[#2c2c2c] cursor-pointer hover:text-[#1a1a1a] select-none">
+          <input type="checkbox" id="rfpOptionSampleBox" class="w-4 h-4 rounded border-[#dcdcdc] bg-white text-[#7fa894] focus:ring-0 cursor-pointer">
           <span>Request Physical Sample Box</span>
         </label>
-        <label class="flex items-center gap-2.5 text-xs text-gray-300 cursor-pointer hover:text-white select-none">
-          <input type="checkbox" id="rfpOptionGstInvoice" class="w-4 h-4 rounded border-gray-700 bg-gray-900 text-amber-500 focus:ring-0 cursor-pointer">
+        <label class="flex items-center gap-2.5 text-xs text-[#2c2c2c] cursor-pointer hover:text-[#1a1a1a] select-none">
+          <input type="checkbox" id="rfpOptionGstInvoice" class="w-4 h-4 rounded border-[#dcdcdc] bg-white text-[#7fa894] focus:ring-0 cursor-pointer">
           <span>GST / Tax Invoice Required</span>
         </label>
-        <label class="flex items-center gap-2.5 text-xs text-gray-300 cursor-pointer hover:text-white select-none">
-          <input type="checkbox" id="rfpOptionMultiAddress" class="w-4 h-4 rounded border-gray-700 bg-gray-900 text-amber-500 focus:ring-0 cursor-pointer">
+        <label class="flex items-center gap-2.5 text-xs text-[#2c2c2c] cursor-pointer hover:text-[#1a1a1a] select-none">
+          <input type="checkbox" id="rfpOptionMultiAddress" class="w-4 h-4 rounded border-[#dcdcdc] bg-white text-[#7fa894] focus:ring-0 cursor-pointer">
           <span>Multi-Address Employee Drop-Shipping</span>
         </label>
       </div>
 
       <div class="space-y-2 pt-1">
         <input type="text" id="rfpCompanyName" placeholder="Company Name (Optional)" 
-               class="w-full bg-[#10141d] border border-white/[0.1] rounded-lg px-3 py-2.5 text-xs text-white outline-none focus:border-amber-400 input-mobile-safe">
+               class="w-full bg-white border border-[#dcdcdc] rounded-lg px-3 py-2.5 text-xs text-[#1a1a1a] placeholder-[#8c8c8c] outline-none focus:border-[#7fa894] input-mobile-safe">
         <input type="text" id="rfpCustomNotes" placeholder="Special requirements / target delivery date (Optional)" 
-               class="w-full bg-[#10141d] border border-white/[0.1] rounded-lg px-3 py-2.5 text-xs text-white outline-none focus:border-amber-400 input-mobile-safe">
+               class="w-full bg-white border border-[#dcdcdc] rounded-lg px-3 py-2.5 text-xs text-[#1a1a1a] placeholder-[#8c8c8c] outline-none focus:border-[#7fa894] input-mobile-safe">
       </div>
 
       <div class="space-y-2 pt-1">
         <button id="submitRfpWhatsappBtn" class="btn-whatsapp w-full py-3.5 text-xs font-bold">
           <i class="fa-brands fa-whatsapp text-base"></i> Send Quote Inquiry on WhatsApp
         </button>
-        <a href="tel:+919916418879" class="btn-secondary-outline w-full py-2.5 text-xs justify-center">
-          <i class="fas fa-phone-volume text-amber-400"></i> Call Concierge: +91 9916418879
+        <a href="tel:+919916418879" class="btn-secondary-outline w-full py-2.5 text-xs justify-center bg-white border-[#dcdcdc] text-[#1a1a1a] hover:border-[#7fa894]">
+          <i class="fas fa-phone-volume text-[#7fa894]"></i> Call Concierge: +91 9916418879
         </a>
       </div>
     </div>
@@ -723,11 +724,11 @@
     </a>
     <a href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants%20team,%20I%20would%20like%20to%20inquire%20about%20corporate%20gifting%20solutions." 
        target="_blank" rel="noopener" 
-       class="mobile-dock-item text-emerald-400">
+       class="mobile-dock-item text-emerald-600">
       <i class="fa-brands fa-whatsapp text-lg"></i>
       <span>WhatsApp</span>
     </a>
-    <button onclick="openRfpDrawer()" class="mobile-dock-item relative text-amber-300" aria-label="View quotation drawer">
+    <button onclick="openRfpDrawer()" class="mobile-dock-item relative text-[#7fa894]" aria-label="View quotation drawer">
       <i class="fas fa-file-invoice-dollar text-base"></i>
       <span>Quote</span>
       <span id="mobileDockBadge" class="mobile-dock-cart-badge" style="display: none;">0</span>

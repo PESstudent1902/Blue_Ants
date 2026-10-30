@@ -1,76 +1,88 @@
 /* ==========================================================================
    THE BLUE ANTS — HAUTE CORPORATE GIFTING & BESPOKE SUITES
    Bespoke Editorial Luxury Visual Identity & Design System
-   Aesthetic: Net-a-Porter, Tiffany & Co., Aesop
+   Heritage British Department Store Aesthetic: Fortnum & Mason Inspired
+   Color Palette: Eau de Nil, Cream, Ivory, Charcoal, Soft Gold & Downy Teal
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
   /* ==========================================================================
-     1. OBSIDIAN NOIR CANVAS (Deep, velvety, rich black foundations)
+     1. FORTNUM & MASON SIGNATURE HERITAGE PALETTE
      ========================================================================== */
-  --bg-obsidian-deep: #07090e;      /* Ultimate page canvas background */
-  --bg-obsidian-noir: #090c13;      /* Elevated section background */
-  --bg-charcoal-base: #10141d;      /* Primary card & surface foundation */
-  --bg-charcoal-surface: #141924;   /* Secondary elevated surface */
-  --bg-charcoal-hover: #1a202e;     /* Interactive hover state */
-  --bg-charcoal-subtle: #0d1017;    /* Inset well / table header */
+  --fm-eau-de-nil: #c8dcc8;        /* Signature F&M Pale Sage Green — DNA Anchor */
+  --fm-eau-de-nil-deep: #7fa894;   /* Rich Eau de Nil for primary buttons & active states */
+  --fm-downy: #6ec5b8;             /* Signature Downy Teal Top Accent Stripe */
+  --fm-cream: #f7f4ef;             /* Primary Page Canvas (Warm Cream / Ivory) */
+  --fm-ivory: #faf8f5;             /* Secondary Elevated Light Surface */
+  --fm-charcoal: #2c2c2c;          /* Deep Charcoal Body Text (Not pure black) */
+  --fm-dark: #1a1a1a;              /* Headings & Prominent Editorial Titles */
+  --fm-border: #dcdcdc;            /* Gainsboro Fine Hairline Borders */
+  --fm-gold-accent: #c9a84c;       /* Heritage Warm Brass (Used Sparingly) */
+
+  /* Palette swap mappings to transform dark obsidian variables into F&M light palette */
+  --bg-obsidian-deep: #f7f4ef;      /* Warm cream canvas */
+  --bg-obsidian-noir: #ffffff;      /* Pure white sections */
+  --bg-charcoal-base: #ffffff;      /* Primary card & surface foundation */
+  --bg-charcoal-surface: #f5f2ed;   /* Slightly warm gray surface */
+  --bg-charcoal-hover: #eceae5;     /* Interactive hover state */
+  --bg-charcoal-subtle: #f0ede8;    /* Subtle inset well / table header */
 
   /* Legacy variable mappings for backward compatibility */
-  --bg-noir: #07090e;
-  --bg-surface: #10141d;
-  --bg-card: #10141d;
-  --bg-card-hover: #141924;
+  --bg-noir: #f7f4ef;
+  --bg-surface: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f5f2ed;
 
   /* ==========================================================================
-     2. CHAMPAGNE GOLD FOIL (Refined, understated metallic accents)
+     2. METALLIC & HERITAGE ACCENTS
      ========================================================================== */
-  --gold-primary: #d4af37;          /* Classic 24k champagne gold */
-  --gold-light: #e6ca65;            /* Soft champagne highlight */
-  --gold-dark: #997a1e;             /* Deep antique bronze */
-  --gold-muted: rgba(212, 175, 55, 0.10); /* Subtle badge & selection fill */
-  --gold-hairline: rgba(212, 175, 55, 0.22); /* Restrained metallic border */
-  --gold-foil: linear-gradient(135deg, #f5e4a8 0%, #d4af37 50%, #9e7d23 100%);
-  --gold-foil-subtle: linear-gradient(135deg, rgba(245, 228, 168, 0.15) 0%, rgba(212, 175, 55, 0.08) 100%);
-  --gold-gradient: linear-gradient(135deg, #f5e4a8 0%, #d4af37 50%, #9e7d23 100%);
+  --gold-primary: #c9a84c;          /* Warmer brass / antique gold */
+  --gold-light: #b8860b;            /* DarkGoldenrod for accent text/borders */
+  --gold-dark: #8b6914;             /* Deep burnished bronze */
+  --gold-muted: rgba(200, 220, 200, 0.25); /* Subtle Eau de Nil badge & selection fill */
+  --gold-hairline: rgba(127, 168, 148, 0.35); /* Teal-tinted restrained border */
+  --gold-foil: linear-gradient(135deg, #7fa894 0%, #5e8f7a 100%); /* F&M rich teal signature */
+  --gold-foil-subtle: linear-gradient(135deg, rgba(200, 220, 200, 0.35) 0%, rgba(127, 168, 148, 0.15) 100%);
+  --gold-gradient: linear-gradient(135deg, #7fa894 0%, #5e8f7a 100%);
 
   /* ==========================================================================
      3. EDITORIAL TYPOGRAPHY & NEUTRALS
      ========================================================================== */
-  --text-white: #ffffff;            /* Pure editorial title white */
-  --text-primary: #f1f5f9;          /* High-legibility body off-white */
-  --text-secondary: #94a3b8;        /* Slate neutral body secondary */
-  --text-muted: #64748b;            /* Metadata, captions, subtle hints */
-  --text-gold-foil: #e6ca65;        /* Curated gold text highlight */
+  --text-white: #1a1a1a;            /* Primary dark title color (mapped for compatibility) */
+  --text-primary: #2c2c2c;          /* Charcoal primary body text */
+  --text-secondary: #6b6b6b;        /* Medium neutral secondary text */
+  --text-muted: #8c8c8c;            /* Light gray metadata, captions, subtle hints */
+  --text-gold-foil: #7fa894;        /* Curated teal text highlight */
 
-  --font-display: 'Cormorant Garamond', 'Cinzel', Georgia, serif;
-  --font-serif: 'Cormorant Garamond', 'Cinzel', Georgia, serif;
-  --font-cinzel: 'Cinzel', 'Cormorant Garamond', Georgia, serif;
+  --font-display: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-cinzel: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
   --font-cormorant: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Inter', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   /* ==========================================================================
-     4. HAIRLINE BORDERS & SOFT SHADOWS (Zero harsh glows)
+     4. HAIRLINE BORDERS & SOFT SHADOWS (Zero harsh glows, quiet luxury)
      ========================================================================== */
-  --border-hairline: rgba(255, 255, 255, 0.06);       /* Ultra-fine card border */
-  --border-hairline-light: rgba(255, 255, 255, 0.10); /* Active/hover border */
-  --border-hairline-gold: rgba(212, 175, 55, 0.22);   /* Restrained gold hairline */
-  --border-subtle: rgba(255, 255, 255, 0.06);
-  --border-gold: rgba(212, 175, 55, 0.22);
+  --border-hairline: rgba(0, 0, 0, 0.08);       /* Ultra-fine card border */
+  --border-hairline-light: rgba(0, 0, 0, 0.12); /* Active/hover border */
+  --border-hairline-gold: rgba(127, 168, 148, 0.35); /* Teal-tinted hairline */
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-gold: rgba(127, 168, 148, 0.35);
 
-  --shadow-editorial-sm: 0 4px 16px -2px rgba(0, 0, 0, 0.5);
-  --shadow-editorial-md: 0 12px 32px -6px rgba(0, 0, 0, 0.65), 0 4px 12px -2px rgba(0, 0, 0, 0.4);
-  --shadow-editorial-lg: 0 24px 50px -10px rgba(0, 0, 0, 0.8), 0 8px 20px -4px rgba(0, 0, 0, 0.5);
+  --shadow-editorial-sm: 0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-editorial-md: 0 6px 18px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.03);
+  --shadow-editorial-lg: 0 16px 36px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
 
   /* ==========================================================================
      5. CONCIERGE & WHATSAPP INTEGRATION
      ========================================================================== */
-  --emerald-concierge: #10b981;
-  --emerald-surface: rgba(16, 185, 129, 0.10);
-  --emerald-border: rgba(16, 185, 129, 0.22);
-  --emerald-gradient: linear-gradient(135deg, #10b981 0%, #059669 100%);
-  --emerald-whatsapp: #10b981;
+  --emerald-concierge: #25d366;
+  --emerald-surface: rgba(37, 211, 102, 0.08);
+  --emerald-border: rgba(37, 211, 102, 0.25);
+  --emerald-gradient: linear-gradient(135deg, #25d366 0%, #1ea952 100%);
+  --emerald-whatsapp: #25d366;
 
   /* ==========================================================================
      6. MOTION & SPRINGS
@@ -80,7 +92,9 @@
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* Base Reset & Core Document Styles */
+/* ==========================================================================
+   BASE RESET & CORE DOCUMENT STYLES
+   ========================================================================== */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -89,14 +103,14 @@
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark;
-  background-color: var(--bg-obsidian-deep);
+  color-scheme: light;
+  background-color: var(--fm-cream);
   -webkit-text-size-adjust: 100%;
 }
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--bg-obsidian-deep);
+  background-color: var(--fm-cream);
   color: var(--text-primary);
   overflow-x: hidden;
   line-height: 1.7;
@@ -109,7 +123,7 @@ body {
 /* Classical Major Third Typography System */
 h1, h2, h3, h4, .font-display, .font-serif {
   font-family: var(--font-display);
-  color: var(--text-white);
+  color: var(--fm-dark);
   font-feature-settings: "kern" 1, "liga" 1;
 }
 
@@ -125,33 +139,33 @@ h1, h2, h3, h4, .font-display, .font-serif {
   font-family: var(--font-sans);
 }
 
-/* Headings scale */
+/* Headings scale with generous letter-spacing */
 h1, .heading-1 {
   font-size: clamp(2.2rem, 4.5vw, 3.8rem);
   line-height: 1.15;
   font-weight: 600;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.02em;
 }
 
 h2, .heading-2 {
   font-size: clamp(1.75rem, 3.2vw, 2.44rem);
   line-height: 1.25;
   font-weight: 600;
-  letter-spacing: 0.00em;
+  letter-spacing: 0.03em;
 }
 
 h3, .heading-3 {
   font-size: clamp(1.25rem, 2vw, 1.56rem);
   line-height: 1.30;
   font-weight: 600;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
 }
 
 h4, .heading-4 {
   font-size: 1.25rem;
   line-height: 1.35;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
 }
 
 p, .editorial-prose {
@@ -162,39 +176,40 @@ p, .editorial-prose {
 
 .eyebrow-tag {
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--gold-light);
+  letter-spacing: 0.20em;
+  color: var(--fm-eau-de-nil-deep);
 }
 
-/* Foil Metallic Text Treatment */
+/* Teal Signature Metallic / Foil Text Treatment */
 .gold-gradient-text {
-  background: var(--gold-foil);
+  background: linear-gradient(135deg, #7fa894 0%, #4a7561 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
   position: relative;
+  font-weight: 700;
 }
 
-/* Minimalist Editorial Scrollbar */
+/* Minimalist Light Editorial Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--bg-obsidian-deep);
+  background: var(--fm-cream);
 }
 ::-webkit-scrollbar-thumb {
-  background: #1c2331;
-  border-radius: 3px;
+  background: #d0ccc4;
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--gold-dark);
+  background: var(--fm-eau-de-nil-deep);
 }
 
 /* ==========================================================================
-   GLOBAL BRAND NAVIGATION HEADER
+   GLOBAL BRAND NAVIGATION HEADER (Fortnum & Mason Style)
    ========================================================================== */
 .brand-header {
   position: fixed;
@@ -202,16 +217,16 @@ p, .editorial-prose {
   left: 0;
   width: 100%;
   height: 76px;
-  background: rgba(7, 9, 14, 0.88);
-  backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
-  border-bottom: 1px solid var(--border-hairline);
+  background: #ffffff;
+  border-top: 4px solid var(--fm-downy); /* Signature F&M Teal Top Border */
+  border-bottom: 1px solid var(--fm-border);
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 3.5rem;
   transition: all 0.3s var(--ease-editorial);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
 }
 
 .brand-logo {
@@ -223,23 +238,24 @@ p, .editorial-prose {
 }
 
 .brand-logo:hover {
-  opacity: 0.9;
+  opacity: 0.92;
 }
 
 .logo-badge {
   width: 38px;
   height: 38px;
-  border-radius: 8px;
-  background: var(--gold-foil);
+  border-radius: 3px;
+  background: var(--fm-eau-de-nil-deep);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #07090e;
+  color: #ffffff;
   font-size: 14px;
   font-weight: 800;
-  font-family: var(--font-cinzel);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: var(--font-display);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: var(--shadow-editorial-sm);
+  letter-spacing: 0.04em;
   transition: transform 0.25s var(--ease-editorial);
 }
 
@@ -248,21 +264,22 @@ p, .editorial-prose {
 }
 
 .nav-link {
-  color: var(--text-secondary);
+  color: var(--fm-charcoal);
   text-decoration: none;
-  font-size: 0.875rem;
-  font-weight: 500;
+  font-size: 0.8125rem;
+  font-weight: 600;
   padding: 8px 16px;
-  border-radius: 8px;
-  letter-spacing: 0.02em;
+  border-radius: 3px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
   transition: color 0.2s ease, background-color 0.2s ease;
   display: inline-flex;
   align-items: center;
 }
 
 .nav-link:hover {
-  color: var(--gold-light);
-  background: rgba(255, 255, 255, 0.03);
+  color: var(--fm-eau-de-nil-deep);
+  background: rgba(200, 220, 200, 0.25);
 }
 
 /* ==========================================================================
@@ -272,7 +289,7 @@ p, .editorial-prose {
   position: relative;
   width: 100%;
   height: 260vh;
-  background-color: var(--bg-obsidian-deep);
+  background-color: var(--fm-cream);
   z-index: 10;
 }
 
@@ -288,7 +305,7 @@ p, .editorial-prose {
   justify-content: center;
 }
 
-/* Dual Canvas Wrapper: Background Mirror Blur + Crisp Foreground */
+/* Dual Canvas Wrapper: Light Radial Heritage Glow */
 .canvas-wrapper {
   position: absolute;
   top: 0;
@@ -299,11 +316,11 @@ p, .editorial-prose {
   align-items: center;
   justify-content: center;
   z-index: 1;
-  background: radial-gradient(circle at center, #101520 0%, #07090e 85%);
+  background: radial-gradient(circle at center, #ede9e2 0%, #f7f4ef 85%);
   overflow: hidden;
 }
 
-/* Dynamic Mirrored Blur Canvas (Ultra-wide desktop pillarbox elimination) */
+/* Dynamic Mirrored Blur Canvas (Soft warm ambient diffusion) */
 .hero-blur-canvas {
   position: absolute;
   top: -8%;
@@ -311,23 +328,23 @@ p, .editorial-prose {
   width: 116%;
   height: 116%;
   object-fit: cover;
-  filter: blur(55px) brightness(0.6) saturate(160%);
-  -webkit-filter: blur(55px) brightness(0.6) saturate(160%);
+  filter: blur(55px) brightness(1.04) saturate(120%);
+  -webkit-filter: blur(55px) brightness(1.04) saturate(120%);
   transform: scale(1.15);
   z-index: 1;
   pointer-events: none;
-  opacity: 0.9;
+  opacity: 0.75;
   transition: opacity 0.4s ease;
 }
 
-/* Crisp Foreground Scrubbing Canvas */
+/* Crisp Foreground Scrubbing Canvas with Gentle Shadow */
 .hero-sharp-canvas {
   position: relative;
   width: 100%;
   height: 100%;
   object-fit: contain;
   z-index: 2;
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.85));
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.12));
 }
 
 /* Minimalist Clean Intro Overlay */
@@ -346,24 +363,24 @@ p, .editorial-prose {
   box-sizing: border-box;
 }
 
-/* Hero Intro Box with Editorial Luxury Scrim */
+/* Hero Intro Box: Pure White Architectural Card */
 .hero-intro-box {
   position: relative;
   max-width: 520px;
   pointer-events: auto;
   z-index: 25;
-  padding: 2rem 2.25rem;
-  border-radius: 1.25rem;
-  background: radial-gradient(130% 120% at 0% 0%, rgba(7, 9, 14, 0.94) 0%, rgba(9, 12, 19, 0.88) 65%, rgba(16, 20, 29, 0.75) 100%);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--border-hairline-gold);
-  box-shadow: var(--shadow-editorial-lg);
+  padding: 2.25rem 2.5rem;
+  border-radius: 4px;
+  background: #ffffff;
+  border: 1px solid var(--fm-border);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
   transition: opacity 0.5s var(--ease-smooth), transform 0.5s var(--ease-smooth);
 }
 
 .hero-intro-box h1 {
-  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.95), 0 2px 6px rgba(0, 0, 0, 0.9);
+  text-shadow: none;
+  color: var(--fm-dark);
+  letter-spacing: 0.02em;
 }
 
 .hero-intro-box .btn-primary-gold,
@@ -373,20 +390,19 @@ p, .editorial-prose {
   pointer-events: auto;
 }
 
+/* Eau de Nil Tinted Hero Pill */
 .hero-glass-pill {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 6px 14px;
-  border-radius: 20px;
-  background: rgba(16, 20, 29, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border-hairline-gold);
-  color: var(--gold-light);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.10em;
+  border-radius: 3px;
+  background: rgba(200, 220, 200, 0.5);
+  border: 1px solid rgba(127, 168, 148, 0.45);
+  color: var(--fm-eau-de-nil-deep);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   margin-bottom: 14px;
 }
@@ -399,7 +415,7 @@ p, .editorial-prose {
   font-size: 0.8125rem;
   font-weight: 500;
   margin-top: 20px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
 }
 
 /* Floating Unboxing Progress Meter Pill */
@@ -410,10 +426,8 @@ p, .editorial-prose {
   transform: translateX(-50%);
   z-index: 25;
   pointer-events: auto;
-  background: rgba(9, 12, 19, 0.94);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--border-hairline-gold);
+  background: #ffffff;
+  border: 1px solid var(--fm-border);
   border-radius: 30px;
   padding: 9px 20px;
   display: flex;
@@ -428,14 +442,14 @@ p, .editorial-prose {
 .unboxing-progress-bar-track {
   width: 100%;
   height: 3px;
-  background: rgba(255, 255, 255, 0.08);
+  background: #e8e5df;
   border-radius: 3px;
   overflow: hidden;
 }
 
 .unboxing-progress-bar-fill {
   height: 100%;
-  background: var(--gold-foil);
+  background: var(--fm-eau-de-nil-deep);
   border-radius: 3px;
   transition: width 0.1s linear;
 }
@@ -454,14 +468,14 @@ p, .editorial-prose {
 }
 
 /* ==========================================================================
-   LUXURY MARQUEE TICKER TAPE
+   LUXURY MARQUEE TICKER TAPE (F&M Eau de Nil Ribbon)
    ========================================================================== */
 .luxury-marquee-wrap {
   position: relative;
   z-index: 25;
-  background: var(--bg-obsidian-noir);
-  border-top: 1px solid var(--border-hairline-gold);
-  border-bottom: 1px solid var(--border-hairline-gold);
+  background: var(--fm-eau-de-nil);
+  border-top: 1px solid rgba(127, 168, 148, 0.35);
+  border-bottom: 1px solid rgba(127, 168, 148, 0.35);
   overflow: hidden;
   padding: 13px 0;
 }
@@ -481,17 +495,22 @@ p, .editorial-prose {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: var(--text-secondary);
+  color: var(--fm-charcoal);
   font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   white-space: nowrap;
 }
 
+.marquee-item i {
+  color: var(--fm-eau-de-nil-deep) !important;
+}
+
 .marquee-item a {
-  color: var(--gold-light);
-  text-decoration: none;
+  color: var(--fm-eau-de-nil-deep) !important;
+  text-decoration: underline;
+  font-weight: 700;
 }
 
 @keyframes marqueeSlide {
@@ -505,15 +524,15 @@ p, .editorial-prose {
 .catalog-section {
   position: relative;
   z-index: 30;
-  background-color: var(--bg-obsidian-deep);
+  background-color: var(--fm-cream);
   min-height: 100vh;
-  border-top: 1px solid var(--border-hairline-gold);
+  border-top: 1px solid var(--fm-border);
 }
 
-/* Amazon / Net-a-Porter Style Search Subnav */
+/* Search & Subnav Bar */
 .amazon-subnav {
-  background-color: var(--bg-charcoal-base);
-  border-bottom: 1px solid var(--border-hairline);
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--fm-border);
   padding: 16px 3.5rem;
   display: flex;
   align-items: center;
@@ -525,9 +544,9 @@ p, .editorial-prose {
 .search-bar-container {
   display: flex;
   align-items: center;
-  background: var(--bg-obsidian-noir);
-  border: 1px solid var(--border-hairline-gold);
-  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid var(--fm-border);
+  border-radius: 4px;
   overflow: hidden;
   flex: 1;
   max-width: 680px;
@@ -535,19 +554,20 @@ p, .editorial-prose {
 }
 
 .search-bar-container:focus-within {
-  border-color: var(--gold-light);
-  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.15);
+  border-color: var(--fm-eau-de-nil-deep);
+  box-shadow: 0 0 0 2px rgba(127, 168, 148, 0.20);
 }
 
 .search-dept-select {
-  background: var(--bg-charcoal-surface);
-  color: var(--text-secondary);
+  background: var(--fm-ivory);
+  color: var(--text-primary);
   border: none;
   padding: 12px 16px;
   font-size: 0.85rem;
   outline: none;
-  border-right: 1px solid var(--border-hairline);
+  border-right: 1px solid var(--fm-border);
   cursor: pointer;
+  font-weight: 500;
 }
 
 .search-input-field {
@@ -565,8 +585,8 @@ p, .editorial-prose {
 }
 
 .search-btn {
-  background: var(--gold-foil);
-  color: #07090e;
+  background: var(--fm-eau-de-nil-deep);
+  color: #ffffff;
   border: none;
   padding: 12px 24px;
   font-weight: 700;
@@ -574,11 +594,11 @@ p, .editorial-prose {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.2s;
+  transition: background-color 0.2s ease;
 }
 
 .search-btn:hover {
-  opacity: 0.9;
+  background: #6d9682;
 }
 
 /* Category Pills Strip */
@@ -586,8 +606,8 @@ p, .editorial-prose {
   display: flex;
   gap: 12px;
   padding: 16px 3.5rem;
-  background: var(--bg-obsidian-noir);
-  border-bottom: 1px solid var(--border-hairline);
+  background: #ffffff;
+  border-bottom: 1px solid var(--fm-border);
   overflow-x: auto;
   scrollbar-width: none;
 }
@@ -600,12 +620,14 @@ p, .editorial-prose {
   display: inline-flex;
   align-items: center;
   padding: 9px 20px;
-  border-radius: 22px;
-  background: var(--bg-charcoal-base);
-  border: 1px solid var(--border-hairline);
-  color: var(--text-secondary);
-  font-size: 0.84rem;
-  font-weight: 500;
+  border-radius: 3px;
+  background: #ffffff;
+  border: 1px solid var(--fm-border);
+  color: var(--text-primary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   cursor: pointer;
   transition: all 0.2s ease;
   white-space: nowrap;
@@ -613,9 +635,10 @@ p, .editorial-prose {
 
 .category-pill:hover,
 .category-pill.active {
-  background: var(--gold-muted);
-  border-color: var(--gold-primary);
-  color: var(--gold-light);
+  background: var(--fm-eau-de-nil);
+  border-color: var(--fm-eau-de-nil-deep);
+  color: var(--fm-charcoal);
+  font-weight: 700;
 }
 
 /* Spacious Editorial Catalog Grid Layout */
@@ -630,11 +653,9 @@ p, .editorial-prose {
 
 /* Left Sidebar Filter */
 .catalog-sidebar {
-  background: rgba(16, 20, 29, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--border-hairline);
-  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid var(--fm-border);
+  border-radius: 4px;
   padding: 24px;
   height: fit-content;
   position: sticky;
@@ -645,7 +666,7 @@ p, .editorial-prose {
 .filter-group {
   margin-bottom: 26px;
   padding-bottom: 20px;
-  border-bottom: 1px solid var(--border-hairline);
+  border-bottom: 1px solid var(--fm-border);
 }
 
 .filter-group:last-child {
@@ -655,11 +676,12 @@ p, .editorial-prose {
 }
 
 .filter-title {
-  font-size: 0.75rem;
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--gold-light);
+  letter-spacing: 0.14em;
+  color: var(--fm-eau-de-nil-deep);
   margin-bottom: 14px;
 }
 
@@ -681,7 +703,7 @@ p, .editorial-prose {
 
 .checkbox-label input[type="checkbox"],
 .checkbox-label input[type="radio"] {
-  accent-color: var(--gold-primary);
+  accent-color: var(--fm-eau-de-nil-deep);
   width: 16px;
   height: 16px;
   cursor: pointer;
@@ -689,10 +711,10 @@ p, .editorial-prose {
 
 .sidebar-concierge-card {
   margin-top: 22px;
-  padding: 16px;
-  border-radius: 12px;
-  background: var(--bg-obsidian-noir);
-  border: 1px solid var(--border-hairline-gold);
+  padding: 18px;
+  border-radius: 4px;
+  background: var(--fm-ivory);
+  border: 1px solid var(--fm-eau-de-nil);
 }
 
 /* Product Cards Grid — Spacious & Editorial */
@@ -703,28 +725,27 @@ p, .editorial-prose {
 }
 
 .product-card {
-  background: var(--bg-charcoal-base);
-  border: 1px solid var(--border-hairline);
-  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid var(--fm-border);
+  border-radius: 4px;
   overflow: hidden;
-  transition: transform 0.35s var(--ease-editorial), border-color 0.35s ease, box-shadow 0.35s ease;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
   display: flex;
   flex-direction: column;
   position: relative;
-  box-shadow: var(--shadow-editorial-md);
+  box-shadow: var(--shadow-editorial-sm);
 }
 
 .product-card:hover {
-  border-color: var(--border-hairline-gold);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-editorial-lg);
+  border-color: var(--fm-eau-de-nil-deep);
+  box-shadow: var(--shadow-editorial-md);
 }
 
 .product-image-container {
   position: relative;
   width: 100%;
   padding-top: 76%;
-  background: var(--bg-obsidian-noir);
+  background: #faf8f5;
   overflow: hidden;
   cursor: pointer;
 }
@@ -740,25 +761,23 @@ p, .editorial-prose {
 }
 
 .product-card:hover .product-image-container img {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
 
-/* Refined Editorial Badges (No Neon Clichés) */
+/* Refined Editorial Badges (Heritage Minimal Style) */
 .card-badge-choice {
   position: absolute;
   top: 14px;
   left: 14px;
-  background: rgba(9, 12, 19, 0.92);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid var(--border-hairline-gold);
-  color: var(--gold-light);
-  font-size: 0.70rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
+  background: #ffffff;
+  border: 1px solid var(--fm-eau-de-nil-deep);
+  color: var(--fm-eau-de-nil-deep);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  padding: 5px 12px;
-  border-radius: 6px;
+  padding: 4px 10px;
+  border-radius: 2px;
   z-index: 2;
   display: inline-flex;
   align-items: center;
@@ -769,17 +788,15 @@ p, .editorial-prose {
   position: absolute;
   top: 14px;
   left: 14px;
-  background: rgba(9, 12, 19, 0.92);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid var(--border-hairline-gold);
-  color: var(--gold-light);
-  font-size: 0.70rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
+  background: var(--fm-ivory);
+  border: 1px solid var(--gold-light);
+  color: var(--gold-dark);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  padding: 5px 12px;
-  border-radius: 6px;
+  padding: 4px 10px;
+  border-radius: 2px;
   z-index: 2;
   display: inline-flex;
   align-items: center;
@@ -790,16 +807,14 @@ p, .editorial-prose {
   position: absolute;
   top: 14px;
   right: 14px;
-  background: rgba(7, 9, 14, 0.88);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid var(--border-hairline);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--fm-border);
   color: var(--text-secondary);
-  font-size: 0.70rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  padding: 5px 12px;
-  border-radius: 20px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  border-radius: 2px;
   z-index: 2;
   box-shadow: var(--shadow-editorial-sm);
 }
@@ -813,40 +828,41 @@ p, .editorial-prose {
 
 .product-cat-label {
   font-size: 0.72rem;
-  color: var(--gold-light);
+  color: var(--fm-eau-de-nil-deep);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 600;
+  letter-spacing: 0.14em;
+  font-weight: 700;
 }
 
 .product-card-title {
   font-family: var(--font-display);
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--text-white);
+  color: var(--fm-dark);
   line-height: 1.35;
   cursor: pointer;
   margin-bottom: 8px;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
   transition: color 0.2s ease;
 }
 
 .product-card-title:hover {
-  color: var(--gold-light);
+  color: var(--fm-eau-de-nil-deep);
 }
 
 /* ==========================================================================
    BUTTONS & ACTIONS
    ========================================================================== */
 .btn-primary-gold {
-  background: var(--gold-foil);
-  color: #07090e;
+  background: var(--fm-eau-de-nil-deep);
+  color: #ffffff;
   font-weight: 600;
-  font-size: 0.84rem;
-  letter-spacing: 0.02em;
+  font-size: 0.8125rem;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
   padding: 12px 20px;
-  border-radius: 8px;
-  border: none;
+  border-radius: 3px;
+  border: 1px solid var(--fm-eau-de-nil-deep);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -854,24 +870,27 @@ p, .editorial-prose {
   gap: 8px;
   text-decoration: none;
   transition: all 0.2s var(--ease-editorial);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(212, 175, 55, 0.2);
+  box-shadow: 0 2px 6px rgba(127, 168, 148, 0.25);
 }
 
 .btn-primary-gold:hover {
-  filter: brightness(1.08);
+  background: #6d9682;
+  border-color: #6d9682;
+  color: #ffffff;
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(212, 175, 55, 0.25);
+  box-shadow: 0 4px 12px rgba(127, 168, 148, 0.35);
 }
 
 .btn-secondary-outline {
   background: transparent;
   color: var(--text-primary);
-  border: 1px solid var(--border-hairline-light);
-  font-weight: 500;
-  font-size: 0.84rem;
-  letter-spacing: 0.02em;
+  border: 1px solid var(--fm-border);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
   padding: 12px 20px;
-  border-radius: 8px;
+  border-radius: 3px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -882,18 +901,18 @@ p, .editorial-prose {
 }
 
 .btn-secondary-outline:hover {
-  background: rgba(255, 255, 255, 0.03);
-  border-color: var(--border-hairline-gold);
-  color: var(--gold-light);
+  background: rgba(200, 220, 200, 0.20);
+  border-color: var(--fm-eau-de-nil-deep);
+  color: var(--fm-eau-de-nil-deep);
 }
 
 .btn-whatsapp {
-  background: var(--emerald-gradient);
+  background: var(--emerald-whatsapp);
   color: #ffffff;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.06em;
   padding: 11px 18px;
-  border-radius: 8px;
+  border-radius: 3px;
   border: none;
   cursor: pointer;
   display: inline-flex;
@@ -902,13 +921,13 @@ p, .editorial-prose {
   gap: 8px;
   text-decoration: none;
   transition: all 0.2s var(--ease-editorial);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(16, 185, 129, 0.2);
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.2);
 }
 
 .btn-whatsapp:hover {
-  filter: brightness(1.08);
+  background: #20bd5a;
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
 }
 
 /* ==========================================================================
@@ -917,9 +936,9 @@ p, .editorial-prose {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(4, 6, 10, 0.88);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -938,18 +957,18 @@ p, .editorial-prose {
 /* Bottom Sheet Drag Handle */
 .bottom-sheet-handle {
   width: 44px;
-  height: 5px;
-  border-radius: 3px;
-  background: rgba(255, 255, 255, 0.25);
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.2);
   margin: 12px auto 6px auto;
   cursor: grab;
   touch-action: none;
 }
 
 .modal-dialog {
-  background: var(--bg-charcoal-base);
-  border: 1px solid var(--border-hairline-gold);
-  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid var(--fm-border);
+  border-radius: 4px;
   max-width: 920px;
   width: 100%;
   max-height: 90vh;
@@ -967,9 +986,9 @@ p, .editorial-prose {
 
 /* Mobile Filter Bottom Sheet Dialog */
 .mobile-filter-dialog {
-  background: var(--bg-charcoal-base);
-  border: 1px solid var(--border-hairline-gold);
-  border-radius: 24px 24px 0 0;
+  background: #ffffff;
+  border: 1px solid var(--fm-border);
+  border-radius: 16px 16px 0 0;
   width: 100%;
   max-width: 600px;
   position: fixed;
@@ -994,10 +1013,10 @@ p, .editorial-prose {
   gap: 8px;
   min-height: 48px;
   padding: 12px 18px;
-  border-radius: 8px;
-  background: var(--bg-charcoal-surface);
-  border: 1px solid var(--border-hairline-gold);
-  color: #fff;
+  border-radius: 4px;
+  background: #ffffff;
+  border: 1px solid var(--fm-border);
+  color: var(--text-primary);
   font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
@@ -1006,12 +1025,12 @@ p, .editorial-prose {
 }
 
 .mobile-filter-btn:active {
-  transform: scale(0.96);
+  transform: scale(0.97);
 }
 
 .filter-count-badge {
-  background: var(--gold-primary);
-  color: #07090e;
+  background: var(--fm-eau-de-nil-deep);
+  color: #ffffff;
   font-size: 10px;
   font-weight: 800;
   width: 18px;
@@ -1024,12 +1043,12 @@ p, .editorial-prose {
 
 .mobile-sort-select {
   width: 100%;
-  background: var(--bg-charcoal-surface);
-  border: 1px solid var(--border-hairline);
+  background: #ffffff;
+  border: 1px solid var(--fm-border);
   color: var(--text-primary);
   font-size: 0.8rem;
   padding: 8px 10px;
-  border-radius: 8px;
+  border-radius: 4px;
   outline: none;
 }
 
@@ -1038,9 +1057,9 @@ p, .editorial-prose {
   align-items: center;
   justify-content: space-between;
   padding: 11px 14px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid var(--border-hairline);
+  border-radius: 4px;
+  background: var(--fm-ivory);
+  border: 1px solid var(--fm-border);
   font-size: 0.88rem;
   color: var(--text-primary);
   cursor: pointer;
@@ -1048,13 +1067,13 @@ p, .editorial-prose {
 }
 
 .mobile-checkbox-label:active {
-  background: rgba(212, 175, 55, 0.08);
+  background: rgba(200, 220, 200, 0.3);
 }
 
 .mobile-checkbox-label input {
   width: 18px;
   height: 18px;
-  accent-color: var(--gold-primary);
+  accent-color: var(--fm-eau-de-nil-deep);
 }
 
 /* RFP Quote Drawer */
@@ -1065,8 +1084,8 @@ p, .editorial-prose {
   width: min(100vw, 480px);
   height: 100vh;
   height: 100dvh;
-  background: var(--bg-charcoal-base);
-  border-left: 1px solid var(--border-hairline-gold);
+  background: #ffffff;
+  border-left: 1px solid var(--fm-border);
   z-index: 1100;
   display: flex;
   flex-direction: column;
@@ -1101,14 +1120,14 @@ p, .editorial-prose {
 }
 
 .toast {
-  background: var(--bg-charcoal-surface);
-  border-left: 3px solid var(--gold-primary);
-  border-top: 1px solid var(--border-hairline);
-  border-right: 1px solid var(--border-hairline);
-  border-bottom: 1px solid var(--border-hairline);
+  background: #ffffff;
+  border-left: 3px solid var(--fm-eau-de-nil-deep);
+  border-top: 1px solid var(--fm-border);
+  border-right: 1px solid var(--fm-border);
+  border-bottom: 1px solid var(--fm-border);
   color: var(--text-primary);
   padding: 12px 18px;
-  border-radius: 8px;
+  border-radius: 4px;
   box-shadow: var(--shadow-editorial-md);
   display: flex;
   align-items: center;
@@ -1137,12 +1156,12 @@ p, .editorial-prose {
   width: 54px;
   height: 54px;
   border-radius: 50%;
-  background: var(--emerald-gradient);
+  background: var(--emerald-whatsapp);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 2px 8px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(37, 211, 102, 0.25);
   text-decoration: none;
   position: relative;
   touch-action: manipulation;
@@ -1157,7 +1176,7 @@ p, .editorial-prose {
   transform: scale(0.92);
 }
 
-/* Subtle concierge status dot */
+/* Concierge status dot */
 .whatsapp-ping {
   position: absolute;
   top: 2px;
@@ -1166,7 +1185,7 @@ p, .editorial-prose {
   height: 12px;
   border-radius: 50%;
   background: #34d399;
-  border: 2px solid var(--bg-obsidian-deep);
+  border: 2px solid #ffffff;
   pointer-events: none;
 }
 
@@ -1178,14 +1197,13 @@ p, .editorial-prose {
   width: 100%;
   height: calc(56px + env(safe-area-inset-bottom, 0px));
   padding-bottom: env(safe-area-inset-bottom, 0px);
-  background: rgba(7, 9, 14, 0.95);
-  backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
-  border-top: 1px solid var(--border-hairline-gold);
+  background: #ffffff;
+  border-top: 1px solid var(--fm-border);
   z-index: 1200;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.03);
 }
 
 .mobile-dock-item {
@@ -1198,7 +1216,7 @@ p, .editorial-prose {
   color: var(--text-secondary);
   font-size: 10px;
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
   text-decoration: none;
   flex: 1;
   height: 100%;
@@ -1219,7 +1237,7 @@ p, .editorial-prose {
 }
 
 .mobile-dock-item.active {
-  color: var(--gold-light);
+  color: var(--fm-eau-de-nil-deep);
 }
 
 .mobile-dock-item .dock-active-dot {
@@ -1229,8 +1247,7 @@ p, .editorial-prose {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: var(--gold-primary);
-  box-shadow: 0 0 6px var(--gold-primary);
+  background: var(--fm-eau-de-nil-deep);
 }
 
 .mobile-dock-item.active .dock-active-dot {
@@ -1241,8 +1258,8 @@ p, .editorial-prose {
   position: absolute;
   top: 4px;
   right: 20%;
-  background: var(--gold-primary);
-  color: #07090e;
+  background: var(--fm-eau-de-nil-deep);
+  color: #ffffff;
   font-size: 9px;
   font-weight: 800;
   width: 17px;
@@ -1251,7 +1268,7 @@ p, .editorial-prose {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1.5px solid #07090e;
+  border: 1.5px solid #ffffff;
 }
 
 /* Scroll Reveal Animations */
@@ -1290,7 +1307,7 @@ p, .editorial-prose {
   }
 
   .modal-dialog {
-    border-radius: 24px 24px 0 0;
+    border-radius: 16px 16px 0 0;
     max-height: 88vh;
     max-height: 88dvh;
     width: 100%;
@@ -1309,14 +1326,14 @@ p, .editorial-prose {
   .rfp-drawer {
     width: 100vw;
     max-width: 100vw;
-    border-radius: 24px 24px 0 0;
+    border-radius: 16px 16px 0 0;
     height: 90vh;
     height: 90dvh;
     top: auto;
     bottom: 0;
     transform: translateY(100%);
     border-left: none;
-    border-top: 1px solid var(--border-hairline-gold);
+    border-top: 1px solid var(--fm-border);
   }
 
   .rfp-drawer.active {
@@ -1335,7 +1352,7 @@ p, .editorial-prose {
   }
 
   .hero-blur-canvas {
-    display: none !important; /* Disabled on mobile to conserve 100% GPU fill-rate */
+    display: none !important;
   }
 
   .hero-sharp-canvas {
@@ -1352,7 +1369,7 @@ p, .editorial-prose {
   .hero-intro-box {
     max-width: 100%;
     padding: 1.35rem;
-    background: rgba(7, 9, 14, 0.95);
+    background: #ffffff;
   }
   .hero-intro-box h1 {
     font-size: 1.85rem;
@@ -1385,4 +1402,396 @@ p, .editorial-prose {
   .brand-header { height: 62px; }
   .amazon-subnav { padding: 12px 1rem; }
   .category-pills-strip { padding: 12px 1rem; }
+}
+
+/* ==========================================================================
+   FORTNUM & MASON HERITAGE OVERRIDES FOR HTML TAILWIND & DYNAMIC COMPONENTS
+   (Ensures perfect Light Theme without modifying JavaScript bindings)
+   ========================================================================== */
+
+/* Overrides for hardcoded dark tailwind utility classes on body & layout */
+body.bg-\[\#07090e\] {
+  background-color: var(--fm-cream) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Header typography and icons */
+.brand-header .text-white {
+  color: var(--fm-charcoal) !important;
+}
+.brand-header .font-cinzel {
+  font-family: var(--font-display) !important;
+  letter-spacing: 0.16em !important;
+  color: var(--fm-dark) !important;
+}
+.brand-header .text-amber-300\/90,
+.brand-header .text-amber-300,
+.brand-header .text-amber-400 {
+  color: var(--fm-eau-de-nil-deep) !important;
+}
+.brand-header .bg-white\/\[0\.04\] {
+  background-color: var(--fm-ivory) !important;
+  border-color: var(--fm-border) !important;
+  color: var(--text-primary) !important;
+}
+.brand-header .bg-white\/\[0\.04\]:hover {
+  border-color: var(--fm-eau-de-nil-deep) !important;
+}
+.brand-header .bg-emerald-500\/10 {
+  background-color: rgba(200, 220, 200, 0.45) !important;
+  border-color: var(--fm-eau-de-nil-deep) !important;
+  color: var(--fm-charcoal) !important;
+}
+.brand-header #rfpCartCount {
+  background: var(--fm-eau-de-nil-deep) !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+/* Hero elements */
+#heroIntroBox p.text-slate-300 {
+  color: var(--text-secondary) !important;
+}
+#heroIntroBox .btn-secondary-outline {
+  background-color: transparent !important;
+  border-color: var(--fm-eau-de-nil-deep) !important;
+  color: var(--fm-eau-de-nil-deep) !important;
+}
+#heroIntroBox .btn-secondary-outline:hover {
+  background-color: rgba(200, 220, 200, 0.25) !important;
+}
+#heroIntroBox .text-amber-400 {
+  color: var(--fm-eau-de-nil-deep) !important;
+}
+
+/* Unboxing Progress Pill inside Hero */
+.unboxing-progress-pill span,
+.unboxing-progress-pill .text-white {
+  color: var(--fm-charcoal) !important;
+}
+.unboxing-progress-pill .text-gray-300 {
+  color: var(--text-secondary) !important;
+}
+.unboxing-progress-pill .text-amber-400 {
+  color: var(--fm-eau-de-nil-deep) !important;
+}
+
+/* Amazon / Catalog subnav items */
+.amazon-subnav .text-white {
+  color: var(--fm-charcoal) !important;
+}
+.amazon-subnav .text-gray-300,
+.amazon-subnav .text-gray-400 {
+  color: var(--text-secondary) !important;
+}
+.amazon-subnav .text-amber-400,
+.amazon-subnav .text-amber-300 {
+  color: var(--fm-eau-de-nil-deep) !important;
+}
+
+/* Catalog products sort bar */
+.catalog-section .bg-\[\#10141d\]\/90 {
+  background-color: #ffffff !important;
+  border-color: var(--fm-border) !important;
+  box-shadow: var(--shadow-editorial-sm) !important;
+}
+.catalog-section .bg-\[\#10141d\]\/90 .text-white {
+  color: var(--fm-charcoal) !important;
+}
+.catalog-section .bg-\[\#090c13\] {
+  background-color: var(--fm-ivory) !important;
+  border-color: var(--fm-border) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Catalog Sidebar filter styles */
+.catalog-sidebar .border-white\/\[0\.06\] {
+  border-color: var(--fm-border) !important;
+}
+.catalog-sidebar .text-white {
+  color: var(--fm-charcoal) !important;
+}
+.catalog-sidebar .text-amber-400,
+.catalog-sidebar .text-amber-300 {
+  color: var(--fm-eau-de-nil-deep) !important;
+}
+
+/* Product Card dynamically generated elements */
+.product-card .text-white {
+  color: var(--fm-dark) !important;
+}
+.product-card .text-gray-400,
+.product-card .text-gray-500 {
+  color: var(--text-secondary) !important;
+}
+.product-card .border-gray-800\/80 {
+  border-color: var(--fm-border) !important;
+}
+.product-card .text-amber-400 {
+  color: #c9a84c !important; /* Elegant gold rating stars */
+}
+.product-card .text-emerald-400 {
+  color: var(--fm-eau-de-nil-deep) !important;
+}
+
+/* Quick View Modal & Bulk Calculator */
+.modal-dialog {
+  background-color: #ffffff !important;
+  color: var(--text-primary) !important;
+}
+.modal-dialog .text-white {
+  color: var(--fm-dark) !important;
+}
+.modal-dialog .text-gray-300,
+.modal-dialog .text-gray-400 {
+  color: var(--text-secondary) !important;
+}
+.modal-dialog .bg-gray-900,
+.modal-dialog .bg-gray-950,
+.modal-dialog .bg-\[\#10141d\],
+.modal-dialog .bg-\[\#10141d\]\/90 {
+  background-color: var(--fm-ivory) !important;
+  border-color: var(--fm-border) !important;
+}
+.modal-dialog .border-gray-700,
+.modal-dialog .border-gray-800,
+.modal-dialog .border-white\/\[0\.08\] {
+  border-color: var(--fm-border) !important;
+}
+.modal-dialog .bg-gray-900\/90,
+.modal-dialog .bg-gray-900\/60 {
+  background-color: var(--fm-cream) !important;
+  border-color: var(--fm-border) !important;
+}
+.modal-dialog .bg-emerald-950\/40,
+.modal-dialog .bg-emerald-950\/60 {
+  background-color: rgba(200, 220, 200, 0.4) !important;
+  border-color: var(--fm-eau-de-nil-deep) !important;
+}
+.modal-dialog .text-emerald-300,
+.modal-dialog .text-emerald-400 {
+  color: #2e624b !important;
+}
+.modal-dialog .text-amber-300,
+.modal-dialog .text-amber-400 {
+  color: var(--fm-eau-de-nil-deep) !important;
+}
+.modal-dialog .text-amber-400.text-xs {
+  color: #c9a84c !important; /* Rating stars */
+}
+.modal-dialog .border-amber-500\/30 {
+  border-color: rgba(127, 168, 148, 0.4) !important;
+}
+.modal-dialog .bg-gray-800\/90 {
+  background-color: #ffffff !important;
+  border-color: var(--fm-border) !important;
+  color: var(--text-primary) !important;
+}
+.modal-dialog .bg-gray-800\/90:hover {
+  background-color: var(--fm-eau-de-nil) !important;
+  border-color: var(--fm-eau-de-nil-deep) !important;
+}
+.modal-dialog input#qvQtyInput {
+  background-color: #ffffff !important;
+  color: var(--fm-dark) !important;
+  border-color: var(--fm-border) !important;
+}
+.modal-dialog button[onclick*="adjustQvQty"] {
+  background-color: var(--fm-ivory) !important;
+  color: var(--fm-dark) !important;
+  border-color: var(--fm-border) !important;
+}
+.modal-dialog button[onclick*="adjustQvQty"]:hover {
+  background-color: var(--fm-eau-de-nil) !important;
+}
+.modal-dialog button[onclick*="closeQuickView"] {
+  background-color: #ffffff !important;
+  border-color: var(--fm-border) !important;
+  color: var(--text-secondary) !important;
+}
+.modal-dialog button[onclick*="closeQuickView"]:hover {
+  color: var(--fm-dark) !important;
+}
+
+/* RFP Drawer styling */
+.rfp-drawer {
+  background-color: #ffffff !important;
+}
+.rfp-drawer .bg-\[\#090c13\],
+.rfp-drawer .bg-\[\#07090e\] {
+  background-color: var(--fm-ivory) !important;
+  border-color: var(--fm-border) !important;
+}
+.rfp-drawer .text-white {
+  color: var(--fm-dark) !important;
+}
+.rfp-drawer .text-gray-400 {
+  color: var(--text-secondary) !important;
+}
+.rfp-drawer .text-gray-300 {
+  color: var(--text-primary) !important;
+}
+.rfp-drawer .text-amber-300,
+.rfp-drawer .text-amber-400 {
+  color: var(--fm-eau-de-nil-deep) !important;
+}
+.rfp-drawer .border-white\/\[0\.06\],
+.rfp-drawer .border-white\/\[0\.1\] {
+  border-color: var(--fm-border) !important;
+}
+.rfp-drawer .bg-\[\#10141d\] {
+  background-color: var(--fm-cream) !important;
+  border-color: var(--fm-border) !important;
+}
+.rfp-drawer .bg-gray-900 {
+  background-color: #ffffff !important;
+  border-color: var(--fm-border) !important;
+}
+.rfp-drawer .border-gray-800,
+.rfp-drawer .border-gray-700 {
+  border-color: var(--fm-border) !important;
+}
+.rfp-drawer input[type="text"] {
+  background-color: #ffffff !important;
+  border: 1px solid var(--fm-border) !important;
+  color: var(--fm-dark) !important;
+}
+.rfp-drawer input[type="text"]:focus {
+  border-color: var(--fm-eau-de-nil-deep) !important;
+}
+.rfp-drawer input[type="checkbox"] {
+  accent-color: var(--fm-eau-de-nil-deep) !important;
+}
+.rfp-drawer .bg-gray-950 {
+  background-color: var(--fm-ivory) !important;
+  border-color: var(--fm-border) !important;
+}
+
+/* Mobile Filter Bottom Sheet Dialog */
+.mobile-filter-dialog .bg-\[\#090c13\],
+.mobile-filter-dialog .bg-\[\#07090e\] {
+  background-color: var(--fm-ivory) !important;
+  border-color: var(--fm-border) !important;
+}
+.mobile-filter-dialog .text-white {
+  color: var(--fm-dark) !important;
+}
+.mobile-filter-dialog .text-gray-400 {
+  color: var(--text-secondary) !important;
+}
+.mobile-filter-dialog .text-amber-400 {
+  color: var(--fm-eau-de-nil-deep) !important;
+}
+.mobile-filter-dialog .border-white\/\[0\.06\],
+.mobile-filter-dialog .border-white\/\[0\.08\] {
+  border-color: var(--fm-border) !important;
+}
+
+/* ==========================================================================
+   ABOUT SECTION & BESPOKE STEWARDSHIP (F&M Editorial Treatment)
+   ========================================================================== */
+#aboutSection {
+  background-color: var(--fm-cream) !important;
+  border-top: 1px solid var(--fm-border) !important;
+}
+
+#aboutSection .text-white {
+  color: var(--fm-dark) !important;
+}
+
+#aboutSection .text-gray-400 {
+  color: var(--text-secondary) !important;
+}
+
+#aboutSection .bg-\[\#10141d\] {
+  background-color: #ffffff !important;
+  border: 1px solid var(--fm-border) !important;
+  box-shadow: var(--shadow-editorial-sm) !important;
+}
+
+#aboutSection .bg-\[\#10141d\]:hover {
+  border-color: var(--fm-eau-de-nil-deep) !important;
+}
+
+#aboutSection .bg-amber-500\/10 {
+  background-color: rgba(200, 220, 200, 0.45) !important;
+  border-color: var(--fm-eau-de-nil-deep) !important;
+  color: var(--fm-eau-de-nil-deep) !important;
+}
+
+#aboutSection .text-amber-400,
+#aboutSection .text-amber-300 {
+  color: var(--fm-eau-de-nil-deep) !important;
+}
+
+/* Dedicated Direct Concierge Callout Banner */
+.concierge-highlight-banner > div,
+#aboutSection .bg-gradient-to-r {
+  background: linear-gradient(135deg, #e5efe5 0%, #c8dcc8 100%) !important;
+  border: 1px solid var(--fm-eau-de-nil-deep) !important;
+  box-shadow: var(--shadow-editorial-md) !important;
+}
+
+.concierge-highlight-banner .text-white,
+.concierge-highlight-banner h3 {
+  color: var(--fm-dark) !important;
+}
+
+.concierge-highlight-banner p,
+.concierge-highlight-banner .text-gray-300 {
+  color: var(--fm-charcoal) !important;
+}
+
+.concierge-highlight-banner strong.text-amber-300 {
+  color: #1e523b !important;
+}
+
+.concierge-highlight-banner .bg-amber-500\/10 {
+  background-color: #ffffff !important;
+  border-color: var(--fm-eau-de-nil-deep) !important;
+  color: var(--fm-eau-de-nil-deep) !important;
+}
+
+.concierge-highlight-banner .btn-secondary-outline {
+  background-color: #ffffff !important;
+  border-color: var(--fm-eau-de-nil-deep) !important;
+  color: var(--fm-charcoal) !important;
+}
+.concierge-highlight-banner .btn-secondary-outline:hover {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  color: var(--fm-eau-de-nil-deep) !important;
+}
+
+/* ==========================================================================
+   FOOTER (Heritage Clean Ivory Finish)
+   ========================================================================== */
+footer.bg-\[\#07090e\] {
+  background-color: var(--fm-ivory) !important;
+  border-top: 1px solid var(--fm-border) !important;
+  color: var(--text-secondary) !important;
+}
+
+footer .text-white {
+  color: var(--fm-dark) !important;
+  letter-spacing: 0.10em;
+}
+
+footer a.text-gray-400 {
+  color: var(--text-secondary) !important;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+footer a.text-gray-400:hover {
+  color: var(--fm-eau-de-nil-deep) !important;
+}
+
+footer a.text-amber-300 {
+  color: var(--fm-eau-de-nil-deep) !important;
+  font-weight: 600;
+}
+
+footer a.text-amber-300:hover {
+  color: #5e8f7a !important;
 }
