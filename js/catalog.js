@@ -433,13 +433,13 @@ function renderProducts() {
           </div>
 
           <div class="price-section mb-5">
-            <div class="flex items-baseline gap-1.5">
-              <span class="text-2xl font-bold text-[#1a1a1a] font-serif">$${p.price.toFixed(2)}</span>
-              <span class="text-xs text-[#8c8c8c]">/ unit</span>
+            <div class="flex items-baseline gap-2">
+              <span class="text-3xl font-bold text-[#1a1a1a] font-serif tracking-tight">$${p.price.toFixed(2)}</span>
+              <span class="text-xs text-[#8c8c8c] font-medium uppercase tracking-wider">/ suite</span>
             </div>
-            <div class="text-[12px] text-[#7fa894] font-medium mt-1.5 flex items-center gap-1.5">
+            <div class="text-[12px] text-[#7fa894] font-medium mt-2 flex items-center gap-1.5 bg-[#c8dcc8]/20 px-2.5 py-1 rounded-md w-fit border border-[#7fa894]/20">
               <i class="fas fa-tags text-[11px] text-[#7fa894]"></i>
-              <span>From <strong>$${lowestTier.price.toFixed(2)}</strong> for ${lowestTier.min}+ units (Save ${lowestTier.discount})</span>
+              <span>Tier pricing from <strong class="text-[#1a1a1a]">$${lowestTier.price.toFixed(2)}</strong> (Save ${lowestTier.discount})</span>
             </div>
           </div>
 

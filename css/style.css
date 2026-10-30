@@ -363,24 +363,27 @@ p, .editorial-prose {
   box-sizing: border-box;
 }
 
-/* Hero Intro Box: Pure White Architectural Card */
+/* Hero Intro Box: Pure White Architectural Card with Eau de Nil Accent */
 .hero-intro-box {
   position: relative;
-  max-width: 520px;
+  max-width: 540px;
   pointer-events: auto;
   z-index: 25;
-  padding: 2.25rem 2.5rem;
-  border-radius: 4px;
-  background: #ffffff;
-  border: 1px solid var(--fm-border);
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 2.75rem 3rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(127, 168, 148, 0.35);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(127, 168, 148, 0.12);
   transition: opacity 0.5s var(--ease-smooth), transform 0.5s var(--ease-smooth);
 }
 
 .hero-intro-box h1 {
   text-shadow: none;
   color: var(--fm-dark);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
 }
 
 .hero-intro-box .btn-primary-gold,
@@ -645,9 +648,9 @@ p, .editorial-prose {
 .catalog-main-layout {
   display: grid;
   grid-template-columns: 290px 1fr;
-  gap: 40px;
-  padding: 3.5rem 3.5rem;
-  max-width: 1680px;
+  gap: 48px;
+  padding: 4rem 3.5rem 5rem 3.5rem;
+  max-width: 1720px;
   margin: 0 auto;
 }
 
@@ -655,12 +658,12 @@ p, .editorial-prose {
 .catalog-sidebar {
   background: #ffffff;
   border: 1px solid var(--fm-border);
-  border-radius: 4px;
-  padding: 24px;
+  border-radius: 8px;
+  padding: 26px;
   height: fit-content;
   position: sticky;
   top: 96px;
-  box-shadow: var(--shadow-editorial-sm);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
 .filter-group {
@@ -711,41 +714,43 @@ p, .editorial-prose {
 
 .sidebar-concierge-card {
   margin-top: 22px;
-  padding: 18px;
-  border-radius: 4px;
+  padding: 20px;
+  border-radius: 8px;
   background: var(--fm-ivory);
   border: 1px solid var(--fm-eau-de-nil);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
 }
 
 /* Product Cards Grid — Spacious & Editorial */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 36px;
 }
 
 .product-card {
   background: #ffffff;
   border: 1px solid var(--fm-border);
-  border-radius: 4px;
+  border-radius: 8px;
   overflow: hidden;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.35s var(--ease-editorial), border-color 0.35s ease, box-shadow 0.35s ease;
   display: flex;
   flex-direction: column;
   position: relative;
-  box-shadow: var(--shadow-editorial-sm);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
 }
 
 .product-card:hover {
+  transform: translateY(-6px);
   border-color: var(--fm-eau-de-nil-deep);
-  box-shadow: var(--shadow-editorial-md);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(127, 168, 148, 0.12);
 }
 
 .product-image-container {
   position: relative;
   width: 100%;
-  padding-top: 76%;
-  background: #faf8f5;
+  padding-top: 80%;
+  background: radial-gradient(circle at center, #faf8f5 0%, #f0ece3 100%);
   overflow: hidden;
   cursor: pointer;
 }
@@ -757,11 +762,11 @@ p, .editorial-prose {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s var(--ease-editorial);
+  transition: transform 0.7s var(--ease-editorial);
 }
 
 .product-card:hover .product-image-container img {
-  transform: scale(1.03);
+  transform: scale(1.06);
 }
 
 /* Refined Editorial Badges (Heritage Minimal Style) */
@@ -769,19 +774,20 @@ p, .editorial-prose {
   position: absolute;
   top: 14px;
   left: 14px;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
   border: 1px solid var(--fm-eau-de-nil-deep);
   color: var(--fm-eau-de-nil-deep);
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: 2px;
+  padding: 5px 12px;
+  border-radius: 4px;
   z-index: 2;
   display: inline-flex;
   align-items: center;
-  box-shadow: var(--shadow-editorial-sm);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .card-badge-bestseller {
