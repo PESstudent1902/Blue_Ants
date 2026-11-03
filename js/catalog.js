@@ -1,6 +1,7 @@
 /**
- * THE BLUE ANTS — Corporate Product Catalog & Direct WhatsApp Concierge Engine
- * Centralized Configuration & Quiet Luxury State Architecture
+ * THE BLUE ANTS — THE PRINTED CATALOG
+ * Corporate Product Catalog & Interactive Stamping Engine
+ * Architecture: Zero heavy runtime dependencies, 60fps 3D transforms, Accessible State
  */
 
 const CONFIG = {
@@ -15,13 +16,13 @@ const PRODUCTS = [
     id: 'prod-1',
     name: 'The Sovereign: Executive Leather Suite',
     category: 'executive',
-    categoryLabel: 'Executive VIP Suites',
+    categoryLabel: 'Executive VIP',
     price: 95.00,
     moq: 25,
     rating: 4.9,
     reviews: 428,
     image: 'assets/products/blueants_exec_leather.webp',
-    badge: "Enterprise Choice",
+    badge: "VIP Standard",
     badgeType: 'choice',
     leadTime: 'standard',
     leadTimeLabel: '5-7 Days Standard',
@@ -32,7 +33,7 @@ const PRODUCTS = [
       'Fast Qi Wireless Minimalist Matte Charging Pad',
       'Custom Blind-Debossed Company Monogram'
     ],
-    description: 'A benchmark in C-suite corporate appreciation. Hand-stitched full-grain leather notebook paired with a precision-balanced brass fountain pen and ultra-thin desk charger.',
+    description: 'Full-grain saddle leather notebook paired with a precision-balanced brass fountain pen and ultra-thin desk charger in rigid presentation box.',
     boxContents: [
       '1x Italian Full-Grain Leather Notebook with Refillable 120gsm Paper',
       '1x Solid Brass Fountain Pen with German Iridium Nib & Velvet Pouch',
@@ -51,13 +52,13 @@ const PRODUCTS = [
     id: 'prod-2',
     name: 'The Barista Reserve: Pour-Over Craft Kit',
     category: 'gourmet',
-    categoryLabel: 'Gourmet Connoisseur Hampers',
+    categoryLabel: 'Gourmet Pairings',
     price: 68.00,
     moq: 30,
     rating: 4.8,
     reviews: 312,
     image: 'assets/products/blueants_coffee_gourmet.webp',
-    badge: 'Best Seller',
+    badge: 'Artisanal',
     badgeType: 'bestseller',
     leadTime: 'express',
     leadTimeLabel: '48h Express Ready',
@@ -68,7 +69,7 @@ const PRODUCTS = [
       'Artisanal Guji Single-Origin Whole Bean Coffee (250g)',
       'Brushed Brass Measuring Spoon & Sealing Clip'
     ],
-    description: 'Elevate morning routines for remote teams and valued partners. Features specialty roast Ethiopian beans and minimalist Scandinavian brewing hardware.',
+    description: 'Specialty roast single-origin Ethiopian coffee beans paired with Scandinavian ceramic V60 dripper and double-walled thermal tumbler.',
     boxContents: [
       '1x V60 Ceramic Matte Black Dripper with Walnut Stand',
       '1x Double-Walled Thermal Tumbler (16oz, 8h hot / 16h cold)',
@@ -87,7 +88,7 @@ const PRODUCTS = [
     id: 'prod-3',
     name: 'The Tech Nomad: ANC & Titanium Power Suite',
     category: 'welcome',
-    categoryLabel: 'Welcome & Onboarding Kits',
+    categoryLabel: 'Onboarding & Tech',
     price: 145.00,
     moq: 15,
     rating: 4.95,
@@ -104,7 +105,7 @@ const PRODUCTS = [
       'Braided Fast-Charge Cables with Brass Endcaps',
       'Top-Grain Leather Cable Organizer Snaps'
     ],
-    description: 'The ultimate kit for high-performing modern executives and frequent business travelers. High-fidelity audio combined with ultra-dense multi-device power.',
+    description: 'High-fidelity hybrid noise-cancelling headphones combined with 65W laptop-capable titanium power bank and leather cable keepers.',
     boxContents: [
       '1x Over-Ear Hybrid Active Noise Cancelling Studio Headphones',
       '1x 20,000mAh 65W Laptop & Phone Power Delivery Battery',
@@ -123,13 +124,13 @@ const PRODUCTS = [
     id: 'prod-4',
     name: 'Serenity: Botanical Corporate Wellness Box',
     category: 'welcome',
-    categoryLabel: 'Welcome & Onboarding Kits',
+    categoryLabel: 'Wellness & Team',
     price: 58.00,
     moq: 40,
     rating: 4.75,
     reviews: 245,
     image: 'assets/products/blueants_wellness_hamper.webp',
-    badge: 'Popular',
+    badge: 'Mindful Team',
     badgeType: 'bestseller',
     leadTime: 'express',
     leadTimeLabel: '48h Express Ready',
@@ -140,7 +141,7 @@ const PRODUCTS = [
       'Organic Chamomile & Lavender Night Tea Infusion',
       'A5 Soft-Touch Wellness Reflection Journal'
     ],
-    description: 'Promote mindfulness, work-life balance, and mental rejuvenation across your organization. Ideal for team appreciation days and retreat welcome packages.',
+    description: 'Hand-poured cedar & fig soy candle, ceramic aroma diffuser stone, organic loose-leaf tea, and dot-grid mindfulness journal.',
     boxContents: [
       '1x 8oz Natural Soy Wax Candle with Clean Crackling Wood Wick',
       '1x 100ml Pure Essential Oil Blend with Ceramic Diffuser Stone',
@@ -159,13 +160,13 @@ const PRODUCTS = [
     id: 'prod-5',
     name: 'The Highland Connoisseur: Decanter & Chilling Stones',
     category: 'executive',
-    categoryLabel: 'Executive VIP Suites',
+    categoryLabel: 'Executive VIP',
     price: 120.00,
     moq: 20,
     rating: 4.92,
     reviews: 388,
     image: 'assets/products/blueants_whiskey_connoisseur.webp',
-    badge: 'Enterprise Choice',
+    badge: 'Milestone',
     badgeType: 'choice',
     leadTime: 'standard',
     leadTimeLabel: '5-7 Days Standard',
@@ -176,7 +177,7 @@ const PRODUCTS = [
       'Granite Chilling Stones in Velvet Keepsake Pouch',
       'Brushed Brass Tongs with Silicone Grip Tips'
     ],
-    description: 'A timeless gift for sealing landmark deals and honoring C-suite milestones. Exceptional geometric crystal glassware paired with natural volcanic granite stones.',
+    description: 'Lead-free geometric crystal whiskey decanter with 2 heavy-base rocks tumblers and natural granite beverage chilling stones in walnut crate.',
     boxContents: [
       '1x 750ml Hand-Cut Crystal Whiskey Decanter with Solid Stopper',
       '2x 320ml Weighted Old Fashioned Geometric Rocks Glasses',
@@ -212,7 +213,7 @@ const PRODUCTS = [
       'Biodegradable Wheat Straw Retractable Rollerball Pen',
       'Organic Heavy Canvas Tote with Reinforced Handles'
     ],
-    description: 'Reinforce your organization’s ESG commitments with organic, zero-waste, sustainably sourced daily essentials for incoming employees and summit delegates.',
+    description: 'Double-walled bamboo insulated bottle, recycled cork hardcover notebook, biodegradable wheat pen, and raw cotton utility tote.',
     boxContents: [
       '1x Double-Walled 500ml Insulated Bottle with Natural Bamboo Outer Shell',
       '1x A5 Cork Hardcover Journal with Recycled Post-Consumer Paper',
@@ -231,13 +232,13 @@ const PRODUCTS = [
     id: 'prod-7',
     name: 'Chronos: Milestone Executive Award Timepiece',
     category: 'executive',
-    categoryLabel: 'Executive VIP Suites',
+    categoryLabel: 'Executive VIP',
     price: 185.00,
     moq: 10,
     rating: 4.98,
     reviews: 176,
     image: 'assets/products/blueants_milestone_watch.webp',
-    badge: 'VIP Milestone',
+    badge: 'Board Award',
     badgeType: 'choice',
     leadTime: 'standard',
     leadTimeLabel: '5-7 Days Standard',
@@ -248,7 +249,7 @@ const PRODUCTS = [
       'Solid Black Marble Base with Felt Underlay',
       'Custom Laser-Engraved Milestone Commemoration Plate'
     ],
-    description: 'Commemorate decades of dedication, IPO celebrations, and exceptional leadership achievements with a substantial marble-anchored desk timepiece.',
+    description: 'Brushed gunmetal stainless steel desk clock anchored on solid Nero Marquina black marble with custom engraved brass inscription plaque.',
     boxContents: [
       '1x Solid Gunmetal Desk Clock with Mineral Glass Face',
       '1x Natural Veined Nero Marquina Marble Display Plinth',
@@ -267,26 +268,26 @@ const PRODUCTS = [
     id: 'prod-8',
     name: 'Grand Cru: 24k Gold Truffles & Raw Honey',
     category: 'gourmet',
-    categoryLabel: 'Gourmet Connoisseur Hampers',
+    categoryLabel: 'Gourmet Pairings',
     price: 78.00,
     moq: 25,
     rating: 4.89,
     reviews: 290,
     image: 'assets/products/blueants_gourmet_truffles.webp',
-    badge: 'Best Seller',
+    badge: 'Confection',
     badgeType: 'bestseller',
     leadTime: 'express',
     leadTimeLabel: '48h Express Ready',
     brandingOptions: ['gold-foil', 'laser'],
     features: [
-      'Handcrafted Single-Origin Belgian Dark Truffles (16pc)',
-      'Pure Artisanal Wildflower Forest Honey with Wooden Dipper',
-      'Raw Macadamia Nuts Glazed with Madagascar Vanilla',
-      'Custom Gold Foil Embossed Satin Keepsake Box'
+      'Artisanal Dark Chocolate Truffles with 24k Edible Gold Leaf',
+      'Raw Wildflower Honey Jar from Himalayan Foothills (250g)',
+      'Hand-Carved Olive Wood Honey Drizzler',
+      'Slow-Roasted Vanilla Glazed Macadamia Nuts'
     ],
-    description: 'A decadent culinary indulgence designed for high-value client thank-yous, festive holidays, and year-end celebrations. Premium sweets from master chocolatiers.',
+    description: 'Handmade dark chocolate truffles adorned with edible gold leaf, unfiltered Himalayan forest honey, and carved olive wood honey drizzler.',
     boxContents: [
-      '1x Box of 16 Artisanal Valrhona Dark Ganache Truffles with Edible Gold Flakes',
+      '1x 12-Piece Grand Cru Dark Chocolate Truffle Assortment with Edible Gold',
       '1x 250g Jar of Unfiltered Raw Forest Honey from Himalayan Foothills',
       '1x Hand-Turned Olive Wood Honey Drizzler',
       '1x 150g Roasted Macadamias with Vanilla Bean Dusting',
@@ -301,7 +302,7 @@ const PRODUCTS = [
   }
 ];
 
-// State Architecture
+// Active State
 let filterState = {
   category: 'all',
   priceFilters: [],
@@ -320,6 +321,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupModalListeners();
   setupDrawerListeners();
   setupHeaderScroll();
+  initHeroStamper();
 });
 
 function setupHeaderScroll() {
@@ -336,6 +338,115 @@ function setupHeaderScroll() {
 
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
+}
+
+/**
+ * =========================================================================
+ * SIGNATURE MOMENT: "STAMP YOUR OWN BOX" ENGINE
+ * Real-time metallic foil rendering, specular reflection, 3D tilt & lid reveal
+ * =========================================================================
+ */
+function initHeroStamper() {
+  const stamperInput = document.getElementById('companyStamperInput');
+  const stampBtn = document.getElementById('stampActionBtn');
+  const boxStampedName = document.getElementById('boxStampedName');
+  const requestStampedBtn = document.getElementById('requestStampedBoxBtn');
+  const box3DWrapper = document.getElementById('box3DWrapper');
+  const boxLid = document.getElementById('boxLid');
+  const toggleLidBtn = document.getElementById('toggleLidBtn');
+  const lidToggleText = document.getElementById('lidToggleText');
+  const boxFoilSheen = document.getElementById('boxFoilSheen');
+  const stage = document.getElementById('heroBoxStage');
+  const rfpCompanyInput = document.getElementById('rfpCompanyName');
+
+  if (!stamperInput || !boxStampedName) return;
+
+  const updateStamping = () => {
+    const rawVal = stamperInput.value.trim();
+    const displayName = rawVal.length > 0 ? rawVal.toUpperCase() : 'YOUR COMPANY';
+    boxStampedName.textContent = displayName;
+
+    // Sync to Quote Drawer Company Field
+    if (rfpCompanyInput && rawVal.length > 0) {
+      rfpCompanyInput.value = rawVal;
+    }
+
+    // Update WhatsApp CTA Link with pre-filled company name
+    if (requestStampedBtn) {
+      const msg = `Hi The Blue Ants, I'd like a bulk quote for The Sovereign Suite customized with our branding for ${displayName}.`;
+      requestStampedBtn.href = `https://wa.me/${CONFIG.PHONE}?text=${encodeURIComponent(msg)}`;
+    }
+  };
+
+  stamperInput.addEventListener('input', updateStamping);
+  stamperInput.addEventListener('change', updateStamping);
+
+  if (stampBtn) {
+    stampBtn.addEventListener('click', () => {
+      updateStamping();
+      boxStampedName.style.transform = 'scale(1.06)';
+      setTimeout(() => {
+        boxStampedName.style.transform = 'scale(1)';
+      }, 300);
+      showToast('Foil stamp updated on presentation lid');
+    });
+  }
+
+  // Toggle Lid Open / Closed
+  const toggleLid = (e) => {
+    if (e) e.stopPropagation();
+    if (!box3DWrapper) return;
+    const isOpen = box3DWrapper.classList.toggle('lid-open');
+    if (lidToggleText) {
+      lidToggleText.textContent = isOpen ? 'Close Lid' : 'Open Lid to Inspect';
+    }
+  };
+
+  if (toggleLidBtn) toggleLidBtn.addEventListener('click', toggleLid);
+  if (boxLid) {
+    boxLid.addEventListener('click', (e) => {
+      // Don't toggle if clicking inspect button directly to avoid double toggle
+      if (e.target.closest('#toggleLidBtn')) return;
+      toggleLid();
+    });
+    boxLid.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleLid();
+      }
+    });
+  }
+
+  // Interactive Specular Sheen & 3D Tilt Tracking
+  if (stage && box3DWrapper && boxFoilSheen) {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!prefersReducedMotion) {
+      stage.addEventListener('mousemove', (e) => {
+        const rect = stage.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+        // Subtle 3D tilt
+        const rotX = 16 - y * 10;
+        const rotY = -12 + x * 12;
+        box3DWrapper.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg)`;
+
+        // Specular foil gradient sheen angle
+        const angle = 90 + Math.round(x * 60);
+        const intensity = Math.min(0.45, 0.2 + Math.abs(x) * 0.3);
+        boxFoilSheen.style.background = `linear-gradient(${angle}deg, transparent 20%, rgba(255, 235, 180, ${intensity}) 45%, transparent 65%)`;
+      });
+
+      stage.addEventListener('mouseleave', () => {
+        box3DWrapper.style.transform = 'rotateX(16deg) rotateY(-12deg)';
+        boxFoilSheen.style.background = 'linear-gradient(115deg, transparent 20%, rgba(255, 235, 180, 0.25) 45%, transparent 65%)';
+      });
+    }
+  }
+
+  // Initial call
+  updateStamping();
 }
 
 /**
@@ -360,9 +471,9 @@ function getFilteredProducts() {
 
     if (filterState.moqFilters.length > 0) {
       const match = filterState.moqFilters.some(mf => {
-        if (mf === 'under25') return p.moq <= 25;
-        if (mf === '25to50') return p.moq >= 25 && p.moq <= 50;
-        if (mf === '50plus') return p.moq >= 50;
+        if (mf === 'low') return p.moq <= 25;
+        if (mf === 'mid') return p.moq > 25 && p.moq <= 50;
+        if (mf === 'bulk') return p.moq > 50;
         return true;
       });
       if (!match) return false;
@@ -380,7 +491,7 @@ function getFilteredProducts() {
     if (filterState.sortBy === 'price-low') return a.price - b.price;
     if (filterState.sortBy === 'price-high') return b.price - a.price;
     if (filterState.sortBy === 'moq') return a.moq - b.moq;
-    return 0; // 'featured' keeps original curated order
+    return 0; // 'featured'
   });
 
   return list;
@@ -399,7 +510,6 @@ function renderProducts() {
 
   const filtered = getFilteredProducts();
 
-  // Active filter count
   const activeCount = filterState.priceFilters.length + filterState.moqFilters.length + filterState.brandingFilters.length;
   if (activeCountBadge) {
     activeCountBadge.textContent = activeCount;
@@ -411,23 +521,22 @@ function renderProducts() {
   }
 
   if (countDisplay) {
-    countDisplay.textContent = `Showing ${filtered.length} bespoke corporate suites`;
+    countDisplay.textContent = `Showing ${filtered.length} suites`;
   }
 
   if (filtered.length === 0) {
     container.innerHTML = `
-      <div style="grid-column: 1 / -1; padding: 64px 24px; text-align: center;">
-        <i class="fas fa-boxes-stacked" style="font-size: 2.5rem; color: var(--text-muted); margin-bottom: 16px;"></i>
-        <h3 style="font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: 8px;">No matching corporate suites found</h3>
-        <p style="color: var(--text-secondary); font-size: 0.875rem; max-width: 420px; margin: 0 auto 20px auto;">
-          We frequently curate custom suites not listed in our standard collection.
+      <div style="grid-column: 1 / -1; padding: 64px 24px; text-align: center; border: 1px dashed var(--border-strong); background: var(--color-paper-card);">
+        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 8px;">No matching suites found</h3>
+        <p style="color: var(--color-ink-muted); font-size: 0.9375rem; max-width: 440px; margin: 0 auto 20px auto;">
+          We frequently curate custom suites not listed in our standard catalogue.
         </p>
         <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
-          <button onclick="resetFilters()" class="btn-secondary" style="min-height: 44px; padding: 10px 20px;">
+          <button onclick="resetFilters()" class="btn-card-details" style="height: 48px; padding: 0 20px;">
             Reset Filters
           </button>
-          <a href="https://wa.me/${CONFIG.PHONE}?text=${encodeURIComponent('Hi Blue Ants, I am looking for custom gift suites with specific requirements.')}" 
-             target="_blank" rel="noopener" class="btn-wa-solid" style="min-height: 44px; padding: 10px 20px;">
+          <a href="https://wa.me/${CONFIG.PHONE}?text=${encodeURIComponent('Hi Blue Ants, I am looking for custom corporate gift suites with specific requirements.')}" 
+             target="_blank" rel="noopener" class="btn-wa-direct" style="height: 48px; padding: 0 20px;">
             <i class="fa-brands fa-whatsapp text-lg"></i> Inquire on WhatsApp
           </a>
         </div>
@@ -436,38 +545,36 @@ function renderProducts() {
     return;
   }
 
-  container.innerHTML = filtered.map((p) => {
-    const lowestTier = p.bulkTiers[p.bulkTiers.length - 1];
-
+  container.innerHTML = filtered.map((p, idx) => {
     return `
-      <article class="product-card" data-id="${p.id}">
-        <div class="product-image-container" onclick="openQuickView('${p.id}')">
-          <span class="card-badge-choice">${p.badge}</span>
-          <span class="card-moq-pill">MOQ ${p.moq}</span>
+      <article class="product-catalog-card" data-id="${p.id}">
+        <div class="product-image-slot" onclick="openQuickView('${p.id}')">
           <img src="${p.image}" alt="${p.name}" loading="lazy" width="400" height="400">
         </div>
         
-        <div class="product-info-wrap">
-          <div class="product-cat-label">${p.categoryLabel}</div>
-          <h3 class="product-card-title" onclick="openQuickView('${p.id}')">${p.name}</h3>
-          <p class="product-card-desc">${p.description}</p>
-
-          <div class="price-section">
-            <div class="price-row">
-              <span class="price-main">${CONFIG.formatPrice(p.price)}</span>
-              <span class="price-unit">/ unit</span>
-            </div>
-            <div class="price-tier-hint">
-              Tier pricing from <strong>${CONFIG.formatPrice(lowestTier.price)}</strong> (Save ${lowestTier.discount})
-            </div>
+        <div class="product-body-specs">
+          <div class="product-card-mono-row">
+            <span class="mono-caption" style="font-size: 0.6875rem;">NO. 0${idx + 1} // ${p.categoryLabel.toUpperCase()}</span>
+            <span class="mono-caption" style="color: var(--color-blue-ant); font-size: 0.6875rem;">${p.badge}</span>
           </div>
 
-          <div class="card-actions-grid">
-            <button class="btn-secondary-outline" onclick="openQuickView('${p.id}')" aria-label="View Details for ${p.name}">
-              View Details
+          <h3 class="product-title-serif" onclick="openQuickView('${p.id}')">${p.name}</h3>
+          <p class="product-short-desc">${p.description}</p>
+
+          <div class="product-price-moq-bar">
+            <div>
+              <span class="product-unit-price">${CONFIG.formatPrice(p.price)}</span>
+              <span class="mono-caption" style="font-size: 0.6875rem; color: var(--color-ink-muted);"> / UNIT</span>
+            </div>
+            <div class="product-moq-spec">MOQ: ${p.moq} UNITS</div>
+          </div>
+
+          <div class="card-action-btns">
+            <button class="btn-card-details" onclick="openQuickView('${p.id}')" aria-label="View Specs: ${p.name}">
+              View Specs
             </button>
-            <button class="btn-primary-gold" onclick="addToRfp('${p.id}')" aria-label="Add to Quote: ${p.name}">
-              <i class="fas fa-plus mr-1"></i> Add to Quote
+            <button class="btn-card-add" onclick="addToRfp('${p.id}')" aria-label="Add to Quote: ${p.name}">
+              <i class="fas fa-plus text-xs"></i> Add to Quote
             </button>
           </div>
         </div>
@@ -482,14 +589,14 @@ function renderProducts() {
 function selectOccasionCategory(cat) {
   filterState.category = cat;
   
-  const chips = document.querySelectorAll('.category-chip');
-  chips.forEach(chip => {
-    if (chip.dataset.category === cat) {
-      chip.classList.add('active');
-      chip.setAttribute('aria-selected', 'true');
+  const tabs = document.querySelectorAll('.catalog-tab');
+  tabs.forEach(tab => {
+    if (tab.dataset.category === cat) {
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
     } else {
-      chip.classList.remove('active');
-      chip.setAttribute('aria-selected', 'false');
+      tab.classList.remove('active');
+      tab.setAttribute('aria-selected', 'false');
     }
   });
 
@@ -512,14 +619,14 @@ function resetFilters() {
 
   document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
 
-  const chips = document.querySelectorAll('.category-chip');
-  chips.forEach(c => {
-    if (c.dataset.category === 'all') {
-      c.classList.add('active');
-      c.setAttribute('aria-selected', 'true');
+  const tabs = document.querySelectorAll('.catalog-tab');
+  tabs.forEach(t => {
+    if (t.dataset.category === 'all') {
+      t.classList.add('active');
+      t.setAttribute('aria-selected', 'true');
     } else {
-      c.classList.remove('active');
-      c.setAttribute('aria-selected', 'false');
+      t.classList.remove('active');
+      t.setAttribute('aria-selected', 'false');
     }
   });
 
@@ -530,17 +637,17 @@ function resetFilters() {
 }
 
 function setupFilterListeners() {
-  // Category chips
-  const chips = document.querySelectorAll('.category-chip');
-  chips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      chips.forEach(c => {
-        c.classList.remove('active');
-        c.setAttribute('aria-selected', 'false');
+  // Category tabs
+  const tabs = document.querySelectorAll('.catalog-tab');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
       });
-      chip.classList.add('active');
-      chip.setAttribute('aria-selected', 'true');
-      filterState.category = chip.dataset.category || 'all';
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      filterState.category = tab.dataset.category || 'all';
       renderProducts();
     });
   });
@@ -553,20 +660,15 @@ function setupFilterListeners() {
       renderProducts();
     });
   }
+}
 
-  // Checkbox listeners in filter sheet
-  const syncGroup = (inputName, stateKey) => {
-    document.querySelectorAll(`input[name="${inputName}"]`).forEach(cb => {
-      cb.addEventListener('change', () => {
-        filterState[stateKey] = Array.from(document.querySelectorAll(`input[name="${inputName}"]:checked`)).map(c => c.value);
-        renderProducts();
-      });
-    });
-  };
+function applyMobileFilters() {
+  filterState.priceFilters = Array.from(document.querySelectorAll('input[name="priceFilter"]:checked')).map(c => c.value);
+  filterState.moqFilters = Array.from(document.querySelectorAll('input[name="moqFilter"]:checked')).map(c => c.value);
+  filterState.brandingFilters = Array.from(document.querySelectorAll('input[name="brandFilter"]:checked')).map(c => c.value);
 
-  syncGroup('priceFilter', 'priceFilters');
-  syncGroup('moqFilter', 'moqFilters');
-  syncGroup('brandingFilter', 'brandingFilters');
+  renderProducts();
+  closeMobileFilters();
 }
 
 /**
@@ -578,62 +680,64 @@ function openQuickView(prodId) {
   currentProduct = product;
 
   const modal = document.getElementById('quickViewModal');
+  const title = document.getElementById('qvSuiteTitle');
   const content = document.getElementById('quickViewContent');
   if (!modal || !content) return;
 
+  if (title) title.textContent = product.name;
+
   content.innerHTML = `
-    <div style="display: grid; grid-template-columns: 1fr; gap: 24px;">
-      <div style="aspect-ratio: 16/9; background: var(--bg-subtle); border-radius: 8px; overflow: hidden;">
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+      <div style="aspect-ratio: 16/10; background: var(--color-paper-subtle); border: 1px solid var(--border-hairline); overflow: hidden;">
         <img src="${product.image}" alt="${product.name}" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
 
       <div>
-        <div class="eyebrow-tag">${product.categoryLabel}</div>
-        <h2 id="qvModalTitle" style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 8px;">${product.name}</h2>
-        <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 16px;">${product.description}</p>
+        <div class="mono-caption" style="margin-bottom: 6px;">${product.categoryLabel.toUpperCase()} // ${product.badge}</div>
+        <p style="font-size: 0.9375rem; color: var(--color-ink-secondary); line-height: 1.5; margin-bottom: 16px;">
+          ${product.description}
+        </p>
 
-        <div style="background: var(--bg-primary); padding: 16px; border-radius: 8px; border: 1px solid var(--border-hairline); margin-bottom: 20px;">
-          <div style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-gold); margin-bottom: 8px;">
-            Included in Gift Suite:
-          </div>
-          <ul style="font-size: 0.8125rem; color: var(--text-secondary); padding-left: 18px; line-height: 1.6;">
+        <div style="background: var(--color-paper-card); padding: 16px; border: 1px solid var(--border-hairline); margin-bottom: 20px;">
+          <div class="mono-caption" style="margin-bottom: 8px; color: var(--color-ink);">SUITE CONTENTS (BOX EMBEDDED)</div>
+          <ul style="font-size: 0.875rem; color: var(--color-ink-secondary); padding-left: 18px; line-height: 1.6;">
             ${product.boxContents.map(c => `<li>${c}</li>`).join('')}
           </ul>
         </div>
 
-        <div style="background: #FFFFFF; border: 1px solid var(--border-medium); border-radius: 8px; padding: 16px; margin-bottom: 20px;">
+        <div style="background: #FFFFFF; border: 1px solid var(--border-hairline); padding: 16px; margin-bottom: 20px;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-            <span style="font-size: 0.8125rem; font-weight: 600; color: var(--text-primary);">Order Quantity (MOQ: ${product.moq})</span>
-            <span id="qvDiscountBadge" style="font-size: 0.75rem; color: var(--brand-navy); font-weight: 600;">Base Rate</span>
+            <span class="mono-caption">ORDER QUANTITY (MOQ: ${product.moq})</span>
+            <span id="qvDiscountBadge" class="mono-caption" style="color: var(--color-blue-ant);">Base Rate</span>
           </div>
 
           <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
-            <button onclick="adjustQvQty(-10)" class="stepper-btn" aria-label="Decrease quantity">-</button>
-            <input type="number" id="qvQtyInput" value="${product.moq}" min="${product.moq}" step="5"
-                   style="width: 80px; height: 44px; text-align: center; border: 1px solid var(--border-medium); border-radius: 4px; font-weight: 600; outline: none;">
-            <button onclick="adjustQvQty(10)" class="stepper-btn" aria-label="Increase quantity">+</button>
-            
-            <span style="font-size: 0.8125rem; color: var(--text-muted); margin-left: 8px;">Units</span>
+            <div class="qty-stepper-wrap">
+              <button onclick="adjustQvQty(-10)" class="stepper-btn" aria-label="Decrease quantity">-</button>
+              <input type="number" id="qvQtyInput" value="${product.moq}" min="${product.moq}" step="5" class="stepper-input">
+              <button onclick="adjustQvQty(10)" class="stepper-btn" aria-label="Increase quantity">+</button>
+            </div>
+            <span class="mono-caption" style="color: var(--color-ink-muted);">UNITS</span>
           </div>
 
           <div style="display: flex; justify-content: space-between; align-items: baseline; padding-top: 12px; border-top: 1px solid var(--border-hairline);">
             <div>
-              <div style="font-size: 0.75rem; color: var(--text-muted);">Estimated Unit Price:</div>
-              <strong id="qvUnitPrice" style="font-size: 1.125rem; color: var(--text-primary); font-family: var(--font-serif);">${CONFIG.formatPrice(product.price)}</strong>
+              <div class="mono-caption" style="font-size: 0.6875rem;">UNIT ESTIMATE:</div>
+              <strong id="qvUnitPrice" style="font-family: var(--font-mono); font-size: 1.125rem;">${CONFIG.formatPrice(product.price)}</strong>
             </div>
             <div style="text-align: right;">
-              <div style="font-size: 0.75rem; color: var(--text-muted);">Total Estimate:</div>
-              <strong id="qvTotalPrice" style="font-size: 1.25rem; color: var(--brand-navy); font-family: var(--font-serif);">${CONFIG.formatPrice(product.price * product.moq)}</strong>
+              <div class="mono-caption" style="font-size: 0.6875rem;">TOTAL ESTIMATE:</div>
+              <strong id="qvTotalPrice" style="font-family: var(--font-mono); font-size: 1.25rem; color: var(--color-blue-ant);">${CONFIG.formatPrice(product.price * product.moq)}</strong>
             </div>
           </div>
         </div>
 
         <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-          <button onclick="addCurrentQvToRfp()" class="btn-primary" style="flex: 1; min-height: 48px;">
+          <button onclick="addCurrentQvToRfp()" class="btn-card-add" style="flex: 1; height: 50px; font-size: 0.75rem;">
             <i class="fas fa-plus"></i> Add to Quote Request
           </button>
-          <button onclick="inquireProductWhatsapp('${product.id}')" class="btn-wa-solid" style="min-height: 48px;">
-            <i class="fa-brands fa-whatsapp text-lg"></i> Instant WhatsApp
+          <button onclick="inquireProductWhatsapp('${product.id}')" class="btn-wa-direct" style="height: 50px;">
+            <i class="fa-brands fa-whatsapp text-lg"></i> Direct WhatsApp
           </button>
         </div>
       </div>
@@ -682,7 +786,7 @@ function updateQvCalculations() {
   if (unitPriceEl) unitPriceEl.textContent = `${CONFIG.formatPrice(appliedTier.price)} / unit`;
   if (totalPriceEl) totalPriceEl.textContent = CONFIG.formatPrice(appliedTier.price * qty);
   if (discountBadge) {
-    discountBadge.textContent = appliedTier.discount !== '0%' ? `Tier Savings: ${appliedTier.discount}` : 'Base Rate';
+    discountBadge.textContent = appliedTier.discount !== '0%' ? `Volume Privilege: ${appliedTier.discount}` : 'Base Rate';
   }
 }
 
@@ -714,7 +818,7 @@ function inquireProductWhatsapp(prodId) {
     `*Suite:* ${product.name}\n` +
     `*Category:* ${product.categoryLabel}\n` +
     `*Quantity:* ${qty} units\n` +
-    `*Price Tier:* ${CONFIG.formatPrice(appliedTier.price)} / unit\n` +
+    `*Estimated Unit Price:* ${CONFIG.formatPrice(appliedTier.price)}\n` +
     `*Total Estimate:* ${CONFIG.formatPrice(total)}\n` +
     `━━━━━━━━━━━━━━━━━━━━\n` +
     `Hi Blue Ants team, please share corporate branding options (gold foil debossing / laser engraving), sample availability, and lead times.`;
@@ -723,7 +827,9 @@ function inquireProductWhatsapp(prodId) {
 }
 
 /**
- * RFP Quote Drawer Management
+ * =========================================================================
+ * RFP QUOTE DRAWER & MICRO-INTERACTION (Nav Cart Receive Bump)
+ * =========================================================================
  */
 function addToRfp(prodId, qty) {
   const product = PRODUCTS.find(p => p.id === prodId);
@@ -746,10 +852,19 @@ function addToRfp(prodId, qty) {
     });
   }
 
+  // Supporting wow micro-moment 2: Nav quote button receives item with tactile bump
+  const navQuoteBtn = document.getElementById('openRfpCartBtn');
+  if (navQuoteBtn) {
+    navQuoteBtn.classList.remove('cart-received');
+    void navQuoteBtn.offsetWidth; // trigger reflow
+    navQuoteBtn.classList.add('cart-received');
+    setTimeout(() => navQuoteBtn.classList.remove('cart-received'), 500);
+  }
+
   updateRfpBadges();
   renderRfpDrawer();
   openRfpDrawer();
-  showToast(`Added ${product.name} to quote`);
+  showToast(`Added ${product.name} to quotation list`);
 }
 
 function removeFromRfp(prodId) {
@@ -770,6 +885,7 @@ function updateRfpBadges() {
   const count = rfpCart.length;
   const headerBadge = document.getElementById('rfpCartCount');
   const dockBadge = document.getElementById('mobileDockBadge');
+  const itemCountHeader = document.getElementById('rfpItemCountHeader');
 
   if (headerBadge) {
     headerBadge.textContent = count;
@@ -780,25 +896,29 @@ function updateRfpBadges() {
     dockBadge.textContent = count;
     dockBadge.style.display = count > 0 ? 'inline-flex' : 'none';
   }
+
+  if (itemCountHeader) {
+    itemCountHeader.textContent = `${count} ${count === 1 ? 'Suite' : 'Suites'} Selected`;
+  }
 }
 
 function renderRfpDrawer() {
-  const container = document.getElementById('rfpDrawerItems');
-  const totalDisplay = document.getElementById('rfpDrawerTotal');
-  const savingsDisplay = document.getElementById('rfpDrawerSavings');
+  const container = document.getElementById('rfpCartItemsContainer');
+  const totalDisplay = document.getElementById('rfpTotalAmount');
+  const discountNotice = document.getElementById('rfpDiscountNotice');
 
   if (!container) return;
 
   if (rfpCart.length === 0) {
     container.innerHTML = `
-      <div style="padding: 48px 16px; text-align: center; color: var(--text-muted);">
-        <i class="fas fa-boxes-stacked" style="font-size: 2rem; margin-bottom: 12px; display: block;"></i>
-        <h4 style="font-family: var(--font-serif); font-size: 1.125rem; color: var(--text-primary); margin-bottom: 4px;">Quote list is empty</h4>
-        <p style="font-size: 0.8125rem;">Select suites from the collection to build your quotation.</p>
+      <div style="padding: 48px 16px; text-align: center; color: var(--color-ink-muted);">
+        <i class="fas fa-boxes-stacked" style="font-size: 2rem; margin-bottom: 12px; display: block; opacity: 0.5;"></i>
+        <h4 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--color-ink); margin-bottom: 4px;">Quote list is empty</h4>
+        <p class="mono-caption">Select suites from the catalogue to build your quote.</p>
       </div>
     `;
     if (totalDisplay) totalDisplay.textContent = '$0.00';
-    if (savingsDisplay) savingsDisplay.textContent = '$0.00';
+    if (discountNotice) discountNotice.style.display = 'none';
     return;
   }
 
@@ -816,24 +936,24 @@ function renderRfpDrawer() {
     standardGrandTotal += item.basePrice * item.qty;
 
     return `
-      <div style="background: #FFFFFF; border: 1px solid var(--border-hairline); border-radius: 8px; padding: 12px; display: flex; gap: 12px; align-items: center;">
-        <img src="${item.image}" alt="${item.name}" style="width: 56px; height: 56px; object-fit: cover; border-radius: 6px; flex-shrink: 0;">
+      <div style="background: #FFFFFF; border: 1px solid var(--border-hairline); padding: 14px; margin-bottom: 12px; display: flex; gap: 14px; align-items: center;">
+        <img src="${item.image}" alt="${item.name}" style="width: 60px; height: 60px; object-fit: cover; flex-shrink: 0; border: 1px solid var(--border-hairline);">
         <div style="flex: 1; min-width: 0;">
-          <h4 style="font-size: 0.8125rem; font-weight: 600; color: var(--text-primary); margin-bottom: 2px;" class="truncate">${item.name}</h4>
-          <div style="font-size: 0.75rem; color: var(--text-secondary);">${CONFIG.formatPrice(appliedTier.price)} / unit</div>
+          <h4 style="font-family: var(--font-serif); font-size: 1.0625rem; line-height: 1.2; margin-bottom: 2px;">${item.name}</h4>
+          <div class="mono-caption" style="font-size: 0.6875rem;">${CONFIG.formatPrice(appliedTier.price)} / unit &bull; MOQ ${item.moq}</div>
           
-          <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 8px;">
-            <div style="display: flex; align-items: center; border: 1px solid var(--border-medium); border-radius: 4px; overflow: hidden;">
-              <button onclick="adjustRfpItemQty('${item.id}', -10)" style="width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--bg-subtle); font-weight: 600;">-</button>
-              <span style="padding: 0 8px; font-size: 0.8125rem; font-weight: 600;">${item.qty}</span>
-              <button onclick="adjustRfpItemQty('${item.id}', 10)" style="width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--bg-subtle); font-weight: 600;">+</button>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 10px;">
+            <div class="qty-stepper-wrap" style="height: 36px;">
+              <button onclick="adjustRfpItemQty('${item.id}', -10)" class="stepper-btn" style="width: 36px; height: 36px;" aria-label="Decrease quantity">-</button>
+              <span style="font-family: var(--font-mono); font-size: 0.8125rem; font-weight: 600; padding: 0 8px;">${item.qty}</span>
+              <button onclick="adjustRfpItemQty('${item.id}', 10)" class="stepper-btn" style="width: 36px; height: 36px;" aria-label="Increase quantity">+</button>
             </div>
 
-            <div style="font-family: var(--font-serif); font-weight: 600; font-size: 0.9375rem; color: var(--text-primary);">
+            <div style="font-family: var(--font-mono); font-weight: 600; font-size: 0.9375rem; color: var(--color-ink);">
               ${CONFIG.formatPrice(itemTotal)}
             </div>
 
-            <button onclick="removeFromRfp('${item.id}')" style="color: var(--text-muted); padding: 4px;" aria-label="Remove item">
+            <button onclick="removeFromRfp('${item.id}')" style="color: var(--color-ink-muted); background: none; border: none; cursor: pointer; padding: 6px;" aria-label="Remove item">
               <i class="fas fa-trash-can text-xs"></i>
             </button>
           </div>
@@ -843,17 +963,21 @@ function renderRfpDrawer() {
   }).join('');
 
   if (totalDisplay) totalDisplay.textContent = CONFIG.formatPrice(grandTotal);
-  if (savingsDisplay) {
+  
+  if (discountNotice) {
     const savings = standardGrandTotal - grandTotal;
-    savingsDisplay.textContent = savings > 0 ? `Saved ${CONFIG.formatPrice(savings)} with Tier Privileges` : 'Base Tier Rate';
+    if (savings > 0) {
+      discountNotice.textContent = `Volume privilege applied: Saved ${CONFIG.formatPrice(savings)}`;
+      discountNotice.style.display = 'block';
+    } else {
+      discountNotice.style.display = 'none';
+    }
   }
 }
 
 function openRfpDrawer() {
   const drawer = document.getElementById('rfpDrawer');
-  const backdrop = document.getElementById('rfpBackdrop');
   if (drawer) drawer.classList.add('active');
-  if (backdrop) backdrop.classList.add('active');
   document.body.classList.add('scroll-locked');
   const dock = document.getElementById('mobileBottomDock');
   if (dock) dock.classList.add('is-hidden');
@@ -861,9 +985,7 @@ function openRfpDrawer() {
 
 function closeRfpDrawer() {
   const drawer = document.getElementById('rfpDrawer');
-  const backdrop = document.getElementById('rfpBackdrop');
   if (drawer) drawer.classList.remove('active');
-  if (backdrop) backdrop.classList.remove('active');
   document.body.classList.remove('scroll-locked');
   const dock = document.getElementById('mobileBottomDock');
   if (dock) dock.classList.remove('is-hidden');
@@ -900,6 +1022,13 @@ function setupModalListeners() {
     });
   }
 
+  const rfpDrawer = document.getElementById('rfpDrawer');
+  if (rfpDrawer) {
+    rfpDrawer.addEventListener('click', (e) => {
+      if (e.target === rfpDrawer) closeRfpDrawer();
+    });
+  }
+
   // Escape key global listener
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
@@ -925,14 +1054,14 @@ function setupDrawerListeners() {
       const company = document.getElementById('rfpCompanyName')?.value.trim() || 'Corporate Client';
       const notes = document.getElementById('rfpCustomNotes')?.value.trim() || 'Standard corporate dispatch';
 
-      const sampleBox = document.getElementById('rfpOptionSampleBox')?.checked;
-      const gstInvoice = document.getElementById('rfpOptionGstInvoice')?.checked;
-      const multiAddress = document.getElementById('rfpOptionMultiAddress')?.checked;
+      const sampleBox = document.getElementById('rfpOptSample')?.checked;
+      const gstInvoice = document.getElementById('rfpOptGst')?.checked;
+      const dropShip = document.getElementById('rfpOptDropShip')?.checked;
 
       const selectedOptions = [];
-      if (sampleBox) selectedOptions.push('Physical Pre-Production Sample Box Requested');
-      if (gstInvoice) selectedOptions.push('GST / Tax Invoice Required');
-      if (multiAddress) selectedOptions.push('Multi-Address Employee Drop-Shipping');
+      if (sampleBox) selectedOptions.push('Physical Evaluation Sample Box to Office');
+      if (gstInvoice) selectedOptions.push('GST / B2B Input Tax Credit Invoice');
+      if (dropShip) selectedOptions.push('Multi-Address Individual Drop-Shipping');
 
       let grandTotal = 0;
       let standardTotal = 0;
@@ -946,7 +1075,7 @@ function setupDrawerListeners() {
         grandTotal += itemTotal;
         standardTotal += item.basePrice * item.qty;
 
-        return `• *${item.name}* (Qty: ${item.qty} units @ ${CONFIG.formatPrice(appliedTier.price)}) = ${CONFIG.formatPrice(itemTotal)}`;
+        return `• *${item.name}* (${item.qty} units @ ${CONFIG.formatPrice(appliedTier.price)}) = ${CONFIG.formatPrice(itemTotal)}`;
       }).join('\n');
 
       const savings = standardTotal - grandTotal;
@@ -958,16 +1087,16 @@ function setupDrawerListeners() {
         `*NEW CORPORATE QUOTE REQUEST — THE BLUE ANTS*\n` +
         `━━━━━━━━━━━━━━━━━━━━\n` +
         `*Company / Organization:* ${company}\n` +
-        `*Special Requirements / Notes:* ${notes}\n` +
+        `*Delivery / Timeline Notes:* ${notes}\n` +
         `━━━━━━━━━━━━━━━━━━━━\n` +
-        `*Requested Packages:*\n` +
+        `*Requested Suites:*\n` +
         `${itemsText}\n` +
         `━━━━━━━━━━━━━━━━━━━━\n` +
         `*Estimated Quotation Total:* ${CONFIG.formatPrice(grandTotal)}\n` +
         `*Total Bulk Savings:* ${CONFIG.formatPrice(savings)}\n` +
         `━━━━━━━━━━━━━━━━━━━━\n` +
         `${optionsText}` +
-        `Please share formal PDF quotation, branding mockups, and delivery timelines.`;
+        `Please share formal PDF quotation, branding mockups, and dispatch timelines.`;
 
       window.open(`https://wa.me/${CONFIG.PHONE}?text=${encodeURIComponent(msg)}`, '_blank');
       closeRfpDrawer();
@@ -981,12 +1110,12 @@ function showToast(message) {
   if (!container) {
     container = document.createElement('div');
     container.id = 'toastContainer';
-    container.className = 'toast-container';
+    container.style.cssText = 'position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%); z-index: 2000; pointer-events: none;';
     document.body.appendChild(container);
   }
 
   const toast = document.createElement('div');
-  toast.className = 'toast';
+  toast.style.cssText = 'background: #101826; color: #F3EFE6; padding: 10px 18px; border-radius: 2px; font-family: var(--font-mono); font-size: 0.8125rem; letter-spacing: 0.05em; margin-top: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.25); text-align: center;';
   toast.textContent = message;
   container.appendChild(toast);
 

@@ -3,30 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-  <title>The Blue Ants | Curated Corporate Gifting</title>
-  <meta name="description" content="The Blue Ants curates distinguished corporate gift suites and hampers for visionary teams. Bespoke branding, pan-India white-glove dispatch, and GST compliance.">
+  <title>The Blue Ants — Corporate Gift Suites &amp; Custom Foil Stamping</title>
+  <meta name="description" content="Corporate gifts your clients will actually keep. Custom foil-stamped presentation boxes, bulk pricing, and pan-India dispatch. GST invoicing with every order.">
   
   <!-- Open Graph / WhatsApp Preview -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://blue-ants.vercel.app/">
-  <meta property="og:title" content="The Blue Ants | Curated Corporate Gifting">
-  <meta property="og:description" content="Bespoke gift suites curated for visionary enterprises. Pan-India white-glove dispatch, 24k gold foil branding, and dedicated concierge stewardship.">
-  <meta property="og:image" content="https://blue-ants.vercel.app/assets/products/blueants_exec_leather.jpg">
+  <meta property="og:title" content="The Blue Ants — Corporate Gift Suites">
+  <meta property="og:description" content="Corporate gifts your clients will actually keep. Your logo foil-stamped on luxury boxes. Pan-India dispatch &amp; GST compliance.">
+  <meta property="og:image" content="https://blue-ants.vercel.app/assets/products/blueants_exec_leather.webp">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐜</text></svg>">
 
   <!-- Mobile & PWA -->
-  <meta name="theme-color" content="#FAF8F4">
+  <meta name="theme-color" content="#F3EFE6">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <link rel="manifest" href="manifest.json">
 
-  <!-- Google Fonts Preconnect & Display Swap -->
+  <!-- Google Fonts: Instrument Serif (Display), Hanken Grotesk (Body), IBM Plex Mono (Captions) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400..700;1,400..700&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
-  <!-- Preload LCP Hero Image -->
+  <!-- Preload Hero Image -->
   <link rel="preload" as="image" href="assets/products/blueants_exec_leather_mobile.webp" type="image/webp" media="(max-width: 767px)" fetchpriority="high">
   <link rel="preload" as="image" href="assets/products/blueants_exec_leather.webp" type="image/webp" media="(min-width: 768px)" fetchpriority="high">
 
@@ -34,8 +34,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 
-  <!-- Core Quiet Luxury Stylesheet (Zero external script dependency) -->
-  <link rel="stylesheet" href="css/style.css?v=2.0">
+  <!-- Core Printed Catalog Stylesheet (Version cache-busted) -->
+  <link rel="stylesheet" href="css/style.css?v=3.0">
 </head>
 <body class="has-bottom-dock">
 
@@ -43,20 +43,21 @@
        1. GLOBAL BRAND NAVIGATION HEADER
        ========================================================================= -->
   <header class="brand-header" id="brandHeader">
-    <a href="#" class="brand-logo" aria-label="The Blue Ants">
+    <a href="#" class="brand-logo">
       <div class="logo-badge">BA</div>
       <span class="brand-title">THE BLUE ANTS</span>
     </a>
 
     <nav class="nav-links" aria-label="Primary Navigation">
-      <a href="#catalogSection" class="nav-link">Collection</a>
-      <a href="#featuresSection" class="nav-link">Why Blue Ants</a>
-      <a href="#conciergeSection" class="nav-link">Concierge</a>
+      <a href="#catalogSection" class="nav-link">No. 01 Catalogue</a>
+      <a href="#occasionsSection" class="nav-link">Occasions</a>
+      <a href="#featuresSection" class="nav-link">Why Us</a>
+      <a href="#conciergeSection" class="nav-link">Direct Desk</a>
     </nav>
 
     <div class="header-actions">
       <!-- WhatsApp Direct Icon Button -->
-      <a href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants%20team,%20I%20would%20like%20to%20inquire%20about%20corporate%20gifting%20suites." 
+      <a href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants,%20I'd%20like%20to%20inquire%20about%20corporate%20gifting%20suites." 
          target="_blank" rel="noopener" 
          class="nav-wa-icon-btn" 
          aria-label="Chat with Concierge on WhatsApp">
@@ -75,45 +76,104 @@
   <main id="mainContent">
 
   <!-- =========================================================================
-       2. HERO: "CORPORATE GIFTS WORTH KEEPING"
+       2. SIGNATURE HERO: "STAMP YOUR OWN BOX"
        ========================================================================= -->
-  <section class="hero-section" id="heroSection">
+  <section class="hero-signature-section" id="scrollHeroContainer">
     <div class="container-max w-full">
-      <div class="hero-grid">
+      <div class="hero-editorial-grid">
         
-        <div class="hero-content">
-          <div class="eyebrow-tag">Curated Corporate Gifting</div>
-          <h1 class="hero-title">
-            Corporate gifts worth keeping.
+        <!-- Left: Copy & Real-Time Stamping Module -->
+        <div class="hero-copy-column">
+          <div class="mono-caption">
+            <span class="mono-numeral">01</span>
+            <span>CUSTOM FOIL STAMPING PREVIEW</span>
+          </div>
+          
+          <h1 class="hero-main-title">
+            Gifts your clients will actually keep.
           </h1>
-          <p class="hero-subtext">
-            Bespoke gift suites curated for visionary teams, packaged with master craftsmanship and delivered pan-India.
+          
+          <p class="hero-subline">
+            Your logo, foil-stamped on rigid presentation boxes. Delivered across India. GST invoice with every order.
           </p>
 
-          <div class="hero-ctas">
-            <a href="#catalogSection" class="btn-primary">
-              <span>Browse Collection</span>
-              <i class="fas fa-arrow-down text-xs"></i>
-            </a>
-            <a href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants%20team,%20I%20would%20like%20to%20inquire%20about%20bespoke%20corporate%20gifting%20suites." 
-               target="_blank" rel="noopener" 
-               class="text-link-wa">
-              <i class="fa-brands fa-whatsapp"></i>
-              <span>WhatsApp us</span>
-            </a>
+          <!-- Interactive Stamping Control Box -->
+          <div class="stamper-box-module">
+            <div class="stamper-label-group">
+              <label for="companyStamperInput" class="mono-caption" style="font-size: 0.6875rem; color: var(--color-ink);">
+                TYPE YOUR COMPANY OR CLIENT NAME
+              </label>
+              <span class="mono-caption" style="font-size: 0.6875rem; color: var(--color-gold-dark);">
+                24K FOIL PREVIEW
+              </span>
+            </div>
+
+            <div class="stamper-field-row">
+              <input type="text" id="companyStamperInput" 
+                     placeholder="ENTER COMPANY NAME..." 
+                     value="ACME ENTERPRISES" 
+                     maxlength="28" 
+                     autocomplete="off" 
+                     spellcheck="false" 
+                     class="stamper-input" 
+                     aria-label="Company name to foil-stamp on box lid">
+              <button type="button" id="stampActionBtn" class="stamper-apply-btn">
+                Stamp Lid
+              </button>
+            </div>
+
+            <div class="hero-cta-cluster">
+              <a id="requestStampedBoxBtn" 
+                 href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants,%20I'd%20like%20a%20bulk%20quote%20for%20The%20Sovereign%20Suite%20customized%20with%20our%20branding%20for%20ACME%20ENTERPRISES." 
+                 target="_blank" rel="noopener" 
+                 class="btn-ant-blue">
+                <span>Request Quote for This Box</span>
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+
+              <a href="#catalogSection" class="catalog-jump-link">
+                Browse full catalogue (8 suites) &darr;
+              </a>
+            </div>
           </div>
         </div>
 
-        <div class="hero-visual-card">
-          <picture>
-            <source srcset="assets/products/blueants_exec_leather_mobile.webp" type="image/webp" media="(max-width: 767px)">
-            <source srcset="assets/products/blueants_exec_leather.webp" type="image/webp">
-            <img src="assets/products/blueants_exec_leather_mobile.webp" 
-                 alt="The Sovereign Executive Leather Suite in handcrafted presentation box" 
-                 class="hero-image-mobile" 
-                 width="640" height="480" 
-                 fetchpriority="high">
-          </picture>
+        <!-- Right: 3D Interactive Luxury Box Stage -->
+        <div class="hero-box-stage" id="heroBoxStage">
+          <div class="box-contact-shadow"></div>
+          
+          <div class="box-3d-wrapper" id="box3DWrapper">
+            <!-- Box Body / Interior Suite View -->
+            <div class="box-base">
+              <div class="box-interior-contents">
+                <picture>
+                  <source srcset="assets/products/blueants_exec_leather_mobile.webp" type="image/webp" media="(max-width: 767px)">
+                  <source srcset="assets/products/blueants_exec_leather.webp" type="image/webp">
+                  <img src="assets/products/blueants_exec_leather.webp" 
+                       alt="The Sovereign Executive Leather Suite in handcrafted presentation box" 
+                       width="640" height="480" 
+                       fetchpriority="high">
+                </picture>
+              </div>
+            </div>
+
+            <!-- Hinged Box Lid with Real-Time Foil Stamping -->
+            <div class="box-lid" id="boxLid" role="button" tabindex="0">
+              <div class="foil-specular-sheen" id="boxFoilSheen"></div>
+              
+              <div class="box-foil-stamp-face">
+                <div class="foil-monogram-crest">BA</div>
+                <div id="boxStampedName" class="foil-company-name">ACME ENTERPRISES</div>
+                <div class="foil-caption-line">THE SOVEREIGN SUITE // NO. 01</div>
+              </div>
+
+              <!-- Interactive Inspect / Open Pill -->
+              <button type="button" id="toggleLidBtn" class="box-inspect-pill">
+                <i class="fas fa-eye text-xs"></i>
+                <span id="lidToggleText">Open Lid to Inspect</span>
+              </button>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -121,42 +181,30 @@
   </section>
 
   <!-- =========================================================================
-       3. STATIC TRUST STRIP (4 Items, No Scrolling Ticker)
+       3. CATALOG TRUST LINE (Quiet Mono Dividers)
        ========================================================================= -->
-  <section class="trust-strip" aria-label="Corporate Service Standards">
+  <section class="trust-line-section" aria-label="Corporate Standards">
     <div class="container-max">
-      <div class="trust-grid">
+      <div class="trust-line-grid">
         
-        <div class="trust-item">
-          <div class="trust-icon"><i class="fas fa-stamp"></i></div>
-          <div class="trust-text">
-            <div class="trust-title">Custom Branding</div>
-            <p>24k gold foil, debossing &amp; precision engraving</p>
-          </div>
+        <div class="trust-line-item">
+          <div class="trust-line-label">01 // FOIL &amp; DEBOSS</div>
+          <div class="trust-line-desc">24k metallic gold foil, blind debossing, and precision laser etching.</div>
         </div>
 
-        <div class="trust-item">
-          <div class="trust-icon"><i class="fas fa-truck-fast"></i></div>
-          <div class="trust-text">
-            <div class="trust-title">Pan-India Dispatch</div>
-            <p>Direct white-glove doorstep delivery</p>
-          </div>
+        <div class="trust-line-item">
+          <div class="trust-line-label">02 // PAN-INDIA DISPATCH</div>
+          <div class="trust-line-desc">Direct white-glove doorstep delivery to 500+ destinations across India.</div>
         </div>
 
-        <div class="trust-item">
-          <div class="trust-icon"><i class="fas fa-file-invoice"></i></div>
-          <div class="trust-text">
-            <div class="trust-title">GST Invoicing</div>
-            <p>Full enterprise tax billing &amp; compliance</p>
-          </div>
+        <div class="trust-line-item">
+          <div class="trust-line-label">03 // GST COMPLIANT</div>
+          <div class="trust-line-desc">Official B2B tax invoice with every corporate shipment for input credit.</div>
         </div>
 
-        <div class="trust-item">
-          <div class="trust-icon"><i class="fas fa-layer-group"></i></div>
-          <div class="trust-text">
-            <div class="trust-title">Bulk Pricing</div>
-            <p>Tiered privileges up to 40% on volume</p>
-          </div>
+        <div class="trust-line-item">
+          <div class="trust-line-label">04 // VOLUME PRICING</div>
+          <div class="trust-line-desc">Tiered corporate rates starting from 25 units with custom box stamping.</div>
         </div>
 
       </div>
@@ -164,47 +212,55 @@
   </section>
 
   <!-- =========================================================================
-       4. CATEGORY CARDS: "SHOP BY OCCASION"
+       4. OCCASIONS: ASYMMETRIC EDITORIAL RAIL
        ========================================================================= -->
-  <section class="category-section" id="occasionsSection">
+  <section class="occasions-section" id="occasionsSection">
     <div class="container-max">
-      <div class="section-header text-center">
-        <div class="eyebrow-tag">Occasions &amp; Milestone Suites</div>
-        <h2 class="section-title">Shop by occasion</h2>
-        <p class="section-subtitle mx-auto">Selected collections tailored for executive milestones and team appreciation.</p>
+      <div class="occasions-header-row">
+        <div>
+          <div class="mono-caption">
+            <span class="mono-numeral">02</span>
+            <span>OCCASIONS &amp; MILESTONES</span>
+          </div>
+          <h2 class="section-editorial-title">Selected by occasion</h2>
+        </div>
+        <p class="mono-caption" style="text-transform: none; color: var(--color-ink-muted);">
+          Tap any occasion to filter the active catalogue.
+        </p>
       </div>
 
-      <div class="occasion-grid">
+      <div class="occasions-rail">
         
-        <div class="occasion-card" onclick="selectOccasionCategory('executive')">
-          <div class="occasion-icon-wrap"><i class="fas fa-crown"></i></div>
+        <!-- Featured Tile -->
+        <div class="occasion-tile is-featured" onclick="selectOccasionCategory('executive')">
+          <div class="occasion-tile-numeral">01</div>
           <div>
-            <h3 class="occasion-title">Executive VIP</h3>
-            <p class="occasion-desc">Full-grain leather, solid brass &amp; titanium desk suites.</p>
+            <h3 class="occasion-tile-heading">Executive VIP</h3>
+            <p class="occasion-tile-detail">Full-grain leather journals, weighted solid brass pens, and titanium chargers for board-level appreciation.</p>
           </div>
         </div>
 
-        <div class="occasion-card" onclick="selectOccasionCategory('gourmet')">
-          <div class="occasion-icon-wrap"><i class="fas fa-mug-hot"></i></div>
+        <div class="occasion-tile" onclick="selectOccasionCategory('welcome')">
+          <div class="occasion-tile-numeral">02</div>
           <div>
-            <h3 class="occasion-title">Gourmet Hampers</h3>
-            <p class="occasion-desc">Artisanal single-origin brews &amp; ceramic dripper sets.</p>
+            <h3 class="occasion-tile-heading">Onboarding Kits</h3>
+            <p class="occasion-tile-detail">Recycled wheat-straw journals, bamboo thermal bottles, and organic canvas utility bags for day-one hires.</p>
           </div>
         </div>
 
-        <div class="occasion-card" onclick="selectOccasionCategory('eco-luxe')">
-          <div class="occasion-icon-wrap"><i class="fas fa-leaf"></i></div>
+        <div class="occasion-tile" onclick="selectOccasionCategory('gourmet')">
+          <div class="occasion-tile-numeral">03</div>
           <div>
-            <h3 class="occasion-title">Sustainable Eco-Luxe</h3>
-            <p class="occasion-desc">Zero-waste bamboo, FSC seed-paper &amp; linen canvas.</p>
+            <h3 class="occasion-tile-heading">Gourmet Hampers</h3>
+            <p class="occasion-tile-detail">Artisanal single-origin Ethiopian coffee beans, ceramic V60 drippers, and raw Himalayan forest honey.</p>
           </div>
         </div>
 
-        <div class="occasion-card" onclick="selectOccasionCategory('welcome')">
-          <div class="occasion-icon-wrap"><i class="fas fa-box-open"></i></div>
+        <div class="occasion-tile" onclick="selectOccasionCategory('eco-luxe')">
+          <div class="occasion-tile-numeral">04</div>
           <div>
-            <h3 class="occasion-title">Onboarding Kits</h3>
-            <p class="occasion-desc">Inspiring welcome packages for executive hires.</p>
+            <h3 class="occasion-tile-heading">Eco-Luxe</h3>
+            <p class="occasion-tile-detail">FSC-certified zero-waste materials, cork journals, and plantable wildflower seed greeting stationery.</p>
           </div>
         </div>
 
@@ -213,36 +269,81 @@
   </section>
 
   <!-- =========================================================================
-       5. CATALOG SECTION (Chips + Single Sort + Filter Sheet)
+       5. THE FULL-BLEED ANT BLUE SECTION: RHYTHM BREAK
+       ========================================================================= -->
+  <section class="section-ant-blue">
+    <div class="container-max">
+      <div class="ant-blue-grid">
+        
+        <div>
+          <div class="mono-caption" style="color: var(--color-gold-sheen); margin-bottom: 12px;">
+            <span style="color: #FFFFFF;">03 //</span> DIRECT CORPORATE STANDARD
+          </div>
+          <h2 class="ant-blue-quote">
+            &ldquo;No middlemen. Direct workshop craft. Digital proofs in 24 hours.&rdquo;
+          </h2>
+        </div>
+
+        <div class="ant-blue-terms">
+          <div class="ant-blue-term-item">
+            <div class="ant-blue-term-head">ZERO SURPRISE CHARGES</div>
+            <div class="ant-blue-term-copy">
+              All prices include rigid presentation packaging, custom company branding, and protective outer cartons.
+            </div>
+          </div>
+
+          <div class="ant-blue-term-item">
+            <div class="ant-blue-term-head">PHYSICAL SAMPLE BOXES</div>
+            <div class="ant-blue-term-copy">
+              Inspect materials and foil stamping first-hand. We ship physical evaluation samples directly to your office before bulk production.
+            </div>
+          </div>
+
+          <div class="ant-blue-term-item">
+            <div class="ant-blue-term-head">DROP-SHIPPING READY</div>
+            <div class="ant-blue-term-copy">
+              Provide your employee or client address spreadsheet. We dispatch individually to homes and offices nationwide.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. CATALOGUE SECTION (Streamlined Chips, Sort & Product Grid)
        ========================================================================= -->
   <section class="catalog-section" id="catalogSection">
     <div class="container-max">
       
-      <div class="section-header">
-        <div class="eyebrow-tag">The Curated Catalog</div>
-        <h2 class="section-title">Curated Gift Suites</h2>
-        <p class="section-subtitle">Every suite includes presentation casing, custom debossed logo, and doorstep dispatch.</p>
+      <div class="catalog-header-bar">
+        <div class="mono-caption">
+          <span class="mono-numeral">04</span>
+          <span>CURATED CORPORATE CATALOGUE</span>
+        </div>
+        <h2 class="section-editorial-title">Eight ready-to-brand suites</h2>
       </div>
 
       <!-- Toolbar: Category chips & controls -->
-      <div class="catalog-toolbar">
+      <div class="catalog-toolbar-row">
         
-        <div class="category-chips-wrap" role="tablist" aria-label="Filter by category">
-          <button class="category-chip active" data-category="all" role="tab" aria-selected="true">All Suites (8)</button>
-          <button class="category-chip" data-category="executive" role="tab" aria-selected="false">Executive VIP</button>
-          <button class="category-chip" data-category="welcome" role="tab" aria-selected="false">Onboarding Kits</button>
-          <button class="category-chip" data-category="eco-luxe" role="tab" aria-selected="false">Eco-Luxe</button>
-          <button class="category-chip" data-category="gourmet" role="tab" aria-selected="false">Gourmet Hampers</button>
+        <div class="catalog-category-tabs" role="tablist" aria-label="Filter by category">
+          <button class="catalog-tab active" data-category="all" role="tab" aria-selected="true">All Suites (8)</button>
+          <button class="catalog-tab" data-category="executive" role="tab" aria-selected="false">Executive VIP</button>
+          <button class="catalog-tab" data-category="welcome" role="tab" aria-selected="false">Onboarding</button>
+          <button class="catalog-tab" data-category="eco-luxe" role="tab" aria-selected="false">Eco-Luxe</button>
+          <button class="catalog-tab" data-category="gourmet" role="tab" aria-selected="false">Gourmet</button>
         </div>
 
-        <div class="catalog-controls">
-          <button class="btn-filter-toggle" onclick="openMobileFilters()" aria-label="Open filter options">
+        <div class="catalog-actions-right">
+          <button class="btn-catalog-filter" onclick="openMobileFilters()" aria-label="Open filter options">
             <i class="fas fa-sliders text-xs"></i>
             <span>Filter</span>
             <span id="activeFilterCount" class="quote-count-badge" style="display: none;">0</span>
           </button>
 
-          <select id="sortBySelect" class="select-sort" aria-label="Sort catalog">
+          <select id="sortBySelect" class="catalog-sort-select" aria-label="Sort catalog">
             <option value="featured">Sort: Featured</option>
             <option value="price-low">Price: Low to High</option>
             <option value="price-high">Price: High to Low</option>
@@ -253,15 +354,15 @@
       </div>
 
       <!-- Results Count Bar -->
-      <div class="flex items-center justify-between text-xs text-[#575D6B] mb-6">
-        <span id="productResultsCount">Showing 8 bespoke corporate suites</span>
-        <button id="clearAllFiltersBtn" onclick="resetFilters()" class="text-xs text-[#1B2A4A] font-semibold hover:underline" style="display: none;">
-          Clear Filters
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px;">
+        <span id="productResultsCount" class="mono-caption" style="color: var(--color-ink-muted);">Showing 8 suites</span>
+        <button id="clearAllFiltersBtn" onclick="resetFilters()" class="mono-caption" style="color: var(--color-blue-ant); cursor: pointer; display: none; background: transparent; border: none;">
+          Clear Filters &times;
         </button>
       </div>
 
-      <!-- Product Cards Grid -->
-      <div id="productsGrid" class="products-grid">
+      <!-- Product Cards Grid: 3 cols desktop, 2 cols tablet, 2 cols mobile -->
+      <div id="productsGrid" class="products-editorial-grid">
         <!-- Dynamically rendered by js/catalog.js -->
       </div>
 
@@ -269,56 +370,64 @@
   </section>
 
   <!-- =========================================================================
-       6. FEATURES: "THE ART OF THOUGHTFUL ENTERPRISE GIFTING"
+       7. FEATURES: THREE ALTERNATING ROWS
        ========================================================================= -->
   <section class="features-section" id="featuresSection">
     <div class="container-max">
       
-      <div class="section-header text-center max-w-2xl mx-auto mb-16">
-        <div class="eyebrow-tag">Enterprise Stewardship</div>
-        <h2 class="section-title">The Art of Thoughtful Enterprise Gifting</h2>
-        <p class="section-subtitle mx-auto">Elevating professional relationships through fine craftsmanship and white-glove coordination.</p>
+      <div style="margin-bottom: 48px;">
+        <div class="mono-caption">
+          <span class="mono-numeral">05</span>
+          <span>PRODUCTION &amp; LOGISTICS</span>
+        </div>
+        <h2 class="section-editorial-title">How bulk orders are delivered</h2>
       </div>
 
-      <!-- Feature 1 -->
-      <div class="feature-block">
-        <div class="feature-visual">
+      <!-- Row 1 -->
+      <div class="feature-editorial-row">
+        <div class="feature-media">
           <img src="assets/products/blueants_exec_leather.webp" 
-               alt="Bespoke curated gift suite presentation" 
-               loading="lazy" width="600" height="450">
+               alt="Custom debossed company stationery and presentation box" 
+               loading="lazy" width="600" height="375">
         </div>
-        <div class="feature-content">
-          <div class="eyebrow-tag">Curation</div>
-          <h3>Bespoke Curated Collections</h3>
-          <p>Exclusively sourced luxury suites tailored for leadership summits, annual milestones, and client appreciation.</p>
+        <div class="feature-narrative">
+          <div class="mono-caption">STAGE 01 // WORKSHOP BRANDING</div>
+          <h3 class="feature-serif-head">Your company logo, precision stamped.</h3>
+          <p class="feature-body-text">
+            Send us your high-resolution vector logo. Our workshop produces custom brass dies for 24k gold foil stamping, blind leather debossing, or fiber laser etching on metal components.
+          </p>
         </div>
       </div>
 
-      <!-- Feature 2 -->
-      <div class="feature-block reversed">
-        <div class="feature-visual">
+      <!-- Row 2 (Reversed) -->
+      <div class="feature-editorial-row reversed">
+        <div class="feature-media">
           <img src="assets/products/blueants_coffee_gourmet.webp" 
-               alt="Artisan corporate branding and personalized debossing" 
-               loading="lazy" width="600" height="450">
+               alt="Hand-packed corporate gift sets ready for dispatch" 
+               loading="lazy" width="600" height="375">
         </div>
-        <div class="feature-content">
-          <div class="eyebrow-tag">Craftsmanship</div>
-          <h3>Master Artisan Branding</h3>
-          <p>Seamlessly incorporate your organization's emblem with 24k gold foil debossing, precision laser etching, and calligraphic message stationery.</p>
+        <div class="feature-narrative">
+          <div class="mono-caption">STAGE 02 // QUALITY INSPECTION</div>
+          <h3 class="feature-serif-head">Every suite hand-assembled and checked.</h3>
+          <p class="feature-body-text">
+            No loose parts or damaged corners. Every item is seated securely into custom-cut protective foam beds, tied with grosgrain ribbon, and enclosed with your corporate welcome card.
+          </p>
         </div>
       </div>
 
-      <!-- Feature 3 -->
-      <div class="feature-block">
-        <div class="feature-visual">
+      <!-- Row 3 -->
+      <div class="feature-editorial-row">
+        <div class="feature-media">
           <img src="assets/products/blueants_tech_bundle.webp" 
-               alt="White glove enterprise logistics and drop shipping" 
-               loading="lazy" width="600" height="450">
+               alt="Pan-India courier logistics and corporate delivery" 
+               loading="lazy" width="600" height="375">
         </div>
-        <div class="feature-content">
-          <div class="eyebrow-tag">Fulfillment</div>
-          <h3>White-Glove Pan-India Logistics</h3>
-          <p>End-to-end logistics from coordinated boardroom consignments to individual home drop-shipping across India with full GST invoicing.</p>
+        <div class="feature-narrative">
+          <div class="mono-caption">STAGE 03 // MULTI-DESTINATION DISPATCH</div>
+          <h3 class="feature-serif-head">Direct to offices or employee doorsteps.</h3>
+          <p class="feature-body-text">
+            Whether delivering 500 suites to a single conference hall in Bengaluru or shipping individually to remote employee addresses across Mumbai, Delhi, and Hyderabad, tracking is updated daily.
+          </p>
         </div>
       </div>
 
@@ -326,26 +435,30 @@
   </section>
 
   <!-- =========================================================================
-       7. CONCIERGE CONTACT BLOCK (Only Place With Direct Phone in Body)
+       8. DIRECT CONCIERGE / TALK TO A PERSON
+       (Phone number text appears strictly here and in footer)
        ========================================================================= -->
-  <section class="concierge-section" id="conciergeSection">
+  <section class="contact-person-section" id="conciergeSection">
     <div class="container-max">
-      <div class="concierge-card">
-        <div class="eyebrow-tag">Private Executive Concierge</div>
-        <h2 class="section-title">Direct Consultation with Our Gifting Directors</h2>
-        <p>
-          No ticketing queues or automated delays. Connect directly with our gifting specialists for custom curation, physical sample boxes, and tailored bulk quotations.
+      <div class="contact-card-centered">
+        <div class="mono-caption" style="justify-content: center; margin-bottom: 8px;">
+          <span class="mono-numeral">06</span>
+          <span>DIRECT ENQUIRIES</span>
+        </div>
+        <h2 class="section-editorial-title" style="margin-bottom: 16px;">Talk to a person. WhatsApp us.</h2>
+        <p style="color: var(--color-ink-secondary); max-width: 500px; margin: 0 auto; font-size: 1.0625rem;">
+          No automated ticketing queues. Connect directly with our gifting directors for physical sample boxes, custom pricing tiers, and production scheduling.
         </p>
 
-        <div class="concierge-actions">
-          <a href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants%20team,%20I'd%20like%20to%20discuss%20corporate%20gifting%20packages%20for%20our%20company." 
+        <div class="contact-actions-pair">
+          <a href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants,%20I'd%20like%20to%20discuss%20corporate%20gifting%20packages%20for%20our%20company." 
              target="_blank" rel="noopener" 
-             class="btn-wa-solid">
+             class="btn-wa-direct">
             <i class="fa-brands fa-whatsapp text-lg"></i>
             <span>WhatsApp Executive Desk</span>
           </a>
 
-          <a href="tel:+919916418879" class="btn-secondary">
+          <a href="tel:+919916418879" class="btn-phone-direct">
             <i class="fas fa-phone text-xs"></i>
             <span>Call +91 9916418879</span>
           </a>
@@ -356,21 +469,22 @@
   </main>
 
   <!-- =========================================================================
-       8. MINIMAL FOOTER
+       9. MINIMAL BRAND FOOTER
        ========================================================================= -->
-  <footer class="brand-footer">
+  <footer class="catalog-footer">
     <div class="container-max">
-      <div class="footer-grid">
-        <div class="flex items-center gap-3">
-          <div class="logo-badge" style="width: 28px; height: 28px; font-size: 11px;">BA</div>
-          <div>
-            <strong>THE BLUE ANTS</strong> &copy; 2026. Curated Corporate Gifting.
+      <div class="footer-inner-row">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div class="logo-badge" style="width: 28px; height: 28px; font-size: 10px;">BA</div>
+          <div class="mono-caption" style="color: var(--color-ink);">
+            THE BLUE ANTS &copy; 2026. CORPORATE GIFTING DIRECT.
           </div>
         </div>
 
-        <nav class="footer-nav" aria-label="Footer Navigation">
-          <a href="#catalogSection">Collection</a>
-          <a href="#featuresSection">Why Blue Ants</a>
+        <nav class="footer-nav-mono" aria-label="Footer Navigation">
+          <a href="#catalogSection">Catalogue</a>
+          <a href="#occasionsSection">Occasions</a>
+          <a href="#featuresSection">Why Us</a>
           <a href="tel:+919916418879">+91 9916418879</a>
           <a href="#" onclick="openRfpDrawer(); return false;">Request Quote</a>
         </nav>
@@ -379,50 +493,50 @@
   </footer>
 
   <!-- =========================================================================
-       9. QUICK VIEW MODAL (Center Popover on Desktop / Bottom Sheet on Mobile)
+       10. QUICK VIEW MODAL
        ========================================================================= -->
-  <div id="quickViewModal" class="modal-overlay">
-    <div class="modal-dialog" role="dialog" aria-modal="true" aria-label="Product Quick View">
-      <button onclick="closeQuickView()" class="drawer-close-btn" style="position: absolute; top: 12px; right: 12px; z-index: 10;" aria-label="Close product view">
-        <i class="fas fa-xmark"></i>
-      </button>
-      <div id="quickViewContent"></div>
+  <div id="quickViewModal" class="rfp-drawer-overlay">
+    <div class="rfp-drawer-panel" style="max-width: 560px;" role="dialog" aria-modal="true" aria-label="Product Suite Details">
+      <div class="drawer-header-row">
+        <h3 id="qvSuiteTitle" style="font-family: var(--font-serif); font-size: 1.5rem;">Product Details</h3>
+        <button onclick="closeQuickView()" class="drawer-close-btn" aria-label="Close product view">
+          <i class="fas fa-xmark"></i>
+        </button>
+      </div>
+      <div id="quickViewContent" class="drawer-scroll-body"></div>
     </div>
   </div>
 
   <!-- =========================================================================
-       10. FILTER BOTTOM SHEET (Clean, Concise: Price, MOQ, Branding)
+       11. FILTER BOTTOM SHEET (Clean, Concise: Price, MOQ, Branding)
        ========================================================================= -->
-  <div id="mobileFilterModal" class="modal-overlay">
-    <div class="mobile-filter-dialog" role="dialog" aria-modal="true" aria-label="Filter Collection Options">
-      <div class="bottom-sheet-handle"></div>
-      
-      <div class="drawer-header">
-        <h3 class="drawer-title" style="font-size: 1.125rem;">Filter Collection</h3>
-        <div class="flex items-center gap-3">
-          <button onclick="resetFilters()" class="text-xs text-[#575D6B] hover:text-[#14171F] font-semibold">Clear</button>
+  <div id="mobileFilterModal" class="rfp-drawer-overlay">
+    <div class="rfp-drawer-panel" role="dialog" aria-modal="true" aria-label="Filter Collection Options">
+      <div class="drawer-header-row">
+        <h3 style="font-family: var(--font-serif); font-size: 1.375rem;">Filter Catalogue</h3>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <button onclick="resetFilters()" class="mono-caption" style="color: var(--color-ink-muted); cursor: pointer; background: transparent; border: none;">Clear</button>
           <button onclick="closeMobileFilters()" class="drawer-close-btn" aria-label="Close filters">
             <i class="fas fa-xmark"></i>
           </button>
         </div>
       </div>
 
-      <div class="p-6 space-y-6 overflow-y-auto" style="padding: 20px 24px;">
-        
+      <div class="drawer-scroll-body" style="display: flex; flex-direction: column; gap: 24px;">
         <!-- Budget Filter -->
         <div>
-          <div class="eyebrow-tag" style="margin-bottom: 8px;">Budget Per Unit</div>
-          <div class="flex flex-col gap-2">
-            <label class="flex items-center gap-2 text-sm text-[#14171F] cursor-pointer">
-              <input type="checkbox" name="priceFilter" value="under50"> Under $50
+          <div class="mono-caption" style="margin-bottom: 12px; color: var(--color-ink);">Budget Per Unit</div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 0.9375rem; cursor: pointer;">
+              <input type="checkbox" name="priceFilter" value="under50"> Under $50 (₹4,000)
             </label>
-            <label class="flex items-center gap-2 text-sm text-[#14171F] cursor-pointer">
-              <input type="checkbox" name="priceFilter" value="50to100"> $50 &ndash; $100
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 0.9375rem; cursor: pointer;">
+              <input type="checkbox" name="priceFilter" value="50to100"> $50 &ndash; $100 (₹4,000 &ndash; ₹8,000)
             </label>
-            <label class="flex items-center gap-2 text-sm text-[#14171F] cursor-pointer">
-              <input type="checkbox" name="priceFilter" value="100to150"> $100 &ndash; $150
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 0.9375rem; cursor: pointer;">
+              <input type="checkbox" name="priceFilter" value="100to150"> $100 &ndash; $150 (₹8,000 &ndash; ₹12,000)
             </label>
-            <label class="flex items-center gap-2 text-sm text-[#14171F] cursor-pointer">
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 0.9375rem; cursor: pointer;">
               <input type="checkbox" name="priceFilter" value="over150"> $150+ Executive VIP
             </label>
           </div>
@@ -430,138 +544,134 @@
 
         <!-- MOQ Filter -->
         <div>
-          <div class="eyebrow-tag" style="margin-bottom: 8px;">Minimum Order (MOQ)</div>
-          <div class="flex flex-col gap-2">
-            <label class="flex items-center gap-2 text-sm text-[#14171F] cursor-pointer">
-              <input type="checkbox" name="moqFilter" value="under25"> &le; 25 units
+          <div class="mono-caption" style="margin-bottom: 12px; color: var(--color-ink);">Minimum Order (MOQ)</div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 0.9375rem; cursor: pointer;">
+              <input type="checkbox" name="moqFilter" value="low"> Under 25 units
             </label>
-            <label class="flex items-center gap-2 text-sm text-[#14171F] cursor-pointer">
-              <input type="checkbox" name="moqFilter" value="25to50"> 25 &ndash; 50 units
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 0.9375rem; cursor: pointer;">
+              <input type="checkbox" name="moqFilter" value="mid"> 25 &ndash; 50 units
             </label>
-            <label class="flex items-center gap-2 text-sm text-[#14171F] cursor-pointer">
-              <input type="checkbox" name="moqFilter" value="50plus"> 50+ units
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 0.9375rem; cursor: pointer;">
+              <input type="checkbox" name="moqFilter" value="bulk"> 50+ bulk standard
             </label>
           </div>
         </div>
 
-        <!-- Branding Options -->
+        <!-- Branding Filter -->
         <div>
-          <div class="eyebrow-tag" style="margin-bottom: 8px;">Branding Options</div>
-          <div class="flex flex-col gap-2">
-            <label class="flex items-center gap-2 text-sm text-[#14171F] cursor-pointer">
-              <input type="checkbox" name="brandingFilter" value="gold-foil"> Gold Foil Stamping
+          <div class="mono-caption" style="margin-bottom: 12px; color: var(--color-ink);">Branding Technique</div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 0.9375rem; cursor: pointer;">
+              <input type="checkbox" name="brandFilter" value="gold-foil"> 24k Gold Foil Stamping
             </label>
-            <label class="flex items-center gap-2 text-sm text-[#14171F] cursor-pointer">
-              <input type="checkbox" name="brandingFilter" value="laser"> Laser Engraving
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 0.9375rem; cursor: pointer;">
+              <input type="checkbox" name="brandFilter" value="laser"> Precision Laser Etching
             </label>
-            <label class="flex items-center gap-2 text-sm text-[#14171F] cursor-pointer">
-              <input type="checkbox" name="brandingFilter" value="debossed"> Leather Debossing
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 0.9375rem; cursor: pointer;">
+              <input type="checkbox" name="brandFilter" value="screen-print"> Silk Screen &amp; Blind Debossing
             </label>
           </div>
         </div>
-
       </div>
 
-      <div style="padding: 16px 24px; border-top: 1px solid var(--border-hairline);">
-        <button onclick="closeMobileFilters()" class="btn-primary w-full" style="width: 100%;">
+      <div class="drawer-footer-row">
+        <button onclick="applyMobileFilters()" class="btn-ant-blue" style="width: 100%;">
           Apply Filters
         </button>
       </div>
-
     </div>
   </div>
 
   <!-- =========================================================================
-       11. RFP QUOTE DRAWER (Right Drawer Desktop / Bottom Sheet Mobile)
+       12. RFP QUOTE DRAWER
        ========================================================================= -->
-  <div id="rfpBackdrop" class="modal-overlay" onclick="closeRfpDrawer()"></div>
-  <aside id="rfpDrawer" class="rfp-drawer" role="dialog" aria-modal="true" aria-label="Corporate Quote Request">
-    <div class="bottom-sheet-handle md:hidden"></div>
-    
-    <div class="drawer-header">
-      <div>
-        <h3 class="drawer-title">Quote Request</h3>
-        <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0;">Direct WhatsApp Concierge Dispatch</p>
-      </div>
-      <button id="closeRfpDrawerBtn" onclick="closeRfpDrawer()" class="drawer-close-btn" aria-label="Close quote drawer">
-        <i class="fas fa-xmark"></i>
-      </button>
-    </div>
-
-    <!-- Items List -->
-    <div id="rfpDrawerItems" class="drawer-items">
-      <!-- Populated dynamically by js/catalog.js -->
-    </div>
-
-    <!-- Submission & Options Area -->
-    <div class="drawer-footer">
-      <div style="display: flex; justify-content: space-between; align-items: baseline;">
-        <span style="font-size: 0.875rem; color: var(--text-secondary);">Estimated Total:</span>
-        <span id="rfpDrawerTotal" style="font-family: var(--font-serif); font-size: 1.5rem; font-weight: 600; color: var(--text-primary);">$0.00</span>
-      </div>
-      <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--brand-navy);">
-        <span>Volume Privilege Savings:</span>
-        <span id="rfpDrawerSavings" style="font-weight: 600;">$0.00</span>
+  <aside id="rfpDrawer" class="rfp-drawer-overlay" role="dialog" aria-modal="true" aria-label="Quote Request Summary">
+    <div class="rfp-drawer-panel">
+      
+      <div class="drawer-header-row">
+        <div>
+          <h3 style="font-family: var(--font-serif); font-size: 1.5rem;">Quotation Request</h3>
+          <span id="rfpItemCountHeader" class="mono-caption" style="font-size: 0.6875rem;">0 Suites Selected</span>
+        </div>
+        <button onclick="closeRfpDrawer()" class="drawer-close-btn" aria-label="Close quote drawer">
+          <i class="fas fa-xmark"></i>
+        </button>
       </div>
 
-      <!-- Corporate Options -->
-      <div style="padding-top: 12px; border-top: 1px solid var(--border-hairline); display: flex; flex-direction: column; gap: 8px;">
-        <div class="eyebrow-tag" style="margin-bottom: 2px;">Corporate Options:</div>
-        <label class="flex items-center gap-2 text-xs text-[#14171F] cursor-pointer">
-          <input type="checkbox" id="rfpOptionSampleBox">
-          <span>Request Physical Sample Box</span>
-        </label>
-        <label class="flex items-center gap-2 text-xs text-[#14171F] cursor-pointer">
-          <input type="checkbox" id="rfpOptionGstInvoice">
-          <span>GST / Tax Invoice Required</span>
-        </label>
-        <label class="flex items-center gap-2 text-xs text-[#14171F] cursor-pointer">
-          <input type="checkbox" id="rfpOptionMultiAddress">
-          <span>Multi-Address Employee Drop-Shipping</span>
-        </label>
+      <!-- Items List -->
+      <div id="rfpCartItemsContainer" class="drawer-scroll-body">
+        <!-- Rendered by js/catalog.js -->
       </div>
 
-      <!-- Inputs -->
-      <div style="display: flex; flex-direction: column; gap: 8px;">
-        <input type="text" id="rfpCompanyName" placeholder="Company Name (Optional)" 
-               style="width: 100%; padding: 10px 14px; border: 1px solid var(--border-medium); border-radius: 6px; font-size: 0.875rem; outline: none; background: #FFFFFF;">
-        <input type="text" id="rfpCustomNotes" placeholder="Special requirements / delivery date (Optional)" 
-               style="width: 100%; padding: 10px 14px; border: 1px solid var(--border-medium); border-radius: 6px; font-size: 0.875rem; outline: none; background: #FFFFFF;">
+      <!-- Footer & Calculations -->
+      <div class="drawer-footer-row" style="display: flex; flex-direction: column; gap: 16px;">
+        
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span class="mono-caption">ESTIMATED TOTAL</span>
+          <span id="rfpTotalAmount" style="font-family: var(--font-mono); font-size: 1.25rem; font-weight: 600;">$0.00</span>
+        </div>
+
+        <div id="rfpDiscountNotice" class="mono-caption" style="color: var(--color-blue-ant); display: none;">
+          Volume privilege applied: 10%
+        </div>
+
+        <!-- Quote Options -->
+        <div style="display: flex; flex-direction: column; gap: 6px; padding: 12px; background: #FFFFFF; border: 1px solid var(--border-hairline);">
+          <label style="display: flex; align-items: center; gap: 8px; font-size: 0.8125rem; cursor: pointer;">
+            <input type="checkbox" id="rfpOptSample"> Request physical sample box to office
+          </label>
+          <label style="display: flex; align-items: center; gap: 8px; font-size: 0.8125rem; cursor: pointer;">
+            <input type="checkbox" id="rfpOptGst" checked> GST invoice for tax credit
+          </label>
+          <label style="display: flex; align-items: center; gap: 8px; font-size: 0.8125rem; cursor: pointer;">
+            <input type="checkbox" id="rfpOptDropShip"> Multi-address recipient drop-shipping
+          </label>
+        </div>
+
+        <!-- Inputs -->
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <input type="text" id="rfpCompanyName" placeholder="Company Name (Optional)" 
+                 style="width: 100%; height: 44px; padding: 0 14px; border: 1px solid var(--border-hairline); font-size: 0.875rem; outline: none; background: #FFFFFF;">
+          <input type="text" id="rfpCustomNotes" placeholder="Delivery deadline / destination cities (Optional)" 
+                 style="width: 100%; height: 44px; padding: 0 14px; border: 1px solid var(--border-hairline); font-size: 0.875rem; outline: none; background: #FFFFFF;">
+        </div>
+
+        <button id="submitRfpWhatsappBtn" class="btn-wa-direct" style="width: 100%;">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Send Quote Inquiry on WhatsApp</span>
+        </button>
       </div>
 
-      <button id="submitRfpWhatsappBtn" class="btn-wa-solid w-full" style="width: 100%;">
-        <i class="fa-brands fa-whatsapp text-lg"></i>
-        <span>Send Quote Inquiry on WhatsApp</span>
-      </button>
     </div>
   </aside>
 
   <!-- =========================================================================
-       12. MOBILE BOTTOM DOCK (4 Clean Thumb-Friendly Items)
+       13. MOBILE BOTTOM DOCK (4 Clean Thumb-Friendly Items)
        ========================================================================= -->
-  <nav class="mobile-bottom-dock md:hidden" id="mobileBottomDock" aria-label="Mobile Navigation">
-    <a href="#catalogSection" class="dock-item active">
+  <nav class="mobile-catalog-dock md:hidden" id="mobileBottomDock" aria-label="Mobile Navigation">
+    <a href="#catalogSection" class="dock-tab-btn active">
       <i class="fas fa-boxes-stacked"></i>
-      <span>Catalog</span>
+      <span>Catalogue</span>
     </a>
-    <a href="#featuresSection" class="dock-item">
-      <i class="fas fa-shield-halved"></i>
-      <span>Why Us</span>
+    <a href="#occasionsSection" class="dock-tab-btn">
+      <i class="fas fa-layer-group"></i>
+      <span>Occasions</span>
     </a>
-    <a href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants%20team,%20I%20would%20like%20to%20inquire%20about%20corporate%20gifting%20solutions." 
+    <a href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants,%20I'd%20like%20to%20inquire%20about%20corporate%20gifting%20suites." 
        target="_blank" rel="noopener" 
-       class="dock-item" style="color: #075E54;">
+       class="dock-tab-btn" style="color: var(--color-wa-green);">
       <i class="fa-brands fa-whatsapp"></i>
       <span>WhatsApp</span>
     </a>
-    <button onclick="openRfpDrawer()" class="dock-item" aria-label="Quote - View quotation request">
+    <button onclick="openRfpDrawer()" class="dock-tab-btn" aria-label="Quote - View quotation request">
       <i class="fas fa-file-invoice-dollar"></i>
       <span>Quote</span>
-      <span id="mobileDockBadge" class="dock-badge" style="display: none;">0</span>
+      <span id="mobileDockBadge" class="quote-count-badge" style="display: none; position: absolute; top: 4px; right: 20px;">0</span>
     </button>
   </nav>
 
   <!-- Core Catalog & Interaction Script -->
-  <script src="js/catalog.js?v=2.0" defer></script>
+  <script src="js/catalog.js?v=3.0" defer></script>
 </body>
 </html>
