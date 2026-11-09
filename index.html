@@ -756,6 +756,7 @@
         <a href="#aboutSection" class="text-gray-400 hover:text-amber-300 transition-colors">About</a>
         <a href="tel:+919916418879" class="text-amber-300 hover:text-amber-200 font-semibold transition-colors"><i class="fas fa-phone text-xs mr-1"></i> +91 9916418879</a>
         <a href="#" onclick="openRfpDrawer(); return false;" class="text-gray-400 hover:text-amber-300 transition-colors">Request a Quote</a>
+        <button type="button" id="footerCookieTrigger" onclick="openCookieConsent(); return false;" class="text-gray-400 hover:text-[#38a29a] transition-colors bg-transparent border-none p-0 cursor-pointer text-xs">Cookie Preferences</button>
       </div>
     </div>
   </footer>
@@ -1001,6 +1002,37 @@
       <span id="mobileDockQuoteBadge" class="mobile-dock-cart-badge" style="display: none;">0</span>
     </button>
   </nav>
+
+    <!-- =========================================================================
+       COOKIE & PRIVACY GOVERNANCE BANNER (Accept / Reject with Device Context)
+       ========================================================================= -->
+  <aside id="cookieConsentBanner" class="cookie-banner-wrap" role="dialog" aria-modal="false" aria-label="Privacy and Cookie Preferences" style="display: none;">
+    <div class="cookie-banner-inner">
+      <div class="cookie-banner-content">
+        <div class="cookie-badge-row">
+          <span class="cookie-pill-tag">
+            <i class="fas fa-shield-halved text-[#348b86] text-xs"></i>
+            <span>PRIVACY &amp; COOKIE GOVERNANCE</span>
+          </span>
+          <span class="cookie-live-resolution" id="cookieDeviceResolutionBadge">
+            <!-- Dynamically populated with extracted screen metrics by JS -->
+          </span>
+        </div>
+        <p class="cookie-banner-desc">
+          We extract your device screen profile to dynamically optimize 3D unboxing physics, tactile typography, and memory fill-rates. Essential cookies preserve your customized foil-stamped suites and quotes. Do you accept analytical cookies to refine your bespoke experience?
+        </p>
+      </div>
+
+      <div class="cookie-banner-actions">
+        <button type="button" id="rejectCookiesBtn" class="btn-cookie-reject" aria-label="Reject non-essential cookies">
+          Reject Non-Essential
+        </button>
+        <button type="button" id="acceptCookiesBtn" class="btn-cookie-accept" aria-label="Accept all cookies">
+          Accept All
+        </button>
+      </div>
+    </div>
+  </aside>
 
   <!-- Scripts -->
   <script src="js/video-scroll.js"></script>

@@ -326,6 +326,8 @@ document.addEventListener('DOMContentLoaded', () => {
   setupMobileDockObserver();
   initGlanceModule();
   initHeroStamper();
+  initDeviceIntelligence();
+  initCookieConsent();
 });
 
 function renderProducts() {
@@ -1683,4 +1685,165 @@ function initHeroStamper() {
 
   // Initial call
   updateStamping();
+}
+
+
+/**
+ * =========================================================================
+ * DYNAMIC DEVICE SCREEN & CONTEXT INTELLIGENCE ENGINE
+ * Real-time extraction of physical screen dimensions, DPR, viewport,
+ * touch capability, and dynamic CSS variable synchronization.
+ * =========================================================================
+ */
+let DEVICE_METRICS = {};
+
+function initDeviceIntelligence() {
+  const updateMetrics = () => {
+    const sw = window.screen ? window.screen.width : window.innerWidth;
+    const sh = window.screen ? window.screen.height : window.innerHeight;
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+    const dpr = window.devicePixelRatio || 1;
+    const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+    const orientation = vw > vh ? 'landscape' : 'portrait';
+
+    DEVICE_METRICS = {
+      screenWidth: sw,
+      screenHeight: sh,
+      viewportWidth: vw,
+      viewportHeight: vh,
+      devicePixelRatio: Math.round(dpr * 100) / 100,
+      orientation: orientation,
+      isTouch: isTouch,
+      isRetina: dpr >= 2,
+      tier: vw < 380 ? 'xs' : (vw < 640 ? 'sm' : (vw < 1024 ? 'md' : (vw < 1440 ? 'lg' : 'xl')))
+    };
+    if (typeof window !== 'undefined') {
+      window.DEVICE_METRICS = DEVICE_METRICS;
+    }
+
+    // Synchronize dynamic CSS custom properties on documentElement
+    const root = document.documentElement;
+    root.style.setProperty('--real-vh', `${vh * 0.01}px`);
+    root.style.setProperty('--screen-w', `${vw}px`);
+    root.style.setProperty('--screen-h', `${vh}px`);
+    root.style.setProperty('--device-dpr', `${dpr}`);
+
+    // Synchronize intelligent device classes
+    root.classList.remove('device-xs', 'device-sm', 'device-md', 'device-lg', 'device-xl');
+    root.classList.add(`device-${DEVICE_METRICS.tier}`);
+
+    root.classList.toggle('device-touch', isTouch);
+    root.classList.toggle('device-mouse', !isTouch);
+    root.classList.toggle('device-retina', DEVICE_METRICS.isRetina);
+    root.classList.toggle('orientation-portrait', orientation === 'portrait');
+    root.classList.toggle('orientation-landscape', orientation === 'landscape');
+
+    // Update live resolution badge in cookie banner if present
+    const resBadge = document.getElementById('cookieDeviceResolutionBadge');
+    if (resBadge) {
+      resBadge.textContent = `${vw}×${vh} (${sw}×${sh} @${DEVICE_METRICS.devicePixelRatio}x)`;
+    }
+
+    // Dynamic 3D Box tilt calibration: dynamically calibrate max tilt degrees based on measured screen width
+    const box3DWrapper = document.getElementById('box3DWrapper');
+    if (box3DWrapper && isTouch) {
+      box3DWrapper.style.transform = vw < 480 ? 'rotateX(8deg) rotateY(-5deg)' : 'rotateX(12deg) rotateY(-8deg)';
+    }
+  };
+
+  let resizeTimer = null;
+  const onResize = () => {
+    updateMetrics();
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(updateMetrics, 100);
+  };
+
+  window.addEventListener('resize', onResize, { passive: true });
+  window.addEventListener('orientationchange', onResize, { passive: true });
+
+  updateMetrics();
+}
+
+/**
+ * =========================================================================
+ * COOKIE & PRIVACY GOVERNANCE ENGINE
+ * Granular Accept/Reject state persistence, consent revocation & GDPR compliance
+ * =========================================================================
+ */
+const COOKIE_STORAGE_KEY = 'blueants_cookie_consent';
+
+function initCookieConsent() {
+  const banner = document.getElementById('cookieConsentBanner');
+  const acceptBtn = document.getElementById('acceptCookiesBtn');
+  const rejectBtn = document.getElementById('rejectCookiesBtn');
+  if (!banner) return;
+
+  let consent = null;
+  try {
+    const raw = localStorage.getItem(COOKIE_STORAGE_KEY);
+    if (raw) consent = JSON.parse(raw);
+  } catch (err) {}
+
+  // If no decision recorded yet, display banner with graceful delay
+  if (!consent || !consent.status) {
+    setTimeout(() => {
+      banner.style.display = 'block';
+      requestAnimationFrame(() => {
+        banner.classList.add('is-visible');
+      });
+    }, 750);
+  }
+
+  const setConsentChoice = (status) => {
+    const payload = {
+      status: status,
+      timestamp: new Date().toISOString(),
+      extractedMetrics: {
+        viewportWidth: DEVICE_METRICS.viewportWidth || window.innerWidth,
+        viewportHeight: DEVICE_METRICS.viewportHeight || window.innerHeight,
+        dpr: DEVICE_METRICS.devicePixelRatio || 1
+      }
+    };
+
+    try {
+      localStorage.setItem(COOKIE_STORAGE_KEY, JSON.stringify(payload));
+    } catch (err) {}
+
+    banner.classList.remove('is-visible');
+    setTimeout(() => {
+      banner.style.display = 'none';
+    }, 400);
+
+    if (status === 'accepted') {
+      showToast('Cookie preferences saved: All cookies accepted');
+    } else {
+      showToast('Non-essential cookies declined');
+    }
+  };
+
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', () => setConsentChoice('accepted'));
+  }
+
+  if (rejectBtn) {
+    rejectBtn.addEventListener('click', () => setConsentChoice('rejected'));
+  }
+}
+
+function openCookieConsent() {
+  const banner = document.getElementById('cookieConsentBanner');
+  if (!banner) return;
+  banner.style.display = 'block';
+  requestAnimationFrame(() => {
+    banner.classList.add('is-visible');
+  });
+}
+
+// Global window exposure
+if (typeof window !== 'undefined') {
+  window.DEVICE_METRICS = DEVICE_METRICS;
+  window.initDeviceIntelligence = initDeviceIntelligence;
+  window.initCookieConsent = initCookieConsent;
+  window.openCookieConsent = openCookieConsent;
 }
