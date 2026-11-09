@@ -1,4 +1,11 @@
 /**
+ * THE BLUE ANTS — Configuration
+ */
+const CONFIG = {
+  PHONE: '919916418879'
+};
+
+/**
  * THE BLUE ANTS — Corporate Product Catalog & Direct WhatsApp Concierge Engine
  * Direct phone: +91 9916418879
  */
@@ -1601,7 +1608,7 @@ function initHeroStamper() {
     // Update WhatsApp CTA Link with pre-filled company name
     if (requestStampedBtn) {
       const msg = `Hi The Blue Ants, I would like a bulk quote for The Sovereign Suite customized with our branding for ${displayName}.`;
-      requestStampedBtn.href = `https://wa.me/${CONFIG.PHONE}?text=${encodeURIComponent(msg)}`;
+      requestStampedBtn.href = `https://wa.me/${(typeof CONFIG !== "undefined" && CONFIG.PHONE) ? CONFIG.PHONE : "919916418879"}?text=${encodeURIComponent(msg)}`;
     }
   };
 
