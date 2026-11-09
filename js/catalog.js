@@ -1306,39 +1306,39 @@ function setupMobileDockObserver() {
 const GLANCE_OFFERINGS = {
   'wedding-keepsakes': {
     id: 'wedding-keepsakes',
-    title: '20 Personalised Wedding Keepsakes & Favours',
+    title: 'Personalised Wedding Keepsakes & Favours',
     category: 'Occasions & Milestones',
-    scale: '20+ Units',
+    scale: 'Curated Milestone Scale',
     leadTime: '48h Digital Proofs • 7 Days Dispatch',
     description: 'Bespoke artisanal favours, custom couple monogram foil stamping, rigid gift boxes with velvet beds, and direct delivery to wedding venue or individual guest addresses nationwide.',
     pills: ['Custom Monogram Foil', 'Artisanal Sourcing', 'Protective Rigid Box', 'Pan-India Multi-Address', 'Zero Stress Coordination'],
     targetCategory: 'executive',
     targetSuiteId: 'prod-1',
-    waText: 'Hi The Blue Ants, I would like to inquire about 20 personalised wedding keepsakes.'
+    waText: 'Hi The Blue Ants, I would like to inquire about personalised wedding keepsakes.'
   },
   'school-kits': {
     id: 'school-kits',
-    title: '100 Kits for School, College & Alumni Events',
+    title: 'School, College & Alumni Event Kits',
     category: 'Occasions & Milestones',
-    scale: '100+ Units',
+    scale: 'Institutional Scale',
     leadTime: '48h Proofs • 5–7 Days Standard',
     description: 'Custom crest-stamped event kits featuring recycled stationery, insulated thermal bottles, precision-printed utility totes, and commemorative badges for reunions and graduation galas.',
     pills: ['Institutional Crest Stamping', 'Eco-Luxe Materials', 'Event-Ready Packaging', 'Pan-India Delivery', 'GST Invoicing'],
     targetCategory: 'welcome',
     targetSuiteId: 'prod-6',
-    waText: 'Hi The Blue Ants, I would like to inquire about 100 kits for a school/alumni event.'
+    waText: 'Hi The Blue Ants, I would like to inquire about custom kits for a school/alumni event.'
   },
   'corporate-celebrations': {
     id: 'corporate-celebrations',
-    title: '500 Gifts for Corporate Celebrations & Annual Galas',
+    title: 'Corporate Celebrations & Annual Gala Gifts',
     category: 'Enterprise Scale',
-    scale: '500+ Units',
+    scale: 'Enterprise Scale',
     leadTime: 'Priority Bulk Scheduling • Pan-India Logistics',
     description: 'High-volume executive gifting suites with deep tiered bulk savings, official GST input credit invoices, dedicated project stewardship, and simultaneous multi-city doorstep fulfillment.',
     pills: ['Tiered Volume Savings (Up to 28%)', '24k Gold Foil Die', 'Custom Foam Bedding', 'Pan-India Fleet Dispatch', 'Dedicated Concierge'],
     targetCategory: 'all',
     targetSuiteId: 'prod-1',
-    waText: 'Hi The Blue Ants, I would like to inquire about 500 gifts for our corporate celebration.'
+    waText: 'Hi The Blue Ants, I would like to inquire about curated gifts for our corporate celebration.'
   },
   'completely-unique': {
     id: 'completely-unique',
@@ -1380,7 +1380,7 @@ const GLANCE_OFFERINGS = {
     id: 'sustainable-eco',
     title: 'Sustainable Eco-Luxe & Zero-Waste Sets',
     category: 'Eco-Conscious',
-    scale: '50–500 Units',
+    scale: 'Custom Team Scale',
     leadTime: '5–7 Days Standard',
     description: 'FSC-certified bamboo thermal drinkware, recycled wheat-straw notebooks, organic cotton canvas utility totes, and plantable wildflower seed paper cards.',
     pills: ['Zero Plastic', 'FSC-Certified Cork & Bamboo', 'Plantable Seed Paper', 'Carbon-Neutral Packaging', 'Eco-Luxe'],
@@ -1404,7 +1404,7 @@ const GLANCE_OFFERINGS = {
     id: 'all-under-one-roof',
     title: 'All Under One Roof: Ideation to Doorstep Delivery',
     category: 'Full-Spectrum Fulfillment',
-    scale: '20 to 1,000+ Units',
+    scale: 'Flexible Project Scale',
     leadTime: 'End-to-End Turnkey',
     description: 'From initial creative brainstorming to vector proofs, artisanal sourcing, custom foil stamping, precision box packaging, and multi-destination pan-India doorstep delivery.',
     pills: ['01 Concept Ideation', '02 Sourcing', '03 Customisation', '04 Packaging', '05 Delivery'],
@@ -1464,10 +1464,10 @@ const GLANCE_OFFERINGS = {
     id: 'service-delivery',
     title: '05 // Doorstep Pan-India Multi-Address Dispatch',
     category: 'Full-Spectrum Services',
-    scale: '500+ Indian Pin Codes',
+    scale: 'Pan-India Coverage',
     leadTime: 'Real-Time Air Tracking',
     description: 'White-glove doorstep drop-shipping: upload your recipient address spreadsheet and we dispatch individually packaged gift boxes directly to employee and VIP homes nationwide.',
-    pills: ['Multi-Address Spreadsheet Upload', '500+ Pin Codes Covered', 'SMS & Air Waybill Tracking', 'Damage-Proof Outer Crates'],
+    pills: ['Multi-Address Spreadsheet Upload', 'Nationwide Coverage', 'SMS & Air Waybill Tracking', 'Damage-Proof Outer Crates'],
     targetCategory: 'all',
     targetSuiteId: 'prod-1',
     waText: 'Hi The Blue Ants, I would like to inquire about Multi-Address Doorstep Pan-India Delivery.'
@@ -1624,7 +1624,6 @@ function initHeroStamper() {
       setTimeout(() => {
         boxStampedName.style.transform = 'scale(1)';
       }, 300);
-      showToast('24K Gold foil stamp updated on presentation lid');
     });
   }
 

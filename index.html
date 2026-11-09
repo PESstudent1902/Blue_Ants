@@ -24,7 +24,7 @@
   <!-- FontAwesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="css/style.css?v=6.2">
+  <link rel="stylesheet" href="css/style.css?v=6.3">
 </head>
 <body class="bg-[#07090e] text-slate-100 antialiased selection:bg-amber-500/20 selection:text-amber-200 has-bottom-dock">
 
@@ -68,15 +68,15 @@
             <div class="mega-col">
               <div class="mega-col-title"><i class="fas fa-layer-group"></i> BY OCCASION &amp; SCALE</div>
               <a href="#heroGlanceBox" onclick="selectGlanceOffering('wedding-keepsakes')" class="mega-item">
-                <div class="mega-item-title">20 Wedding Keepsakes</div>
+                <div class="mega-item-title">Wedding Keepsakes &amp; Favours</div>
                 <div class="mega-item-desc">Personalised favours &amp; intimate milestones</div>
               </a>
               <a href="#heroGlanceBox" onclick="selectGlanceOffering('school-kits')" class="mega-item">
-                <div class="mega-item-title">100 School &amp; Alumni Kits</div>
+                <div class="mega-item-title">School &amp; Alumni Event Kits</div>
                 <div class="mega-item-desc">Event kits, apparel &amp; custom stationery</div>
               </a>
               <a href="#heroGlanceBox" onclick="selectGlanceOffering('corporate-celebrations')" class="mega-item">
-                <div class="mega-item-title">500 Corporate Gifts</div>
+                <div class="mega-item-title">Corporate Celebrations &amp; Gifts</div>
                 <div class="mega-item-desc">Annual galas, all-hands &amp; fleet dispatch</div>
               </a>
               <a href="#heroGlanceBox" onclick="selectGlanceOffering('completely-unique')" class="mega-item">
@@ -189,7 +189,7 @@
 
             <!-- Body Subline: EXACT Screenshot Word-for-Word match -->
             <p class="hero-subline">
-              Whether you need 20 personalised gifts for a wedding, 100 kits for a school event, 500 gifts for a corporate celebration or something completely unique, The Blue Ants can curate a solution around your requirement &mdash; ideation, sourcing, customisation, packaging and delivery, all under one roof.
+              Whether you need personalised gifts for a wedding, custom kits for a school event, curated suites for a corporate celebration or something completely unique, The Blue Ants can curate a solution around your requirement &mdash; ideation, sourcing, customisation, packaging and delivery, all under one roof.
             </p>
 
             <!-- THE GLANCE APPROACH: Dropdown list of whatever stuff the company provides -->
@@ -206,10 +206,10 @@
                 <div class="glance-select-trigger" id="glanceCustomTrigger" role="combobox" aria-expanded="false" tabindex="0">
                   <div class="glance-trigger-left">
                     <i class="fas fa-boxes-stacked text-[#348b86] text-sm"></i>
-                    <span id="glanceCurrentTitle" class="glance-trigger-text">20 Personalised Wedding Keepsakes &amp; Favours</span>
+                    <span id="glanceCurrentTitle" class="glance-trigger-text">Personalised Wedding Keepsakes &amp; Favours</span>
                   </div>
                   <div class="flex items-center gap-2">
-                    <span id="glanceCurrentScaleBadge" class="glance-mini-badge">20+ Units</span>
+                    <span id="glanceCurrentScaleBadge" class="glance-mini-badge">Curated Scale</span>
                     <i class="fas fa-chevron-down glance-chevron-icon"></i>
                   </div>
                 </div>
@@ -217,9 +217,9 @@
                 <!-- Native select for accessible / automated interaction -->
                 <select id="glanceDropdownSelector" class="glance-native-select" aria-label="Select what The Blue Ants provides at a glance">
                   <optgroup label="Occasions &amp; Scale (From Screenshot)">
-                    <option value="wedding-keepsakes" selected>20 Personalised Keepsakes &mdash; Weddings &amp; Private Celebrations</option>
-                    <option value="school-kits">100 Kits &mdash; School, College &amp; Alumni Events</option>
-                    <option value="corporate-celebrations">500 Corporate Celebration Gifts &mdash; Annual Galas &amp; All-Hands</option>
+                    <option value="wedding-keepsakes" selected>Personalised Keepsakes &mdash; Weddings &amp; Private Celebrations</option>
+                    <option value="school-kits">Curated Kits &mdash; School, College &amp; Alumni Events</option>
+                    <option value="corporate-celebrations">Corporate Celebration Gifts &mdash; Annual Galas &amp; All-Hands</option>
                     <option value="completely-unique">Completely Unique Bespoke Solutions &mdash; Haute Custom Projects</option>
                   </optgroup>
                   <optgroup label="Curated Gifting Suites">
@@ -241,9 +241,9 @@
               <!-- Quick Glance Filter Chips -->
               <div class="glance-quick-chips">
                 <span class="chips-label">At a Glance:</span>
-                <button type="button" class="glance-chip active" data-glance="wedding-keepsakes">20 Wedding Keepsakes</button>
-                <button type="button" class="glance-chip" data-glance="school-kits">100 School Kits</button>
-                <button type="button" class="glance-chip" data-glance="corporate-celebrations">500 Corporate Gifts</button>
+                <button type="button" class="glance-chip active" data-glance="wedding-keepsakes">Wedding Keepsakes</button>
+                <button type="button" class="glance-chip" data-glance="school-kits">School &amp; Alumni Kits</button>
+                <button type="button" class="glance-chip" data-glance="corporate-celebrations">Corporate Gifts</button>
                 <button type="button" class="glance-chip" data-glance="all-under-one-roof">All Under One Roof</button>
               </div>
 
@@ -372,7 +372,7 @@
   </div>
 
   <!-- =========================================================================
-       OCCASIONS & SCALE: 20 KEEPSAKES TO 500 KITS (From Screenshot)
+       OCCASIONS & CURATED SCALE
        ========================================================================= -->
   <section id="occasionsSection" class="occasions-statement-strip">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -387,7 +387,7 @@
           </h2>
         </div>
         <p class="text-xs sm:text-sm text-gray-400 max-w-md mt-2 md:mt-0 leading-relaxed">
-          From intimate 20-piece family milestones to nationwide 500+ corporate consignments — engineered and delivered with equal devotion.
+          From intimate family milestones to nationwide enterprise consignments — engineered and delivered with equal devotion.
         </p>
       </div>
 
@@ -395,7 +395,7 @@
         <!-- Occasion 1: 20 Wedding Keepsakes -->
         <div class="occasion-card-luxury" onclick="selectGlanceOffering('wedding-keepsakes'); document.getElementById('heroGlanceBox').scrollIntoView({ behavior: 'smooth' });">
           <div class="occasion-numeral-teal">01 // INTIMATE CELEBRATION</div>
-          <h3 class="occasion-heading">20 Personalised Wedding Keepsakes</h3>
+          <h3 class="occasion-heading">Personalised Wedding Keepsakes &amp; Favours</h3>
           <p class="occasion-detail">
             Artisanal favours, custom couple monogram foil stamping, rigid presentation boxes, and individual doorstep dispatch for intimate wedding ceremonies and milestone anniversaries.
           </p>
@@ -404,7 +404,7 @@
         <!-- Occasion 2: 100 School Event Kits -->
         <div class="occasion-card-luxury" onclick="selectGlanceOffering('school-kits'); document.getElementById('heroGlanceBox').scrollIntoView({ behavior: 'smooth' });">
           <div class="occasion-numeral-teal">02 // INSTITUTIONAL SCALE</div>
-          <h3 class="occasion-heading">100 Kits for School &amp; Alumni Events</h3>
+          <h3 class="occasion-heading">School, College &amp; Alumni Event Kits</h3>
           <p class="occasion-detail">
             Coordinated event kits featuring crested stationery, thermal drinkware, organic canvas totes, and commemorative badges for alumni reunions and university convocations.
           </p>
@@ -413,9 +413,9 @@
         <!-- Occasion 3: 500 Corporate Celebration Gifts -->
         <div class="occasion-card-luxury" onclick="selectGlanceOffering('corporate-celebrations'); document.getElementById('heroGlanceBox').scrollIntoView({ behavior: 'smooth' });">
           <div class="occasion-numeral-teal">03 // ENTERPRISE CELEBRATION</div>
-          <h3 class="occasion-heading">500 Corporate Celebration Gifts</h3>
+          <h3 class="occasion-heading">Corporate Celebrations &amp; Annual Galas</h3>
           <p class="occasion-detail">
-            High-volume luxury suites with tiered corporate savings, dedicated project management, GST tax invoicing, and multi-address drop-shipping across 500+ Indian cities.
+            High-volume luxury suites with tiered corporate savings, dedicated project management, GST tax invoicing, and multi-address drop-shipping across Indian cities nationwide.
           </p>
         </div>
 
@@ -1032,7 +1032,7 @@
   </aside>
 
   <!-- Scripts -->
-  <script src="js/video-scroll.js?v=6.2"></script>
-  <script src="js/catalog.js?v=6.2"></script>
+  <script src="js/video-scroll.js?v=6.3"></script>
+  <script src="js/catalog.js?v=6.3"></script>
 </body>
 </html>
