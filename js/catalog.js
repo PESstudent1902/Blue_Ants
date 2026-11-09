@@ -1541,6 +1541,14 @@ function selectGlanceOffering(offeringId) {
       chip.classList.remove('active');
     }
   });
+
+  document.querySelectorAll('.glance-menu-item').forEach(item => {
+    if (item.getAttribute('data-value') === offeringId) {
+      item.classList.add('is-selected');
+    } else {
+      item.classList.remove('is-selected');
+    }
+  });
 }
 
 function selectCatalogCategory(category) {
@@ -1862,3 +1870,58 @@ if (typeof window !== 'undefined') {
   window.initCookieConsent = initCookieConsent;
   window.openCookieConsent = openCookieConsent;
 }
+
+
+// ============================================================================
+// CUSTOM LUXURY FLOATING DROPDOWN CONTROLLER
+// ============================================================================
+function initGlanceCustomDropdown() {
+  const wrapper = document.getElementById('glanceSelectWrapper');
+  const trigger = document.getElementById('glanceCustomTrigger');
+  const menu = document.getElementById('glanceCustomMenu');
+  const nativeSelect = document.getElementById('glanceDropdownSelector');
+
+  if (!wrapper || !trigger || !menu) return;
+
+  const toggleMenu = (e) => {
+    e.stopPropagation();
+    const isOpen = wrapper.classList.toggle('is-open');
+    trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  };
+
+  const closeMenu = () => {
+    wrapper.classList.remove('is-open');
+    trigger.setAttribute('aria-expanded', 'false');
+  };
+
+  trigger.addEventListener('click', toggleMenu);
+
+  menu.querySelectorAll('.glance-menu-item').forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const val = item.getAttribute('data-value');
+      if (val) {
+        if (nativeSelect) {
+          nativeSelect.value = val;
+          nativeSelect.dispatchEvent(new Event('change'));
+        }
+        selectGlanceOffering(val);
+      }
+      closeMenu();
+    });
+  });
+
+  // Close when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!wrapper.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initGlanceCustomDropdown);
