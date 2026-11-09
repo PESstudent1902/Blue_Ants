@@ -1739,11 +1739,7 @@ function initDeviceIntelligence() {
     root.classList.toggle('orientation-portrait', orientation === 'portrait');
     root.classList.toggle('orientation-landscape', orientation === 'landscape');
 
-    // Update live resolution badge in cookie banner if present
-    const resBadge = document.getElementById('cookieDeviceResolutionBadge');
-    if (resBadge) {
-      resBadge.textContent = `${vw}×${vh} (${sw}×${sh} @${DEVICE_METRICS.devicePixelRatio}x)`;
-    }
+
 
     // Dynamic 3D Box tilt calibration: dynamically calibrate max tilt degrees based on measured screen width
     const box3DWrapper = document.getElementById('box3DWrapper');

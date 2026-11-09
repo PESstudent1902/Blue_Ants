@@ -2748,12 +2748,7 @@ p, .editorial-prose {
   font-weight: 600;
 }
 
-.cookie-live-resolution {
-  font-family: var(--font-mono);
-  font-size: 0.625rem;
-  letter-spacing: 0.05em;
-  color: #989b97;
-}
+
 
 .cookie-banner-desc {
   font-family: var(--font-sans);
