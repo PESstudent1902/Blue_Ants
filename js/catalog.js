@@ -1,28 +1,20 @@
 /**
- * THE BLUE ANTS — THE PRINTED CATALOG
- * Corporate Product Catalog & Interactive Stamping Engine
- * Architecture: Zero heavy runtime dependencies, 60fps 3D transforms, Accessible State
+ * THE BLUE ANTS — Corporate Product Catalog & Direct WhatsApp Concierge Engine
+ * Direct phone: +91 9916418879
  */
-
-const CONFIG = {
-  PHONE: '919916418879',
-  PHONE_DISPLAY: '+91 9916418879',
-  CURRENCY_SYMBOL: '$',
-  formatPrice: (amount) => `$${Number(amount).toFixed(2)}`
-};
 
 const PRODUCTS = [
   {
     id: 'prod-1',
     name: 'The Sovereign: Executive Leather Suite',
     category: 'executive',
-    categoryLabel: 'Executive VIP',
+    categoryLabel: 'Executive VIP Suites',
     price: 95.00,
     moq: 25,
     rating: 4.9,
     reviews: 428,
-    image: 'assets/products/blueants_exec_leather.webp',
-    badge: "VIP Standard",
+    image: 'assets/products/blueants_exec_leather.jpg',
+    badge: "Enterprise Choice",
     badgeType: 'choice',
     leadTime: 'standard',
     leadTimeLabel: '5-7 Days Standard',
@@ -33,7 +25,7 @@ const PRODUCTS = [
       'Fast Qi Wireless Minimalist Matte Charging Pad',
       'Custom Blind-Debossed Company Monogram'
     ],
-    description: 'Full-grain saddle leather notebook paired with a precision-balanced brass fountain pen and ultra-thin desk charger in rigid presentation box.',
+    description: 'A benchmark in C-suite corporate appreciation. Hand-stitched full-grain leather notebook paired with a precision-balanced brass fountain pen and ultra-thin desk charger.',
     boxContents: [
       '1x Italian Full-Grain Leather Notebook with Refillable 120gsm Paper',
       '1x Solid Brass Fountain Pen with German Iridium Nib & Velvet Pouch',
@@ -52,13 +44,13 @@ const PRODUCTS = [
     id: 'prod-2',
     name: 'The Barista Reserve: Pour-Over Craft Kit',
     category: 'gourmet',
-    categoryLabel: 'Gourmet Pairings',
+    categoryLabel: 'Gourmet Connoisseur Hampers',
     price: 68.00,
     moq: 30,
     rating: 4.8,
     reviews: 312,
-    image: 'assets/products/blueants_coffee_gourmet.webp',
-    badge: 'Artisanal',
+    image: 'assets/products/blueants_coffee_gourmet.jpg',
+    badge: 'Best Seller',
     badgeType: 'bestseller',
     leadTime: 'express',
     leadTimeLabel: '48h Express Ready',
@@ -69,7 +61,7 @@ const PRODUCTS = [
       'Artisanal Guji Single-Origin Whole Bean Coffee (250g)',
       'Brushed Brass Measuring Spoon & Sealing Clip'
     ],
-    description: 'Specialty roast single-origin Ethiopian coffee beans paired with Scandinavian ceramic V60 dripper and double-walled thermal tumbler.',
+    description: 'Elevate morning routines for remote teams and valued partners. Features specialty roast Ethiopian beans and minimalist Scandinavian brewing hardware.',
     boxContents: [
       '1x V60 Ceramic Matte Black Dripper with Walnut Stand',
       '1x Double-Walled Thermal Tumbler (16oz, 8h hot / 16h cold)',
@@ -88,12 +80,12 @@ const PRODUCTS = [
     id: 'prod-3',
     name: 'The Tech Nomad: ANC & Titanium Power Suite',
     category: 'welcome',
-    categoryLabel: 'Onboarding & Tech',
+    categoryLabel: 'Welcome & Onboarding Kits',
     price: 145.00,
     moq: 15,
     rating: 4.95,
     reviews: 589,
-    image: 'assets/products/blueants_tech_bundle.webp',
+    image: 'assets/products/blueants_tech_bundle.jpg',
     badge: 'Enterprise Choice',
     badgeType: 'choice',
     leadTime: 'standard',
@@ -105,7 +97,7 @@ const PRODUCTS = [
       'Braided Fast-Charge Cables with Brass Endcaps',
       'Top-Grain Leather Cable Organizer Snaps'
     ],
-    description: 'High-fidelity hybrid noise-cancelling headphones combined with 65W laptop-capable titanium power bank and leather cable keepers.',
+    description: 'The ultimate kit for high-performing modern executives and frequent business travelers. High-fidelity audio combined with ultra-dense multi-device power.',
     boxContents: [
       '1x Over-Ear Hybrid Active Noise Cancelling Studio Headphones',
       '1x 20,000mAh 65W Laptop & Phone Power Delivery Battery',
@@ -124,72 +116,73 @@ const PRODUCTS = [
     id: 'prod-4',
     name: 'Serenity: Botanical Corporate Wellness Box',
     category: 'welcome',
-    categoryLabel: 'Wellness & Team',
+    categoryLabel: 'Welcome & Onboarding Kits',
     price: 58.00,
     moq: 40,
-    rating: 4.75,
-    reviews: 245,
-    image: 'assets/products/blueants_wellness_hamper.webp',
-    badge: 'Mindful Team',
-    badgeType: 'bestseller',
+    rating: 4.85,
+    reviews: 246,
+    image: 'assets/products/blueants_wellness_hamper.jpg',
+    badge: 'Popular for HR',
+    badgeType: 'choice',
     leadTime: 'express',
     leadTimeLabel: '48h Express Ready',
-    brandingOptions: ['gold-foil', 'laser'],
+    brandingOptions: ['gold-foil', 'screen-print'],
     features: [
-      'Hand-Poured Amber Glass Soy Candle (Cedar & Fig)',
-      'Ceramic Minimalist Essential Oil Diffuser with Amber Oils',
-      'Organic Chamomile & Lavender Night Tea Infusion',
-      'A5 Soft-Touch Wellness Reflection Journal'
+      'Pure Soy Wax Aromatherapy Candle (Lavender & Bergamot)',
+      '100% Mulberry Silk Contoured Black Sleep Mask',
+      'Organic Botanical Calming Pillow & Room Mist (50ml)',
+      'Artisanal Organic Chamomile & Lavender Loose Leaf Tea'
     ],
-    description: 'Hand-poured cedar & fig soy candle, ceramic aroma diffuser stone, organic loose-leaf tea, and dot-grid mindfulness journal.',
+    description: 'Demonstrate thoughtful care for employee well-being, mental balance, and anniversary celebrations with organic aromatherapy and silk indulgence.',
     boxContents: [
-      '1x 8oz Natural Soy Wax Candle with Clean Crackling Wood Wick',
-      '1x 100ml Pure Essential Oil Blend with Ceramic Diffuser Stone',
-      '1x 50g Organic Loose-Leaf Calming Tea in Matte Black Tin',
-      '1x Gold-Plated Fine Mesh Tea Infuser Spoon',
-      '1x 160-Page Soft-Touch Dot Grid Wellness Journal with Ribbon'
+      '1x Hand-Poured Soy Wax Amber Jar Candle with Wood Wick',
+      '1x 22-Momme Mulberry Silk Luxury Eye Mask with Travel Pouch',
+      '1x Calming Botanical Facial & Pillow Mist in Frosted Amber Glass',
+      '1x Gold Tin of Organic Hand-Picked Herbal Sleep Tea',
+      '1x Guided Mindfulness & De-Stress Audio QR Card'
     ],
     bulkTiers: [
-      { min: 40, max: 74, price: 58.00, discount: '0%' },
-      { min: 75, max: 149, price: 52.00, discount: '10%' },
-      { min: 150, max: 299, price: 46.00, discount: '20%' },
-      { min: 300, max: 9999, price: 40.00, discount: '31%' }
+      { min: 40, max: 99, price: 58.00, discount: '0%' },
+      { min: 100, max: 249, price: 51.00, discount: '12%' },
+      { min: 250, max: 499, price: 44.00, discount: '24%' },
+      { min: 500, max: 9999, price: 39.00, discount: '33%' }
     ]
   },
   {
     id: 'prod-5',
     name: 'The Highland Connoisseur: Decanter & Chilling Stones',
     category: 'executive',
-    categoryLabel: 'Executive VIP',
+    categoryLabel: 'Executive VIP Suites',
     price: 120.00,
     moq: 20,
     rating: 4.92,
-    reviews: 388,
-    image: 'assets/products/blueants_whiskey_connoisseur.webp',
-    badge: 'Milestone',
+    reviews: 375,
+    image: 'assets/products/blueants_whiskey_connoisseur.jpg',
+    badge: 'VIP Elite',
     badgeType: 'choice',
-    leadTime: 'standard',
-    leadTimeLabel: '5-7 Days Standard',
-    brandingOptions: ['laser', 'gold-foil'],
+    leadTime: 'custom',
+    leadTimeLabel: 'Custom 2 Weeks',
+    brandingOptions: ['laser', 'debossed', 'gold-foil'],
     features: [
-      'Hand-Blown Lead-Free Crystal Decanter (750ml)',
-      'Set of 2 Heavy Base Geometric Tumbler Glasses',
-      'Granite Chilling Stones in Velvet Keepsake Pouch',
-      'Brushed Brass Tongs with Silicone Grip Tips'
+      'Geometric Hand-Cut Heavy Crystal Whiskey Decanter (750ml)',
+      'Pair of Weighted Crystal Old-Fashioned Tumblers',
+      'Set of 9 Polished Granite Chilling Stones with Gold Tongs',
+      'Debossed Saddle-Leather Coasters with Velvet Backing'
     ],
-    description: 'Lead-free geometric crystal whiskey decanter with 2 heavy-base rocks tumblers and natural granite beverage chilling stones in walnut crate.',
+    description: 'For momentous partnership milestones and VIP corporate accounts. Crafted with lead-free ultra-clear European crystal in a black lacquered keepsake box.',
     boxContents: [
-      '1x 750ml Hand-Cut Crystal Whiskey Decanter with Solid Stopper',
-      '2x 320ml Weighted Old Fashioned Geometric Rocks Glasses',
-      '6x Hand-Polished Natural Granite Reusable Beverage Chilling Stones',
-      '1x Velvet Travel Pouch with Drawstring & Brass Beads',
-      '1x Solid Walnut Wood Presentation Crate with Laser-Etched Emblem'
+      '1x 750ml Faceted Crystal Decanter with Precision Ground Stopper',
+      '2x 320ml Hand-Cut Crystal Rocks Glasses',
+      '9x Natural Basalt Chilling Cubes in Wooden Storage Tray',
+      '1x Gold-Finished Precision Ice Tongs',
+      '2x Debossed Full-Grain Leather Coasters',
+      '1x Solid Wood Lockable Presentation Chest with Velvet Inlay'
     ],
     bulkTiers: [
       { min: 20, max: 49, price: 120.00, discount: '0%' },
       { min: 50, max: 99, price: 108.00, discount: '10%' },
       { min: 100, max: 249, price: 96.00, discount: '20%' },
-      { min: 250, max: 9999, price: 84.00, discount: '30%' }
+      { min: 250, max: 9999, price: 85.00, discount: '29%' }
     ]
   },
   {
@@ -200,62 +193,62 @@ const PRODUCTS = [
     price: 48.00,
     moq: 50,
     rating: 4.88,
-    reviews: 410,
-    image: 'assets/products/blueants_eco_luxe.webp',
-    badge: 'Eco Verified',
-    badgeType: 'choice',
+    reviews: 690,
+    image: 'assets/products/blueants_eco_luxe.jpg',
+    badge: 'Eco-Certified',
+    badgeType: 'bestseller',
     leadTime: 'express',
     leadTimeLabel: '48h Express Ready',
-    brandingOptions: ['laser', 'screen-print'],
+    brandingOptions: ['laser', 'screen-print', 'gold-foil'],
     features: [
-      'FSC-Certified Bamboo Thermal Water Bottle (500ml)',
-      'Cork & Wheat Straw Hardcover Notebook (100% Recycled)',
-      'Biodegradable Wheat Straw Retractable Rollerball Pen',
-      'Organic Heavy Canvas Tote with Reinforced Handles'
+      'Natural Bamboo & Stainless Steel Insulated Flask (500ml)',
+      'Recycled Kraft & Natural Cork Hardbound Journal',
+      'Biodegradable Wheat-Straw Ballpoint Pen with German Ink',
+      'Organic Heavy Canvas Tote Bag with Reinforced Handles'
     ],
-    description: 'Double-walled bamboo insulated bottle, recycled cork hardcover notebook, biodegradable wheat pen, and raw cotton utility tote.',
+    description: 'The preferred welcome kit for ESG-committed enterprises. 100% plastic-free packaging, FSC certified materials, and carbon-neutral distribution.',
     boxContents: [
-      '1x Double-Walled 500ml Insulated Bottle with Natural Bamboo Outer Shell',
-      '1x A5 Cork Hardcover Journal with Recycled Post-Consumer Paper',
-      '1x Eco Wheat-Straw Blue-Ink Ballpoint Pen',
-      '1x 12oz Heavyweight 100% Organic Cotton Canvas Utility Tote',
-      '1x Plantable Seed Paper Welcome Card with Wildflower Seeds'
+      '1x 500ml Double-Wall Bamboo Vacuum Bottle (Hot 12h / Cold 24h)',
+      '1x A5 Cork Texture Hardcover Notebook (100% Recycled Cotton Pages)',
+      '1x Sustainable Bamboo & Wheat-Straw Pen',
+      '1x 12oz GOTS-Certified Organic Canvas Tote Bag',
+      '1x Plantable Wildflower Seed Welcome Greeting Card'
     ],
     bulkTiers: [
       { min: 50, max: 99, price: 48.00, discount: '0%' },
-      { min: 100, max: 249, price: 43.00, discount: '10%' },
-      { min: 250, max: 499, price: 38.00, discount: '20%' },
-      { min: 500, max: 9999, price: 33.00, discount: '31%' }
+      { min: 100, max: 249, price: 41.00, discount: '14%' },
+      { min: 250, max: 499, price: 35.00, discount: '27%' },
+      { min: 500, max: 9999, price: 29.00, discount: '40%' }
     ]
   },
   {
     id: 'prod-7',
     name: 'Chronos: Milestone Executive Award Timepiece',
     category: 'executive',
-    categoryLabel: 'Executive VIP',
+    categoryLabel: 'Executive VIP Suites',
     price: 185.00,
     moq: 10,
-    rating: 4.98,
-    reviews: 176,
-    image: 'assets/products/blueants_milestone_watch.webp',
-    badge: 'Board Award',
+    rating: 4.97,
+    reviews: 184,
+    image: 'assets/products/blueants_milestone_watch.jpg',
+    badge: 'Prestige Award',
     badgeType: 'choice',
-    leadTime: 'standard',
-    leadTimeLabel: '5-7 Days Standard',
-    brandingOptions: ['laser'],
+    leadTime: 'custom',
+    leadTimeLabel: 'Custom 2 Weeks',
+    brandingOptions: ['laser', 'gold-foil'],
     features: [
-      'Brushed Gunmetal Solid Stainless Steel Desk Clock',
-      'Precision Silent Japanese Quartz Movement',
-      'Solid Black Marble Base with Felt Underlay',
-      'Custom Laser-Engraved Milestone Commemoration Plate'
+      'Minimalist Chronograph Watch with Sapphire Crystal Glass',
+      'Dual Straps: Italian Alligator-Grain Leather & Black Milanese Mesh',
+      'Custom Engraved Solid Brass Dedication Plaque',
+      'Matte Black Piano Lacquer Wood Presentation Box'
     ],
-    description: 'Brushed gunmetal stainless steel desk clock anchored on solid Nero Marquina black marble with custom engraved brass inscription plaque.',
+    description: 'Celebrate 5, 10, and 20-year service milestones or exceptional leadership achievements with an heirloom chronograph with bespoke engraving.',
     boxContents: [
-      '1x Solid Gunmetal Desk Clock with Mineral Glass Face',
-      '1x Natural Veined Nero Marquina Marble Display Plinth',
-      '1x Diamond-Drag Custom Engraved Brushed Brass Inscription Plaque',
-      '1x Microfiber Polishing Cloth & Velvet Protective Sleeve',
-      '1x Magnetic Clasp Luxury Padded Gift Case'
+      '1x Japanese Quartz Chronograph Watch (316L Surgical Steel, 5ATM)',
+      '1x Italian Full-Grain Leather Strap with Quick-Release Spring Bars',
+      '1x Black IP Stainless Steel Milanese Mesh Strap',
+      '1x Deeply Laser-Engraved Solid Brass Commemorative Plaque',
+      '1x High-Gloss Black Piano Lacquer Display Box with Velvet Pillow'
     ],
     bulkTiers: [
       { min: 10, max: 24, price: 185.00, discount: '0%' },
@@ -268,476 +261,508 @@ const PRODUCTS = [
     id: 'prod-8',
     name: 'Grand Cru: 24k Gold Truffles & Raw Honey',
     category: 'gourmet',
-    categoryLabel: 'Gourmet Pairings',
-    price: 78.00,
-    moq: 25,
+    categoryLabel: 'Gourmet Connoisseur Hampers',
+    price: 52.00,
+    moq: 35,
     rating: 4.89,
-    reviews: 290,
-    image: 'assets/products/blueants_gourmet_truffles.webp',
-    badge: 'Confection',
+    reviews: 512,
+    image: 'assets/products/blueants_gourmet_truffles.jpg',
+    badge: 'Festive Favorite',
     badgeType: 'bestseller',
     leadTime: 'express',
     leadTimeLabel: '48h Express Ready',
-    brandingOptions: ['gold-foil', 'laser'],
+    brandingOptions: ['gold-foil', 'screen-print'],
     features: [
-      'Artisanal Dark Chocolate Truffles with 24k Edible Gold Leaf',
-      'Raw Wildflower Honey Jar from Himalayan Foothills (250g)',
-      'Hand-Carved Olive Wood Honey Drizzler',
-      'Slow-Roasted Vanilla Glazed Macadamia Nuts'
+      '12x Handcrafted Single-Origin Dark Chocolate 24k Gold Truffles',
+      'Hexagon Jar of Pure Wildflower Honey (150g)',
+      'Hand-Turned Olive Wood Honey Dipper',
+      'Gold Tin of Slow-Roasted Salted Macadamia Nuts'
     ],
-    description: 'Handmade dark chocolate truffles adorned with edible gold leaf, unfiltered Himalayan forest honey, and carved olive wood honey drizzler.',
+    description: 'An indulgent sweet celebration package for holidays, corporate victories, and partner appreciation. Features edible 24k gold leaf and artisan treats.',
     boxContents: [
-      '1x 12-Piece Grand Cru Dark Chocolate Truffle Assortment with Edible Gold',
-      '1x 250g Jar of Unfiltered Raw Forest Honey from Himalayan Foothills',
-      '1x Hand-Turned Olive Wood Honey Drizzler',
-      '1x 150g Roasted Macadamias with Vanilla Bean Dusting',
-      '1x Rigid Gold-Embossed Presentation Box with Double-Faced Satin Ribbon'
+      '12x Belgian Dark Ganache Truffles Topped with 24k Edible Gold Leaf',
+      '1x 150g Organic Raw Cold-Extracted Wildflower Honey',
+      '1x Hand-Crafted Olive Wood Honey Drizzler',
+      '1x 100g Roasted & Salted Hawaiian Macadamia Nuts in Gold Tin',
+      '1x Gold-Embossed Silk Ribbon Packaging with Satin Gift Bow'
     ],
     bulkTiers: [
-      { min: 25, max: 49, price: 78.00, discount: '0%' },
-      { min: 50, max: 99, price: 70.00, discount: '10%' },
-      { min: 100, max: 249, price: 62.00, discount: '20%' },
-      { min: 250, max: 9999, price: 54.00, discount: '31%' }
+      { min: 35, max: 74, price: 52.00, discount: '0%' },
+      { min: 75, max: 149, price: 46.00, discount: '11%' },
+      { min: 150, max: 299, price: 40.00, discount: '23%' },
+      { min: 300, max: 9999, price: 34.00, discount: '35%' }
     ]
   }
 ];
 
-// Active State
+let rfpCart = [];
+
 let filterState = {
+  searchQuery: '',
   category: 'all',
-  priceFilters: [],
+  selectedCategories: [],
+  priceRanges: [],
   moqFilters: [],
   brandingFilters: [],
+  leadTimeFilters: [],
+  minRating: 0,
   sortBy: 'featured'
 };
 
-let rfpCart = [];
-let currentProduct = null;
-
-// Initialize on DOM Ready
 document.addEventListener('DOMContentLoaded', () => {
   renderProducts();
   setupFilterListeners();
+  setupSearchListeners();
   setupModalListeners();
   setupDrawerListeners();
-  setupHeaderScroll();
-  initHeroStamper();
+  setupScrollReveal();
+  setupMobileDockObserver();
+  initGlanceModule();
 });
 
-function setupHeaderScroll() {
-  const header = document.getElementById('brandHeader');
-  if (!header) return;
+function renderProducts() {
+  const container = document.getElementById('productsGrid');
+  const countDisplay = document.getElementById('productResultsCount');
+  if (!container) return;
 
-  const onScroll = () => {
-    if (window.scrollY > 20) {
-      header.classList.add('is-scrolled');
-    } else {
-      header.classList.remove('is-scrolled');
-    }
-  };
-
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-}
-
-/**
- * =========================================================================
- * SIGNATURE MOMENT: "STAMP YOUR OWN BOX" ENGINE
- * Real-time metallic foil rendering, specular reflection, 3D tilt & lid reveal
- * =========================================================================
- */
-function initHeroStamper() {
-  const stamperInput = document.getElementById('companyStamperInput');
-  const stampBtn = document.getElementById('stampActionBtn');
-  const boxStampedName = document.getElementById('boxStampedName');
-  const requestStampedBtn = document.getElementById('requestStampedBoxBtn');
-  const box3DWrapper = document.getElementById('box3DWrapper');
-  const boxLid = document.getElementById('boxLid');
-  const toggleLidBtn = document.getElementById('toggleLidBtn');
-  const lidToggleText = document.getElementById('lidToggleText');
-  const boxFoilSheen = document.getElementById('boxFoilSheen');
-  const stage = document.getElementById('heroBoxStage');
-  const rfpCompanyInput = document.getElementById('rfpCompanyName');
-
-  if (!stamperInput || !boxStampedName) return;
-
-  const updateStamping = () => {
-    const rawVal = stamperInput.value.trim();
-    const displayName = rawVal.length > 0 ? rawVal.toUpperCase() : 'YOUR COMPANY';
-    boxStampedName.textContent = displayName;
-
-    // Sync to Quote Drawer Company Field
-    if (rfpCompanyInput && rawVal.length > 0) {
-      rfpCompanyInput.value = rawVal;
+  const filtered = PRODUCTS.filter(p => {
+    if (filterState.searchQuery) {
+      const q = filterState.searchQuery.toLowerCase();
+      const matchTitle = p.name.toLowerCase().includes(q);
+      const matchDesc = p.description.toLowerCase().includes(q);
+      const matchCat = p.categoryLabel.toLowerCase().includes(q) || p.category.toLowerCase().includes(q);
+      if (!matchTitle && !matchDesc && !matchCat) return false;
     }
 
-    // Update WhatsApp CTA Link with pre-filled company name
-    if (requestStampedBtn) {
-      const msg = `Hi The Blue Ants, I'd like a bulk quote for The Sovereign Suite customized with our branding for ${displayName}.`;
-      requestStampedBtn.href = `https://wa.me/${CONFIG.PHONE}?text=${encodeURIComponent(msg)}`;
-    }
-  };
-
-  stamperInput.addEventListener('input', updateStamping);
-  stamperInput.addEventListener('change', updateStamping);
-
-  if (stampBtn) {
-    stampBtn.addEventListener('click', () => {
-      updateStamping();
-      boxStampedName.style.transform = 'scale(1.06)';
-      setTimeout(() => {
-        boxStampedName.style.transform = 'scale(1)';
-      }, 300);
-      showToast('Foil stamp updated on presentation lid');
-    });
-  }
-
-  // Toggle Lid Open / Closed
-  const toggleLid = (e) => {
-    if (e) e.stopPropagation();
-    if (!box3DWrapper) return;
-    const isOpen = box3DWrapper.classList.toggle('lid-open');
-    if (lidToggleText) {
-      lidToggleText.textContent = isOpen ? 'Close Lid' : 'Open Lid to Inspect';
-    }
-  };
-
-  if (toggleLidBtn) toggleLidBtn.addEventListener('click', toggleLid);
-  if (boxLid) {
-    boxLid.addEventListener('click', (e) => {
-      // Don't toggle if clicking inspect button directly to avoid double toggle
-      if (e.target.closest('#toggleLidBtn')) return;
-      toggleLid();
-    });
-    boxLid.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        toggleLid();
-      }
-    });
-  }
-
-  // Interactive Specular Sheen & 3D Tilt Tracking
-  if (stage && box3DWrapper && boxFoilSheen) {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    if (!prefersReducedMotion) {
-      stage.addEventListener('mousemove', (e) => {
-        const rect = stage.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width - 0.5;
-        const y = (e.clientY - rect.top) / rect.height - 0.5;
-
-        // Subtle 3D tilt
-        const rotX = 16 - y * 10;
-        const rotY = -12 + x * 12;
-        box3DWrapper.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg)`;
-
-        // Specular foil gradient sheen angle
-        const angle = 90 + Math.round(x * 60);
-        const intensity = Math.min(0.45, 0.2 + Math.abs(x) * 0.3);
-        boxFoilSheen.style.background = `linear-gradient(${angle}deg, transparent 20%, rgba(255, 235, 180, ${intensity}) 45%, transparent 65%)`;
-      });
-
-      stage.addEventListener('mouseleave', () => {
-        box3DWrapper.style.transform = 'rotateX(16deg) rotateY(-12deg)';
-        boxFoilSheen.style.background = 'linear-gradient(115deg, transparent 20%, rgba(255, 235, 180, 0.25) 45%, transparent 65%)';
-      });
-    }
-  }
-
-  // Initial call
-  updateStamping();
-}
-
-/**
- * Filter & Sort Logic
- */
-function getFilteredProducts() {
-  let list = PRODUCTS.filter(p => {
     if (filterState.category !== 'all' && p.category !== filterState.category) {
       return false;
     }
 
-    if (filterState.priceFilters.length > 0) {
-      const match = filterState.priceFilters.some(pf => {
-        if (pf === 'under50') return p.price < 50;
-        if (pf === '50to100') return p.price >= 50 && p.price <= 100;
-        if (pf === '100to150') return p.price > 100 && p.price <= 150;
-        if (pf === 'over150') return p.price > 150;
+    if (filterState.selectedCategories.length > 0 && !filterState.selectedCategories.includes(p.category)) {
+      return false;
+    }
+
+    if (filterState.priceRanges.length > 0) {
+      const matchesPrice = filterState.priceRanges.some(range => {
+        if (range === 'under50') return p.price < 50;
+        if (range === '50to100') return p.price >= 50 && p.price <= 100;
+        if (range === '100to150') return p.price > 100 && p.price <= 150;
+        if (range === 'over150') return p.price > 150;
         return true;
       });
-      if (!match) return false;
+      if (!matchesPrice) return false;
     }
 
     if (filterState.moqFilters.length > 0) {
-      const match = filterState.moqFilters.some(mf => {
-        if (mf === 'low') return p.moq <= 25;
-        if (mf === 'mid') return p.moq > 25 && p.moq <= 50;
-        if (mf === 'bulk') return p.moq > 50;
+      const matchesMoq = filterState.moqFilters.some(m => {
+        if (m === 'under25') return p.moq <= 25;
+        if (m === '25to50') return p.moq >= 25 && p.moq <= 50;
+        if (m === '50plus') return p.moq >= 50;
         return true;
       });
-      if (!match) return false;
+      if (!matchesMoq) return false;
     }
 
     if (filterState.brandingFilters.length > 0) {
-      const match = filterState.brandingFilters.some(bf => p.brandingOptions.includes(bf));
-      if (!match) return false;
+      const hasBranding = filterState.brandingFilters.some(b => p.brandingOptions.includes(b));
+      if (!hasBranding) return false;
+    }
+
+    if (filterState.leadTimeFilters.length > 0) {
+      if (!filterState.leadTimeFilters.includes(p.leadTime)) return false;
+    }
+
+    if (filterState.minRating > 0 && p.rating < filterState.minRating) {
+      return false;
     }
 
     return true;
   });
 
-  list.sort((a, b) => {
+  filtered.sort((a, b) => {
     if (filterState.sortBy === 'price-low') return a.price - b.price;
     if (filterState.sortBy === 'price-high') return b.price - a.price;
+    if (filterState.sortBy === 'rating') return b.rating - a.rating;
     if (filterState.sortBy === 'moq') return a.moq - b.moq;
-    return 0; // 'featured'
+    return 0;
   });
 
-  return list;
-}
-
-/**
- * Render Product Grid
- */
-function renderProducts() {
-  const container = document.getElementById('productsGrid');
-  const countDisplay = document.getElementById('productResultsCount');
-  const clearBtn = document.getElementById('clearAllFiltersBtn');
-  const activeCountBadge = document.getElementById('activeFilterCount');
-
-  if (!container) return;
-
-  const filtered = getFilteredProducts();
-
-  const activeCount = filterState.priceFilters.length + filterState.moqFilters.length + filterState.brandingFilters.length;
-  if (activeCountBadge) {
-    activeCountBadge.textContent = activeCount;
-    activeCountBadge.style.display = activeCount > 0 ? 'inline-flex' : 'none';
-  }
-
-  if (clearBtn) {
-    clearBtn.style.display = (activeCount > 0 || filterState.category !== 'all') ? 'inline-block' : 'none';
-  }
-
   if (countDisplay) {
-    countDisplay.textContent = `Showing ${filtered.length} suites`;
+    countDisplay.textContent = `Showing 1–${filtered.length} of ${filtered.length} corporate gift sets`;
   }
 
   if (filtered.length === 0) {
     container.innerHTML = `
-      <div style="grid-column: 1 / -1; padding: 64px 24px; text-align: center; border: 1px dashed var(--border-strong); background: var(--color-paper-card);">
-        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 8px;">No matching suites found</h3>
-        <p style="color: var(--color-ink-muted); font-size: 0.9375rem; max-width: 440px; margin: 0 auto 20px auto;">
-          We frequently curate custom suites not listed in our standard catalogue.
-        </p>
-        <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
-          <button onclick="resetFilters()" class="btn-card-details" style="height: 48px; padding: 0 20px;">
-            Reset Filters
-          </button>
-          <a href="https://wa.me/${CONFIG.PHONE}?text=${encodeURIComponent('Hi Blue Ants, I am looking for custom corporate gift suites with specific requirements.')}" 
-             target="_blank" rel="noopener" class="btn-wa-direct" style="height: 48px; padding: 0 20px;">
-            <i class="fa-brands fa-whatsapp text-lg"></i> Inquire on WhatsApp
-          </a>
-        </div>
+      <div class="col-span-full py-16 text-center">
+        <i class="fas fa-search text-4xl text-gray-600 mb-3"></i>
+        <h3 class="text-lg font-bold text-gray-200">No Corporate Gift Sets Match Your Filter</h3>
+        <p class="text-gray-400 text-xs mt-1">Try resetting your filters or search terms.</p>
+        <button onclick="resetFilters()" class="btn-primary-gold mx-auto mt-4 text-xs">Reset Filters</button>
       </div>
     `;
     return;
   }
 
   container.innerHTML = filtered.map((p, idx) => {
+    const lowestTier = p.bulkTiers[p.bulkTiers.length - 1];
+    const badgeHtml = p.badgeType === 'choice' 
+      ? `<span class="card-badge-choice"><i class="fas fa-certificate text-amber-400 mr-1.5"></i> ${p.badge}</span>`
+      : `<span class="card-badge-bestseller"><i class="fas fa-fire mr-1.5"></i> ${p.badge}</span>`;
+
     return `
-      <article class="product-catalog-card" data-id="${p.id}">
-        <div class="product-image-slot" onclick="openQuickView('${p.id}')">
-          <img src="${p.image}" alt="${p.name}" loading="lazy" width="400" height="400">
+      <div class="product-card reveal-on-scroll is-revealed" data-id="${p.id}" style="transition-delay: ${idx * 50}ms;">
+        <div class="product-image-container" onclick="openQuickView('${p.id}')">
+          ${badgeHtml}
+          <span class="card-moq-pill">MOQ ${p.moq} units</span>
+          <img src="${p.image}" alt="${p.name}" loading="lazy">
         </div>
         
-        <div class="product-body-specs">
-          <div class="product-card-mono-row">
-            <span class="mono-caption" style="font-size: 0.6875rem;">NO. 0${idx + 1} // ${p.categoryLabel.toUpperCase()}</span>
-            <span class="mono-caption" style="color: var(--color-blue-ant); font-size: 0.6875rem;">${p.badge}</span>
+        <div class="product-info-wrap">
+          <div class="flex items-center justify-between text-xs mb-1">
+            <span class="product-cat-label">${p.categoryLabel}</span>
+            <span class="text-gray-400 flex items-center gap-1"><i class="fas fa-truck-fast text-emerald-400 text-[11px]"></i> ${p.leadTimeLabel}</span>
           </div>
 
-          <h3 class="product-title-serif" onclick="openQuickView('${p.id}')">${p.name}</h3>
-          <p class="product-short-desc">${p.description}</p>
+          <h3 class="product-card-title" onclick="openQuickView('${p.id}')">${p.name}</h3>
+          
+          <div class="flex items-center gap-2 text-xs mb-3">
+            <span class="text-amber-400 inline-flex gap-0.5 text-[11px]">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </span>
+            <span class="font-bold text-white">${p.rating}</span>
+            <span class="text-gray-500 font-normal">(${p.reviews} reviews)</span>
+          </div>
 
-          <div class="product-price-moq-bar">
-            <div>
-              <span class="product-unit-price">${CONFIG.formatPrice(p.price)}</span>
-              <span class="mono-caption" style="font-size: 0.6875rem; color: var(--color-ink-muted);"> / UNIT</span>
+          <div class="price-section mb-5">
+            <div class="flex items-baseline gap-1.5">
+              <span class="text-2xl font-extrabold text-white font-mono">$${p.price.toFixed(2)}</span>
+              <span class="text-xs text-gray-400">/ unit</span>
             </div>
-            <div class="product-moq-spec">MOQ: ${p.moq} UNITS</div>
+            <div class="text-[12px] text-emerald-400 font-medium mt-1.5 flex items-center gap-1.5">
+              <i class="fas fa-tags text-[11px] text-emerald-400"></i>
+              <span>From <strong>$${lowestTier.price.toFixed(2)}</strong> for ${lowestTier.min}+ units (Save ${lowestTier.discount})</span>
+            </div>
           </div>
 
-          <div class="card-action-btns">
-            <button class="btn-card-details" onclick="openQuickView('${p.id}')" aria-label="View Specs: ${p.name}">
-              View Specs
+          <div class="grid grid-cols-2 gap-3 mt-auto pt-3 border-t border-gray-800/80">
+            <button class="btn-secondary-outline" onclick="openQuickView('${p.id}')">
+              Quick View
             </button>
-            <button class="btn-card-add" onclick="addToRfp('${p.id}')" aria-label="Add to Quote: ${p.name}">
-              <i class="fas fa-plus text-xs"></i> Add to Quote
+            <button class="btn-primary-gold" onclick="addToRfp('${p.id}')">
+              <i class="fas fa-plus mr-1"></i> Add to Quote
             </button>
           </div>
         </div>
-      </article>
+      </div>
     `;
   }).join('');
+
+  setupCardTilt();
 }
 
-/**
- * Filter Chip Selection & Occasion Jump
- */
-function selectOccasionCategory(cat) {
-  filterState.category = cat;
-  
-  const tabs = document.querySelectorAll('.catalog-tab');
-  tabs.forEach(tab => {
-    if (tab.dataset.category === cat) {
-      tab.classList.add('active');
-      tab.setAttribute('aria-selected', 'true');
-    } else {
-      tab.classList.remove('active');
-      tab.setAttribute('aria-selected', 'false');
-    }
+function setupFilterListeners() {
+  const pills = document.querySelectorAll('.category-pill');
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      pills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      filterState.category = pill.dataset.category || 'all';
+      const searchDept = document.getElementById('searchDeptSelect');
+      if (searchDept) {
+        searchDept.value = filterState.category;
+      }
+      renderProducts();
+    });
   });
 
-  renderProducts();
+  const sortSelect = document.getElementById('sortBySelect');
+  const mobileSortSelect = document.getElementById('mobileSortBySelect');
 
-  const catalog = document.getElementById('catalogSection');
-  if (catalog) {
-    catalog.scrollIntoView({ behavior: 'smooth' });
+  if (sortSelect) {
+    sortSelect.addEventListener('change', (e) => {
+      filterState.sortBy = e.target.value;
+      if (mobileSortSelect) mobileSortSelect.value = e.target.value;
+      renderProducts();
+    });
+  }
+
+  if (mobileSortSelect) {
+    mobileSortSelect.addEventListener('change', (e) => {
+      filterState.sortBy = e.target.value;
+      if (sortSelect) sortSelect.value = e.target.value;
+      renderProducts();
+    });
+  }
+
+  // Desktop + Mobile Checkbox Syncing
+  const syncCheckboxes = (nameDesktop, nameMobile, stateKey) => {
+    const handler = (sourceName, targetName) => {
+      const checked = Array.from(document.querySelectorAll(`input[name="${sourceName}"]:checked`)).map(c => c.value);
+      filterState[stateKey] = checked;
+      
+      // Mirror to the other checkboxes
+      document.querySelectorAll(`input[name="${targetName}"]`).forEach(cb => {
+        cb.checked = checked.includes(cb.value);
+      });
+
+      updateMobileFilterBadge();
+      renderProducts();
+    };
+
+    document.querySelectorAll(`input[name="${nameDesktop}"]`).forEach(cb => {
+      cb.addEventListener('change', () => handler(nameDesktop, nameMobile));
+    });
+
+    document.querySelectorAll(`input[name="${nameMobile}"]`).forEach(cb => {
+      cb.addEventListener('change', () => handler(nameMobile, nameDesktop));
+    });
+  };
+
+  syncCheckboxes('catFilter', 'catFilterMobile', 'selectedCategories');
+  syncCheckboxes('priceFilter', 'priceFilterMobile', 'priceRanges');
+  syncCheckboxes('moqFilter', 'moqFilterMobile', 'moqFilters');
+  syncCheckboxes('brandingFilter', 'brandingFilterMobile', 'brandingFilters');
+  syncCheckboxes('leadTimeFilter', 'leadTimeFilterMobile', 'leadTimeFilters');
+
+  document.querySelectorAll('input[name="ratingFilter"]').forEach(cb => {
+    cb.addEventListener('change', () => {
+      const checked = document.querySelector('input[name="ratingFilter"]:checked');
+      filterState.minRating = checked ? parseFloat(checked.value) : 0;
+      updateMobileFilterBadge();
+      renderProducts();
+    });
+  });
+}
+
+function setupSearchListeners() {
+  const searchInput = document.getElementById('amazonSearchInput');
+  const searchBtn = document.getElementById('amazonSearchBtn');
+  const searchDept = document.getElementById('searchDeptSelect');
+
+  const executeSearch = () => {
+    if (searchInput) {
+      filterState.searchQuery = searchInput.value.trim();
+    }
+    renderProducts();
+  };
+
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      executeSearch();
+    });
+    searchInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        executeSearch();
+      }
+    });
+  }
+
+  if (searchBtn) {
+    searchBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      executeSearch();
+    });
+  }
+
+  if (searchDept) {
+    searchDept.addEventListener('change', (e) => {
+      const selectedDept = e.target.value;
+      filterState.category = selectedDept;
+      
+      // Synchronize category pills
+      const pills = document.querySelectorAll('.category-pill');
+      pills.forEach(pill => {
+        const cat = pill.dataset.category || 'all';
+        if (cat === selectedDept) {
+          pill.classList.add('active');
+        } else {
+          pill.classList.remove('active');
+        }
+      });
+
+      renderProducts();
+    });
+  }
+}
+
+function openMobileFilters() {
+  const modal = document.getElementById('mobileFilterModal');
+  if (modal) modal.classList.add('active');
+}
+
+function closeMobileFilters() {
+  const modal = document.getElementById('mobileFilterModal');
+  if (modal) modal.classList.remove('active');
+}
+
+function updateMobileFilterBadge() {
+  const badge = document.getElementById('mobileFilterBadge');
+  if (!badge) return;
+
+  const totalActive = (filterState.selectedCategories?.length || 0) +
+                      (filterState.priceRanges?.length || 0) +
+                      (filterState.moqFilters?.length || 0) +
+                      (filterState.brandingFilters?.length || 0) +
+                      (filterState.leadTimeFilters?.length || 0) +
+                      (filterState.minRating > 0 ? 1 : 0);
+
+  if (totalActive > 0) {
+    badge.textContent = totalActive;
+    badge.style.display = 'inline-flex';
+  } else {
+    badge.style.display = 'none';
   }
 }
 
 function resetFilters() {
   filterState = {
+    searchQuery: '',
     category: 'all',
-    priceFilters: [],
+    selectedCategories: [],
+    priceRanges: [],
     moqFilters: [],
     brandingFilters: [],
+    leadTimeFilters: [],
+    minRating: 0,
     sortBy: 'featured'
   };
 
-  document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+  const searchInput = document.getElementById('amazonSearchInput');
+  if (searchInput) searchInput.value = '';
 
-  const tabs = document.querySelectorAll('.catalog-tab');
-  tabs.forEach(t => {
-    if (t.dataset.category === 'all') {
-      t.classList.add('active');
-      t.setAttribute('aria-selected', 'true');
-    } else {
-      t.classList.remove('active');
-      t.setAttribute('aria-selected', 'false');
-    }
-  });
+  const searchDept = document.getElementById('searchDeptSelect');
+  if (searchDept) searchDept.value = 'all';
 
   const sortSelect = document.getElementById('sortBySelect');
   if (sortSelect) sortSelect.value = 'featured';
 
-  renderProducts();
-}
+  const mobileSortSelect = document.getElementById('mobileSortBySelect');
+  if (mobileSortSelect) mobileSortSelect.value = 'featured';
 
-function setupFilterListeners() {
-  // Category tabs
-  const tabs = document.querySelectorAll('.catalog-tab');
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => {
-        t.classList.remove('active');
-        t.setAttribute('aria-selected', 'false');
-      });
-      tab.classList.add('active');
-      tab.setAttribute('aria-selected', 'true');
-      filterState.category = tab.dataset.category || 'all';
-      renderProducts();
-    });
+  document.querySelectorAll('input[type="checkbox"]').forEach(c => c.checked = false);
+  document.querySelectorAll('input[name="ratingFilter"]').forEach(c => c.checked = false);
+  document.querySelectorAll('.category-pill').forEach((p, idx) => {
+    if (idx === 0) p.classList.add('active');
+    else p.classList.remove('active');
   });
 
-  // Sort dropdown
-  const sortSelect = document.getElementById('sortBySelect');
-  if (sortSelect) {
-    sortSelect.addEventListener('change', (e) => {
-      filterState.sortBy = e.target.value;
-      renderProducts();
-    });
-  }
-}
-
-function applyMobileFilters() {
-  filterState.priceFilters = Array.from(document.querySelectorAll('input[name="priceFilter"]:checked')).map(c => c.value);
-  filterState.moqFilters = Array.from(document.querySelectorAll('input[name="moqFilter"]:checked')).map(c => c.value);
-  filterState.brandingFilters = Array.from(document.querySelectorAll('input[name="brandFilter"]:checked')).map(c => c.value);
-
+  updateMobileFilterBadge();
   renderProducts();
-  closeMobileFilters();
+  showToast('Filters cleared.');
 }
 
-/**
- * Quick View Modal
- */
+// Quick View Modal
+let currentProduct = null;
+
 function openQuickView(prodId) {
   const product = PRODUCTS.find(p => p.id === prodId);
   if (!product) return;
-  currentProduct = product;
 
+  currentProduct = product;
   const modal = document.getElementById('quickViewModal');
-  const title = document.getElementById('qvSuiteTitle');
   const content = document.getElementById('quickViewContent');
   if (!modal || !content) return;
 
-  if (title) title.textContent = product.name;
-
   content.innerHTML = `
-    <div style="display: flex; flex-direction: column; gap: 20px;">
-      <div style="aspect-ratio: 16/10; background: var(--color-paper-subtle); border: 1px solid var(--border-hairline); overflow: hidden;">
-        <img src="${product.image}" alt="${product.name}" style="width: 100%; height: 100%; object-fit: cover;">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-6 md:p-8">
+      <div>
+        <div class="rounded-xl overflow-hidden border border-gray-700 bg-gray-900 relative shadow-2xl">
+          <img src="${product.image}" alt="${product.name}" class="w-full h-auto object-cover">
+          <span class="card-moq-pill top-4 right-4">Min. MOQ: ${product.moq} units</span>
+        </div>
+        
+        <div class="mt-4 p-4 rounded-xl bg-gray-900/90 border border-amber-500/30 text-xs">
+          <div class="text-amber-300 font-bold mb-1"><i class="fas fa-stamp mr-1 text-amber-400"></i> Corporate Logo Customization Included</div>
+          <div class="text-gray-400">Laser engraving, gold foil embossing, and custom box packaging available for your enterprise brand.</div>
+        </div>
+
+        <div class="mt-3 p-3 rounded-xl bg-emerald-950/40 border border-emerald-500/30 flex items-center justify-between text-xs">
+          <div class="flex items-center gap-2 text-emerald-300">
+            <i class="fas fa-phone-volume text-emerald-400"></i>
+            <span>Concierge: +91 9916418879</span>
+          </div>
+          <a href="tel:+919916418879" class="text-emerald-300 underline font-semibold">Direct Call</a>
+        </div>
       </div>
 
-      <div>
-        <div class="mono-caption" style="margin-bottom: 6px;">${product.categoryLabel.toUpperCase()} // ${product.badge}</div>
-        <p style="font-size: 0.9375rem; color: var(--color-ink-secondary); line-height: 1.5; margin-bottom: 16px;">
-          ${product.description}
-        </p>
+      <div class="flex flex-col">
+        <div class="flex items-center justify-between">
+          <span class="product-cat-label">${product.categoryLabel}</span>
+          <span class="text-xs text-emerald-400 font-semibold bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-700/50">
+            <i class="fas fa-shield-halved mr-1"></i> Corporate Gifting
+          </span>
+        </div>
 
-        <div style="background: var(--color-paper-card); padding: 16px; border: 1px solid var(--border-hairline); margin-bottom: 20px;">
-          <div class="mono-caption" style="margin-bottom: 8px; color: var(--color-ink);">SUITE CONTENTS (BOX EMBEDDED)</div>
-          <ul style="font-size: 0.875rem; color: var(--color-ink-secondary); padding-left: 18px; line-height: 1.6;">
-            ${product.boxContents.map(c => `<li>${c}</li>`).join('')}
+        <h2 class="text-2xl font-bold text-white mt-2">${product.name}</h2>
+
+        <div class="flex items-center gap-2 text-xs my-2">
+          <span class="text-amber-400 text-xs inline-flex gap-0.5">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </span>
+          <span class="font-bold text-white">${product.rating}</span>
+          <span class="text-gray-400">(${product.reviews} reviews)</span>
+        </div>
+
+        <p class="text-gray-300 text-xs leading-relaxed my-3">${product.description}</p>
+
+        <div class="mb-4 bg-gray-900/60 p-4 rounded-xl border border-gray-800">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-amber-300 mb-2">
+            <i class="fas fa-gift text-amber-400 mr-1"></i> Included in Box:
+          </h4>
+          <ul class="text-xs text-gray-300 space-y-1 list-disc list-inside">
+            ${product.boxContents.map(item => `<li>${item}</li>`).join('')}
           </ul>
         </div>
 
-        <div style="background: #FFFFFF; border: 1px solid var(--border-hairline); padding: 16px; margin-bottom: 20px;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-            <span class="mono-caption">ORDER QUANTITY (MOQ: ${product.moq})</span>
-            <span id="qvDiscountBadge" class="mono-caption" style="color: var(--color-blue-ant);">Base Rate</span>
+        <!-- Volume Pricing & Loss Aversion Calculator -->
+        <div class="bg-gray-950 p-4 rounded-xl border border-amber-500/30 mb-6">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-amber-300 uppercase flex items-center gap-1.5">
+              <i class="fas fa-calculator"></i> Volume Pricing Calculator:
+            </span>
+            <span class="text-xs text-blue-400 font-semibold" id="qvDiscountBadge">Base Rate</span>
           </div>
 
-          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
-            <div class="qty-stepper-wrap">
-              <button onclick="adjustQvQty(-10)" class="stepper-btn" aria-label="Decrease quantity">-</button>
-              <input type="number" id="qvQtyInput" value="${product.moq}" min="${product.moq}" step="5" class="stepper-input">
-              <button onclick="adjustQvQty(10)" class="stepper-btn" aria-label="Increase quantity">+</button>
+          <div class="flex flex-wrap items-center gap-3 my-3">
+            <div class="flex items-center">
+              <button onclick="adjustQvQty(-10)" class="w-12 h-12 min-w-[48px] min-h-[48px] flex items-center justify-center text-lg bg-gray-900 border border-gray-700 text-white rounded-l-lg hover:bg-gray-800 transition-colors touch-manipulation" aria-label="Decrease quantity">-</button>
+              <input type="number" id="qvQtyInput" value="${product.moq}" min="${product.moq}" step="5"
+                     class="w-20 h-12 bg-gray-900 border-y border-gray-700 text-center text-white font-bold text-sm outline-none">
+              <button onclick="adjustQvQty(10)" class="w-12 h-12 min-w-[48px] min-h-[48px] flex items-center justify-center text-lg bg-gray-900 border border-gray-700 text-white rounded-r-lg hover:bg-gray-800 transition-colors touch-manipulation" aria-label="Increase quantity">+</button>
             </div>
-            <span class="mono-caption" style="color: var(--color-ink-muted);">UNITS</span>
+            
+            <div class="flex flex-wrap gap-1.5 ml-auto">
+              <button onclick="setQvQty(${product.moq})" class="text-xs px-2.5 py-1.5 rounded-lg bg-gray-800/90 border border-white/[0.08] text-gray-300 hover:text-white hover:border-amber-400/50 transition-colors font-medium">MOQ (${product.moq})</button>
+              <button onclick="setQvQty(${product.moq * 2})" class="text-xs px-2.5 py-1.5 rounded-lg bg-gray-800/90 border border-white/[0.08] text-gray-300 hover:text-white hover:border-amber-400/50 transition-colors font-medium">2x MOQ (${product.moq * 2})</button>
+              <button onclick="setQvQty(${product.moq * 5})" class="text-xs px-2.5 py-1.5 rounded-lg bg-gray-800/90 border border-white/[0.08] text-gray-300 hover:text-white hover:border-amber-400/50 transition-colors font-medium">5x MOQ (${product.moq * 5})</button>
+              <button onclick="setQvQty(50)" class="text-xs px-2.5 py-1.5 rounded-lg bg-gray-800/90 border border-white/[0.08] text-gray-300 hover:text-white hover:border-amber-400/50 transition-colors font-medium">50 pk</button>
+              <button onclick="setQvQty(100)" class="text-xs px-2.5 py-1.5 rounded-lg bg-gray-800/90 border border-white/[0.08] text-gray-300 hover:text-white hover:border-amber-400/50 transition-colors font-medium">100 pk</button>
+              <button onclick="setQvQty(250)" class="text-xs px-2.5 py-1.5 rounded-lg bg-gray-800/90 border border-white/[0.08] text-gray-300 hover:text-white hover:border-amber-400/50 transition-colors font-medium">250 pk</button>
+            </div>
           </div>
 
-          <div style="display: flex; justify-content: space-between; align-items: baseline; padding-top: 12px; border-top: 1px solid var(--border-hairline);">
+          <div class="pt-3 border-t border-gray-800 flex items-center justify-between text-xs">
             <div>
-              <div class="mono-caption" style="font-size: 0.6875rem;">UNIT ESTIMATE:</div>
-              <strong id="qvUnitPrice" style="font-family: var(--font-mono); font-size: 1.125rem;">${CONFIG.formatPrice(product.price)}</strong>
+              <div class="text-gray-400">Unit Price: <strong class="text-white font-mono" id="qvUnitPrice">$${product.price.toFixed(2)}</strong></div>
+              <div class="text-emerald-400 font-bold tracking-wide mt-0.5" id="qvSavingsTotal">Base Tier</div>
             </div>
-            <div style="text-align: right;">
-              <div class="mono-caption" style="font-size: 0.6875rem;">TOTAL ESTIMATE:</div>
-              <strong id="qvTotalPrice" style="font-family: var(--font-mono); font-size: 1.25rem; color: var(--color-blue-ant);">${CONFIG.formatPrice(product.price * product.moq)}</strong>
+            <div class="text-right">
+              <div class="text-gray-400">Estimated Total:</div>
+              <div class="text-2xl font-bold text-amber-300 font-mono" id="qvTotalPrice">$${(product.price * product.moq).toFixed(2)}</div>
             </div>
           </div>
         </div>
 
-        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-          <button onclick="addCurrentQvToRfp()" class="btn-card-add" style="flex: 1; height: 50px; font-size: 0.75rem;">
-            <i class="fas fa-plus"></i> Add to Quote Request
+        <div class="mt-auto flex flex-col sm:flex-row gap-3">
+          <button class="btn-whatsapp flex-1 py-3 text-xs font-bold" onclick="inquireProductWhatsapp('${product.id}')">
+            <i class="fa-brands fa-whatsapp text-base"></i> Instant WhatsApp Quote
           </button>
-          <button onclick="inquireProductWhatsapp('${product.id}')" class="btn-wa-direct" style="height: 50px;">
-            <i class="fa-brands fa-whatsapp text-lg"></i> Direct WhatsApp
+          <button class="btn-primary-gold px-4 py-3 text-xs" onclick="addCurrentQvToRfp()">
+            <i class="fas fa-plus mr-1"></i> Add to Quote Cart
+          </button>
+          <button class="btn-secondary-outline px-4" onclick="closeQuickView()">
+            Close
           </button>
         </div>
       </div>
@@ -745,27 +770,23 @@ function openQuickView(prodId) {
   `;
 
   modal.classList.add('active');
-  document.body.classList.add('scroll-locked');
-  const dock = document.getElementById('mobileBottomDock');
-  if (dock) dock.classList.add('is-hidden');
-
   updateQvCalculations();
-}
-
-function closeQuickView() {
-  const modal = document.getElementById('quickViewModal');
-  if (modal) modal.classList.remove('active');
-  document.body.classList.remove('scroll-locked');
-  const dock = document.getElementById('mobileBottomDock');
-  if (dock) dock.classList.remove('is-hidden');
 }
 
 function adjustQvQty(delta) {
   const input = document.getElementById('qvQtyInput');
   if (!input || !currentProduct) return;
-  let val = parseInt(input.value) || currentProduct.moq;
+  let val = parseInt(input.value);
+  if (isNaN(val) || val <= 0) val = currentProduct.moq;
   val = Math.max(currentProduct.moq, val + delta);
   input.value = val;
+  updateQvCalculations();
+}
+
+function setQvQty(qty) {
+  const input = document.getElementById('qvQtyInput');
+  if (!input || !currentProduct) return;
+  input.value = Math.max(currentProduct.moq, qty);
   updateQvCalculations();
 }
 
@@ -774,20 +795,64 @@ function updateQvCalculations() {
   const input = document.getElementById('qvQtyInput');
   const unitPriceEl = document.getElementById('qvUnitPrice');
   const totalPriceEl = document.getElementById('qvTotalPrice');
-  const discountBadge = document.getElementById('qvDiscountBadge');
+  const discountBadgeEl = document.getElementById('qvDiscountBadge');
+  const savingsEl = document.getElementById('qvSavingsTotal');
+  if (!input || !unitPriceEl || !totalPriceEl) return;
 
-  const qty = parseInt(input?.value) || currentProduct.moq;
-
+  const rawVal = parseInt(input.value);
+  const qty = (!isNaN(rawVal) && rawVal > 0) ? Math.max(currentProduct.moq, rawVal) : currentProduct.moq;
+  
   let appliedTier = currentProduct.bulkTiers[0];
   for (let t of currentProduct.bulkTiers) {
     if (qty >= t.min) appliedTier = t;
   }
 
-  if (unitPriceEl) unitPriceEl.textContent = `${CONFIG.formatPrice(appliedTier.price)} / unit`;
-  if (totalPriceEl) totalPriceEl.textContent = CONFIG.formatPrice(appliedTier.price * qty);
-  if (discountBadge) {
-    discountBadge.textContent = appliedTier.discount !== '0%' ? `Volume Privilege: ${appliedTier.discount}` : 'Base Rate';
+  const unitPrice = appliedTier.price;
+  const total = unitPrice * qty;
+  const standardTotal = currentProduct.price * qty;
+  const saved = standardTotal - total;
+
+  unitPriceEl.textContent = `$${unitPrice.toFixed(2)}`;
+  totalPriceEl.textContent = `$${total.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+  if (discountBadgeEl) discountBadgeEl.textContent = appliedTier.discount === '0%' ? 'Base Volume Rate' : `Volume Discount: ${appliedTier.discount}`;
+  if (savingsEl) {
+    savingsEl.textContent = saved > 0 
+      ? `Save $${saved.toFixed(2)} on this order with Bulk Tiering` 
+      : 'Base MOQ Tier';
   }
+}
+
+function inquireProductWhatsapp(prodId) {
+  const product = PRODUCTS.find(p => p.id === prodId);
+  if (!product) return;
+
+  const input = document.getElementById('qvQtyInput');
+  const rawVal = parseInt(input?.value);
+  const qty = (!isNaN(rawVal) && rawVal > 0) ? Math.max(product.moq, rawVal) : product.moq;
+
+  let appliedTier = product.bulkTiers[0];
+  for (let t of product.bulkTiers) {
+    if (qty >= t.min) appliedTier = t;
+  }
+
+  const unitPrice = appliedTier.price;
+  const total = unitPrice * qty;
+
+  const message = 
+    `*THE BLUE ANTS — CORPORATE GIFT INQUIRY*\n` +
+    `━━━━━━━━━━━━━━━━━━━━\n` +
+    `*Item:* ${product.name}\n` +
+    `*Category:* ${product.categoryLabel}\n` +
+    `*Quantity:* ${qty} units\n` +
+    `*Bulk Unit Price:* $${unitPrice.toFixed(2)} / unit\n` +
+    `*Estimated Total:* $${total.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}\n` +
+    `*Tier Status:* ${appliedTier.discount !== '0%' ? `Save ${appliedTier.discount}` : 'Base MOQ Tier'}\n` +
+    `━━━━━━━━━━━━━━━━━━━━\n` +
+    `Hi Blue Ants team, please share corporate branding options (gold foil / engraving), physical sample availability, and delivery timelines for this package.`;
+
+  const waUrl = `https://wa.me/919916418879?text=${encodeURIComponent(message)}`;
+  window.open(waUrl, '_blank');
+  showToast('Opening WhatsApp with product inquiry...');
 }
 
 function addCurrentQvToRfp() {
@@ -798,127 +863,174 @@ function addCurrentQvToRfp() {
   closeQuickView();
 }
 
-function inquireProductWhatsapp(prodId) {
-  const product = PRODUCTS.find(p => p.id === prodId);
-  if (!product) return;
-
-  const input = document.getElementById('qvQtyInput');
-  const qty = parseInt(input?.value) || product.moq;
-
-  let appliedTier = product.bulkTiers[0];
-  for (let t of product.bulkTiers) {
-    if (qty >= t.min) appliedTier = t;
-  }
-
-  const total = appliedTier.price * qty;
-
-  const msg = 
-    `*THE BLUE ANTS — CORPORATE GIFT INQUIRY*\n` +
-    `━━━━━━━━━━━━━━━━━━━━\n` +
-    `*Suite:* ${product.name}\n` +
-    `*Category:* ${product.categoryLabel}\n` +
-    `*Quantity:* ${qty} units\n` +
-    `*Estimated Unit Price:* ${CONFIG.formatPrice(appliedTier.price)}\n` +
-    `*Total Estimate:* ${CONFIG.formatPrice(total)}\n` +
-    `━━━━━━━━━━━━━━━━━━━━\n` +
-    `Hi Blue Ants team, please share corporate branding options (gold foil debossing / laser engraving), sample availability, and lead times.`;
-
-  window.open(`https://wa.me/${CONFIG.PHONE}?text=${encodeURIComponent(msg)}`, '_blank');
+function closeQuickView() {
+  const modal = document.getElementById('quickViewModal');
+  if (modal) modal.classList.remove('active');
 }
 
-/**
- * =========================================================================
- * RFP QUOTE DRAWER & MICRO-INTERACTION (Nav Cart Receive Bump)
- * =========================================================================
- */
-function addToRfp(prodId, qty) {
+function setupModalListeners() {
+  const modal = document.getElementById('quickViewModal');
+  const filterModal = document.getElementById('mobileFilterModal');
+  const rfpBackdrop = document.getElementById('rfpBackdrop');
+
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeQuickView();
+    });
+  }
+
+  if (filterModal) {
+    filterModal.addEventListener('click', (e) => {
+      if (e.target === filterModal) closeMobileFilters();
+    });
+  }
+
+  if (rfpBackdrop) {
+    rfpBackdrop.addEventListener('click', () => {
+      closeRfpDrawer();
+    });
+  }
+
+  document.addEventListener('input', (e) => {
+    if (e.target && e.target.id === 'qvQtyInput') {
+      updateQvCalculations();
+    }
+  });
+
+  // Mobile Material Bottom Sheet touch-drag gesture listeners
+  const addSwipeDownToClose = (el, closeFn) => {
+    if (!el) return;
+    let startY = 0;
+    let currentY = 0;
+    let isDragging = false;
+
+    el.addEventListener('touchstart', (e) => {
+      if (el.scrollTop > 5) return;
+      startY = e.touches[0].clientY;
+      currentY = startY;
+      isDragging = true;
+      el.style.transition = 'none';
+    }, { passive: true });
+
+    el.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      currentY = e.touches[0].clientY;
+      const delta = currentY - startY;
+      if (delta > 0 && el.scrollTop <= 0) {
+        el.style.transform = `translateY(${delta}px)`;
+      }
+    }, { passive: true });
+
+    el.addEventListener('touchend', () => {
+      if (!isDragging) return;
+      isDragging = false;
+      if (currentY - startY > 100) {
+        el.style.transition = 'transform 0.3s cubic-bezier(0.16, 1, 0.3, 1)';
+        el.style.transform = 'translateY(100%)';
+        setTimeout(() => {
+          closeFn();
+          el.style.transform = '';
+          el.style.transition = '';
+        }, 280);
+      } else {
+        // Fluid spring reset on canceled drag
+        el.style.transition = 'transform 0.3s cubic-bezier(0.16, 1, 0.3, 1)';
+        el.style.transform = 'translateY(0)';
+        setTimeout(() => {
+          el.style.transform = '';
+          el.style.transition = '';
+        }, 300);
+      }
+    }, { passive: true });
+  };
+
+  addSwipeDownToClose(document.querySelector('#quickViewModal .modal-dialog'), closeQuickView);
+  addSwipeDownToClose(document.querySelector('#mobileFilterModal .mobile-filter-dialog'), closeMobileFilters);
+  addSwipeDownToClose(document.getElementById('rfpDrawer'), closeRfpDrawer);
+}
+
+// RFP Cart & Drawer
+function addToRfp(prodId, customQty = null) {
   const product = PRODUCTS.find(p => p.id === prodId);
   if (!product) return;
 
-  const finalQty = qty || product.moq;
-  const existing = rfpCart.find(i => i.id === prodId);
+  const qty = customQty || product.moq;
+  const existing = rfpCart.find(item => item.id === prodId);
 
   if (existing) {
-    existing.qty += finalQty;
+    existing.qty += qty;
   } else {
     rfpCart.push({
       id: product.id,
       name: product.name,
+      categoryLabel: product.categoryLabel,
       image: product.image,
       basePrice: product.price,
       moq: product.moq,
       bulkTiers: product.bulkTiers,
-      qty: finalQty
+      qty: qty
     });
   }
 
-  // Supporting wow micro-moment 2: Nav quote button receives item with tactile bump
-  const navQuoteBtn = document.getElementById('openRfpCartBtn');
-  if (navQuoteBtn) {
-    navQuoteBtn.classList.remove('cart-received');
-    void navQuoteBtn.offsetWidth; // trigger reflow
-    navQuoteBtn.classList.add('cart-received');
-    setTimeout(() => navQuoteBtn.classList.remove('cart-received'), 500);
-  }
-
-  updateRfpBadges();
+  updateRfpBadge();
   renderRfpDrawer();
   openRfpDrawer();
-  showToast(`Added ${product.name} to quotation list`);
+  showToast(`Added ${qty}x ${product.name} to Quote`);
 }
 
 function removeFromRfp(prodId) {
-  rfpCart = rfpCart.filter(i => i.id !== prodId);
-  updateRfpBadges();
+  rfpCart = rfpCart.filter(item => item.id !== prodId);
+  updateRfpBadge();
   renderRfpDrawer();
+  showToast('Item removed.');
 }
 
 function adjustRfpItemQty(prodId, delta) {
   const item = rfpCart.find(i => i.id === prodId);
   if (!item) return;
   item.qty = Math.max(item.moq, item.qty + delta);
-  updateRfpBadges();
+  updateRfpBadge();
   renderRfpDrawer();
 }
 
-function updateRfpBadges() {
-  const count = rfpCart.length;
-  const headerBadge = document.getElementById('rfpCartCount');
+function updateRfpBadge() {
+  const badge = document.getElementById('rfpCartCount');
   const dockBadge = document.getElementById('mobileDockBadge');
-  const itemCountHeader = document.getElementById('rfpItemCountHeader');
+  const dockQuoteBadge = document.getElementById('mobileDockQuoteBadge');
+  const count = rfpCart.length;
 
-  if (headerBadge) {
-    headerBadge.textContent = count;
-    headerBadge.style.display = count > 0 ? 'inline-flex' : 'none';
+  if (badge) {
+    badge.textContent = count;
+    badge.style.display = count > 0 ? 'flex' : 'none';
   }
 
   if (dockBadge) {
     dockBadge.textContent = count;
-    dockBadge.style.display = count > 0 ? 'inline-flex' : 'none';
+    dockBadge.style.display = count > 0 ? 'flex' : 'none';
   }
 
-  if (itemCountHeader) {
-    itemCountHeader.textContent = `${count} ${count === 1 ? 'Suite' : 'Suites'} Selected`;
+  if (dockQuoteBadge && dockQuoteBadge !== dockBadge) {
+    dockQuoteBadge.textContent = count;
+    dockQuoteBadge.style.display = count > 0 ? 'flex' : 'none';
   }
 }
 
 function renderRfpDrawer() {
-  const container = document.getElementById('rfpCartItemsContainer');
-  const totalDisplay = document.getElementById('rfpTotalAmount');
-  const discountNotice = document.getElementById('rfpDiscountNotice');
-
+  const container = document.getElementById('rfpDrawerItems');
+  const totalDisplay = document.getElementById('rfpDrawerTotal');
+  const savingsDisplay = document.getElementById('rfpDrawerSavings');
   if (!container) return;
 
   if (rfpCart.length === 0) {
     container.innerHTML = `
-      <div style="padding: 48px 16px; text-align: center; color: var(--color-ink-muted);">
-        <i class="fas fa-boxes-stacked" style="font-size: 2rem; margin-bottom: 12px; display: block; opacity: 0.5;"></i>
-        <h4 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--color-ink); margin-bottom: 4px;">Quote list is empty</h4>
-        <p class="mono-caption">Select suites from the catalogue to build your quote.</p>
+      <div class="py-16 text-center text-gray-400 text-xs">
+        <i class="fas fa-box-open text-4xl text-gray-600 mb-3"></i>
+        <h4 class="text-sm font-bold text-gray-200">Your Quote Request is Empty</h4>
+        <p class="text-gray-500 mt-1">Select corporate gift sets from the catalog to build a quotation.</p>
       </div>
     `;
     if (totalDisplay) totalDisplay.textContent = '$0.00';
-    if (discountNotice) discountNotice.style.display = 'none';
+    if (savingsDisplay) savingsDisplay.textContent = '$0.00';
     return;
   }
 
@@ -936,25 +1048,21 @@ function renderRfpDrawer() {
     standardGrandTotal += item.basePrice * item.qty;
 
     return `
-      <div style="background: #FFFFFF; border: 1px solid var(--border-hairline); padding: 14px; margin-bottom: 12px; display: flex; gap: 14px; align-items: center;">
-        <img src="${item.image}" alt="${item.name}" style="width: 60px; height: 60px; object-fit: cover; flex-shrink: 0; border: 1px solid var(--border-hairline);">
-        <div style="flex: 1; min-width: 0;">
-          <h4 style="font-family: var(--font-serif); font-size: 1.0625rem; line-height: 1.2; margin-bottom: 2px;">${item.name}</h4>
-          <div class="mono-caption" style="font-size: 0.6875rem;">${CONFIG.formatPrice(appliedTier.price)} / unit &bull; MOQ ${item.moq}</div>
+      <div class="p-3 rounded-xl bg-gray-900 border border-gray-800 flex gap-3 items-center">
+        <img src="${item.image}" alt="${item.name}" class="w-14 h-14 rounded-lg object-cover border border-gray-700">
+        <div class="flex-1 min-w-0">
+          <h4 class="text-xs font-bold text-white truncate">${item.name}</h4>
+          <div class="text-[11px] text-amber-300 mt-0.5">$${appliedTier.price.toFixed(2)}/unit • ${appliedTier.discount !== '0%' ? `Save ${appliedTier.discount}` : 'Base rate'}</div>
           
-          <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 10px;">
-            <div class="qty-stepper-wrap" style="height: 36px;">
-              <button onclick="adjustRfpItemQty('${item.id}', -10)" class="stepper-btn" style="width: 36px; height: 36px;" aria-label="Decrease quantity">-</button>
-              <span style="font-family: var(--font-mono); font-size: 0.8125rem; font-weight: 600; padding: 0 8px;">${item.qty}</span>
-              <button onclick="adjustRfpItemQty('${item.id}', 10)" class="stepper-btn" style="width: 36px; height: 36px;" aria-label="Increase quantity">+</button>
+          <div class="flex items-center gap-2 mt-2">
+            <div class="flex items-center border border-gray-700 rounded-lg bg-gray-950">
+              <button onclick="adjustRfpItemQty('${item.id}', -10)" class="w-10 h-10 min-w-[40px] min-h-[40px] flex items-center justify-center text-xs text-gray-400 hover:text-white touch-manipulation" aria-label="Decrease quantity">-</button>
+              <span class="px-2.5 text-xs font-bold text-white font-mono">${item.qty}</span>
+              <button onclick="adjustRfpItemQty('${item.id}', 10)" class="w-10 h-10 min-w-[40px] min-h-[40px] flex items-center justify-center text-xs text-gray-400 hover:text-white touch-manipulation" aria-label="Increase quantity">+</button>
             </div>
-
-            <div style="font-family: var(--font-mono); font-weight: 600; font-size: 0.9375rem; color: var(--color-ink);">
-              ${CONFIG.formatPrice(itemTotal)}
-            </div>
-
-            <button onclick="removeFromRfp('${item.id}')" style="color: var(--color-ink-muted); background: none; border: none; cursor: pointer; padding: 6px;" aria-label="Remove item">
-              <i class="fas fa-trash-can text-xs"></i>
+            <span class="text-xs text-gray-400 font-mono font-semibold ml-auto">$${itemTotal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+            <button onclick="removeFromRfp('${item.id}')" class="text-gray-500 hover:text-rose-400 w-10 h-10 min-w-[40px] min-h-[40px] flex items-center justify-center text-xs touch-manipulation" aria-label="Remove item">
+              <i class="fas fa-trash-can"></i>
             </button>
           </div>
         </div>
@@ -962,109 +1070,59 @@ function renderRfpDrawer() {
     `;
   }).join('');
 
-  if (totalDisplay) totalDisplay.textContent = CONFIG.formatPrice(grandTotal);
-  
-  if (discountNotice) {
+  if (totalDisplay) totalDisplay.textContent = `$${grandTotal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+  if (savingsDisplay) {
     const savings = standardGrandTotal - grandTotal;
-    if (savings > 0) {
-      discountNotice.textContent = `Volume privilege applied: Saved ${CONFIG.formatPrice(savings)}`;
-      discountNotice.style.display = 'block';
-    } else {
-      discountNotice.style.display = 'none';
-    }
+    savingsDisplay.textContent = savings > 0 ? `Saved $${savings.toFixed(2)} with Bulk Tiering` : 'Base Tier Pricing';
   }
 }
 
 function openRfpDrawer() {
   const drawer = document.getElementById('rfpDrawer');
+  const backdrop = document.getElementById('rfpBackdrop');
   if (drawer) drawer.classList.add('active');
-  document.body.classList.add('scroll-locked');
-  const dock = document.getElementById('mobileBottomDock');
-  if (dock) dock.classList.add('is-hidden');
+  if (backdrop) backdrop.classList.add('active');
 }
 
 function closeRfpDrawer() {
   const drawer = document.getElementById('rfpDrawer');
+  const backdrop = document.getElementById('rfpBackdrop');
   if (drawer) drawer.classList.remove('active');
-  document.body.classList.remove('scroll-locked');
-  const dock = document.getElementById('mobileBottomDock');
-  if (dock) dock.classList.remove('is-hidden');
-}
-
-function openMobileFilters() {
-  const modal = document.getElementById('mobileFilterModal');
-  if (modal) modal.classList.add('active');
-  document.body.classList.add('scroll-locked');
-  const dock = document.getElementById('mobileBottomDock');
-  if (dock) dock.classList.add('is-hidden');
-}
-
-function closeMobileFilters() {
-  const modal = document.getElementById('mobileFilterModal');
-  if (modal) modal.classList.remove('active');
-  document.body.classList.remove('scroll-locked');
-  const dock = document.getElementById('mobileBottomDock');
-  if (dock) dock.classList.remove('is-hidden');
-}
-
-function setupModalListeners() {
-  const qvModal = document.getElementById('quickViewModal');
-  if (qvModal) {
-    qvModal.addEventListener('click', (e) => {
-      if (e.target === qvModal) closeQuickView();
-    });
-  }
-
-  const filterModal = document.getElementById('mobileFilterModal');
-  if (filterModal) {
-    filterModal.addEventListener('click', (e) => {
-      if (e.target === filterModal) closeMobileFilters();
-    });
-  }
-
-  const rfpDrawer = document.getElementById('rfpDrawer');
-  if (rfpDrawer) {
-    rfpDrawer.addEventListener('click', (e) => {
-      if (e.target === rfpDrawer) closeRfpDrawer();
-    });
-  }
-
-  // Escape key global listener
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      closeQuickView();
-      closeMobileFilters();
-      closeRfpDrawer();
-    }
-  });
+  if (backdrop) backdrop.classList.remove('active');
 }
 
 function setupDrawerListeners() {
   const openBtn = document.getElementById('openRfpCartBtn');
-  if (openBtn) openBtn.addEventListener('click', openRfpDrawer);
+  const closeBtn = document.getElementById('closeRfpDrawerBtn');
+  const backdrop = document.getElementById('rfpBackdrop');
+  const submitWhatsappBtn = document.getElementById('submitRfpWhatsappBtn');
 
-  const submitBtn = document.getElementById('submitRfpWhatsappBtn');
-  if (submitBtn) {
-    submitBtn.addEventListener('click', () => {
+  if (openBtn) openBtn.addEventListener('click', openRfpDrawer);
+  if (closeBtn) closeBtn.addEventListener('click', closeRfpDrawer);
+  if (backdrop) backdrop.addEventListener('click', closeRfpDrawer);
+
+  if (submitWhatsappBtn) {
+    submitWhatsappBtn.addEventListener('click', () => {
       if (rfpCart.length === 0) {
-        showToast('Please add items to quote request first');
+        showToast('Please add items to your quote request first.');
         return;
       }
 
       const company = document.getElementById('rfpCompanyName')?.value.trim() || 'Corporate Client';
       const notes = document.getElementById('rfpCustomNotes')?.value.trim() || 'Standard corporate dispatch';
 
-      const sampleBox = document.getElementById('rfpOptSample')?.checked;
-      const gstInvoice = document.getElementById('rfpOptGst')?.checked;
-      const dropShip = document.getElementById('rfpOptDropShip')?.checked;
+      // Check corporate options
+      const sampleBox = document.getElementById('rfpOptionSampleBox')?.checked;
+      const gstInvoice = document.getElementById('rfpOptionGstInvoice')?.checked;
+      const multiAddress = document.getElementById('rfpOptionMultiAddress')?.checked;
 
       const selectedOptions = [];
-      if (sampleBox) selectedOptions.push('Physical Evaluation Sample Box to Office');
-      if (gstInvoice) selectedOptions.push('GST / B2B Input Tax Credit Invoice');
-      if (dropShip) selectedOptions.push('Multi-Address Individual Drop-Shipping');
+      if (sampleBox) selectedOptions.push('Physical Pre-Production Sample Box Requested');
+      if (gstInvoice) selectedOptions.push('GST / Tax Invoice Required');
+      if (multiAddress) selectedOptions.push('Multi-Address Employee Drop-Shipping');
 
       let grandTotal = 0;
-      let standardTotal = 0;
+      let standardGrandTotal = 0;
 
       const itemsText = rfpCart.map(item => {
         let appliedTier = item.bulkTiers[0];
@@ -1073,34 +1131,37 @@ function setupDrawerListeners() {
         }
         const itemTotal = appliedTier.price * item.qty;
         grandTotal += itemTotal;
-        standardTotal += item.basePrice * item.qty;
+        standardGrandTotal += item.basePrice * item.qty;
 
-        return `• *${item.name}* (${item.qty} units @ ${CONFIG.formatPrice(appliedTier.price)}) = ${CONFIG.formatPrice(itemTotal)}`;
+        return `• *${item.name}* (Qty: ${item.qty} units @ $${appliedTier.price.toFixed(2)}) = $${itemTotal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
       }).join('\n');
 
-      const savings = standardTotal - grandTotal;
-      let optionsText = selectedOptions.length > 0 
-        ? `*Options:*\n${selectedOptions.map(o => `• ${o}`).join('\n')}\n━━━━━━━━━━━━━━━━━━━━\n`
-        : '';
+      const savings = standardGrandTotal - grandTotal;
 
-      const msg = 
+      let optionsSection = '';
+      if (selectedOptions.length > 0) {
+        optionsSection = `*Corporate Options:*\n${selectedOptions.map(opt => `• ${opt}`).join('\n')}\n━━━━━━━━━━━━━━━━━━━━\n`;
+      }
+
+      const message = 
         `*NEW CORPORATE QUOTE REQUEST — THE BLUE ANTS*\n` +
         `━━━━━━━━━━━━━━━━━━━━\n` +
         `*Company / Organization:* ${company}\n` +
-        `*Delivery / Timeline Notes:* ${notes}\n` +
+        `*Special Requirements / Notes:* ${notes}\n` +
         `━━━━━━━━━━━━━━━━━━━━\n` +
-        `*Requested Suites:*\n` +
+        `*Requested Packages:*\n` +
         `${itemsText}\n` +
         `━━━━━━━━━━━━━━━━━━━━\n` +
-        `*Estimated Quotation Total:* ${CONFIG.formatPrice(grandTotal)}\n` +
-        `*Total Bulk Savings:* ${CONFIG.formatPrice(savings)}\n` +
+        `*Estimated Quotation Total:* $${grandTotal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}\n` +
+        `*Total Bulk Savings:* $${savings > 0 ? savings.toFixed(2) : '0.00'}\n` +
         `━━━━━━━━━━━━━━━━━━━━\n` +
-        `${optionsText}` +
-        `Please share formal PDF quotation, branding mockups, and dispatch timelines.`;
+        `${optionsSection}` +
+        `Please share formal PDF quote, branding mockups, and bulk delivery schedule.`;
 
-      window.open(`https://wa.me/${CONFIG.PHONE}?text=${encodeURIComponent(msg)}`, '_blank');
+      const waUrl = `https://wa.me/919916418879?text=${encodeURIComponent(message)}`;
+      window.open(waUrl, '_blank');
       closeRfpDrawer();
-      showToast('Opening WhatsApp with your quote request...');
+      showToast('Opening WhatsApp with your corporate quote...');
     });
   }
 }
@@ -1110,16 +1171,396 @@ function showToast(message) {
   if (!container) {
     container = document.createElement('div');
     container.id = 'toastContainer';
-    container.style.cssText = 'position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%); z-index: 2000; pointer-events: none;';
+    container.className = 'toast-container';
     document.body.appendChild(container);
   }
 
   const toast = document.createElement('div');
-  toast.style.cssText = 'background: #101826; color: #F3EFE6; padding: 10px 18px; border-radius: 2px; font-family: var(--font-mono); font-size: 0.8125rem; letter-spacing: 0.05em; margin-top: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.25); text-align: center;';
-  toast.textContent = message;
+  toast.className = 'toast';
+  toast.innerHTML = `
+    <i class="fas fa-circle-check text-amber-400"></i>
+    <span class="text-xs font-semibold text-gray-200">${message}</span>
+  `;
+
   container.appendChild(toast);
 
   setTimeout(() => {
-    toast.remove();
-  }, 3000);
+    toast.style.opacity = '0';
+    toast.style.transform = 'translateX(40px)';
+    toast.style.transition = 'all 0.3s ease';
+    setTimeout(() => toast.remove(), 300);
+  }, 3500);
+}
+
+// Scroll Reveal Animations
+function setupScrollReveal() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-revealed');
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+}
+
+// 3D Card Tilt Micro-Interaction
+function setupCardTilt() {
+  if (window.innerWidth < 1024) return;
+
+  const cards = document.querySelectorAll('.product-card');
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * -4;
+      const rotateY = ((x - centerX) / centerX) * 4;
+
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)';
+    });
+  });
+}
+
+// Mobile Thumb Navigation Dock Active State Synchronization
+function setupMobileDockObserver() {
+  const dockItems = document.querySelectorAll('.mobile-dock-item[data-dock-target]');
+  if (!dockItems || dockItems.length === 0) return;
+
+  const sections = [
+    { id: 'scrollHeroContainer', el: document.getElementById('scrollHeroContainer') },
+    { id: 'catalogSection', el: document.getElementById('catalogSection') },
+    { id: 'aboutSection', el: document.getElementById('aboutSection') }
+  ];
+
+  const updateActiveDock = (activeId) => {
+    dockItems.forEach(item => {
+      const target = item.getAttribute('data-dock-target');
+      if (target === activeId) {
+        item.classList.add('active');
+      } else {
+        item.classList.remove('active');
+      }
+    });
+  };
+
+  if ('IntersectionObserver' in window) {
+    try {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            updateActiveDock(entry.target.id);
+          }
+        });
+      }, {
+        threshold: 0.2,
+        rootMargin: '-10% 0px -40% 0px'
+      });
+
+      sections.forEach(s => {
+        if (s.el) observer.observe(s.el);
+      });
+    } catch (e) {
+      // Fallback
+    }
+  }
+
+  window.addEventListener('scroll', () => {
+    const scrollPos = window.scrollY + 220;
+    let currentSecId = 'scrollHeroContainer';
+    for (const s of sections) {
+      if (s.el && s.el.offsetTop <= scrollPos) {
+        currentSecId = s.id;
+      }
+    }
+    updateActiveDock(currentSecId);
+  }, { passive: true });
+}
+
+
+
+
+// ============================================================================
+// AT A GLANCE: WHAT WE PROVIDE (Interactive Dropdown Directory)
+// ============================================================================
+const GLANCE_OFFERINGS = {
+  'wedding-keepsakes': {
+    id: 'wedding-keepsakes',
+    title: '20 Personalised Wedding Keepsakes & Favours',
+    category: 'Occasions & Milestones',
+    scale: '20+ Units',
+    leadTime: '48h Digital Proofs • 7 Days Dispatch',
+    description: 'Bespoke artisanal favours, custom couple monogram foil stamping, rigid gift boxes with velvet beds, and direct delivery to wedding venue or individual guest addresses nationwide.',
+    pills: ['Custom Monogram Foil', 'Artisanal Sourcing', 'Protective Rigid Box', 'Pan-India Multi-Address', 'Zero Stress Coordination'],
+    targetCategory: 'executive',
+    targetSuiteId: 'prod-1',
+    waText: 'Hi The Blue Ants, I would like to inquire about 20 personalised wedding keepsakes.'
+  },
+  'school-kits': {
+    id: 'school-kits',
+    title: '100 Kits for School, College & Alumni Events',
+    category: 'Occasions & Milestones',
+    scale: '100+ Units',
+    leadTime: '48h Proofs • 5–7 Days Standard',
+    description: 'Custom crest-stamped event kits featuring recycled stationery, insulated thermal bottles, precision-printed utility totes, and commemorative badges for reunions and graduation galas.',
+    pills: ['Institutional Crest Stamping', 'Eco-Luxe Materials', 'Event-Ready Packaging', 'Pan-India Delivery', 'GST Invoicing'],
+    targetCategory: 'welcome',
+    targetSuiteId: 'prod-6',
+    waText: 'Hi The Blue Ants, I would like to inquire about 100 kits for a school/alumni event.'
+  },
+  'corporate-celebrations': {
+    id: 'corporate-celebrations',
+    title: '500 Gifts for Corporate Celebrations & Annual Galas',
+    category: 'Enterprise Scale',
+    scale: '500+ Units',
+    leadTime: 'Priority Bulk Scheduling • Pan-India Logistics',
+    description: 'High-volume executive gifting suites with deep tiered bulk savings, official GST input credit invoices, dedicated project stewardship, and simultaneous multi-city doorstep fulfillment.',
+    pills: ['Tiered Volume Savings (Up to 28%)', '24k Gold Foil Die', 'Custom Foam Bedding', 'Pan-India Fleet Dispatch', 'Dedicated Concierge'],
+    targetCategory: 'all',
+    targetSuiteId: 'prod-1',
+    waText: 'Hi The Blue Ants, I would like to inquire about 500 gifts for our corporate celebration.'
+  },
+  'completely-unique': {
+    id: 'completely-unique',
+    title: 'Completely Unique Bespoke Solutions',
+    category: 'Haute Custom',
+    scale: 'Custom Scale',
+    leadTime: 'White-Glove Bespoke Curation',
+    description: 'Custom ideation from sketch to box. Tell us your theme, audience, and budget — we handle global and domestic artisanal sourcing, custom packaging engineering, and door-to-door white-glove delivery.',
+    pills: ['End-to-End Ideation', 'Global Sourcing Desk', 'Custom Structural Engineering', 'Private Concierge', 'All Under One Roof'],
+    targetCategory: 'all',
+    targetSuiteId: 'prod-1',
+    waText: 'Hi The Blue Ants, I am looking for a completely unique bespoke gifting solution for our upcoming project.'
+  },
+  'executive-vip': {
+    id: 'executive-vip',
+    title: 'Executive VIP & Boardroom Appreciation Suites',
+    category: 'C-Suite & Boardroom',
+    scale: '25+ Units',
+    leadTime: '5–7 Days Standard',
+    description: 'Handcrafted Italian full-grain saddle leather journals, solid weighted brass fountain pens, fast Qi wireless chargers, and blind-debossed corporate monograms.',
+    pills: ['Top-Grain Leather', 'Solid Brass Pen', 'Wireless Charging Disc', 'Gold Foil Box', 'Executive Luxury'],
+    targetCategory: 'executive',
+    targetSuiteId: 'prod-1',
+    waText: 'Hi The Blue Ants, I would like to inquire about Executive VIP Suites for our leadership team.'
+  },
+  'employee-onboarding': {
+    id: 'employee-onboarding',
+    title: 'Employee Onboarding & Welcome Packs',
+    category: 'Team & Culture',
+    scale: '30–250 Units',
+    leadTime: '48h Express Ready',
+    description: 'Day-one delight for new hires: ergonomic desk accessories, premium insulated tumblers, artisan notebooks, and custom welcome letters nestled in company-branded rigid cases.',
+    pills: ['Day-One Welcome', 'Custom Brand Imprint', 'Multi-City Drop Ship', 'GST Compliant', 'Express Available'],
+    targetCategory: 'welcome',
+    targetSuiteId: 'prod-6',
+    waText: 'Hi The Blue Ants, I would like to inquire about Employee Onboarding & Welcome Packs.'
+  },
+  'sustainable-eco': {
+    id: 'sustainable-eco',
+    title: 'Sustainable Eco-Luxe & Zero-Waste Sets',
+    category: 'Eco-Conscious',
+    scale: '50–500 Units',
+    leadTime: '5–7 Days Standard',
+    description: 'FSC-certified bamboo thermal drinkware, recycled wheat-straw notebooks, organic cotton canvas utility totes, and plantable wildflower seed paper cards.',
+    pills: ['Zero Plastic', 'FSC-Certified Cork & Bamboo', 'Plantable Seed Paper', 'Carbon-Neutral Packaging', 'Eco-Luxe'],
+    targetCategory: 'eco-luxe',
+    targetSuiteId: 'prod-6',
+    waText: 'Hi The Blue Ants, I would like to inquire about Sustainable Eco-Luxe Corporate Gift Sets.'
+  },
+  'gourmet-connoisseur': {
+    id: 'gourmet-connoisseur',
+    title: 'Artisanal Gourmet & Single-Origin Connoisseur Boxes',
+    category: 'Gourmet Luxury',
+    scale: '30–250 Units',
+    leadTime: 'Fresh Small-Batch Dispatch',
+    description: 'Single-origin Ethiopian Yirgacheffe specialty coffee beans, matte ceramic pour-over drippers, raw Himalayan wild forest honey, and 24k edible gold dark chocolate truffles.',
+    pills: ['Single-Origin Roast', 'Raw Forest Honey', 'Ceramic Dripper', '24k Gold Truffles', 'Hand-Assembled'],
+    targetCategory: 'gourmet',
+    targetSuiteId: 'prod-2',
+    waText: 'Hi The Blue Ants, I would like to inquire about Artisanal Gourmet & Coffee Hampers.'
+  },
+  'all-under-one-roof': {
+    id: 'all-under-one-roof',
+    title: 'All Under One Roof: Ideation to Doorstep Delivery',
+    category: 'Full-Spectrum Fulfillment',
+    scale: '20 to 1,000+ Units',
+    leadTime: 'End-to-End Turnkey',
+    description: 'From initial creative brainstorming to vector proofs, artisanal sourcing, custom foil stamping, precision box packaging, and multi-destination pan-India doorstep delivery.',
+    pills: ['01 Concept Ideation', '02 Sourcing', '03 Customisation', '04 Packaging', '05 Delivery'],
+    targetCategory: 'all',
+    targetSuiteId: 'prod-1',
+    waText: 'Hi The Blue Ants, I would like to discuss full end-to-end gifting solutions under one roof.'
+  },
+  'service-ideation': {
+    id: 'service-ideation',
+    title: '01 // Concept Ideation & 24h Digital Proofs',
+    category: 'Full-Spectrum Services',
+    scale: 'Any Order Scale',
+    leadTime: '24h Digital Mockups',
+    description: 'Collaborate with our senior designers to map out bespoke packaging, item compositions, corporate colour palettes, and 3D digital box proofs before production commences.',
+    pills: ['Visual 3D Mockups', 'Pantone Color Matching', 'Custom Die Layouts', 'Free Pre-Production Consultation'],
+    targetCategory: 'all',
+    targetSuiteId: 'prod-1',
+    waText: 'Hi The Blue Ants, I would like to inquire about Concept Ideation & 24h Proofs for our upcoming project.'
+  },
+  'service-sourcing': {
+    id: 'service-sourcing',
+    title: '02 // Direct Artisanal & Global Sourcing',
+    category: 'Full-Spectrum Services',
+    scale: 'Strict Quality Standards',
+    leadTime: 'Direct Workshop Network',
+    description: 'Direct procurement bypassing distributors: top-grain Italian leather from Tuscan tanneries, single-origin coffee from Chikmagalur estates, and raw Himalayan honey from sustainable apiaries.',
+    pills: ['Verified Artisans', 'Zero Counterfeits', 'Ethical Standards', 'Bespoke Material Selection'],
+    targetCategory: 'all',
+    targetSuiteId: 'prod-2',
+    waText: 'Hi The Blue Ants, I would like to inquire about your Artisanal Sourcing capabilities.'
+  },
+  'service-customisation': {
+    id: 'service-customisation',
+    title: '03 // 24k Gold Foil Stamping, Laser & Debossing',
+    category: 'Full-Spectrum Services',
+    scale: 'Precision Workshop',
+    leadTime: 'Micro-Engineered Dies',
+    description: 'Custom CNC-milled brass dies for 24k metallic gold foil stamping, blind leather debossing, fiber laser etching on metal components, and silk-screened monograms.',
+    pills: ['24k Metallic Gold Foil', 'Blind Leather Deboss', 'Fiber Laser Etching', 'Crest & Monogram Dies'],
+    targetCategory: 'all',
+    targetSuiteId: 'prod-1',
+    waText: 'Hi The Blue Ants, I would like to inquire about Custom Foil Stamping & Branding Options.'
+  },
+  'service-packaging': {
+    id: 'service-packaging',
+    title: '04 // Handcrafted Rigid Boxes & Custom Foam Beds',
+    category: 'Full-Spectrum Services',
+    scale: 'Bespoke Structural Design',
+    leadTime: '1200gsm Rigid Board',
+    description: 'Industrial-grade 1200gsm rigid presentation boxes wrapped in textured fine papers, custom CNC contour-cut high-density EVA foam inserts, magnetic closures, and grosgrain ribbon pulls.',
+    pills: ['1200gsm Rigid Board', 'CNC Contour EVA Foam', 'Magnetic Closures', 'Grosgrain Silk Ribbons'],
+    targetCategory: 'all',
+    targetSuiteId: 'prod-1',
+    waText: 'Hi The Blue Ants, I would like to inquire about Custom Rigid Box Packaging Architecture.'
+  },
+  'service-delivery': {
+    id: 'service-delivery',
+    title: '05 // Doorstep Pan-India Multi-Address Dispatch',
+    category: 'Full-Spectrum Services',
+    scale: '500+ Indian Pin Codes',
+    leadTime: 'Real-Time Air Tracking',
+    description: 'White-glove doorstep drop-shipping: upload your recipient address spreadsheet and we dispatch individually packaged gift boxes directly to employee and VIP homes nationwide.',
+    pills: ['Multi-Address Spreadsheet Upload', '500+ Pin Codes Covered', 'SMS & Air Waybill Tracking', 'Damage-Proof Outer Crates'],
+    targetCategory: 'all',
+    targetSuiteId: 'prod-1',
+    waText: 'Hi The Blue Ants, I would like to inquire about Multi-Address Doorstep Pan-India Delivery.'
+  }
+};
+
+function selectGlanceOffering(offeringId) {
+  const offering = GLANCE_OFFERINGS[offeringId] || GLANCE_OFFERINGS['wedding-keepsakes'];
+  
+  const select = document.getElementById('glanceDropdownSelector');
+  if (select && select.value !== offering.id) {
+    select.value = offering.id;
+  }
+
+  const titleEl = document.getElementById('glanceCurrentTitle');
+  const badgeEl = document.getElementById('glanceCurrentScaleBadge');
+  if (titleEl) titleEl.textContent = offering.title;
+  if (badgeEl) badgeEl.textContent = offering.scale;
+
+  const card = document.getElementById('glanceDisplayCard');
+  if (card) {
+    card.innerHTML = `
+      <div class="glance-card-header">
+        <div>
+          <div class="text-[10px] uppercase tracking-widest text-[#348b86] font-semibold mb-1">${offering.category}</div>
+          <h3 class="glance-card-title">${offering.title}</h3>
+        </div>
+        <span class="glance-mini-badge">${offering.scale}</span>
+      </div>
+      <p class="glance-card-desc">${offering.description}</p>
+      <div class="glance-pills-row">
+        ${offering.pills.map(p => `<span class="glance-spec-pill">${p}</span>`).join('')}
+      </div>
+      <div class="glance-card-actions">
+        <a href="#catalogSection" onclick="selectCatalogCategory('${offering.targetCategory}')" class="btn-glance-catalog">
+          <i class="fas fa-boxes-stacked text-xs"></i>
+          <span>View in Curated Catalogue &darr;</span>
+        </a>
+        <a href="https://wa.me/919916418879?text=${encodeURIComponent(offering.waText)}" target="_blank" rel="noopener" class="btn-glance-wa">
+          <i class="fa-brands fa-whatsapp text-sm"></i>
+          <span>Inquire via WhatsApp Desk</span>
+        </a>
+      </div>
+    `;
+  }
+
+  document.querySelectorAll('.glance-chip').forEach(chip => {
+    if (chip.getAttribute('data-glance') === offeringId) {
+      chip.classList.add('active');
+    } else {
+      chip.classList.remove('active');
+    }
+  });
+}
+
+function selectCatalogCategory(category) {
+  if (typeof filterState !== 'undefined') {
+    filterState.category = category;
+  }
+  document.querySelectorAll('.category-pill').forEach(pill => {
+    if (pill.getAttribute('data-category') === category) {
+      pill.classList.add('active');
+    } else {
+      pill.classList.remove('active');
+    }
+  });
+  if (typeof renderProducts === 'function') {
+    renderProducts();
+  }
+}
+
+function initGlanceModule() {
+  const select = document.getElementById('glanceDropdownSelector');
+  if (select) {
+    select.addEventListener('change', (e) => {
+      selectGlanceOffering(e.target.value);
+    });
+  }
+
+  const trigger = document.getElementById('glanceCustomTrigger');
+  if (trigger && select) {
+    trigger.addEventListener('click', () => {
+      select.focus();
+      if (typeof select.showPicker === 'function') {
+        try { select.showPicker(); } catch (err) {}
+      }
+    });
+  }
+
+  document.querySelectorAll('.glance-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const g = chip.getAttribute('data-glance');
+      if (g) selectGlanceOffering(g);
+    });
+  });
+
+  selectGlanceOffering('wedding-keepsakes');
+}
+
+// Global window exposure
+if (typeof window !== 'undefined') {
+  window.selectGlanceOffering = selectGlanceOffering;
+  window.selectCatalogCategory = selectCatalogCategory;
+  window.initGlanceModule = initGlanceModule;
+  window.GLANCE_OFFERINGS = GLANCE_OFFERINGS;
 }
