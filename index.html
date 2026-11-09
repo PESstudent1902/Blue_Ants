@@ -24,7 +24,7 @@
   <!-- FontAwesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="css/style.css?v=6.3">
+  <link rel="stylesheet" href="css/style.css?v=6.4">
 </head>
 <body class="bg-[#07090e] text-slate-100 antialiased selection:bg-amber-500/20 selection:text-amber-200 has-bottom-dock">
 
@@ -64,59 +64,93 @@
 
         <div class="nav-mega-dropdown" id="navMegaDropdown">
           <div class="mega-dropdown-grid">
-            <!-- Col 1: Occasions & Scale (Screenshot Wording) -->
+            <!-- Col 1: Occasions & Milestones -->
             <div class="mega-col">
-              <div class="mega-col-title"><i class="fas fa-layer-group"></i> BY OCCASION &amp; SCALE</div>
-              <a href="#heroGlanceBox" onclick="selectGlanceOffering('wedding-keepsakes')" class="mega-item">
-                <div class="mega-item-title">Wedding Keepsakes &amp; Favours</div>
-                <div class="mega-item-desc">Personalised favours &amp; intimate milestones</div>
-              </a>
-              <a href="#heroGlanceBox" onclick="selectGlanceOffering('school-kits')" class="mega-item">
-                <div class="mega-item-title">School &amp; Alumni Event Kits</div>
-                <div class="mega-item-desc">Event kits, apparel &amp; custom stationery</div>
-              </a>
-              <a href="#heroGlanceBox" onclick="selectGlanceOffering('corporate-celebrations')" class="mega-item">
-                <div class="mega-item-title">Corporate Celebrations &amp; Gifts</div>
-                <div class="mega-item-desc">Annual galas, all-hands &amp; fleet dispatch</div>
-              </a>
-              <a href="#heroGlanceBox" onclick="selectGlanceOffering('completely-unique')" class="mega-item">
-                <div class="mega-item-title">Completely Unique</div>
-                <div class="mega-item-desc">Haute custom curation around your theme</div>
-              </a>
+              <div class="mega-col-title"><i class="fas fa-layer-group text-[#1f6d68]"></i> CURATED OCCASIONS</div>
+              <div class="mega-items-list">
+                <a href="#heroGlanceBox" onclick="selectGlanceOffering('wedding-keepsakes')" class="mega-item">
+                  <div class="mega-item-icon"><i class="fas fa-heart text-[#1f6d68]"></i></div>
+                  <div class="mega-item-body">
+                    <div class="mega-item-title">Wedding Keepsakes &amp; Favours</div>
+                    <div class="mega-item-desc">Monogram foil stamping &amp; bespoke gift suites</div>
+                  </div>
+                </a>
+                <a href="#heroGlanceBox" onclick="selectGlanceOffering('school-kits')" class="mega-item">
+                  <div class="mega-item-icon"><i class="fas fa-graduation-cap text-[#1f6d68]"></i></div>
+                  <div class="mega-item-body">
+                    <div class="mega-item-title">School &amp; Alumni Event Kits</div>
+                    <div class="mega-item-desc">Crest-stamped stationery, drinkware &amp; apparel</div>
+                  </div>
+                </a>
+                <a href="#heroGlanceBox" onclick="selectGlanceOffering('corporate-celebrations')" class="mega-item">
+                  <div class="mega-item-icon"><i class="fas fa-building text-[#1f6d68]"></i></div>
+                  <div class="mega-item-body">
+                    <div class="mega-item-title">Corporate Celebrations &amp; Gifts</div>
+                    <div class="mega-item-desc">Annual galas, all-hands &amp; pan-India dispatch</div>
+                  </div>
+                </a>
+                <a href="#heroGlanceBox" onclick="selectGlanceOffering('completely-unique')" class="mega-item">
+                  <div class="mega-item-icon"><i class="fas fa-wand-magic-sparkles text-[#1f6d68]"></i></div>
+                  <div class="mega-item-body">
+                    <div class="mega-item-title">Completely Unique Bespoke</div>
+                    <div class="mega-item-desc">Haute custom curation engineered from sketch</div>
+                  </div>
+                </a>
+              </div>
             </div>
 
             <!-- Col 2: Curated Suites -->
             <div class="mega-col">
-              <div class="mega-col-title"><i class="fas fa-crown"></i> READY-TO-BRAND SUITES</div>
-              <a href="#catalogSection" onclick="selectCatalogCategory('executive')" class="mega-item">
-                <div class="mega-item-title">Executive VIP Suites</div>
-                <div class="mega-item-desc">Italian full-grain leather &amp; solid brass</div>
-              </a>
-              <a href="#catalogSection" onclick="selectCatalogCategory('welcome')" class="mega-item">
-                <div class="mega-item-title">Onboarding &amp; Welcome Kits</div>
-                <div class="mega-item-desc">Day-one welcome &amp; branded essentials</div>
-              </a>
-              <a href="#catalogSection" onclick="selectCatalogCategory('eco-luxe')" class="mega-item">
-                <div class="mega-item-title">Sustainable Eco-Luxe</div>
-                <div class="mega-item-desc">FSC bamboo, cork &amp; seed stationery</div>
-              </a>
-              <a href="#catalogSection" onclick="selectCatalogCategory('gourmet')" class="mega-item">
-                <div class="mega-item-title">Gourmet Connoisseur</div>
-                <div class="mega-item-desc">Single-origin coffee &amp; raw forest honey</div>
-              </a>
+              <div class="mega-col-title"><i class="fas fa-crown text-[#1f6d68]"></i> SIGNATURE SUITES</div>
+              <div class="mega-items-list">
+                <a href="#catalogSection" onclick="selectCatalogCategory('executive')" class="mega-item">
+                  <div class="mega-item-icon"><i class="fas fa-briefcase text-[#1f6d68]"></i></div>
+                  <div class="mega-item-body">
+                    <div class="mega-item-title">Executive VIP Suites</div>
+                    <div class="mega-item-desc">Full-grain leather journals &amp; solid brass pens</div>
+                  </div>
+                </a>
+                <a href="#catalogSection" onclick="selectCatalogCategory('welcome')" class="mega-item">
+                  <div class="mega-item-icon"><i class="fas fa-user-check text-[#1f6d68]"></i></div>
+                  <div class="mega-item-body">
+                    <div class="mega-item-title">Onboarding &amp; Welcome Kits</div>
+                    <div class="mega-item-desc">Day-one essentials with corporate branding</div>
+                  </div>
+                </a>
+                <a href="#catalogSection" onclick="selectCatalogCategory('eco-luxe')" class="mega-item">
+                  <div class="mega-item-icon"><i class="fas fa-leaf text-[#1f6d68]"></i></div>
+                  <div class="mega-item-body">
+                    <div class="mega-item-title">Sustainable Eco-Luxe</div>
+                    <div class="mega-item-desc">FSC bamboo, organic cork &amp; seed paper</div>
+                  </div>
+                </a>
+                <a href="#catalogSection" onclick="selectCatalogCategory('gourmet')" class="mega-item">
+                  <div class="mega-item-icon"><i class="fas fa-coffee text-[#1f6d68]"></i></div>
+                  <div class="mega-item-body">
+                    <div class="mega-item-title">Gourmet Connoisseur</div>
+                    <div class="mega-item-desc">Single-origin coffee &amp; raw forest honey</div>
+                  </div>
+                </a>
+              </div>
             </div>
 
             <!-- Col 3: All Under One Roof -->
-            <div class="mega-col">
-              <div class="mega-col-title"><i class="fas fa-hammer"></i> ALL UNDER ONE ROOF</div>
-              <div class="mega-service-step"><span class="step-num">01</span> Ideation &amp; 24h Digital Proofs</div>
-              <div class="mega-service-step"><span class="step-num">02</span> Global &amp; Artisanal Sourcing</div>
-              <div class="mega-service-step"><span class="step-num">03</span> 24k Gold Foil &amp; Laser Etching</div>
-              <div class="mega-service-step"><span class="step-num">04</span> Rigid Box Packaging Architecture</div>
-              <div class="mega-service-step"><span class="step-num">05</span> Pan-India Doorstep Dispatch</div>
-              <a href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants,%20I'd%20like%20to%20discuss%20a%20curated%20gifting%20project." target="_blank" rel="noopener" class="mega-cta-btn">
-                <i class="fa-brands fa-whatsapp text-emerald-400 mr-1.5"></i> WhatsApp Concierge Desk
-              </a>
+            <div class="mega-col mega-col-feature">
+              <div class="mega-col-title"><i class="fas fa-shield-halved text-[#1f6d68]"></i> ALL UNDER ONE ROOF</div>
+              <div class="mega-feature-card">
+                <div class="mega-feature-tag">FULL-SERVICE ATELIER</div>
+                <div class="mega-steps-container">
+                  <div class="mega-service-step"><span class="step-num">01</span><span>Ideation &amp; 24h Digital Proofs</span></div>
+                  <div class="mega-service-step"><span class="step-num">02</span><span>Direct Artisanal Sourcing</span></div>
+                  <div class="mega-service-step"><span class="step-num">03</span><span>24K Gold Foil Die-Stamping</span></div>
+                  <div class="mega-service-step"><span class="step-num">04</span><span>Rigid Box Architecture</span></div>
+                  <div class="mega-service-step"><span class="step-num">05</span><span>Pan-India Doorstep Dispatch</span></div>
+                </div>
+                <a href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants,%20I'd%20like%20to%20discuss%20a%20bespoke%20gifting%20project." target="_blank" rel="noopener" class="mega-cta-btn">
+                  <i class="fa-brands fa-whatsapp text-emerald-600 mr-2 text-base"></i>
+                  <span>WhatsApp Concierge Desk</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -1032,7 +1066,7 @@
   </aside>
 
   <!-- Scripts -->
-  <script src="js/video-scroll.js?v=6.3"></script>
-  <script src="js/catalog.js?v=6.3"></script>
+  <script src="js/video-scroll.js?v=6.4"></script>
+  <script src="js/catalog.js?v=6.4"></script>
 </body>
 </html>

@@ -2824,3 +2824,2084 @@ p, .editorial-prose {
   transform: translateY(-1px);
   box-shadow: 0 6px 18px rgba(52, 138, 134, 0.45);
 }
+
+/* ==========================================================================
+   LUMINOUS WHITE & SIGNATURE TEAL LUXURY DESIGN SYSTEM
+   Editorial Aesthetic: Clean White Canvas, Deep Obsidian Charcoal Typography,
+   Vibrant Brand Teal (#1f6d68 / #27857e) Accents, and 24K Gold Stamped Contrast.
+   ========================================================================== */
+
+/* 1. Global Canvas & Document Resets */
+body {
+  background-color: #fafbfb !important;
+  color: #0f172a !important;
+}
+
+/* 2. Brand Teal Color Refinements for White Canvas (High-Contrast & AAA Accessible) */
+:root {
+  --color-teal: #1f6d68;
+  --color-teal-light: #27857e;
+  --color-teal-dark: #164e4a;
+  --color-teal-glow: rgba(31, 109, 104, 0.18);
+  --color-teal-subtle: rgba(31, 109, 104, 0.08);
+  --text-teal: #1f6d68;
+}
+
+/* 3. Navigation Header (Luminous White Glass) */
+header.fixed {
+  background: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(31, 109, 104, 0.12) !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04) !important;
+}
+
+header .text-white,
+header .font-bold {
+  color: #0f172a !important;
+}
+
+header .nav-link,
+header .nav-link-dropdown {
+  color: #334155 !important;
+}
+
+header .nav-link:hover,
+header .nav-link-dropdown:hover {
+  color: var(--color-teal) !important;
+}
+
+header a[href="#catalogSection"].hidden {
+  background: #ffffff !important;
+  border: 1px solid rgba(31, 109, 104, 0.18) !important;
+  color: #334155 !important;
+}
+
+header a[href="#catalogSection"].hidden:hover {
+  border-color: var(--color-teal) !important;
+  color: var(--color-teal) !important;
+}
+
+/* 4. Navigation Mega Dropdown (Luxury White Boutique Menu) */
+.nav-mega-dropdown {
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+  border: 1px solid rgba(31, 109, 104, 0.18) !important;
+  box-shadow: 0 24px 60px -12px rgba(15, 23, 42, 0.16), 0 4px 16px rgba(31, 109, 104, 0.08) !important;
+  border-radius: 20px !important;
+  padding: 1.5rem 1.65rem !important;
+}
+
+.mega-col-title {
+  color: var(--color-teal) !important;
+  border-bottom: 1px solid rgba(31, 109, 104, 0.12) !important;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.12em !important;
+  font-weight: 700 !important;
+}
+
+.mega-items-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+
+.mega-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 0.65rem 0.75rem !important;
+  border-radius: 12px !important;
+  background: transparent !important;
+  text-decoration: none !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.mega-item:hover {
+  background: rgba(31, 109, 104, 0.08) !important;
+  transform: translateX(4px) !important;
+}
+
+.mega-item-icon {
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 34px !important;
+  border-radius: 10px !important;
+  background: rgba(31, 109, 104, 0.10) !important;
+  border: 1px solid rgba(31, 109, 104, 0.18) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 0.875rem !important;
+}
+
+.mega-item-body {
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+
+.mega-item-title {
+  color: #0f172a !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+}
+
+.mega-item:hover .mega-item-title {
+  color: var(--color-teal) !important;
+}
+
+.mega-item-desc {
+  color: #64748b !important;
+  font-size: 0.75rem !important;
+  line-height: 1.35 !important;
+  margin-top: 2px !important;
+}
+
+.mega-feature-card {
+  background: linear-gradient(145deg, #f0f7f6 0%, #ffffff 100%) !important;
+  border: 1px solid rgba(31, 109, 104, 0.22) !important;
+  border-radius: 14px !important;
+  padding: 1.15rem !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
+}
+
+.mega-feature-tag {
+  display: inline-block !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.625rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  color: var(--color-teal) !important;
+  background: rgba(31, 109, 104, 0.10) !important;
+  border: 1px solid rgba(31, 109, 104, 0.20) !important;
+  padding: 2px 8px !important;
+  border-radius: 6px !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.mega-steps-container {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+}
+
+.mega-service-step {
+  color: #334155 !important;
+  font-size: 0.75rem !important;
+  padding: 0.3rem 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.mega-service-step .step-num {
+  color: var(--color-teal) !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-weight: 700 !important;
+}
+
+.mega-cta-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  margin-top: 0.85rem !important;
+  padding: 9px 14px !important;
+  border-radius: 10px !important;
+  background: var(--color-teal) !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-size: 0.8125rem !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 14px rgba(31, 109, 104, 0.25) !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.mega-cta-btn:hover {
+  background: var(--color-teal-dark) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 18px rgba(31, 109, 104, 0.35) !important;
+}
+
+/* 5. Hero Section (White Editorial Canvas & High-Contrast Typography) */
+#scrollHeroContainer {
+  background: linear-gradient(180deg, #ffffff 0%, #f6faf9 60%, #edf5f4 100%) !important;
+}
+
+.hero-editorial-title {
+  color: #0a1413 !important;
+}
+
+.hero-title-teal {
+  color: var(--color-teal) !important;
+}
+
+.hero-subline {
+  color: #475569 !important;
+}
+
+.hero-badge-tag {
+  background: rgba(31, 109, 104, 0.08) !important;
+  border: 1px solid rgba(31, 109, 104, 0.25) !important;
+  color: var(--color-teal) !important;
+}
+
+/* 6. Hero At a Glance Explorer (White Glass Aesthetic) */
+.hero-glance-box {
+  background: rgba(255, 255, 255, 0.96) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(31, 109, 104, 0.22) !important;
+  box-shadow: 0 16px 40px -8px rgba(15, 23, 42, 0.08), 0 0 24px rgba(31, 109, 104, 0.06) !important;
+  border-radius: 20px !important;
+}
+
+.hero-glance-box:hover {
+  border-color: rgba(31, 109, 104, 0.45) !important;
+}
+
+.glance-pill-tag {
+  background: rgba(31, 109, 104, 0.08) !important;
+  border: 1px solid rgba(31, 109, 104, 0.25) !important;
+  color: var(--color-teal) !important;
+}
+
+.glance-caption-hint {
+  color: #64748b !important;
+}
+
+.glance-select-trigger {
+  background: #f8faf9 !important;
+  border: 1px solid rgba(31, 109, 104, 0.28) !important;
+  color: #0f172a !important;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03) !important;
+}
+
+.glance-select-trigger:hover,
+.glance-select-trigger:focus-visible {
+  border-color: var(--color-teal) !important;
+  box-shadow: 0 0 0 3px rgba(31, 109, 104, 0.15) !important;
+}
+
+.glance-trigger-text {
+  color: #0f172a !important;
+}
+
+.glance-mini-badge {
+  background: rgba(31, 109, 104, 0.10) !important;
+  color: var(--color-teal) !important;
+  border: 1px solid rgba(31, 109, 104, 0.25) !important;
+}
+
+.glance-chip {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.12) !important;
+  color: #475569 !important;
+}
+
+.glance-chip:hover {
+  background: rgba(31, 109, 104, 0.08) !important;
+  border-color: rgba(31, 109, 104, 0.35) !important;
+  color: var(--color-teal) !important;
+}
+
+.glance-chip.active {
+  background: var(--color-teal) !important;
+  border-color: var(--color-teal) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(31, 109, 104, 0.25) !important;
+}
+
+.glance-display-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(31, 109, 104, 0.18) !important;
+  box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.06) !important;
+  border-radius: 14px !important;
+}
+
+.glance-display-card::before {
+  background: var(--color-teal) !important;
+}
+
+.glance-card-title {
+  color: #0f172a !important;
+  font-size: 1.35rem !important;
+}
+
+.glance-card-desc {
+  color: #475569 !important;
+  font-size: 0.875rem !important;
+}
+
+.glance-header-meta {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin-bottom: 0.4rem !important;
+}
+
+.glance-category-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.6875rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  color: var(--color-teal) !important;
+}
+
+.glance-highlights-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 8px 12px !important;
+  margin-bottom: 1rem !important;
+}
+
+.glance-highlight-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  color: #334155 !important;
+  padding: 5px 9px !important;
+  border-radius: 6px !important;
+  background: rgba(31, 109, 104, 0.05) !important;
+  border: 1px solid rgba(31, 109, 104, 0.12) !important;
+}
+
+.glance-card-footer {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  padding-top: 0.75rem !important;
+  border-top: 1px solid rgba(15, 23, 42, 0.06) !important;
+}
+
+.glance-leadtime {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 0.75rem !important;
+  color: #64748b !important;
+  font-weight: 500 !important;
+}
+
+.btn-glance-catalog {
+  background: var(--color-teal) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(31, 109, 104, 0.22) !important;
+}
+
+.btn-glance-catalog:hover {
+  background: var(--color-teal-dark) !important;
+}
+
+.btn-glance-wa {
+  background: #ffffff !important;
+  border: 1px solid rgba(16, 185, 129, 0.35) !important;
+  color: #065f46 !important;
+}
+
+.btn-glance-wa:hover {
+  background: rgba(16, 185, 129, 0.08) !important;
+}
+
+/* 7. 3D Box Interactive Stage (White Marble Gallery Pedestal) */
+.stamper-box-module {
+  background: #ffffff !important;
+  border: 1px solid rgba(31, 109, 104, 0.20) !important;
+  box-shadow: 0 10px 30px -4px rgba(15, 23, 42, 0.06) !important;
+  border-radius: 16px !important;
+}
+
+.stamper-label-group label {
+  color: #0f172a !important;
+}
+
+.stamper-input {
+  background: #f8faf9 !important;
+  border: 1px solid rgba(31, 109, 104, 0.25) !important;
+  color: #0f172a !important;
+}
+
+.stamper-input:focus {
+  border-color: var(--color-teal) !important;
+  box-shadow: 0 0 0 3px rgba(31, 109, 104, 0.15) !important;
+}
+
+.stamper-apply-btn {
+  background: var(--color-teal) !important;
+  color: #ffffff !important;
+}
+
+.stamper-apply-btn:hover {
+  background: var(--color-teal-dark) !important;
+}
+
+.box-inspect-pill {
+  background: rgba(255, 255, 255, 0.94) !important;
+  border: 1px solid rgba(31, 109, 104, 0.25) !important;
+  color: #0f172a !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08) !important;
+}
+
+.box-contact-shadow {
+  background: radial-gradient(ellipse at center, rgba(15, 23, 42, 0.22) 0%, rgba(31, 109, 104, 0.08) 45%, transparent 70%) !important;
+}
+
+/* 8. Occasions Section */
+#occasionsSection {
+  background: #ffffff !important;
+  border-top: 1px solid rgba(31, 109, 104, 0.12) !important;
+}
+
+#occasionsSection h2 {
+  color: #0f172a !important;
+}
+
+.occasion-card-luxury {
+  background: #f9fbfa !important;
+  border: 1px solid rgba(31, 109, 104, 0.16) !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04) !important;
+}
+
+.occasion-card-luxury:hover {
+  background: #ffffff !important;
+  border-color: var(--color-teal) !important;
+  box-shadow: 0 16px 36px -4px rgba(15, 23, 42, 0.08), 0 0 0 1px var(--color-teal) !important;
+}
+
+.occasion-numeral-teal {
+  color: var(--color-teal) !important;
+}
+
+.occasion-heading {
+  color: #0f172a !important;
+}
+
+.occasion-detail {
+  color: #475569 !important;
+}
+
+/* 9. Catalog Section (White Cards & High-Contrast Typography) */
+#catalogSection {
+  background: #f8faf9 !important;
+  border-top: 1px solid rgba(31, 109, 104, 0.12) !important;
+}
+
+#catalogSection h2 {
+  color: #0f172a !important;
+}
+
+#catalogSection p {
+  color: #475569 !important;
+}
+
+.product-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(31, 109, 104, 0.16) !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05) !important;
+}
+
+.product-card:hover {
+  box-shadow: 0 16px 36px -4px rgba(15, 23, 42, 0.10) !important;
+  border-color: var(--color-teal) !important;
+}
+
+.product-card h3 {
+  color: #0f172a !important;
+}
+
+.product-card p {
+  color: #475569 !important;
+}
+
+.category-pill {
+  background: #ffffff !important;
+  color: #475569 !important;
+  border: 1px solid rgba(15, 23, 42, 0.12) !important;
+}
+
+.category-pill:hover {
+  border-color: var(--color-teal) !important;
+  color: var(--color-teal) !important;
+}
+
+.category-pill.active {
+  background: var(--color-teal) !important;
+  color: #ffffff !important;
+  border-color: var(--color-teal) !important;
+}
+
+/* Filter Bar in Catalog */
+#catalogSection .bg-\[\#10141d\]\/90 {
+  background: #ffffff !important;
+  border: 1px solid rgba(31, 109, 104, 0.16) !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
+}
+
+#sortBySelect {
+  background: #f8faf9 !important;
+  border: 1px solid rgba(31, 109, 104, 0.22) !important;
+  color: #0f172a !important;
+}
+
+/* 10. About & How We Work Section */
+#aboutSection {
+  background: #ffffff !important;
+  border-top: 1px solid rgba(31, 109, 104, 0.12) !important;
+}
+
+#aboutSection h2 {
+  color: #0f172a !important;
+}
+
+#aboutSection .bg-\[\#10141d\] {
+  background: #f9fbfa !important;
+  border: 1px solid rgba(31, 109, 104, 0.14) !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
+}
+
+#aboutSection h3 {
+  color: #0f172a !important;
+}
+
+#aboutSection p {
+  color: #475569 !important;
+}
+
+/* 11. Footer */
+footer {
+  background: #f1f5f4 !important;
+  border-top: 1px solid rgba(31, 109, 104, 0.15) !important;
+  color: #475569 !important;
+}
+
+footer a {
+  color: #475569 !important;
+}
+
+footer a:hover {
+  color: var(--color-teal) !important;
+}
+
+/* 12. Modals & Drawers */
+.rfp-drawer {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border-left: 1px solid rgba(31, 109, 104, 0.18) !important;
+  box-shadow: -10px 0 40px rgba(15, 23, 42, 0.12) !important;
+}
+
+.rfp-drawer .bg-\[\#090c13\],
+.rfp-drawer .bg-\[\#07090e\] {
+  background: #f8faf9 !important;
+  border-color: rgba(31, 109, 104, 0.12) !important;
+}
+
+.rfp-drawer h2, .rfp-drawer h3 {
+  color: #0f172a !important;
+}
+
+.rfp-drawer input,
+.rfp-drawer textarea {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid rgba(31, 109, 104, 0.25) !important;
+}
+
+/* Cookie Governance Banner */
+.cookie-banner-wrap {
+  background: rgba(255, 255, 255, 0.98) !important;
+  border: 1px solid rgba(31, 109, 104, 0.25) !important;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.14) !important;
+}
+
+.cookie-banner-desc {
+  color: #475569 !important;
+}
+
+.btn-cookie-reject {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.18) !important;
+  color: #334155 !important;
+}
+
+.btn-cookie-accept {
+  background: var(--color-teal) !important;
+  color: #ffffff !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .glance-highlights-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ==========================================================================
+   LUMINOUS WHITE & SIGNATURE TEAL LUXURY DESIGN SYSTEM
+   Editorial Aesthetic: Clean White Canvas, Deep Obsidian Charcoal Typography,
+   Vibrant Brand Teal (#1f6d68 / #27857e) Accents, and 24K Gold Stamped Contrast.
+   ========================================================================== */
+
+/* 1. Global Canvas & Document Resets */
+body {
+  background-color: #fafbfb !important;
+  color: #0f172a !important;
+}
+
+/* 2. Brand Teal Color Refinements for White Canvas (High-Contrast & AAA Accessible) */
+:root {
+  --color-teal: #1f6d68;
+  --color-teal-light: #27857e;
+  --color-teal-dark: #164e4a;
+  --color-teal-glow: rgba(31, 109, 104, 0.18);
+  --color-teal-subtle: rgba(31, 109, 104, 0.08);
+  --text-teal: #1f6d68;
+}
+
+/* 3. Navigation Header (Luminous White Glass) */
+.brand-header,
+header.fixed {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(31, 109, 104, 0.14) !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04) !important;
+}
+
+.brand-title-white {
+  color: #0f172a !important;
+}
+
+.brand-title-teal {
+  color: var(--color-teal) !important;
+}
+
+.brand-subtitle-mini {
+  color: #64748b !important;
+}
+
+.brand-header .nav-link,
+.brand-header .nav-link-dropdown {
+  color: #334155 !important;
+}
+
+.brand-header .nav-link:hover,
+.brand-header .nav-link-dropdown:hover {
+  color: var(--color-teal) !important;
+}
+
+header a[href="#catalogSection"].hidden {
+  background: #ffffff !important;
+  border: 1px solid rgba(31, 109, 104, 0.18) !important;
+  color: #334155 !important;
+}
+
+header a[href="#catalogSection"].hidden:hover {
+  border-color: var(--color-teal) !important;
+  color: var(--color-teal) !important;
+}
+
+/* 4. Navigation Mega Dropdown (Luxury White Boutique Menu) */
+.nav-mega-dropdown {
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+  border: 1px solid rgba(31, 109, 104, 0.18) !important;
+  box-shadow: 0 24px 60px -12px rgba(15, 23, 42, 0.16), 0 4px 16px rgba(31, 109, 104, 0.08) !important;
+  border-radius: 20px !important;
+  padding: 1.5rem 1.65rem !important;
+}
+
+.mega-col-title {
+  color: var(--color-teal) !important;
+  border-bottom: 1px solid rgba(31, 109, 104, 0.12) !important;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.12em !important;
+  font-weight: 700 !important;
+}
+
+.mega-items-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+
+.mega-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 0.65rem 0.75rem !important;
+  border-radius: 12px !important;
+  background: transparent !important;
+  text-decoration: none !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.mega-item:hover {
+  background: rgba(31, 109, 104, 0.08) !important;
+  transform: translateX(4px) !important;
+}
+
+.mega-item-icon {
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 34px !important;
+  border-radius: 10px !important;
+  background: rgba(31, 109, 104, 0.10) !important;
+  border: 1px solid rgba(31, 109, 104, 0.18) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 0.875rem !important;
+}
+
+.mega-item-body {
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+
+.mega-item-title {
+  color: #0f172a !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+}
+
+.mega-item:hover .mega-item-title {
+  color: var(--color-teal) !important;
+}
+
+.mega-item-desc {
+  color: #64748b !important;
+  font-size: 0.75rem !important;
+  line-height: 1.35 !important;
+  margin-top: 2px !important;
+}
+
+.mega-feature-card {
+  background: linear-gradient(145deg, #f0f7f6 0%, #ffffff 100%) !important;
+  border: 1px solid rgba(31, 109, 104, 0.22) !important;
+  border-radius: 14px !important;
+  padding: 1.15rem !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
+}
+
+.mega-feature-tag {
+  display: inline-block !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.625rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  color: var(--color-teal) !important;
+  background: rgba(31, 109, 104, 0.10) !important;
+  border: 1px solid rgba(31, 109, 104, 0.20) !important;
+  padding: 2px 8px !important;
+  border-radius: 6px !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.mega-steps-container {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+}
+
+.mega-service-step {
+  color: #334155 !important;
+  font-size: 0.75rem !important;
+  padding: 0.3rem 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.mega-service-step .step-num {
+  color: var(--color-teal) !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-weight: 700 !important;
+}
+
+.mega-cta-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  margin-top: 0.85rem !important;
+  padding: 9px 14px !important;
+  border-radius: 10px !important;
+  background: var(--color-teal) !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-size: 0.8125rem !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 14px rgba(31, 109, 104, 0.25) !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.mega-cta-btn:hover {
+  background: var(--color-teal-dark) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 18px rgba(31, 109, 104, 0.35) !important;
+}
+
+/* 5. Hero Section (White Editorial Canvas & High-Contrast Typography) */
+#scrollHeroContainer {
+  background: linear-gradient(180deg, #ffffff 0%, #f6faf9 60%, #edf5f4 100%) !important;
+}
+
+.hero-main-title {
+  color: #0a1413 !important;
+}
+
+.hero-teal-accent {
+  color: var(--color-teal) !important;
+}
+
+.hero-subline {
+  color: #475569 !important;
+}
+
+.hero-glass-pill {
+  background: rgba(31, 109, 104, 0.08) !important;
+  border: 1px solid rgba(31, 109, 104, 0.25) !important;
+  color: var(--color-teal) !important;
+}
+
+/* 6. Hero At a Glance Explorer (White Glass Aesthetic) */
+.hero-glance-box {
+  background: rgba(255, 255, 255, 0.96) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(31, 109, 104, 0.22) !important;
+  box-shadow: 0 16px 40px -8px rgba(15, 23, 42, 0.08), 0 0 24px rgba(31, 109, 104, 0.06) !important;
+  border-radius: 20px !important;
+}
+
+.hero-glance-box:hover {
+  border-color: rgba(31, 109, 104, 0.45) !important;
+}
+
+.glance-pill-tag {
+  background: rgba(31, 109, 104, 0.08) !important;
+  border: 1px solid rgba(31, 109, 104, 0.25) !important;
+  color: var(--color-teal) !important;
+}
+
+.glance-caption-hint {
+  color: #64748b !important;
+}
+
+.glance-select-trigger {
+  background: #f8faf9 !important;
+  border: 1px solid rgba(31, 109, 104, 0.28) !important;
+  color: #0f172a !important;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03) !important;
+}
+
+.glance-select-trigger:hover,
+.glance-select-trigger:focus-visible {
+  border-color: var(--color-teal) !important;
+  box-shadow: 0 0 0 3px rgba(31, 109, 104, 0.15) !important;
+}
+
+.glance-trigger-text {
+  color: #0f172a !important;
+}
+
+.glance-mini-badge {
+  background: rgba(31, 109, 104, 0.10) !important;
+  color: var(--color-teal) !important;
+  border: 1px solid rgba(31, 109, 104, 0.25) !important;
+}
+
+.glance-chip {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.12) !important;
+  color: #475569 !important;
+}
+
+.glance-chip:hover {
+  background: rgba(31, 109, 104, 0.08) !important;
+  border-color: rgba(31, 109, 104, 0.35) !important;
+  color: var(--color-teal) !important;
+}
+
+.glance-chip.active {
+  background: var(--color-teal) !important;
+  border-color: var(--color-teal) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(31, 109, 104, 0.25) !important;
+}
+
+.glance-display-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(31, 109, 104, 0.18) !important;
+  box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.06) !important;
+  border-radius: 14px !important;
+}
+
+.glance-display-card::before {
+  background: var(--color-teal) !important;
+}
+
+.glance-card-title {
+  color: #0f172a !important;
+  font-size: 1.35rem !important;
+}
+
+.glance-card-desc {
+  color: #475569 !important;
+  font-size: 0.875rem !important;
+}
+
+.glance-header-meta {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin-bottom: 0.4rem !important;
+}
+
+.glance-category-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.6875rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  color: var(--color-teal) !important;
+}
+
+.glance-highlights-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 8px 12px !important;
+  margin-bottom: 1rem !important;
+}
+
+.glance-highlight-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  color: #334155 !important;
+  padding: 5px 9px !important;
+  border-radius: 6px !important;
+  background: rgba(31, 109, 104, 0.05) !important;
+  border: 1px solid rgba(31, 109, 104, 0.12) !important;
+}
+
+.glance-card-footer {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  padding-top: 0.75rem !important;
+  border-top: 1px solid rgba(15, 23, 42, 0.06) !important;
+}
+
+.glance-leadtime {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 0.75rem !important;
+  color: #64748b !important;
+  font-weight: 500 !important;
+}
+
+.btn-glance-catalog {
+  background: var(--color-teal) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(31, 109, 104, 0.22) !important;
+}
+
+.btn-glance-catalog:hover {
+  background: var(--color-teal-dark) !important;
+}
+
+.btn-glance-wa {
+  background: #ffffff !important;
+  border: 1px solid rgba(16, 185, 129, 0.35) !important;
+  color: #065f46 !important;
+}
+
+.btn-glance-wa:hover {
+  background: rgba(16, 185, 129, 0.08) !important;
+}
+
+/* 7. 3D Box Interactive Stage (White Marble Gallery Pedestal) */
+.stamper-box-module {
+  background: #ffffff !important;
+  border: 1px solid rgba(31, 109, 104, 0.20) !important;
+  box-shadow: 0 10px 30px -4px rgba(15, 23, 42, 0.06) !important;
+  border-radius: 16px !important;
+}
+
+.stamper-label-group label {
+  color: #0f172a !important;
+}
+
+.stamper-input {
+  background: #f8faf9 !important;
+  border: 1px solid rgba(31, 109, 104, 0.25) !important;
+  color: #0f172a !important;
+}
+
+.stamper-input:focus {
+  border-color: var(--color-teal) !important;
+  box-shadow: 0 0 0 3px rgba(31, 109, 104, 0.15) !important;
+}
+
+.stamper-apply-btn {
+  background: var(--color-teal) !important;
+  color: #ffffff !important;
+}
+
+.stamper-apply-btn:hover {
+  background: var(--color-teal-dark) !important;
+}
+
+.box-inspect-pill {
+  background: rgba(255, 255, 255, 0.94) !important;
+  border: 1px solid rgba(31, 109, 104, 0.25) !important;
+  color: #0f172a !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08) !important;
+}
+
+.box-contact-shadow {
+  background: radial-gradient(ellipse at center, rgba(15, 23, 42, 0.22) 0%, rgba(31, 109, 104, 0.08) 45%, transparent 70%) !important;
+}
+
+/* 8. Luxury Marquee Ticker Strip */
+.luxury-marquee-wrap {
+  background: #f3f8f7 !important;
+  border-top: 1px solid rgba(31, 109, 104, 0.14) !important;
+  border-bottom: 1px solid rgba(31, 109, 104, 0.14) !important;
+}
+
+.marquee-item {
+  color: #334155 !important;
+  font-weight: 500 !important;
+}
+
+.marquee-item a {
+  color: var(--color-teal) !important;
+  font-weight: 600 !important;
+}
+
+/* 9. Occasions Section */
+#occasionsSection {
+  background: #ffffff !important;
+  border-top: 1px solid rgba(31, 109, 104, 0.12) !important;
+}
+
+#occasionsSection h2 {
+  color: #0f172a !important;
+}
+
+.occasion-card-luxury {
+  background: #f9fbfa !important;
+  border: 1px solid rgba(31, 109, 104, 0.16) !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04) !important;
+}
+
+.occasion-card-luxury:hover {
+  background: #ffffff !important;
+  border-color: var(--color-teal) !important;
+  box-shadow: 0 16px 36px -4px rgba(15, 23, 42, 0.08), 0 0 0 1px var(--color-teal) !important;
+}
+
+.occasion-numeral-teal {
+  color: var(--color-teal) !important;
+}
+
+.occasion-heading {
+  color: #0f172a !important;
+}
+
+.occasion-detail {
+  color: #475569 !important;
+}
+
+/* 10. Catalog Search Subnav */
+.amazon-subnav {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid rgba(31, 109, 104, 0.12) !important;
+  color: #334155 !important;
+}
+
+.category-select-dropdown {
+  background: #f8faf9 !important;
+  border: 1px solid rgba(31, 109, 104, 0.22) !important;
+  color: #0f172a !important;
+}
+
+.search-input-field {
+  background: #f8faf9 !important;
+  border: 1px solid rgba(31, 109, 104, 0.22) !important;
+  color: #0f172a !important;
+}
+
+.search-input-field::placeholder {
+  color: #94a3b8 !important;
+}
+
+.search-input-field:focus {
+  border-color: var(--color-teal) !important;
+  background: #ffffff !important;
+}
+
+.search-btn {
+  background: var(--color-teal) !important;
+  color: #ffffff !important;
+}
+
+.search-btn:hover {
+  background: var(--color-teal-dark) !important;
+}
+
+.category-pills-strip {
+  background: #f8faf9 !important;
+  border-bottom: 1px solid rgba(31, 109, 104, 0.10) !important;
+}
+
+/* 11. Catalog Section (White Cards & High-Contrast Typography) */
+#catalogSection {
+  background: #f8faf9 !important;
+  border-top: 1px solid rgba(31, 109, 104, 0.12) !important;
+}
+
+#catalogSection h2 {
+  color: #0f172a !important;
+}
+
+#catalogSection p {
+  color: #475569 !important;
+}
+
+.catalog-sidebar {
+  background: #ffffff !important;
+  border: 1px solid rgba(31, 109, 104, 0.16) !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05) !important;
+}
+
+.catalog-sidebar h3 {
+  color: #0f172a !important;
+}
+
+.catalog-sidebar .filter-title {
+  color: var(--color-teal) !important;
+}
+
+.catalog-sidebar .checkbox-label {
+  color: #334155 !important;
+}
+
+.catalog-sidebar .text-gray-500 {
+  color: #64748b !important;
+}
+
+.product-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(31, 109, 104, 0.16) !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05) !important;
+}
+
+.product-card:hover {
+  box-shadow: 0 16px 36px -4px rgba(15, 23, 42, 0.10) !important;
+  border-color: var(--color-teal) !important;
+}
+
+.product-card h3 {
+  color: #0f172a !important;
+}
+
+.product-card p {
+  color: #475569 !important;
+}
+
+.category-pill {
+  background: #ffffff !important;
+  color: #475569 !important;
+  border: 1px solid rgba(15, 23, 42, 0.12) !important;
+}
+
+.category-pill:hover {
+  border-color: var(--color-teal) !important;
+  color: var(--color-teal) !important;
+}
+
+.category-pill.active {
+  background: var(--color-teal) !important;
+  color: #ffffff !important;
+  border-color: var(--color-teal) !important;
+}
+
+#catalogSection .bg-\[\#10141d\]\/90 {
+  background: #ffffff !important;
+  border: 1px solid rgba(31, 109, 104, 0.16) !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
+}
+
+#sortBySelect {
+  background: #f8faf9 !important;
+  border: 1px solid rgba(31, 109, 104, 0.22) !important;
+  color: #0f172a !important;
+}
+
+/* 12. About & How We Work Section */
+#aboutSection {
+  background: #ffffff !important;
+  border-top: 1px solid rgba(31, 109, 104, 0.12) !important;
+}
+
+#aboutSection h2 {
+  color: #0f172a !important;
+}
+
+#aboutSection .bg-\[\#10141d\] {
+  background: #f9fbfa !important;
+  border: 1px solid rgba(31, 109, 104, 0.14) !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
+}
+
+#aboutSection h3 {
+  color: #0f172a !important;
+}
+
+#aboutSection p {
+  color: #475569 !important;
+}
+
+/* 13. Footer */
+footer {
+  background: #f1f5f4 !important;
+  border-top: 1px solid rgba(31, 109, 104, 0.15) !important;
+  color: #475569 !important;
+}
+
+footer a {
+  color: #475569 !important;
+}
+
+footer a:hover {
+  color: var(--color-teal) !important;
+}
+
+/* 14. Modals & Drawers */
+.rfp-drawer {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border-left: 1px solid rgba(31, 109, 104, 0.18) !important;
+  box-shadow: -10px 0 40px rgba(15, 23, 42, 0.12) !important;
+}
+
+.rfp-drawer .bg-\[\#090c13\],
+.rfp-drawer .bg-\[\#07090e\] {
+  background: #f8faf9 !important;
+  border-color: rgba(31, 109, 104, 0.12) !important;
+}
+
+.rfp-drawer h2, .rfp-drawer h3 {
+  color: #0f172a !important;
+}
+
+.rfp-drawer input,
+.rfp-drawer textarea {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid rgba(31, 109, 104, 0.25) !important;
+}
+
+/* 15. Cookie Governance Banner */
+.cookie-banner-wrap {
+  background: rgba(255, 255, 255, 0.98) !important;
+  border: 1px solid rgba(31, 109, 104, 0.25) !important;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.14) !important;
+}
+
+.cookie-pill-tag {
+  background: rgba(31, 109, 104, 0.08) !important;
+  border-color: rgba(31, 109, 104, 0.25) !important;
+  color: var(--color-teal) !important;
+}
+
+.cookie-banner-desc {
+  color: #475569 !important;
+}
+
+.btn-cookie-reject {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.18) !important;
+  color: #334155 !important;
+}
+
+.btn-cookie-accept {
+  background: var(--color-teal) !important;
+  color: #ffffff !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .glance-highlights-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ==========================================================================
+   LUMINOUS WHITE & SIGNATURE TEAL LUXURY DESIGN SYSTEM
+   Editorial Aesthetic: Clean White Canvas, Deep Obsidian Charcoal Typography,
+   Vibrant Brand Teal (#1f6d68 / #27857e) Accents, and 24K Gold Stamped Contrast.
+   ========================================================================== */
+
+/* 1. Global Canvas & Document Resets */
+body {
+  background-color: #fafbfb !important;
+  color: #0f172a !important;
+}
+
+/* 2. Brand Teal Color Refinements for White Canvas (High-Contrast & AAA Accessible) */
+:root {
+  --color-teal: #1f6d68;
+  --color-teal-light: #27857e;
+  --color-teal-dark: #164e4a;
+  --color-teal-glow: rgba(31, 109, 104, 0.18);
+  --color-teal-subtle: rgba(31, 109, 104, 0.08);
+  --text-teal: #1f6d68;
+}
+
+/* 3. Navigation Header (Luminous White Glass) */
+.brand-header,
+header.fixed {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(31, 109, 104, 0.14) !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04) !important;
+}
+
+.brand-title-white {
+  color: #0f172a !important;
+}
+
+.brand-title-teal {
+  color: var(--color-teal) !important;
+}
+
+.brand-subtitle-mini {
+  color: #64748b !important;
+}
+
+.brand-header .nav-link,
+.brand-header .nav-link-dropdown {
+  color: #334155 !important;
+}
+
+.brand-header .nav-link:hover,
+.brand-header .nav-link-dropdown:hover {
+  color: var(--color-teal) !important;
+}
+
+header a[href="#catalogSection"].hidden {
+  background: #ffffff !important;
+  border: 1px solid rgba(31, 109, 104, 0.18) !important;
+  color: #334155 !important;
+}
+
+header a[href="#catalogSection"].hidden:hover {
+  border-color: var(--color-teal) !important;
+  color: var(--color-teal) !important;
+}
+
+/* 4. Navigation Mega Dropdown (Luxury White Boutique Menu) */
+.nav-mega-dropdown {
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+  border: 1px solid rgba(31, 109, 104, 0.18) !important;
+  box-shadow: 0 24px 60px -12px rgba(15, 23, 42, 0.16), 0 4px 16px rgba(31, 109, 104, 0.08) !important;
+  border-radius: 20px !important;
+  padding: 1.5rem 1.65rem !important;
+}
+
+.mega-col-title {
+  color: var(--color-teal) !important;
+  border-bottom: 1px solid rgba(31, 109, 104, 0.12) !important;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.12em !important;
+  font-weight: 700 !important;
+}
+
+.mega-items-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+
+.mega-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 0.65rem 0.75rem !important;
+  border-radius: 12px !important;
+  background: transparent !important;
+  text-decoration: none !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.mega-item:hover {
+  background: rgba(31, 109, 104, 0.08) !important;
+  transform: translateX(4px) !important;
+}
+
+.mega-item-icon {
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 34px !important;
+  border-radius: 10px !important;
+  background: rgba(31, 109, 104, 0.10) !important;
+  border: 1px solid rgba(31, 109, 104, 0.18) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 0.875rem !important;
+}
+
+.mega-item-body {
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+
+.mega-item-title {
+  color: #0f172a !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+}
+
+.mega-item:hover .mega-item-title {
+  color: var(--color-teal) !important;
+}
+
+.mega-item-desc {
+  color: #64748b !important;
+  font-size: 0.75rem !important;
+  line-height: 1.35 !important;
+  margin-top: 2px !important;
+}
+
+.mega-feature-card {
+  background: linear-gradient(145deg, #f0f7f6 0%, #ffffff 100%) !important;
+  border: 1px solid rgba(31, 109, 104, 0.22) !important;
+  border-radius: 14px !important;
+  padding: 1.15rem !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
+}
+
+.mega-feature-tag {
+  display: inline-block !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.625rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  color: var(--color-teal) !important;
+  background: rgba(31, 109, 104, 0.10) !important;
+  border: 1px solid rgba(31, 109, 104, 0.20) !important;
+  padding: 2px 8px !important;
+  border-radius: 6px !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.mega-steps-container {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+}
+
+.mega-service-step {
+  color: #334155 !important;
+  font-size: 0.75rem !important;
+  padding: 0.3rem 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.mega-service-step .step-num {
+  color: var(--color-teal) !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-weight: 700 !important;
+}
+
+.mega-cta-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  margin-top: 0.85rem !important;
+  padding: 9px 14px !important;
+  border-radius: 10px !important;
+  background: var(--color-teal) !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-size: 0.8125rem !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 14px rgba(31, 109, 104, 0.25) !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.mega-cta-btn:hover {
+  background: var(--color-teal-dark) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 18px rgba(31, 109, 104, 0.35) !important;
+}
+
+/* 5. Hero Section (White Editorial Canvas & High-Contrast Typography) */
+#scrollHeroContainer {
+  background: linear-gradient(180deg, #ffffff 0%, #f6faf9 60%, #edf5f4 100%) !important;
+}
+
+.hero-main-title {
+  color: #0a1413 !important;
+}
+
+.hero-teal-accent {
+  color: var(--color-teal) !important;
+}
+
+.hero-subline {
+  color: #475569 !important;
+}
+
+.hero-glass-pill {
+  background: rgba(31, 109, 104, 0.08) !important;
+  border: 1px solid rgba(31, 109, 104, 0.25) !important;
+  color: var(--color-teal) !important;
+}
+
+/* 6. Hero At a Glance Explorer (White Glass Aesthetic) */
+.hero-glance-box {
+  background: rgba(255, 255, 255, 0.96) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(31, 109, 104, 0.22) !important;
+  box-shadow: 0 16px 40px -8px rgba(15, 23, 42, 0.08), 0 0 24px rgba(31, 109, 104, 0.06) !important;
+  border-radius: 20px !important;
+}
+
+.hero-glance-box:hover {
+  border-color: rgba(31, 109, 104, 0.45) !important;
+}
+
+.glance-pill-tag {
+  background: rgba(31, 109, 104, 0.08) !important;
+  border: 1px solid rgba(31, 109, 104, 0.25) !important;
+  color: var(--color-teal) !important;
+}
+
+.glance-caption-hint {
+  color: #64748b !important;
+}
+
+.glance-select-trigger {
+  background: #f8faf9 !important;
+  border: 1px solid rgba(31, 109, 104, 0.28) !important;
+  color: #0f172a !important;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03) !important;
+}
+
+.glance-select-trigger:hover,
+.glance-select-trigger:focus-visible {
+  border-color: var(--color-teal) !important;
+  box-shadow: 0 0 0 3px rgba(31, 109, 104, 0.15) !important;
+}
+
+.glance-trigger-text {
+  color: #0f172a !important;
+}
+
+.glance-mini-badge {
+  background: rgba(31, 109, 104, 0.10) !important;
+  color: var(--color-teal) !important;
+  border: 1px solid rgba(31, 109, 104, 0.25) !important;
+}
+
+.glance-chip {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.12) !important;
+  color: #475569 !important;
+}
+
+.glance-chip:hover {
+  background: rgba(31, 109, 104, 0.08) !important;
+  border-color: rgba(31, 109, 104, 0.35) !important;
+  color: var(--color-teal) !important;
+}
+
+.glance-chip.active {
+  background: var(--color-teal) !important;
+  border-color: var(--color-teal) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(31, 109, 104, 0.25) !important;
+}
+
+.glance-display-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(31, 109, 104, 0.18) !important;
+  box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.06) !important;
+  border-radius: 14px !important;
+}
+
+.glance-display-card::before {
+  background: var(--color-teal) !important;
+}
+
+.glance-card-title {
+  color: #0f172a !important;
+  font-size: 1.35rem !important;
+}
+
+.glance-card-desc {
+  color: #475569 !important;
+  font-size: 0.875rem !important;
+}
+
+.glance-header-meta {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin-bottom: 0.4rem !important;
+}
+
+.glance-category-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.6875rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  color: var(--color-teal) !important;
+}
+
+.glance-highlights-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 8px 12px !important;
+  margin-bottom: 1rem !important;
+}
+
+.glance-highlight-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  color: #334155 !important;
+  padding: 5px 9px !important;
+  border-radius: 6px !important;
+  background: rgba(31, 109, 104, 0.05) !important;
+  border: 1px solid rgba(31, 109, 104, 0.12) !important;
+}
+
+.glance-card-footer {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  padding-top: 0.75rem !important;
+  border-top: 1px solid rgba(15, 23, 42, 0.06) !important;
+}
+
+.glance-leadtime {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 0.75rem !important;
+  color: #64748b !important;
+  font-weight: 500 !important;
+}
+
+.btn-glance-catalog {
+  background: var(--color-teal) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(31, 109, 104, 0.22) !important;
+}
+
+.btn-glance-catalog:hover {
+  background: var(--color-teal-dark) !important;
+}
+
+.btn-glance-wa {
+  background: #ffffff !important;
+  border: 1px solid rgba(16, 185, 129, 0.35) !important;
+  color: #065f46 !important;
+}
+
+.btn-glance-wa:hover {
+  background: rgba(16, 185, 129, 0.08) !important;
+}
+
+/* 7. 3D Box Interactive Stage (White Marble Gallery Pedestal) */
+.stamper-box-module {
+  background: #ffffff !important;
+  border: 1px solid rgba(31, 109, 104, 0.20) !important;
+  box-shadow: 0 10px 30px -4px rgba(15, 23, 42, 0.06) !important;
+  border-radius: 16px !important;
+}
+
+.stamper-label-group label {
+  color: #0f172a !important;
+}
+
+.stamper-input {
+  background: #f8faf9 !important;
+  border: 1px solid rgba(31, 109, 104, 0.25) !important;
+  color: #0f172a !important;
+}
+
+.stamper-input:focus {
+  border-color: var(--color-teal) !important;
+  box-shadow: 0 0 0 3px rgba(31, 109, 104, 0.15) !important;
+}
+
+.stamper-apply-btn {
+  background: var(--color-teal) !important;
+  color: #ffffff !important;
+}
+
+.stamper-apply-btn:hover {
+  background: var(--color-teal-dark) !important;
+}
+
+.box-inspect-pill {
+  background: rgba(255, 255, 255, 0.94) !important;
+  border: 1px solid rgba(31, 109, 104, 0.25) !important;
+  color: #0f172a !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08) !important;
+}
+
+.box-contact-shadow {
+  background: radial-gradient(ellipse at center, rgba(15, 23, 42, 0.22) 0%, rgba(31, 109, 104, 0.08) 45%, transparent 70%) !important;
+}
+
+/* 8. Luxury Marquee Ticker Strip */
+.luxury-marquee-wrap {
+  background: #f3f8f7 !important;
+  border-top: 1px solid rgba(31, 109, 104, 0.14) !important;
+  border-bottom: 1px solid rgba(31, 109, 104, 0.14) !important;
+}
+
+.marquee-item {
+  color: #334155 !important;
+  font-weight: 500 !important;
+}
+
+.marquee-item a {
+  color: var(--color-teal) !important;
+  font-weight: 600 !important;
+}
+
+/* 9. Occasions Section */
+#occasionsSection {
+  background: #ffffff !important;
+  border-top: 1px solid rgba(31, 109, 104, 0.12) !important;
+}
+
+#occasionsSection h2 {
+  color: #0f172a !important;
+}
+
+.occasion-card-luxury {
+  background: #f9fbfa !important;
+  border: 1px solid rgba(31, 109, 104, 0.16) !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04) !important;
+}
+
+.occasion-card-luxury:hover {
+  background: #ffffff !important;
+  border-color: var(--color-teal) !important;
+  box-shadow: 0 16px 36px -4px rgba(15, 23, 42, 0.08), 0 0 0 1px var(--color-teal) !important;
+}
+
+.occasion-numeral-teal {
+  color: var(--color-teal) !important;
+}
+
+.occasion-heading {
+  color: #0f172a !important;
+}
+
+.occasion-detail {
+  color: #475569 !important;
+}
+
+/* 10. Catalog Search Subnav */
+.amazon-subnav {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid rgba(31, 109, 104, 0.12) !important;
+  color: #334155 !important;
+}
+
+.category-select-dropdown {
+  background: #f8faf9 !important;
+  border: 1px solid rgba(31, 109, 104, 0.22) !important;
+  color: #0f172a !important;
+}
+
+.search-input-field {
+  background: #f8faf9 !important;
+  border: 1px solid rgba(31, 109, 104, 0.22) !important;
+  color: #0f172a !important;
+}
+
+.search-input-field::placeholder {
+  color: #94a3b8 !important;
+}
+
+.search-input-field:focus {
+  border-color: var(--color-teal) !important;
+  background: #ffffff !important;
+}
+
+.search-btn {
+  background: var(--color-teal) !important;
+  color: #ffffff !important;
+}
+
+.search-btn:hover {
+  background: var(--color-teal-dark) !important;
+}
+
+.category-pills-strip {
+  background: #f8faf9 !important;
+  border-bottom: 1px solid rgba(31, 109, 104, 0.10) !important;
+}
+
+/* 11. Catalog Section (White Cards & High-Contrast Typography) */
+#catalogSection {
+  background: #f8faf9 !important;
+  border-top: 1px solid rgba(31, 109, 104, 0.12) !important;
+}
+
+#catalogSection h2 {
+  color: #0f172a !important;
+}
+
+#catalogSection p {
+  color: #475569 !important;
+}
+
+.catalog-sidebar {
+  background: #ffffff !important;
+  border: 1px solid rgba(31, 109, 104, 0.16) !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05) !important;
+}
+
+.catalog-sidebar h3 {
+  color: #0f172a !important;
+}
+
+.catalog-sidebar .filter-title {
+  color: var(--color-teal) !important;
+}
+
+.catalog-sidebar .checkbox-label {
+  color: #334155 !important;
+}
+
+.catalog-sidebar .text-gray-500 {
+  color: #64748b !important;
+}
+
+.product-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(31, 109, 104, 0.16) !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05) !important;
+}
+
+.product-card:hover {
+  box-shadow: 0 16px 36px -4px rgba(15, 23, 42, 0.10) !important;
+  border-color: var(--color-teal) !important;
+}
+
+.product-card h3 {
+  color: #0f172a !important;
+}
+
+.product-card p {
+  color: #475569 !important;
+}
+
+.category-pill {
+  background: #ffffff !important;
+  color: #475569 !important;
+  border: 1px solid rgba(15, 23, 42, 0.12) !important;
+}
+
+.category-pill:hover {
+  border-color: var(--color-teal) !important;
+  color: var(--color-teal) !important;
+}
+
+.category-pill.active {
+  background: var(--color-teal) !important;
+  color: #ffffff !important;
+  border-color: var(--color-teal) !important;
+}
+
+#catalogSection .bg-\[\#10141d\]\/90 {
+  background: #ffffff !important;
+  border: 1px solid rgba(31, 109, 104, 0.16) !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
+}
+
+#sortBySelect {
+  background: #f8faf9 !important;
+  border: 1px solid rgba(31, 109, 104, 0.22) !important;
+  color: #0f172a !important;
+}
+
+/* 12. About & How We Work Section */
+#aboutSection {
+  background: #ffffff !important;
+  border-top: 1px solid rgba(31, 109, 104, 0.12) !important;
+}
+
+#aboutSection h2 {
+  color: #0f172a !important;
+}
+
+#aboutSection .bg-\[\#10141d\] {
+  background: #f9fbfa !important;
+  border: 1px solid rgba(31, 109, 104, 0.14) !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
+}
+
+#aboutSection h3 {
+  color: #0f172a !important;
+}
+
+#aboutSection p {
+  color: #475569 !important;
+}
+
+/* 13. Footer */
+footer {
+  background: #f1f5f4 !important;
+  border-top: 1px solid rgba(31, 109, 104, 0.15) !important;
+  color: #475569 !important;
+}
+
+footer a {
+  color: #475569 !important;
+}
+
+footer a:hover {
+  color: var(--color-teal) !important;
+}
+
+/* 14. Modals & Drawers */
+.rfp-drawer {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border-left: 1px solid rgba(31, 109, 104, 0.18) !important;
+  box-shadow: -10px 0 40px rgba(15, 23, 42, 0.12) !important;
+}
+
+.rfp-drawer .bg-\[\#090c13\],
+.rfp-drawer .bg-\[\#07090e\] {
+  background: #f8faf9 !important;
+  border-color: rgba(31, 109, 104, 0.12) !important;
+}
+
+.rfp-drawer h2, .rfp-drawer h3 {
+  color: #0f172a !important;
+}
+
+.rfp-drawer input,
+.rfp-drawer textarea {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid rgba(31, 109, 104, 0.25) !important;
+}
+
+/* 15. Cookie Governance Banner (Clean White Card) */
+.cookie-banner-wrap {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.cookie-banner-inner {
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  border: 1px solid rgba(31, 109, 104, 0.22) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 20px 50px -10px rgba(15, 23, 42, 0.16), 0 0 0 1px rgba(31, 109, 104, 0.10) !important;
+  color: #0f172a !important;
+}
+
+.cookie-pill-tag {
+  background: rgba(31, 109, 104, 0.08) !important;
+  border: 1px solid rgba(31, 109, 104, 0.25) !important;
+  color: var(--color-teal) !important;
+}
+
+.cookie-banner-desc {
+  color: #475569 !important;
+}
+
+.btn-cookie-reject {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.18) !important;
+  color: #334155 !important;
+}
+
+.btn-cookie-accept {
+  background: var(--color-teal) !important;
+  color: #ffffff !important;
+}
+
+/* 16. Mobile Bottom Dock (White Glass) */
+.mobile-bottom-dock {
+  background: rgba(255, 255, 255, 0.96) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-top: 1px solid rgba(31, 109, 104, 0.14) !important;
+  box-shadow: 0 -4px 20px rgba(15, 23, 42, 0.05) !important;
+}
+
+.mobile-dock-item {
+  color: #64748b !important;
+}
+
+.mobile-dock-item.active,
+.mobile-dock-item:hover {
+  color: var(--color-teal) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .glance-highlights-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

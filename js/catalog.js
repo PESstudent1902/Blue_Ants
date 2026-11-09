@@ -1490,26 +1490,46 @@ function selectGlanceOffering(offeringId) {
   const card = document.getElementById('glanceDisplayCard');
   if (card) {
     card.innerHTML = `
-      <div class="glance-card-header">
-        <div>
-          <div class="text-[10px] uppercase tracking-widest text-[#348b86] font-semibold mb-1">${offering.category}</div>
+      <div class="glance-card-inner">
+        <div class="glance-card-header">
+          <div class="glance-header-meta">
+            <span class="glance-category-badge">
+              <i class="fas fa-sparkles text-[11px] mr-1 text-[#1f6d68]"></i>
+              ${offering.category}
+            </span>
+            <span class="glance-mini-badge">${offering.scale}</span>
+          </div>
           <h3 class="glance-card-title">${offering.title}</h3>
         </div>
-        <span class="glance-mini-badge">${offering.scale}</span>
-      </div>
-      <p class="glance-card-desc">${offering.description}</p>
-      <div class="glance-pills-row">
-        ${offering.pills.map(p => `<span class="glance-spec-pill">${p}</span>`).join('')}
-      </div>
-      <div class="glance-card-actions">
-        <a href="#catalogSection" onclick="selectCatalogCategory('${offering.targetCategory}')" class="btn-glance-catalog">
-          <i class="fas fa-boxes-stacked text-xs"></i>
-          <span>View in Curated Catalogue &darr;</span>
-        </a>
-        <a href="https://wa.me/919916418879?text=${encodeURIComponent(offering.waText)}" target="_blank" rel="noopener" class="btn-glance-wa">
-          <i class="fa-brands fa-whatsapp text-sm"></i>
-          <span>Inquire via WhatsApp Desk</span>
-        </a>
+
+        <p class="glance-card-desc">${offering.description}</p>
+
+        <!-- Structured Highlights Grid -->
+        <div class="glance-highlights-grid">
+          ${offering.pills.slice(0, 4).map(p => `
+            <div class="glance-highlight-item">
+              <i class="fas fa-check-circle text-[#1f6d68] text-xs"></i>
+              <span>${p}</span>
+            </div>
+          `).join('')}
+        </div>
+
+        <div class="glance-card-footer">
+          <div class="glance-leadtime">
+            <i class="fas fa-clock-rotate-left text-xs text-[#1f6d68]"></i>
+            <span>${offering.leadTime}</span>
+          </div>
+          <div class="glance-card-actions">
+            <a href="#catalogSection" onclick="selectCatalogCategory('${offering.targetCategory}')" class="btn-glance-catalog">
+              <span>Explore in Catalogue</span>
+              <i class="fas fa-arrow-down text-xs ml-1"></i>
+            </a>
+            <a href="https://wa.me/919916418879?text=${encodeURIComponent(offering.waText)}" target="_blank" rel="noopener" class="btn-glance-wa">
+              <i class="fa-brands fa-whatsapp text-emerald-600 text-sm mr-1.5"></i>
+              <span>WhatsApp Concierge</span>
+            </a>
+          </div>
+        </div>
       </div>
     `;
   }
