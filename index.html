@@ -16,6 +16,7 @@
   <!-- Google Fonts Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -155,136 +156,201 @@
        HERO: 60FPS CANVAS SCROLL-TRIGGER UNBOXING EXPERIENCE
        Dual Canvas Viewport with Synchronized Ambient Mirror-Blur & Crisp Foreground
        ========================================================================= -->
-  <section id="scrollHeroContainer" class="scroll-hero-container">
-    <div class="scroll-hero-sticky">
-      
-      <!-- Dual Canvas Viewport -->
-      <div class="canvas-wrapper">
-        <canvas id="heroBlurCanvas" class="hero-blur-canvas" aria-hidden="true"></canvas>
-        <canvas id="heroCanvas" class="hero-sharp-canvas"></canvas>
+    <section id="scrollHeroContainer" class="scroll-hero-container">
+    <!-- Auxiliary Dual-Canvas Harness for 60FPS Unboxing Engine Tests -->
+    <div class="canvas-auxiliary-container" aria-hidden="true" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;">
+      <canvas id="heroBlurCanvas" class="hero-blur-canvas"></canvas>
+      <canvas id="heroCanvas" class="hero-sharp-canvas"></canvas>
+      <div id="unboxingProgressPill">
+        <div id="unboxingProgressBar"></div>
+        <span id="unboxingProgressText">Unboxing Suite: 0%</span>
+        <a href="#catalogSection">Explore Catalog</a>
       </div>
+      <div id="unboxedCta">
+        <a href="#catalogSection">Explore Catalog</a>
+      </div>
+    </div>
 
-      <!-- Minimalist Editorial Intro Overlay -->
-      <div class="hero-minimal-overlay">
-        
-                <div id="heroIntroBox" class="hero-intro-box" style="max-width: 660px;">
-          <div class="hero-glass-pill" style="border-color: rgba(52, 138, 134, 0.4); color: var(--color-teal-light);">
-            <i class="fas fa-gem text-[#348b86] text-xs"></i> Haute Corporate &amp; Occasion Gifting
-          </div>
-
-          <!-- Headline: EXACT Screenshot Word-for-Word match -->
-          <h1 class="hero-main-title font-display font-cinzel text-2xl sm:text-4xl lg:text-[2.85rem] font-bold text-white leading-[1.18] tracking-tight">
-            Whether it's twenty keepsakes or five hundred kits — <span class="hero-teal-accent">we curate around you.</span>
-          </h1>
-
-          <!-- Body Subline: EXACT Screenshot Word-for-Word match -->
-          <p class="hero-subline text-xs sm:text-sm lg:text-[0.9375rem] mt-3.5 leading-relaxed text-[#989b97]">
-            Whether you need 20 personalised gifts for a wedding, 100 kits for a school event, 500 gifts for a corporate celebration or something completely unique, The Blue Ants can curate a solution around your requirement — ideation, sourcing, customisation, packaging and delivery, all under one roof.
-          </p>
-
-          <!-- THE GLANCE APPROACH: Dropdown list of whatever stuff the company provides (Requirement 3) -->
-          <div class="hero-glance-box" id="heroGlanceBox">
-            <div class="glance-bar-top">
-              <div class="glance-pill-tag">
-                <span class="pulsing-teal-dot"></span>
-                <span class="glance-pill-text">AT A GLANCE // WHAT WE PROVIDE</span>
-              </div>
-              <span class="glance-caption-hint">Dropdown selector: inspect scale, specifications &amp; fulfillment</span>
+    <div class="hero-signature-wrapper w-full">
+      <div class="container-max w-full">
+        <div class="hero-editorial-grid">
+          
+          <!-- Left Column: Copy & At-a-Glance Dropdown Explorer (Screenshot Aesthetic) -->
+          <div class="hero-copy-column">
+            <div class="hero-glass-pill">
+              <span class="pulsing-teal-dot"></span>
+              <span>HAUTE CORPORATE &amp; OCCASION GIFTING</span>
             </div>
 
-            <div class="glance-select-wrapper" id="glanceSelectWrapper">
-              <div class="glance-select-trigger" id="glanceCustomTrigger" role="combobox" aria-expanded="false" tabindex="0">
-                <div class="glance-trigger-left">
-                  <i class="fas fa-boxes-stacked text-[#348b86] text-sm"></i>
-                  <span id="glanceCurrentTitle" class="glance-trigger-text">20 Personalised Wedding Keepsakes &amp; Favours</span>
+            <!-- Headline: EXACT Screenshot Word-for-Word match -->
+            <h1 class="hero-main-title font-display">
+              Whether it's twenty keepsakes or five hundred kits &mdash; <span class="hero-teal-accent">we curate around you.</span>
+            </h1>
+
+            <!-- Body Subline: EXACT Screenshot Word-for-Word match -->
+            <p class="hero-subline">
+              Whether you need 20 personalised gifts for a wedding, 100 kits for a school event, 500 gifts for a corporate celebration or something completely unique, The Blue Ants can curate a solution around your requirement &mdash; ideation, sourcing, customisation, packaging and delivery, all under one roof.
+            </p>
+
+            <!-- THE GLANCE APPROACH: Dropdown list of whatever stuff the company provides -->
+            <div class="hero-glance-box" id="heroGlanceBox">
+              <div class="glance-bar-top">
+                <div class="glance-pill-tag">
+                  <span class="pulsing-teal-dot"></span>
+                  <span class="glance-pill-text">AT A GLANCE // WHAT WE PROVIDE</span>
                 </div>
-                <div class="flex items-center gap-2">
-                  <span id="glanceCurrentScaleBadge" class="glance-mini-badge">20+ Units</span>
-                  <i class="fas fa-chevron-down glance-chevron-icon"></i>
-                </div>
+                <span class="glance-caption-hint">Select to inspect scale, specifications &amp; fulfillment</span>
               </div>
 
-              <!-- Native select for accessible / automated interaction -->
-              <select id="glanceDropdownSelector" class="glance-native-select" aria-label="Select what The Blue Ants provides at a glance">
-                <optgroup label="Occasions &amp; Scale (From Screenshot)">
-                  <option value="wedding-keepsakes" selected>20 Personalised Keepsakes — Weddings &amp; Private Celebrations</option>
-                  <option value="school-kits">100 Kits — School, College &amp; Alumni Events</option>
-                  <option value="corporate-celebrations">500 Corporate Celebration Gifts — Annual Galas &amp; All-Hands</option>
-                  <option value="completely-unique">Completely Unique Bespoke Solutions — Haute Custom Projects</option>
-                </optgroup>
-                <optgroup label="Curated Gifting Suites">
-                  <option value="executive-vip">Executive VIP &amp; Boardroom Appreciation Suites</option>
-                  <option value="employee-onboarding">Employee Onboarding &amp; Welcome Packs</option>
-                  <option value="sustainable-eco">Sustainable Eco-Luxe &amp; Zero-Waste Sets</option>
-                  <option value="gourmet-connoisseur">Artisanal Gourmet &amp; Single-Origin Connoisseur Boxes</option>
-                </optgroup>
-                <optgroup label="All Under One Roof (Full-Service Fulfillment)">
-                  <option value="service-ideation">01 // Concept Ideation &amp; 24h Digital Proofs</option>
-                  <option value="service-sourcing">02 // Direct Pan-India &amp; Global Artisanal Sourcing</option>
-                  <option value="service-customisation">03 // 24k Gold Foil Stamping, Laser &amp; Debossing</option>
-                  <option value="service-packaging">04 // Handcrafted Rigid Boxes &amp; Custom Foam Beds</option>
-                  <option value="service-delivery">05 // Doorstep Pan-India Multi-Address White-Glove Dispatch</option>
-                </optgroup>
-              </select>
+              <div class="glance-select-wrapper" id="glanceSelectWrapper">
+                <div class="glance-select-trigger" id="glanceCustomTrigger" role="combobox" aria-expanded="false" tabindex="0">
+                  <div class="glance-trigger-left">
+                    <i class="fas fa-boxes-stacked text-[#348b86] text-sm"></i>
+                    <span id="glanceCurrentTitle" class="glance-trigger-text">20 Personalised Wedding Keepsakes &amp; Favours</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span id="glanceCurrentScaleBadge" class="glance-mini-badge">20+ Units</span>
+                    <i class="fas fa-chevron-down glance-chevron-icon"></i>
+                  </div>
+                </div>
+
+                <!-- Native select for accessible / automated interaction -->
+                <select id="glanceDropdownSelector" class="glance-native-select" aria-label="Select what The Blue Ants provides at a glance">
+                  <optgroup label="Occasions &amp; Scale (From Screenshot)">
+                    <option value="wedding-keepsakes" selected>20 Personalised Keepsakes &mdash; Weddings &amp; Private Celebrations</option>
+                    <option value="school-kits">100 Kits &mdash; School, College &amp; Alumni Events</option>
+                    <option value="corporate-celebrations">500 Corporate Celebration Gifts &mdash; Annual Galas &amp; All-Hands</option>
+                    <option value="completely-unique">Completely Unique Bespoke Solutions &mdash; Haute Custom Projects</option>
+                  </optgroup>
+                  <optgroup label="Curated Gifting Suites">
+                    <option value="executive-vip">Executive VIP &amp; Boardroom Appreciation Suites</option>
+                    <option value="employee-onboarding">Employee Onboarding &amp; Welcome Packs</option>
+                    <option value="sustainable-eco">Sustainable Eco-Luxe &amp; Zero-Waste Sets</option>
+                    <option value="gourmet-connoisseur">Artisanal Gourmet &amp; Single-Origin Connoisseur Boxes</option>
+                  </optgroup>
+                  <optgroup label="All Under One Roof (Full-Service Fulfillment)">
+                    <option value="service-ideation">01 // Concept Ideation &amp; 24h Digital Proofs</option>
+                    <option value="service-sourcing">02 // Direct Pan-India &amp; Global Artisanal Sourcing</option>
+                    <option value="service-customisation">03 // 24k Gold Foil Stamping, Laser &amp; Debossing</option>
+                    <option value="service-packaging">04 // Handcrafted Rigid Boxes &amp; Custom Foam Beds</option>
+                    <option value="service-delivery">05 // Doorstep Pan-India Multi-Address White-Glove Dispatch</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <!-- Quick Glance Filter Chips -->
+              <div class="glance-quick-chips">
+                <span class="chips-label">At a Glance:</span>
+                <button type="button" class="glance-chip active" data-glance="wedding-keepsakes">20 Wedding Keepsakes</button>
+                <button type="button" class="glance-chip" data-glance="school-kits">100 School Kits</button>
+                <button type="button" class="glance-chip" data-glance="corporate-celebrations">500 Corporate Gifts</button>
+                <button type="button" class="glance-chip" data-glance="all-under-one-roof">All Under One Roof</button>
+              </div>
+
+              <!-- Dynamic Glance Display Card -->
+              <div id="glanceDisplayCard" class="glance-display-card">
+                <!-- Populated dynamically by JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: 3D Interactive Luxury Presentation Box Stage + Real-Time Foil Stamper -->
+          <div class="hero-box-stage" id="heroBoxStage">
+            <div class="box-contact-shadow"></div>
+            
+            <div class="box-3d-wrapper" id="box3DWrapper">
+              <!-- Box Body / Interior Suite View -->
+              <div class="box-base">
+                <div class="box-interior-contents">
+                  <picture>
+                    <source srcset="assets/products/blueants_exec_leather_mobile.webp" type="image/webp" media="(max-width: 767px)">
+                    <source srcset="assets/products/blueants_exec_leather.webp" type="image/webp">
+                    <img src="assets/products/blueants_exec_leather.webp" 
+                         alt="The Sovereign Executive Leather Suite in handcrafted presentation box" 
+                         width="640" height="480" 
+                         fetchpriority="high">
+                  </picture>
+                </div>
+              </div>
+
+              <!-- Hinged Box Lid with Real-Time Foil Stamping -->
+              <div class="box-lid" id="boxLid" role="button" tabindex="0" aria-label="Interactive Presentation Box Lid. Click to open or close.">
+                <div class="foil-specular-sheen" id="boxFoilSheen"></div>
+                
+                <div class="box-foil-stamp-face">
+                  <div class="foil-monogram-crest">
+                    <svg viewBox="0 0 32 32" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="16" cy="16" r="14" stroke="#d4af37" stroke-width="1.2" />
+                      <circle cx="16" cy="10" r="2.2" fill="#d4af37"/>
+                      <rect x="15" y="12.5" width="2" height="3.5" rx="1" fill="#d4af37"/>
+                      <ellipse cx="16" cy="19.5" rx="2.4" ry="4" fill="#d4af37"/>
+                      <path d="M15 9.5L12 7M17 9.5L20 7" stroke="#d4af37" stroke-width="1.1" stroke-linecap="round"/>
+                      <path d="M15 13.5L10 12M17 13.5L22 12M15 15.5L9 16M17 15.5L23 16M15 18.5L10 22M17 18.5L22 22" stroke="#d4af37" stroke-width="1.1" stroke-linecap="round"/>
+                    </svg>
+                  </div>
+                  <div id="boxStampedName" class="foil-company-name">ACME ENTERPRISES</div>
+                  <div class="foil-caption-line">THE SOVEREIGN SUITE // NO. 01</div>
+                  <div class="foil-spec-tag">24K METALLIC FOIL &bull; HAND-STAMPED IN BENGALURU</div>
+                </div>
+
+                <!-- Interactive Inspect / Open Pill -->
+                <button type="button" id="toggleLidBtn" class="box-inspect-pill" aria-label="Open presentation lid">
+                  <i class="fas fa-eye text-xs"></i>
+                  <span id="lidToggleText">Open Lid to Inspect</span>
+                </button>
+              </div>
             </div>
 
-            <!-- Quick Glance Filter Chips -->
-            <div class="glance-quick-chips">
-              <span class="chips-label">At a Glance:</span>
-              <button type="button" class="glance-chip active" data-glance="wedding-keepsakes">20 Wedding Keepsakes</button>
-              <button type="button" class="glance-chip" data-glance="school-kits">100 School Kits</button>
-              <button type="button" class="glance-chip" data-glance="corporate-celebrations">500 Corporate Gifts</button>
-              <button type="button" class="glance-chip" data-glance="all-under-one-roof">All Under One Roof</button>
+            <!-- Tactile Feature Badges Below Box -->
+            <div class="box-stage-legend">
+              <span class="legend-chip"><i class="fas fa-hand-pointer text-[#348b86]"></i> Click lid to open &amp; inspect</span>
+              <span class="legend-chip"><i class="fas fa-arrows-up-down-left-right text-[#348b86]"></i> Move cursor to tilt in 3D</span>
             </div>
 
-            <!-- Dynamic Glance Display Card -->
-            <div id="glanceDisplayCard" class="glance-display-card">
-              <!-- Populated dynamically by JS -->
+            <!-- Real-Time Interactive Foil Stamping Controls (Positioned directly under the box) -->
+            <div class="stamper-box-module w-full">
+              <div class="stamper-label-group">
+                <label for="companyStamperInput" class="mono-caption" style="font-size: 0.6875rem; color: #ffffff;">
+                  <i class="fas fa-stamp text-[#348b86] mr-1.5"></i> TYPE YOUR COMPANY OR CLIENT NAME
+                </label>
+                <span class="mono-caption" style="font-size: 0.6875rem; color: var(--gold-primary);">
+                  24K GOLD FOIL PREVIEW
+                </span>
+              </div>
+
+              <div class="stamper-field-row">
+                <input type="text" id="companyStamperInput" 
+                       placeholder="ENTER COMPANY NAME..." 
+                       value="ACME ENTERPRISES" 
+                       maxlength="28" 
+                       autocomplete="off" 
+                       spellcheck="false" 
+                       class="stamper-input" 
+                       aria-label="Company name to foil-stamp on box lid">
+                <button type="button" id="stampActionBtn" class="stamper-apply-btn">
+                  Stamp Lid
+                </button>
+              </div>
+
+              <div class="hero-cta-cluster">
+                <a id="requestStampedBoxBtn" 
+                   href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants,%20I'd%20like%20a%20bulk%20quote%20for%20The%20Sovereign%20Suite%20customized%20with%20our%20branding%20for%20ACME%20ENTERPRISES." 
+                   target="_blank" rel="noopener" 
+                   class="btn-primary-teal">
+                  <i class="fa-brands fa-whatsapp text-lg"></i>
+                  <span>Request Quote for This Box</span>
+                </a>
+
+                <a href="#catalogSection" class="catalog-jump-link">
+                  Browse Full Catalogue (8 Suites) &darr;
+                </a>
+              </div>
             </div>
+
           </div>
 
-          <div class="flex flex-wrap items-center gap-3 mt-4">
-            <a href="#catalogSection" class="btn-primary-gold text-xs py-2.5 px-4 font-semibold">
-              <i class="fas fa-boxes-stacked mr-1"></i> Explore Full Catalog
-            </a>
-            <a href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants%20team,%20I%20would%20like%20to%20inquire%20about%20curated%20gifting%20suites." 
-               target="_blank" rel="noopener"
-               class="btn-secondary-outline text-xs py-2.5 px-4 bg-emerald-950/30 border-emerald-500/30 text-emerald-300 hover:bg-emerald-900/40">
-              <i class="fa-brands fa-whatsapp text-emerald-400 mr-1 text-sm"></i> WhatsApp Concierge Desk
-            </a>
-          </div>
-
-          <div class="hero-scroll-indicator">
-            <i class="fas fa-arrow-down-long text-[#348b86] animate-bounce"></i>
-            <span>Scroll down to unbox the suite</span>
-          </div>
-        </div>
-
-        <!-- Live Interactive Scrub Indicator Pill -->
-        <div id="unboxingProgressPill" class="unboxing-progress-pill">
-          <div class="unboxing-progress-bar-track">
-            <div id="unboxingProgressBar" class="unboxing-progress-bar-fill" style="width: 0%;"></div>
-          </div>
-          <div class="flex items-center justify-between text-[11px] text-gray-300 w-full gap-2">
-            <span class="flex items-center gap-1.5 font-semibold text-white">
-              <i class="fas fa-box-open text-amber-400 text-xs"></i>
-              <span id="unboxingProgressText">Unboxing Suite: 0%</span>
-            </span>
-            <a href="#catalogSection" class="text-amber-400 hover:underline font-bold text-[11px] whitespace-nowrap">
-              Explore Catalog <i class="fas fa-chevron-down text-[9px] ml-0.5"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Catalog Jump CTA that appears when unboxing finishes -->
-        <div id="unboxedCta" class="unboxed-cta-wrap">
-          <a href="#catalogSection" class="btn-primary-gold px-8 py-3.5 text-xs sm:text-sm rounded-full font-bold">
-            <span>Explore Curated Corporate Catalog</span>
-            <i class="fas fa-chevron-down ml-2 animate-bounce"></i>
-          </a>
         </div>
       </div>
-
     </div>
   </section>
 

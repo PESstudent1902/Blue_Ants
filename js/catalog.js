@@ -318,6 +318,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupScrollReveal();
   setupMobileDockObserver();
   initGlanceModule();
+  initHeroStamper();
 });
 
 function renderProducts() {
@@ -1563,4 +1564,116 @@ if (typeof window !== 'undefined') {
   window.selectCatalogCategory = selectCatalogCategory;
   window.initGlanceModule = initGlanceModule;
   window.GLANCE_OFFERINGS = GLANCE_OFFERINGS;
+}
+
+
+/**
+ * =========================================================================
+ * SIGNATURE 3D INTERACTIVE PRESENTATION BOX ENGINE
+ * Real-time 24K Gold Foil Stamping, Specular Sheen & 3D Hinged Lid Inspection
+ * =========================================================================
+ */
+function initHeroStamper() {
+  const stamperInput = document.getElementById('companyStamperInput');
+  const stampBtn = document.getElementById('stampActionBtn');
+  const boxStampedName = document.getElementById('boxStampedName');
+  const requestStampedBtn = document.getElementById('requestStampedBoxBtn');
+  const box3DWrapper = document.getElementById('box3DWrapper');
+  const boxLid = document.getElementById('boxLid');
+  const toggleLidBtn = document.getElementById('toggleLidBtn');
+  const lidToggleText = document.getElementById('lidToggleText');
+  const boxFoilSheen = document.getElementById('boxFoilSheen');
+  const stage = document.getElementById('heroBoxStage');
+  const rfpCompanyInput = document.getElementById('rfpCompanyName');
+
+  if (!stamperInput || !boxStampedName) return;
+
+  const updateStamping = () => {
+    const rawVal = stamperInput.value.trim();
+    const displayName = rawVal.length > 0 ? rawVal.toUpperCase() : 'YOUR COMPANY';
+    boxStampedName.textContent = displayName;
+
+    // Sync to Quote Drawer Company Field
+    if (rfpCompanyInput && rawVal.length > 0) {
+      rfpCompanyInput.value = rawVal;
+    }
+
+    // Update WhatsApp CTA Link with pre-filled company name
+    if (requestStampedBtn) {
+      const msg = `Hi The Blue Ants, I would like a bulk quote for The Sovereign Suite customized with our branding for ${displayName}.`;
+      requestStampedBtn.href = `https://wa.me/${CONFIG.PHONE}?text=${encodeURIComponent(msg)}`;
+    }
+  };
+
+  stamperInput.addEventListener('input', updateStamping);
+  stamperInput.addEventListener('change', updateStamping);
+
+  if (stampBtn) {
+    stampBtn.addEventListener('click', () => {
+      updateStamping();
+      boxStampedName.style.transform = 'scale(1.05)';
+      setTimeout(() => {
+        boxStampedName.style.transform = 'scale(1)';
+      }, 300);
+      showToast('24K Gold foil stamp updated on presentation lid');
+    });
+  }
+
+  // Toggle Lid Open / Closed (Hinged 3D Inspection)
+  const toggleLid = (e) => {
+    if (e) e.stopPropagation();
+    if (!box3DWrapper) return;
+    const isOpen = box3DWrapper.classList.toggle('lid-open');
+    if (lidToggleText) {
+      lidToggleText.textContent = isOpen ? 'Close Lid' : 'Open Lid to Inspect';
+    }
+  };
+
+  if (toggleLidBtn) toggleLidBtn.addEventListener('click', toggleLid);
+  if (boxLid) {
+    boxLid.addEventListener('click', (e) => {
+      if (e.target.closest('#toggleLidBtn')) return;
+      toggleLid();
+    });
+    boxLid.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleLid();
+      }
+    });
+  }
+
+  // Interactive Specular Sheen & 3D Tilt Tracking
+  if (stage && box3DWrapper && boxFoilSheen) {
+    const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!prefersReducedMotion) {
+      stage.addEventListener('mousemove', (e) => {
+        const rect = stage.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+        // Subtle 3D tilt
+        const rotX = 14 - y * 12;
+        const rotY = -10 + x * 14;
+        box3DWrapper.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg)`;
+
+        // Specular foil gradient sheen angle
+        const angle = 90 + Math.round(x * 60);
+        const intensity = Math.min(0.45, 0.2 + Math.abs(x) * 0.3);
+        boxFoilSheen.style.background = `linear-gradient(${angle}deg, transparent 20%, rgba(255, 235, 180, ${intensity}) 45%, transparent 65%)`;
+      });
+
+      stage.addEventListener('mouseleave', () => {
+        box3DWrapper.style.transform = 'rotateX(14deg) rotateY(-10deg)';
+        boxFoilSheen.style.background = 'linear-gradient(115deg, transparent 20%, rgba(255, 235, 180, 0.22) 45%, transparent 65%)';
+      });
+    }
+  }
+
+  // Expose globally
+  window.initHeroStamper = initHeroStamper;
+
+  // Initial call
+  updateStamping();
 }
