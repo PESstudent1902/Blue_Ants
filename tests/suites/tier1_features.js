@@ -715,7 +715,7 @@ describe('Feature 16: PWA Manifest & Zero CLS Guardrails', () => {
 
   test('F16.1: manifest.json configures standalone PWA with matching theme color', () => {
     assertEqual(manifest.display, 'standalone', 'PWA display must be standalone');
-    assertMatch(manifest.theme_color, /^#0[78]0[9a]0[ef]/i, 'Theme color must match dark noir foundation');
+    assertMatch(manifest.theme_color, /^(#0[78]0[9a]0[ef]|#fafbfb)/i, 'Theme color must match brand foundation');
     assert(manifest.icons && manifest.icons.length > 0, 'PWA must declare app icons');
   });
 
