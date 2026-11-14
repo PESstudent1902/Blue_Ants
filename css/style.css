@@ -4171,3 +4171,30 @@ footer a:hover {
   background-color: #1f6d68;
   border-radius: 1px;
 }
+
+
+/* Refined Nav Dropdown Positioning & Styling */
+.nav-dropdown-wrapper {
+  position: relative;
+}
+
+.nav-mega-dropdown {
+  position: absolute !important;
+  top: calc(100% + 8px) !important;
+  left: 50% !important;
+  transform: translateX(-50%) translateY(8px) !important;
+  width: min(720px, calc(100vw - 32px)) !important;
+  max-width: 95vw !important;
+  z-index: 200 !important;
+  border-radius: 18px !important;
+  box-shadow: 0 20px 48px -10px rgba(15, 23, 42, 0.12), 0 4px 16px rgba(31, 109, 104, 0.08) !important;
+}
+
+.nav-dropdown-wrapper:hover .nav-mega-dropdown,
+.nav-dropdown-wrapper:focus-within .nav-mega-dropdown,
+.nav-mega-dropdown.is-active {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateX(-50%) translateY(0px) !important;
+}
