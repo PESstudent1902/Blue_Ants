@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <title>Corporate Gifting Catalog &amp; Suites | The Blue Ants</title>
+  <meta name="description" content="Browse 8 bespoke corporate gifting suites: Executive VIP, Welcome Kits, Sustainable Eco-Luxe, and Gourmet Connoisseur with live bulk pricing calculator.">
+
+  <!-- Mobile PWA Optimization -->
+  <meta name="theme-color" content="#fafbfb">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css?v=8.0">
+</head>
+<body class="bg-[#fafbfb] text-slate-900 antialiased has-bottom-dock">
+
+  <!-- GLOBAL BRAND NAVIGATION HEADER -->
+  <header class="brand-header">
+    <a href="index.html" class="brand-logo" aria-label="The Blue Ants - Home">
+      <div class="logo-ant-circle">
+        <svg viewBox="0 0 40 40" width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="18" stroke="#1f6d68" stroke-width="1.6" />
+          <path d="M20 10.5C21 10.5 21.8 11.3 21.8 12.3C21.8 13.3 21 14.1 20 14.1C19 14.1 18.2 13.3 18.2 12.3Z" fill="#1f6d68"/>
+          <path d="M19 14.8H21V19H19V14.8Z" fill="#1f6d68"/>
+          <ellipse cx="20" cy="23.5" rx="2.8" ry="4.8" fill="#1f6d68"/>
+          <path d="M19 11.5L15.5 8M21 11.5L24.5 8" stroke="#1f6d68" stroke-width="1.3" stroke-linecap="round"/>
+          <path d="M19 16L12.5 14M21 16L27.5 14M19 18.5L11.5 19M21 18.5L28.5 19M19 22L12.5 26M21 22L27.5 26" stroke="#1f6d68" stroke-width="1.3" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="brand-text-cluster">
+        <div class="brand-title-line">
+          <span class="brand-title-white font-cinzel tracking-wider text-slate-900">THE BLUE</span>
+          <span class="brand-title-teal font-cinzel tracking-wider text-[#1f6d68]">ANTS</span>
+        </div>
+        <div class="brand-subtitle-mini hidden min-[380px]:block tracking-widest text-slate-500">Bespoke Curation &bull; All Under One Roof</div>
+      </div>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-6" aria-label="Main Navigation">
+      <a href="index.html" class="nav-link text-slate-700 hover:text-[#1f6d68] transition-colors text-sm font-medium">Home</a>
+      <a href="occasions.html" class="nav-link text-slate-700 hover:text-[#1f6d68] transition-colors text-sm font-medium">Occasions</a>
+      <a href="catalog.html" class="nav-link active-page text-sm font-medium">Catalog</a>
+      <a href="about.html" class="nav-link text-slate-700 hover:text-[#1f6d68] transition-colors text-sm font-medium">About Us</a>
+      <a href="tel:+919916418879" class="nav-link text-slate-600 hover:text-[#1f6d68] text-sm">
+        <i class="fas fa-phone-volume text-[#1f6d68] mr-1.5 text-xs"></i> +91 9916418879
+      </a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a href="https://wa.me/919916418879?text=Hi%20The%20Blue%20Ants,%20I'd%20like%20to%20discuss%20corporate%20gifting%20catalog%20suites." 
+         target="_blank" rel="noopener" 
+         class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-emerald-50 border border-emerald-200 text-xs font-semibold text-emerald-800 hover:bg-emerald-100 transition-all">
+        <i class="fa-brands fa-whatsapp text-emerald-600 text-sm"></i>
+        <span>WhatsApp</span>
+      </a>
+
+      <button id="openRfpCartBtn" class="editorial-btn editorial-btn-primary min-h-[44px] px-4 text-xs font-bold tracking-wide relative" aria-label="Open quotation request drawer">
+        <i class="fas fa-file-invoice-dollar text-xs"></i>
+        <span class="hidden sm:inline">Request Quote</span>
+        <span class="sm:hidden">Quote</span>
+        <span id="rfpCartCount" class="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-amber-400 text-slate-900 text-[10px] font-extrabold flex items-center justify-center border-2 border-white" style="display: none;">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- CATALOG HERO BANNER -->
+  <section class="pt-32 pb-12 sm:pt-36 sm:pb-16 border-b border-slate-200/80 bg-white">
+    <div class="editorial-container text-center max-w-3xl">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1f6d68]/10 text-[#1f6d68] text-xs font-bold tracking-widest uppercase mb-4">
+        <i class="fas fa-boxes-stacked text-[10px]"></i> Enterprise Catalog
+      </div>
+      <h1 class="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-tight">
+        Curated Bespoke Suites
+      </h1>
+      <p class="text-slate-600 text-base mt-3 leading-relaxed font-normal">
+        Explore 8 signature luxury suites with live tier pricing, volume savings, and immediate sample box dispatch.
+      </p>
+    </div>
+  </section>
+
+  <!-- CATALOG SECTION -->
+  <section id="catalogSection" class="catalog-section py-12">
+    <div class="editorial-container">
+      
+      <!-- Search Console & Filters Strip -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-8 bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+        
+        <!-- Search Console -->
+        <div class="search-bar-container w-full md:max-w-md flex items-center border border-slate-200 rounded-lg overflow-hidden bg-white">
+          <select id="searchDeptSelect" class="search-dept-select text-xs font-medium text-slate-700 bg-slate-50 border-r border-slate-200 px-3 py-2.5 outline-none" aria-label="Select Category">
+            <option value="all">All Suites</option>
+            <option value="executive">Executive VIP</option>
+            <option value="welcome">Welcome Kits</option>
+            <option value="eco-luxe">Sustainable Eco-Luxe</option>
+            <option value="gourmet">Gourmet Connoisseur</option>
+          </select>
+          <input type="text" id="amazonSearchInput" class="search-input-field flex-1 text-xs px-3 py-2.5 text-slate-900 outline-none" placeholder="Search suites, journals, hampers..." aria-label="Search catalog">
+          <button id="amazonSearchBtn" class="search-btn bg-[#1f6d68] text-white px-4 py-2.5 text-xs hover:bg-[#27857e] transition-colors" title="Search">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+
+        <!-- Category Pills (Hick's Law 4 Pillars) -->
+        <div class="flex flex-wrap items-center gap-2 w-full md:w-auto">
+          <button type="button" class="category-pill active" data-category="all">All Suites</button>
+          <button type="button" class="category-pill" data-category="executive">Executive VIP</button>
+          <button type="button" class="category-pill" data-category="welcome">Welcome Kits</button>
+          <button type="button" class="category-pill" data-category="eco-luxe">Eco-Luxe</button>
+          <button type="button" class="category-pill" data-category="gourmet">Gourmet</button>
+        </div>
+
+      </div>
+
+      <!-- Results Header -->
+      <div class="flex items-center justify-between mb-6 pb-3 border-b border-slate-200 text-xs">
+        <div id="productResultsCount" class="font-semibold text-slate-700">Showing 1–8 of 8 bespoke corporate suites</div>
+        <div class="flex items-center gap-2">
+          <span class="text-slate-500">Sort:</span>
+          <select id="sortBySelect" class="bg-white border border-slate-200 text-slate-700 text-xs rounded-lg px-2.5 py-1.5 outline-none focus:border-[#1f6d68]">
+            <option value="featured">Featured Suites</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="moq-low">Lowest MOQ</option>
+            <option value="rating">Top Rated</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Product Cards Grid -->
+      <main class="flex flex-col">
+        <div id="productsGrid" class="products-grid"></div>
+      </main>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-200 py-12 px-6 text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <div class="logo-badge" style="width: 26px; height: 26px; font-size: 11px; background: #1f6d68; color: white; display: flex; align-items: center; justify-content: center; border-radius: 6px; font-weight: 700;">BA</div>
+        <div>
+          <span class="font-bold text-slate-900">THE BLUE ANTS</span> &copy; 2026. Haute Corporate Gifting &amp; Curated Bespoke Suites.
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-6">
+        <a href="index.html" class="text-slate-600 hover:text-[#1f6d68] transition-colors">Home</a>
+        <a href="occasions.html" class="text-slate-600 hover:text-[#1f6d68] transition-colors">Occasions</a>
+        <a href="catalog.html" class="text-slate-900 font-semibold transition-colors">Catalog</a>
+        <a href="about.html" class="text-slate-600 hover:text-[#1f6d68] transition-colors">About</a>
+        <a href="tel:+919916418879" class="text-[#1f6d68] font-semibold transition-colors"><i class="fas fa-phone text-xs mr-1"></i> +91 9916418879</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- QUICK VIEW MODAL -->
+  <div id="quickViewModal" class="modal-overlay">
+    <div class="modal-dialog">
+      <div class="bottom-sheet-handle lg:hidden"></div>
+      <button onclick="closeQuickView()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-900 text-lg z-20 w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-slate-100 flex items-center justify-center border border-slate-200 p-2.5 transition-colors touch-manipulation" aria-label="Close modal">
+        <i class="fas fa-xmark"></i>
+      </button>
+      <div id="quickViewContent"></div>
+    </div>
+  </div>
+
+  <!-- RFP QUOTE DRAWER -->
+  <div id="rfpBackdrop" class="modal-overlay"></div>
+  <aside id="rfpDrawer" class="rfp-drawer">
+    <div class="p-6 border-b border-slate-200 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <i class="fas fa-file-invoice-dollar text-[#1f6d68] text-lg"></i>
+        <h3 class="font-cinzel text-lg font-bold text-slate-900">Quotation Request</h3>
+      </div>
+      <button id="closeRfpDrawerBtn" class="text-slate-400 hover:text-slate-900 text-lg w-11 h-11 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-slate-100 p-2.5 transition-colors touch-manipulation" aria-label="Close quote drawer">
+        <i class="fas fa-xmark"></i>
+      </button>
+    </div>
+
+    <div id="rfpDrawerItems" class="flex-1 overflow-y-auto p-4 space-y-3"></div>
+
+    <div class="p-6 border-t border-slate-200 bg-slate-50 space-y-4">
+      <div class="space-y-1">
+        <div class="flex items-center justify-between text-xs text-slate-500">
+          <span>Estimated Total:</span>
+          <span id="rfpDrawerTotal" class="text-base font-bold text-[#1f6d68] font-mono">$0.00</span>
+        </div>
+        <div class="flex items-center justify-between text-xs text-emerald-700">
+          <span>Volume Savings:</span>
+          <span id="rfpDrawerSavings">$0.00</span>
+        </div>
+      </div>
+
+      <div class="space-y-2 text-xs text-slate-600 border-t border-slate-200 pt-3">
+        <label class="flex items-center gap-2 cursor-pointer">
+          <input type="checkbox" id="rfpOptionSampleBox" class="w-4 h-4 rounded border-slate-300 text-[#1f6d68]">
+          <span>Request physical pre-production sample box</span>
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer">
+          <input type="checkbox" id="rfpOptionGstInvoice" class="w-4 h-4 rounded border-slate-300 text-[#1f6d68]" checked>
+          <span>Require 18% GST tax invoice for corporate claim</span>
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer">
+          <input type="checkbox" id="rfpOptionMultiAddress" class="w-4 h-4 rounded border-slate-300 text-[#1f6d68]">
+          <span>Multi-address individual doorstep drop-shipping</span>
+        </label>
+      </div>
+
+      <div class="space-y-2">
+        <input type="text" id="rfpCompanyName" placeholder="Company Name (Optional)" class="w-full px-3 py-2 text-xs rounded border border-slate-300 bg-white text-slate-900 focus:outline-none focus:border-[#1f6d68]">
+        <input type="text" id="rfpCustomNotes" placeholder="Special requirements / target delivery date (Optional)" class="w-full px-3 py-2 text-xs rounded border border-slate-300 bg-white text-slate-900 focus:outline-none focus:border-[#1f6d68]">
+      </div>
+
+      <button id="submitRfpWhatsappBtn" class="btn-whatsapp w-full py-3.5 text-xs font-bold flex items-center justify-center gap-2 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 transition-colors">
+        <i class="fa-brands fa-whatsapp text-base"></i> Dispatch Quotation to WhatsApp Concierge
+      </button>
+    </div>
+  </aside>
+
+  <!-- MOBILE BOTTOM DOCK -->
+  <nav class="mobile-bottom-dock lg:hidden" aria-label="Mobile Navigation">
+    <a href="index.html" class="mobile-dock-item text-slate-600" data-dock-target="home">
+      <i class="fas fa-home text-base"></i>
+      <span>Home</span>
+    </a>
+    <a href="occasions.html" class="mobile-dock-item text-slate-600" data-dock-target="occasions">
+      <i class="fas fa-calendar-check text-base"></i>
+      <span>Occasions</span>
+    </a>
+    <a href="catalog.html" class="mobile-dock-item active text-[#1f6d68]" data-dock-target="catalog">
+      <i class="fas fa-box-open text-base"></i>
+      <span>Catalog</span>
+    </a>
+    <button onclick="openRfpDrawer()" class="mobile-dock-item relative text-[#1f6d68]" aria-label="View quotation drawer">
+      <i class="fas fa-file-invoice-dollar text-base"></i>
+      <span>Quote</span>
+      <span id="mobileDockBadge" class="mobile-dock-cart-badge" style="display: none;">0</span>
+      <span id="mobileDockQuoteBadge" class="mobile-dock-cart-badge" style="display: none;">0</span>
+    </button>
+  </nav>
+
+  <!-- Scripts -->
+  <script src="js/catalog.js?v=8.0"></script>
+</body>
+</html>
