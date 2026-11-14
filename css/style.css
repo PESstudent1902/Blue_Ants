@@ -4206,3 +4206,155 @@ footer a:hover {
   pointer-events: auto !important;
   transform: translateX(-50%) translateY(0px) !important;
 }
+
+/* ==========================================================================
+   CORPKRAFT-STYLE MOBILE NAVIGATION DRAWER (Slide-In from Left + Accordion +/-)
+   ========================================================================== */
+.mobile-nav-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1500;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-nav-drawer-overlay.is-open {
+  display: block;
+  opacity: 1;
+}
+
+.mobile-nav-drawer-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.mobile-nav-drawer-sheet {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: min(320px, 82vw);
+  background: #ffffff;
+  box-shadow: 10px 0 35px rgba(15, 23, 42, 0.22);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.mobile-nav-drawer-overlay.is-open .mobile-nav-drawer-sheet {
+  transform: translateX(0);
+}
+
+.mobile-drawer-close-btn {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  border-radius: 8px;
+  background: #1f6d68;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+}
+
+.mobile-drawer-close-btn:hover {
+  background: #175450;
+}
+
+.mobile-nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 13px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1e293b;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.7);
+  background: transparent;
+  transition: color 0.15s ease, background-color 0.15s ease;
+  cursor: pointer;
+}
+
+.mobile-nav-item:hover,
+.mobile-nav-item.active {
+  color: #1f6d68;
+  background-color: rgba(31, 109, 104, 0.04);
+}
+
+.mobile-nav-item .accordion-icon {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1f6d68;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.mobile-nav-sublist {
+  display: none;
+  background: #f8fafc;
+  padding: 6px 0 8px 0;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.mobile-nav-sublist.is-expanded {
+  display: block;
+}
+
+.mobile-nav-subitem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 20px 9px 30px;
+  font-size: 13.5px;
+  color: #475569;
+  text-decoration: none;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.mobile-nav-subitem:hover {
+  color: #1f6d68;
+  transform: translateX(3px);
+}
+
+.mobile-nav-subitem i {
+  font-size: 11px;
+  color: #1f6d68;
+  width: 14px;
+  text-align: center;
+}
+
+/* Mobile search bar optimization (Zero truncation on 375px) */
+@media (max-width: 480px) {
+  .search-dept-select {
+    max-width: 95px !important;
+    padding-left: 6px !important;
+    padding-right: 4px !important;
+    font-size: 11px !important;
+  }
+  .search-input-field {
+    font-size: 11px !important;
+    padding-left: 8px !important;
+  }
+}
+
+/* Mobile Floating WhatsApp: Hide on mobile so it doesn't overlap bottom dock or cards */
+@media (max-width: 1023px) {
+  .floating-whatsapp-wrap {
+    display: none !important;
+  }
+}

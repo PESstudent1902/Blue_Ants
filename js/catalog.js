@@ -409,7 +409,7 @@ function renderProducts() {
   });
 
   if (countDisplay) {
-    countDisplay.textContent = `Showing 1–${filtered.length} of ${filtered.length} corporate gift sets`;
+    countDisplay.textContent = `Showing 1–${filtered.length} of ${filtered.length} bespoke curated suites`;
   }
 
   if (filtered.length === 0) {
@@ -711,7 +711,7 @@ function openQuickView(prodId) {
         <div class="flex items-center justify-between">
           <span class="product-cat-label">${product.categoryLabel}</span>
           <span class="text-xs text-emerald-400 font-semibold bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-700/50">
-            <i class="fas fa-shield-halved mr-1"></i> Corporate Gifting
+            <i class="fas fa-shield-halved mr-1"></i> Bespoke Suite
           </span>
         </div>
 
@@ -1047,7 +1047,7 @@ function renderRfpDrawer() {
       <div class="py-16 text-center text-gray-400 text-xs">
         <i class="fas fa-box-open text-4xl text-gray-600 mb-3"></i>
         <h4 class="text-sm font-bold text-gray-200">Your Quote Request is Empty</h4>
-        <p class="text-gray-500 mt-1">Select corporate gift sets from the catalog to build a quotation.</p>
+        <p class="text-gray-500 mt-1">Select bespoke suites from the catalog to build a quotation.</p>
       </div>
     `;
     if (totalDisplay) totalDisplay.textContent = '$0.00';

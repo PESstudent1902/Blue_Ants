@@ -10,6 +10,7 @@ node_modules/
 Thumbs.db
 desktop.ini
 *.mp4.tmp
+WhatsApp Video*.mp4
 
 scratch/
 screenshots/
