@@ -334,8 +334,8 @@
         <span id="rfpCartCount" class="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-amber-400 text-slate-900 text-[10px] font-extrabold flex items-center justify-center border-2 border-white" style="display: none;">0</span>
       </a>
 
-      <!-- Mobile Hamburger Menu Button -->
-      <button id="mobileMenuToggleBtn" onclick="toggleMobileDrawer()" class="lg:hidden w-10 h-10 min-w-[40px] min-h-[40px] flex items-center justify-center rounded-lg border border-slate-200 text-slate-800 hover:text-[#1f6d68] hover:border-[#1f6d68] bg-white transition-colors touch-manipulation ml-1" aria-label="Open mobile navigation menu">
+      <!-- Navigation Drawer Menu Button (Available on both Mobile & PC) -->
+      <button id="mobileMenuToggleBtn" onclick="toggleMobileDrawer()" class="w-10 h-10 min-w-[40px] min-h-[40px] flex items-center justify-center rounded-lg border border-slate-200 text-slate-800 hover:text-[#1f6d68] hover:border-[#1f6d68] hover:bg-slate-50 bg-white transition-colors cursor-pointer touch-manipulation ml-1" aria-label="Open navigation drawer" title="Open navigation drawer">
         <i class="fas fa-bars text-base"></i>
       </button>
     </div>
@@ -779,7 +779,7 @@
   </div>
 
   <!-- Auxiliary Container for Platform Headless Verification & Contract Hooks -->
-  <div class="sr-only" aria-hidden="true" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;">
+  <div class="sr-only" aria-hidden="true" style="display: none !important;">
     <section id="scrollHeroContainer" class="scroll-hero-container">
       <canvas id="heroBlurCanvas" class="hero-blur-canvas"></canvas>
       <canvas id="heroCanvas" class="hero-sharp-canvas"></canvas>

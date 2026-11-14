@@ -4237,7 +4237,7 @@ footer a:hover {
   top: 0;
   left: 0;
   bottom: 0;
-  width: min(320px, 82vw);
+  width: min(340px, 86vw);
   background: #ffffff;
   box-shadow: 10px 0 35px rgba(15, 23, 42, 0.22);
   display: flex;
@@ -4246,6 +4246,13 @@ footer a:hover {
   transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
   z-index: 2;
+}
+
+@media (min-width: 1024px) {
+  .mobile-nav-drawer-sheet {
+    width: 380px;
+    box-shadow: 20px 0 60px rgba(15, 23, 42, 0.25);
+  }
 }
 
 .mobile-nav-drawer-overlay.is-open .mobile-nav-drawer-sheet {
@@ -4338,17 +4345,27 @@ footer a:hover {
   text-align: center;
 }
 
-/* Mobile search bar optimization (Zero truncation on 375px) */
-@media (max-width: 480px) {
+/* Mobile search bar optimization (Zero truncation and overflow on mobile) */
+@media (max-width: 640px) {
+  .search-bar-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
   .search-dept-select {
-    max-width: 95px !important;
-    padding-left: 6px !important;
-    padding-right: 4px !important;
+    max-width: 80px !important;
+    padding: 8px 4px !important;
     font-size: 11px !important;
   }
   .search-input-field {
+    min-width: 0 !important;
     font-size: 11px !important;
-    padding-left: 8px !important;
+    padding: 8px 6px !important;
+  }
+  .search-btn {
+    padding: 8px 12px !important;
+    min-width: 36px !important;
+    flex-shrink: 0 !important;
   }
 }
 
