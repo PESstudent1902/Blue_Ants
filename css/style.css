@@ -4190,6 +4190,14 @@ footer a:hover {
   box-shadow: 0 20px 48px -10px rgba(15, 23, 42, 0.12), 0 4px 16px rgba(31, 109, 104, 0.08) !important;
 }
 
+.nav-dropdown-occasions {
+  width: min(590px, calc(100vw - 32px)) !important;
+}
+
+.nav-dropdown-catalog {
+  width: min(560px, calc(100vw - 32px)) !important;
+}
+
 .nav-dropdown-wrapper:hover .nav-mega-dropdown,
 .nav-dropdown-wrapper:focus-within .nav-mega-dropdown,
 .nav-mega-dropdown.is-active {

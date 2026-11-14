@@ -328,6 +328,17 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroStamper();
   initDeviceIntelligence();
   initCookieConsent();
+
+  // Handle URL query parameters for category filtering (e.g. catalog.html?category=executive)
+  if (typeof window !== 'undefined' && window.location && window.location.search) {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const catParam = params.get('category');
+      if (catParam && ['executive', 'welcome', 'eco-luxe', 'gourmet', 'all'].includes(catParam)) {
+        selectCatalogCategory(catParam);
+      }
+    } catch (e) {}
+  }
 });
 
 function renderProducts() {
