@@ -20,7 +20,7 @@ const PRODUCTS = [
     moq: 25,
     rating: 4.9,
     reviews: 428,
-    image: 'assets/products/blueants_exec_leather.jpg',
+    image: 'assets/products/blueants_bespoke_navy_suite.jpg',
     badge: "Enterprise Choice",
     badgeType: 'choice',
     leadTime: 'standard',
