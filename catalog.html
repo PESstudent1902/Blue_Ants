@@ -498,96 +498,39 @@
         </button>
       </div>
 
-      <!-- Drawer Scrollable Menu List (CorpKraft-Style Menu & Products Accordion) -->
+      <!-- Drawer Scrollable Menu List -->
       <div class="overflow-y-auto flex-1 py-2 font-montserrat">
         <!-- 1. Home -->
         <a href="index.html" class="mobile-nav-item" onclick="closeMobileDrawer()">
           <span>Home</span>
         </a>
 
-        <!-- 2. Gift Cards -->
-        <a href="catalog.html?category=gift-sets" class="mobile-nav-item" onclick="closeMobileDrawer()">
-          <span>Gift Cards</span>
-        </a>
-
-        <!-- 3. Products Accordion (+ / - like CorpKraft in Video) -->
+        <!-- 2. Curations Accordion -->
         <div>
-          <div class="mobile-nav-item active text-[#1f6d68] font-semibold" onclick="toggleMobileAccordion('mobProducts')">
-            <span>Products</span>
-            <span class="accordion-icon" id="mobProductsIcon">+</span>
+          <div class="mobile-nav-item" onclick="toggleMobileAccordion('mobCurations')">
+            <span>Curations</span>
+            <span class="accordion-icon" id="mobCurationsIcon">+</span>
           </div>
-          <div id="mobProducts" class="mobile-nav-sublist">
-            <a href="catalog.html?category=joining-kit" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Joining Kit</span>
+          <div id="mobCurations" class="mobile-nav-sublist">
+            <a href="occasions.html" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Curated Occasions</span>
               <i class="fa fa-angle-right subitem-arrow"></i>
             </a>
-            <a href="catalog.html?category=gift-sets" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Gift Sets</span>
+            <a href="catalog.html" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Signature Suites</span>
               <i class="fa fa-angle-right subitem-arrow"></i>
             </a>
-            <a href="catalog.html?category=desktop-accessories" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Desktop Accessories</span>
-              <i class="fa fa-angle-right subitem-arrow"></i>
-            </a>
-            <a href="catalog.html?category=apparel" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Apparel</span>
-              <i class="fa fa-angle-right subitem-arrow"></i>
-            </a>
-            <a href="catalog.html?category=bags" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Bags Backpacks and Laptop Sleeves</span>
-              <i class="fa fa-angle-right subitem-arrow"></i>
-            </a>
-            <a href="catalog.html?category=drinkware" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Drinkware Bottles &amp; Mugs</span>
-              <i class="fa fa-angle-right subitem-arrow"></i>
-            </a>
-            <a href="catalog.html?category=electronics" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Electronics</span>
-              <i class="fa fa-angle-right subitem-arrow"></i>
-            </a>
-            <a href="catalog.html?category=music" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Music</span>
-              <i class="fa fa-angle-right subitem-arrow"></i>
-            </a>
-            <a href="catalog.html?category=lights" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Lights</span>
-              <i class="fa fa-angle-right subitem-arrow"></i>
-            </a>
-            <a href="catalog.html?category=travel" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Travel</span>
-              <i class="fa fa-angle-right subitem-arrow"></i>
-            </a>
-            <a href="catalog.html?category=notebook-pens" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Notebook &amp; Pens</span>
-              <i class="fa fa-angle-right subitem-arrow"></i>
-            </a>
-            <a href="catalog.html?category=chocolates" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Chocolates</span>
-              <i class="fa fa-angle-right subitem-arrow"></i>
-            </a>
-            <a href="catalog.html?category=gourmet-teas" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Gourmet Teas</span>
-              <i class="fa fa-angle-right subitem-arrow"></i>
-            </a>
-            <a href="catalog.html?category=dry-fruits" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Dry Fruits</span>
-              <i class="fa fa-angle-right subitem-arrow"></i>
-            </a>
-            <a href="catalog.html?category=eco-friendly" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Eco Friendly Products</span>
-              <i class="fa fa-angle-right subitem-arrow"></i>
-            </a>
-            <a href="catalog.html?category=executive" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text font-semibold text-[#1f6d68]">Executive VIP Suites</span>
+            <a href="about.html" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Atelier Values &amp; Craft</span>
               <i class="fa fa-angle-right subitem-arrow"></i>
             </a>
           </div>
         </div>
 
-        <!-- 4. Trending Now / Occasions Accordion -->
+        <!-- 3. Occasions Accordion -->
         <div>
           <div class="mobile-nav-item" onclick="toggleMobileAccordion('mobOccasions')">
-            <span>Trending Now</span>
+            <span>Occasions</span>
             <span class="accordion-icon" id="mobOccasionsIcon">+</span>
           </div>
           <div id="mobOccasions" class="mobile-nav-sublist">
@@ -630,19 +573,159 @@
           </div>
         </div>
 
-        <!-- 5. About Us -->
+        <!-- 4. Products Accordion (All Products We Offer) -->
+        <div>
+          <div class="mobile-nav-item active text-[#1f6d68] font-semibold" onclick="toggleMobileAccordion('mobProducts')">
+            <span>Products</span>
+            <span class="accordion-icon" id="mobProductsIcon">+</span>
+          </div>
+          <div id="mobProducts" class="mobile-nav-sublist">
+            <!-- All Products We Offer (Direct Suites) -->
+            <div class="px-5 py-2 text-[11px] font-bold tracking-wider text-slate-400 uppercase bg-slate-50 border-y border-slate-100">
+              ALL PRODUCTS WE OFFER
+            </div>
+            <a href="catalog.html?category=executive" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text font-medium text-slate-800">The Sovereign: Executive Leather Suite</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=gourmet" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text font-medium text-slate-800">The Barista Reserve: Craft Kit</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=welcome" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text font-medium text-slate-800">The Tech Nomad: ANC Audio Suite</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=welcome" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text font-medium text-slate-800">Serenity: Botanical Wellness Box</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=executive" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text font-medium text-slate-800">The Highland: Decanter &amp; Tumblers</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=eco-luxe" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text font-medium text-slate-800">Terra: Eco-Luxe Onboarding Set</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=executive" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text font-medium text-slate-800">Chronos: Milestone Desk Timepiece</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=gourmet" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text font-medium text-slate-800">Grand Cru: 24k Gold Truffles</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+
+            <!-- Product Categories -->
+            <div class="px-5 py-2 text-[11px] font-bold tracking-wider text-slate-400 uppercase bg-slate-50 border-y border-slate-100 mt-2">
+              BY CATEGORY
+            </div>
+            <a href="catalog.html?category=joining-kit" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Joining Kit &amp; Welcome Sets</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=gift-sets" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Gift Sets &amp; Hampers</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=desktop-accessories" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Desktop Accessories</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=apparel" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Apparel &amp; Polos</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=bags" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Bags Backpacks and Laptop Sleeves</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=drinkware" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Drinkware Bottles &amp; Mugs</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=electronics" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Electronics &amp; Tech Gadgets</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=music" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Music &amp; Audio</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=lights" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Lights &amp; Lamps</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=travel" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Travel Essentials</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=notebook-pens" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Notebook &amp; Luxury Pens</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=chocolates" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Chocolates &amp; Confections</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=gourmet-teas" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Gourmet Teas &amp; Coffee</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=dry-fruits" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Dry Fruits &amp; Nuts</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=eco-friendly" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Eco Friendly Products</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html" class="mobile-nav-subitem font-semibold text-[#1f6d68] border-t border-slate-100 mt-1" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Explore All Products &amp; Volume Pricing &rarr;</span>
+              <i class="fa fa-arrow-right subitem-arrow"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. Catalog Accordion -->
+        <div>
+          <div class="mobile-nav-item" onclick="toggleMobileAccordion('mobCatalog')">
+            <span>Catalog</span>
+            <span class="accordion-icon" id="mobCatalogIcon">+</span>
+          </div>
+          <div id="mobCatalog" class="mobile-nav-sublist">
+            <a href="catalog.html?category=executive" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Executive VIP Suites</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=welcome" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Welcome &amp; Induction Sets</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=eco-luxe" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Sustainable Eco-Luxe</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=gourmet" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Gourmet Connoisseur</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html" class="mobile-nav-subitem font-semibold text-[#1f6d68]" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Volume Pricing Engine</span>
+              <i class="fa fa-arrow-right subitem-arrow"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 6. About Us -->
         <a href="about.html" class="mobile-nav-item" onclick="closeMobileDrawer()">
           <span>About Us</span>
         </a>
 
-        <!-- 6. Blogs -->
-        <a href="occasions.html" class="mobile-nav-item" onclick="closeMobileDrawer()">
-          <span>Blogs</span>
-        </a>
-
-        <!-- 7. Contact Us / Telephone -->
+        <!-- 7. Direct Desk: +91 9916418879 -->
         <a href="tel:+919916418879" class="mobile-nav-item" onclick="closeMobileDrawer()">
-          <span>Contact Us: +91 9916418879</span>
+          <span>Direct Desk: +91 9916418879</span>
           <i class="fas fa-phone text-[#1f6d68] text-xs"></i>
         </a>
 
@@ -651,7 +734,6 @@
           <span>WhatsApp Concierge</span>
           <i class="fa-brands fa-whatsapp text-emerald-600 text-base"></i>
         </a>
-      </div>
       </div>
 
       <!-- Drawer Bottom CTA -->

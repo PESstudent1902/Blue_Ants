@@ -513,37 +513,238 @@
   </section>
 
   <!-- =========================================================================
-       SECTION 3: SIGNATURE SUITES (Artisanal Luxury Curation)
-       One heading, one line of copy, one visual, one link.
+       SECTION 3: ALL PRODUCTS WE OFFER (Bespoke Corporate Suites)
+       Complete product gallery with all 8 curated suites
        ========================================================================= -->
-  <section class="editorial-section bg-[#fafbfb] border-t border-slate-200/80">
-    <div class="editorial-container">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-        
-        <div class="lg:col-span-7 order-2 lg:order-1">
-          <div class="teaser-visual-wrap rounded-2xl overflow-hidden aspect-[16/9] shadow-md border border-slate-200">
-            <a href="catalog.html" class="block w-full h-full">
-              <img src="assets/products/blueants_eco_luxe.webp" alt="Signature Artisanal Suites" class="teaser-img" loading="lazy">
-            </a>
-          </div>
-        </div>
-
-        <div class="lg:col-span-5 space-y-4 order-1 lg:order-2">
-          <div class="text-[#1f6d68] text-xs font-bold uppercase tracking-widest">02 // BESPOKE CATALOG</div>
+  <section id="productsSection" class="editorial-section bg-[#fafbfb] border-t border-slate-200/80 py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-4 border-b border-slate-200/80 gap-4">
+        <div>
+          <div class="text-[#1f6d68] text-xs font-bold uppercase tracking-widest mb-1.5 font-montserrat">02 // BESPOKE CATALOG</div>
           <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
-            Signature Artisanal Suites
+            All Products We Offer
           </h2>
-          <p class="text-slate-600 text-base leading-relaxed">
-            Full-grain Italian leather, single-origin gourmets, and sustainable deskware crafted by master makers.
+          <p class="text-slate-600 text-sm sm:text-base mt-2 max-w-2xl font-montserrat">
+            Bespoke corporate gifting suites crafted in-house with custom monogramming, laser engraving, and tiered volume pricing.
           </p>
-          <div class="pt-2">
-            <a href="catalog.html" class="inline-flex items-center gap-2 text-sm font-bold text-[#1f6d68] hover:text-[#27857e] transition-colors group">
-              <span class="border-b border-[#1f6d68] pb-0.5">Browse Catalog &amp; Bulk Pricing</span>
-              <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
-            </a>
+        </div>
+        <div class="flex items-center gap-3 shrink-0">
+          <a href="catalog.html" class="editorial-btn editorial-btn-primary text-xs font-bold px-5 py-2.5 flex items-center gap-2">
+            <span>Browse Full Catalog</span>
+            <i class="fas fa-arrow-right text-[11px]"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- 8 Products Responsive Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- 1. The Sovereign -->
+        <div class="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 flex flex-col group">
+          <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+            <span class="card-badge-choice absolute top-2.5 left-2.5 z-10"><i class="fas fa-certificate text-amber-400 mr-1"></i> Choice</span>
+            <span class="card-moq-pill absolute top-2.5 right-2.5 z-10">MOQ 25</span>
+            <img src="assets/products/blueants_exec_leather.webp" alt="The Sovereign: Executive Leather Suite" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-semibold text-[#1f6d68] uppercase tracking-wider mb-1 font-montserrat">Executive VIP</div>
+              <h3 class="font-bold text-slate-900 text-sm leading-snug group-hover:text-[#1f6d68] transition-colors">The Sovereign: Executive Leather Suite</h3>
+              <p class="text-xs text-slate-500 mt-1 line-clamp-2">Italian saddle leather journal, weighted brass pen &amp; wireless charging pad.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-400">From</span>
+                <span class="font-bold text-slate-900 text-sm">$68.00</span>
+              </div>
+              <a href="catalog.html?category=executive" class="text-xs font-bold text-[#1f6d68] hover:underline flex items-center gap-1 font-montserrat">
+                <span>View Suite</span>
+                <i class="fas fa-chevron-right text-[10px]"></i>
+              </a>
+            </div>
           </div>
         </div>
 
+        <!-- 2. The Barista Reserve -->
+        <div class="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 flex flex-col group">
+          <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+            <span class="card-badge-bestseller absolute top-2.5 left-2.5 z-10"><i class="fas fa-fire mr-1"></i> Bestseller</span>
+            <span class="card-moq-pill absolute top-2.5 right-2.5 z-10">MOQ 25</span>
+            <img src="assets/products/blueants_coffee_gourmet.webp" alt="The Barista Reserve: Pour-Over Craft Kit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-semibold text-[#1f6d68] uppercase tracking-wider mb-1 font-montserrat">Gourmet Connoisseur</div>
+              <h3 class="font-bold text-slate-900 text-sm leading-snug group-hover:text-[#1f6d68] transition-colors">The Barista Reserve: Craft Kit</h3>
+              <p class="text-xs text-slate-500 mt-1 line-clamp-2">Gooseneck kettle, ceramic pour-over dripper, tasting mugs &amp; Ethiopian roast.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-400">From</span>
+                <span class="font-bold text-slate-900 text-sm">$47.00</span>
+              </div>
+              <a href="catalog.html?category=gourmet" class="text-xs font-bold text-[#1f6d68] hover:underline flex items-center gap-1 font-montserrat">
+                <span>View Suite</span>
+                <i class="fas fa-chevron-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. The Tech Nomad -->
+        <div class="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 flex flex-col group">
+          <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+            <span class="card-badge-choice absolute top-2.5 left-2.5 z-10"><i class="fas fa-certificate text-amber-400 mr-1"></i> Choice</span>
+            <span class="card-moq-pill absolute top-2.5 right-2.5 z-10">MOQ 15</span>
+            <img src="assets/products/blueants_tech_bundle.webp" alt="The Tech Nomad: ANC & Titanium Power Suite" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-semibold text-[#1f6d68] uppercase tracking-wider mb-1 font-montserrat">Welcome &amp; Onboarding</div>
+              <h3 class="font-bold text-slate-900 text-sm leading-snug group-hover:text-[#1f6d68] transition-colors">The Tech Nomad: ANC Audio Suite</h3>
+              <p class="text-xs text-slate-500 mt-1 line-clamp-2">Hybrid ANC headphones, 10,000mAh aluminum power bank &amp; ballistic folio.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-400">From</span>
+                <span class="font-bold text-slate-900 text-sm">$77.00</span>
+              </div>
+              <a href="catalog.html?category=welcome" class="text-xs font-bold text-[#1f6d68] hover:underline flex items-center gap-1 font-montserrat">
+                <span>View Suite</span>
+                <i class="fas fa-chevron-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Serenity Botanical Wellness -->
+        <div class="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 flex flex-col group">
+          <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+            <span class="card-badge-bestseller absolute top-2.5 left-2.5 z-10"><i class="fas fa-fire mr-1"></i> Bestseller</span>
+            <span class="card-moq-pill absolute top-2.5 right-2.5 z-10">MOQ 25</span>
+            <img src="assets/products/blueants_wellness_hamper.webp" alt="Serenity: Botanical Corporate Wellness Box" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-semibold text-[#1f6d68] uppercase tracking-wider mb-1 font-montserrat">Wellness &amp; Care</div>
+              <h3 class="font-bold text-slate-900 text-sm leading-snug group-hover:text-[#1f6d68] transition-colors">Serenity: Botanical Wellness Box</h3>
+              <p class="text-xs text-slate-500 mt-1 line-clamp-2">Soy aromatherapy candle, room mist, porcelain infuser mug &amp; organic tea.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-400">From</span>
+                <span class="font-bold text-slate-900 text-sm">$36.00</span>
+              </div>
+              <a href="catalog.html?category=welcome" class="text-xs font-bold text-[#1f6d68] hover:underline flex items-center gap-1 font-montserrat">
+                <span>View Suite</span>
+                <i class="fas fa-chevron-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. The Highland Connoisseur -->
+        <div class="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 flex flex-col group">
+          <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+            <span class="card-badge-choice absolute top-2.5 left-2.5 z-10"><i class="fas fa-certificate text-amber-400 mr-1"></i> Choice</span>
+            <span class="card-moq-pill absolute top-2.5 right-2.5 z-10">MOQ 10</span>
+            <img src="assets/products/blueants_whiskey_connoisseur.webp" alt="The Highland Connoisseur: Decanter & Chilling Stones" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-semibold text-[#1f6d68] uppercase tracking-wider mb-1 font-montserrat">Executive VIP</div>
+              <h3 class="font-bold text-slate-900 text-sm leading-snug group-hover:text-[#1f6d68] transition-colors">The Highland: Decanter &amp; Tumblers</h3>
+              <p class="text-xs text-slate-500 mt-1 line-clamp-2">European crystal decanter, geometric tumblers &amp; soapstone chilling cubes.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-400">From</span>
+                <span class="font-bold text-slate-900 text-sm">$95.00</span>
+              </div>
+              <a href="catalog.html?category=executive" class="text-xs font-bold text-[#1f6d68] hover:underline flex items-center gap-1 font-montserrat">
+                <span>View Suite</span>
+                <i class="fas fa-chevron-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Terra Eco-Luxe -->
+        <div class="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 flex flex-col group">
+          <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+            <span class="card-badge-bestseller absolute top-2.5 left-2.5 z-10"><i class="fas fa-fire mr-1"></i> Bestseller</span>
+            <span class="card-moq-pill absolute top-2.5 right-2.5 z-10">MOQ 30</span>
+            <img src="assets/products/blueants_eco_luxe.webp" alt="Terra: Eco-Luxe Sustainable Onboarding Set" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-semibold text-[#1f6d68] uppercase tracking-wider mb-1 font-montserrat">Sustainable Eco-Luxe</div>
+              <h3 class="font-bold text-slate-900 text-sm leading-snug group-hover:text-[#1f6d68] transition-colors">Terra: Eco-Luxe Onboarding Set</h3>
+              <p class="text-xs text-slate-500 mt-1 line-clamp-2">Bamboo vacuum flask, seed-paper journal, bamboo pen &amp; wheat-straw speaker.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-400">From</span>
+                <span class="font-bold text-slate-900 text-sm">$32.00</span>
+              </div>
+              <a href="catalog.html?category=eco-luxe" class="text-xs font-bold text-[#1f6d68] hover:underline flex items-center gap-1 font-montserrat">
+                <span>View Suite</span>
+                <i class="fas fa-chevron-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Chronos Milestone Award -->
+        <div class="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 flex flex-col group">
+          <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+            <span class="card-badge-choice absolute top-2.5 left-2.5 z-10"><i class="fas fa-certificate text-amber-400 mr-1"></i> Choice</span>
+            <span class="card-moq-pill absolute top-2.5 right-2.5 z-10">MOQ 5</span>
+            <img src="assets/products/blueants_milestone_watch.webp" alt="Chronos: Milestone Executive Award Timepiece" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-semibold text-[#1f6d68] uppercase tracking-wider mb-1 font-montserrat">Milestone &amp; Awards</div>
+              <h3 class="font-bold text-slate-900 text-sm leading-snug group-hover:text-[#1f6d68] transition-colors">Chronos: Milestone Desk Timepiece</h3>
+              <p class="text-xs text-slate-500 mt-1 line-clamp-2">Skeleton movement brass clock on Nero Marquina marble with oak vault.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-400">From</span>
+                <span class="font-bold text-slate-900 text-sm">$135.00</span>
+              </div>
+              <a href="catalog.html?category=executive" class="text-xs font-bold text-[#1f6d68] hover:underline flex items-center gap-1 font-montserrat">
+                <span>View Suite</span>
+                <i class="fas fa-chevron-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Grand Cru Truffles -->
+        <div class="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 flex flex-col group">
+          <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+            <span class="card-badge-bestseller absolute top-2.5 left-2.5 z-10"><i class="fas fa-fire mr-1"></i> Bestseller</span>
+            <span class="card-moq-pill absolute top-2.5 right-2.5 z-10">MOQ 25</span>
+            <img src="assets/products/blueants_gourmet_truffles.webp" alt="Grand Cru: 24k Gold Truffles & Raw Honey" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-semibold text-[#1f6d68] uppercase tracking-wider mb-1 font-montserrat">Gourmet Connoisseur</div>
+              <h3 class="font-bold text-slate-900 text-sm leading-snug group-hover:text-[#1f6d68] transition-colors">Grand Cru: 24k Gold Truffles</h3>
+              <p class="text-xs text-slate-500 mt-1 line-clamp-2">Valrhona dark truffles with 24k gold leaf, raw wildflower honey &amp; first-flush tea.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-400">From</span>
+                <span class="font-bold text-slate-900 text-sm">$34.00</span>
+              </div>
+              <a href="catalog.html?category=gourmet" class="text-xs font-bold text-[#1f6d68] hover:underline flex items-center gap-1 font-montserrat">
+                <span>View Suite</span>
+                <i class="fas fa-chevron-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -643,96 +844,39 @@
         </button>
       </div>
 
-      <!-- Drawer Scrollable Menu List (CorpKraft-Style Menu & Products Accordion) -->
+      <!-- Drawer Scrollable Menu List -->
       <div class="overflow-y-auto flex-1 py-2 font-montserrat">
         <!-- 1. Home -->
         <a href="index.html" class="mobile-nav-item" onclick="closeMobileDrawer()">
           <span>Home</span>
         </a>
 
-        <!-- 2. Gift Cards -->
-        <a href="catalog.html?category=gift-sets" class="mobile-nav-item" onclick="closeMobileDrawer()">
-          <span>Gift Cards</span>
-        </a>
-
-        <!-- 3. Products Accordion (+ / - like CorpKraft in Video) -->
+        <!-- 2. Curations Accordion -->
         <div>
-          <div class="mobile-nav-item" onclick="toggleMobileAccordion('mobProducts')">
-            <span>Products</span>
-            <span class="accordion-icon" id="mobProductsIcon">+</span>
+          <div class="mobile-nav-item" onclick="toggleMobileAccordion('mobCurations')">
+            <span>Curations</span>
+            <span class="accordion-icon" id="mobCurationsIcon">+</span>
           </div>
-          <div id="mobProducts" class="mobile-nav-sublist">
-            <a href="catalog.html?category=joining-kit" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Joining Kit</span>
+          <div id="mobCurations" class="mobile-nav-sublist">
+            <a href="occasions.html" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Curated Occasions</span>
               <i class="fa fa-angle-right subitem-arrow"></i>
             </a>
-            <a href="catalog.html?category=gift-sets" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Gift Sets</span>
+            <a href="catalog.html" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Signature Suites</span>
               <i class="fa fa-angle-right subitem-arrow"></i>
             </a>
-            <a href="catalog.html?category=desktop-accessories" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Desktop Accessories</span>
-              <i class="fa fa-angle-right subitem-arrow"></i>
-            </a>
-            <a href="catalog.html?category=apparel" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Apparel</span>
-              <i class="fa fa-angle-right subitem-arrow"></i>
-            </a>
-            <a href="catalog.html?category=bags" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Bags Backpacks and Laptop Sleeves</span>
-              <i class="fa fa-angle-right subitem-arrow"></i>
-            </a>
-            <a href="catalog.html?category=drinkware" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Drinkware Bottles &amp; Mugs</span>
-              <i class="fa fa-angle-right subitem-arrow"></i>
-            </a>
-            <a href="catalog.html?category=electronics" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Electronics</span>
-              <i class="fa fa-angle-right subitem-arrow"></i>
-            </a>
-            <a href="catalog.html?category=music" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Music</span>
-              <i class="fa fa-angle-right subitem-arrow"></i>
-            </a>
-            <a href="catalog.html?category=lights" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Lights</span>
-              <i class="fa fa-angle-right subitem-arrow"></i>
-            </a>
-            <a href="catalog.html?category=travel" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Travel</span>
-              <i class="fa fa-angle-right subitem-arrow"></i>
-            </a>
-            <a href="catalog.html?category=notebook-pens" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Notebook &amp; Pens</span>
-              <i class="fa fa-angle-right subitem-arrow"></i>
-            </a>
-            <a href="catalog.html?category=chocolates" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Chocolates</span>
-              <i class="fa fa-angle-right subitem-arrow"></i>
-            </a>
-            <a href="catalog.html?category=gourmet-teas" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Gourmet Teas</span>
-              <i class="fa fa-angle-right subitem-arrow"></i>
-            </a>
-            <a href="catalog.html?category=dry-fruits" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Dry Fruits</span>
-              <i class="fa fa-angle-right subitem-arrow"></i>
-            </a>
-            <a href="catalog.html?category=eco-friendly" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text">Eco Friendly Products</span>
-              <i class="fa fa-angle-right subitem-arrow"></i>
-            </a>
-            <a href="catalog.html?category=executive" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
-              <span class="subitem-text font-semibold text-[#1f6d68]">Executive VIP Suites</span>
+            <a href="about.html" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Atelier Values &amp; Craft</span>
               <i class="fa fa-angle-right subitem-arrow"></i>
             </a>
           </div>
         </div>
 
-        <!-- 4. Trending Now / Occasions Accordion -->
+        <!-- 3. Occasions Accordion -->
         <div>
           <div class="mobile-nav-item" onclick="toggleMobileAccordion('mobOccasions')">
-            <span>Trending Now</span>
+            <span>Occasions</span>
             <span class="accordion-icon" id="mobOccasionsIcon">+</span>
           </div>
           <div id="mobOccasions" class="mobile-nav-sublist">
@@ -775,19 +919,159 @@
           </div>
         </div>
 
-        <!-- 5. About Us -->
+        <!-- 4. Products Accordion (All Products We Offer) -->
+        <div>
+          <div class="mobile-nav-item active text-[#1f6d68] font-semibold" onclick="toggleMobileAccordion('mobProducts')">
+            <span>Products</span>
+            <span class="accordion-icon" id="mobProductsIcon">+</span>
+          </div>
+          <div id="mobProducts" class="mobile-nav-sublist">
+            <!-- All Products We Offer (Direct Suites) -->
+            <div class="px-5 py-2 text-[11px] font-bold tracking-wider text-slate-400 uppercase bg-slate-50 border-y border-slate-100">
+              ALL PRODUCTS WE OFFER
+            </div>
+            <a href="catalog.html?category=executive" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text font-medium text-slate-800">The Sovereign: Executive Leather Suite</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=gourmet" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text font-medium text-slate-800">The Barista Reserve: Craft Kit</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=welcome" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text font-medium text-slate-800">The Tech Nomad: ANC Audio Suite</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=welcome" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text font-medium text-slate-800">Serenity: Botanical Wellness Box</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=executive" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text font-medium text-slate-800">The Highland: Decanter &amp; Tumblers</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=eco-luxe" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text font-medium text-slate-800">Terra: Eco-Luxe Onboarding Set</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=executive" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text font-medium text-slate-800">Chronos: Milestone Desk Timepiece</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=gourmet" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text font-medium text-slate-800">Grand Cru: 24k Gold Truffles</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+
+            <!-- Product Categories -->
+            <div class="px-5 py-2 text-[11px] font-bold tracking-wider text-slate-400 uppercase bg-slate-50 border-y border-slate-100 mt-2">
+              BY CATEGORY
+            </div>
+            <a href="catalog.html?category=joining-kit" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Joining Kit &amp; Welcome Sets</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=gift-sets" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Gift Sets &amp; Hampers</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=desktop-accessories" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Desktop Accessories</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=apparel" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Apparel &amp; Polos</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=bags" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Bags Backpacks and Laptop Sleeves</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=drinkware" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Drinkware Bottles &amp; Mugs</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=electronics" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Electronics &amp; Tech Gadgets</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=music" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Music &amp; Audio</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=lights" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Lights &amp; Lamps</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=travel" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Travel Essentials</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=notebook-pens" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Notebook &amp; Luxury Pens</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=chocolates" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Chocolates &amp; Confections</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=gourmet-teas" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Gourmet Teas &amp; Coffee</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=dry-fruits" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Dry Fruits &amp; Nuts</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=eco-friendly" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Eco Friendly Products</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html" class="mobile-nav-subitem font-semibold text-[#1f6d68] border-t border-slate-100 mt-1" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Explore All Products &amp; Volume Pricing &rarr;</span>
+              <i class="fa fa-arrow-right subitem-arrow"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. Catalog Accordion -->
+        <div>
+          <div class="mobile-nav-item" onclick="toggleMobileAccordion('mobCatalog')">
+            <span>Catalog</span>
+            <span class="accordion-icon" id="mobCatalogIcon">+</span>
+          </div>
+          <div id="mobCatalog" class="mobile-nav-sublist">
+            <a href="catalog.html?category=executive" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Executive VIP Suites</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=welcome" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Welcome &amp; Induction Sets</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=eco-luxe" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Sustainable Eco-Luxe</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html?category=gourmet" class="mobile-nav-subitem" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Gourmet Connoisseur</span>
+              <i class="fa fa-angle-right subitem-arrow"></i>
+            </a>
+            <a href="catalog.html" class="mobile-nav-subitem font-semibold text-[#1f6d68]" onclick="closeMobileDrawer()">
+              <span class="subitem-text">Volume Pricing Engine</span>
+              <i class="fa fa-arrow-right subitem-arrow"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 6. About Us -->
         <a href="about.html" class="mobile-nav-item" onclick="closeMobileDrawer()">
           <span>About Us</span>
         </a>
 
-        <!-- 6. Blogs -->
-        <a href="occasions.html" class="mobile-nav-item" onclick="closeMobileDrawer()">
-          <span>Blogs</span>
-        </a>
-
-        <!-- 7. Contact Us / Telephone -->
+        <!-- 7. Direct Desk: +91 9916418879 -->
         <a href="tel:+919916418879" class="mobile-nav-item" onclick="closeMobileDrawer()">
-          <span>Contact Us: +91 9916418879</span>
+          <span>Direct Desk: +91 9916418879</span>
           <i class="fas fa-phone text-[#1f6d68] text-xs"></i>
         </a>
 
@@ -796,7 +1080,6 @@
           <span>WhatsApp Concierge</span>
           <i class="fa-brands fa-whatsapp text-emerald-600 text-base"></i>
         </a>
-      </div>
       </div>
 
       <!-- Drawer Bottom CTA -->
