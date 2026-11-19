@@ -4232,6 +4232,38 @@ footer a:hover {
   -webkit-backdrop-filter: blur(4px);
 }
 
+/* =========================================================================
+   CORPKRAFT-STYLE SLIDE-OVER NAVIGATION DRAWER & PRODUCT ACCORDION
+   ========================================================================= */
+
+.font-montserrat,
+.mobile-nav-drawer-sheet,
+.mobile-nav-item,
+.mobile-nav-subitem,
+.nav-mega-dropdown {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.mobile-nav-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  visibility: hidden;
+  transition: visibility 0.28s ease;
+}
+
+.mobile-nav-drawer-overlay.is-open {
+  visibility: visible;
+}
+
+.mobile-nav-drawer-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
 .mobile-nav-drawer-sheet {
   position: absolute;
   top: 0;
@@ -4246,6 +4278,7 @@ footer a:hover {
   transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
   z-index: 2;
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media (min-width: 1024px) {
@@ -4264,17 +4297,20 @@ footer a:hover {
   height: 36px;
   min-width: 36px;
   min-height: 36px;
-  border-radius: 8px;
+  border-radius: 6px;
   background: #1f6d68;
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.15s ease;
+  transition: background 0.15s ease, transform 0.15s ease;
+  cursor: pointer;
+  border: none;
 }
 
 .mobile-drawer-close-btn:hover {
   background: #175450;
+  transform: scale(1.05);
 }
 
 .mobile-nav-item {
@@ -4283,12 +4319,13 @@ footer a:hover {
   justify-content: space-between;
   width: 100%;
   padding: 13px 20px;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   font-weight: 500;
-  color: #1e293b;
+  color: #333333;
   text-decoration: none;
-  border-bottom: 1px solid rgba(226, 232, 240, 0.7);
-  background: transparent;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+  background: #ffffff;
   transition: color 0.15s ease, background-color 0.15s ease;
   cursor: pointer;
 }
@@ -4300,49 +4337,73 @@ footer a:hover {
 }
 
 .mobile-nav-item .accordion-icon {
-  font-size: 16px;
-  font-weight: 700;
-  color: #1f6d68;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 19px;
+  font-weight: 300;
+  color: #555555;
   width: 24px;
   height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   user-select: none;
+  transition: color 0.15s ease, transform 0.2s ease;
 }
 
+.mobile-nav-item:hover .accordion-icon {
+  color: #1f6d68;
+}
+
+/* Fluid accordion animation matching CorpKraft */
 .mobile-nav-sublist {
-  display: none;
-  background: #f8fafc;
-  padding: 6px 0 8px 0;
-  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  background: #ffffff;
+  padding: 0;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease, padding 0.25s ease;
 }
 
 .mobile-nav-sublist.is-expanded {
-  display: block;
+  max-height: 1200px;
+  opacity: 1;
+  padding: 4px 0 8px 0;
 }
 
 .mobile-nav-subitem {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 9px 20px 9px 30px;
-  font-size: 13.5px;
-  color: #475569;
+  justify-content: space-between;
+  padding: 9px 20px 9px 32px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #4b5563;
   text-decoration: none;
+  transition: color 0.15s ease, transform 0.15s ease, background-color 0.15s ease;
+}
+
+.mobile-nav-subitem:hover,
+.mobile-nav-subitem:active {
+  color: #bc9051; /* Warm Gold accent matching CorpKraft */
+  background-color: rgba(188, 144, 81, 0.04);
+  transform: translateX(4px);
+}
+
+.mobile-nav-subitem .subitem-text {
+  flex: 1;
+}
+
+.mobile-nav-subitem .subitem-arrow {
+  font-size: 11px;
+  color: #cbd5e1;
   transition: color 0.15s ease, transform 0.15s ease;
 }
 
-.mobile-nav-subitem:hover {
-  color: #1f6d68;
-  transform: translateX(3px);
-}
-
-.mobile-nav-subitem i {
-  font-size: 11px;
-  color: #1f6d68;
-  width: 14px;
-  text-align: center;
+.mobile-nav-subitem:hover .subitem-arrow {
+  color: #bc9051;
+  transform: translateX(2px);
 }
 
 /* Mobile search bar optimization (Zero truncation and overflow on mobile) */

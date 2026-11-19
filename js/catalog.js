@@ -302,6 +302,29 @@ const PRODUCTS = [
   }
 ];
 
+const CATEGORY_MAP = {
+  'all': ['executive', 'welcome', 'eco-luxe', 'gourmet'],
+  'executive': ['executive'],
+  'welcome': ['welcome'],
+  'eco-luxe': ['eco-luxe'],
+  'gourmet': ['gourmet'],
+  'joining-kit': ['welcome', 'eco-luxe'],
+  'gift-sets': ['executive', 'gourmet', 'welcome'],
+  'desktop-accessories': ['executive'],
+  'apparel': ['executive', 'welcome'],
+  'bags': ['welcome', 'executive'],
+  'drinkware': ['gourmet', 'eco-luxe', 'executive'],
+  'electronics': ['welcome', 'executive'],
+  'music': ['welcome'],
+  'lights': ['executive'],
+  'travel': ['welcome', 'executive'],
+  'notebook-pens': ['executive', 'eco-luxe'],
+  'chocolates': ['gourmet'],
+  'gourmet-teas': ['gourmet', 'welcome'],
+  'dry-fruits': ['gourmet'],
+  'eco-friendly': ['eco-luxe']
+};
+
 let rfpCart = [];
 
 let filterState = {
@@ -329,12 +352,12 @@ document.addEventListener('DOMContentLoaded', () => {
   initDeviceIntelligence();
   initCookieConsent();
 
-  // Handle URL query parameters for category filtering (e.g. catalog.html?category=executive)
+  // Handle URL query parameters for category filtering (e.g. catalog.html?category=electronics)
   if (typeof window !== 'undefined' && window.location && window.location.search) {
     try {
       const params = new URLSearchParams(window.location.search);
       const catParam = params.get('category');
-      if (catParam && ['executive', 'welcome', 'eco-luxe', 'gourmet', 'all'].includes(catParam)) {
+      if (catParam) {
         selectCatalogCategory(catParam);
       }
     } catch (e) {}
@@ -356,7 +379,18 @@ function renderProducts() {
     }
 
     if (filterState.category !== 'all' && p.category !== filterState.category) {
-      return false;
+      const catKey = filterState.category.toLowerCase();
+      const mappedCats = CATEGORY_MAP[catKey] || [catKey];
+      const matchMapped = mappedCats.includes(p.category);
+      const q = catKey.replace(/-/g, ' ');
+      const matchText = p.name.toLowerCase().includes(q) ||
+        p.description.toLowerCase().includes(q) ||
+        p.categoryLabel.toLowerCase().includes(q) ||
+        (Array.isArray(p.features) && p.features.some(f => f.toLowerCase().includes(q))) ||
+        (Array.isArray(p.boxContents) && p.boxContents.some(b => b.toLowerCase().includes(q)));
+      if (!matchMapped && !matchText) {
+        return false;
+      }
     }
 
     if (filterState.selectedCategories.length > 0 && !filterState.selectedCategories.includes(p.category)) {
@@ -1566,13 +1600,37 @@ function selectCatalogCategory(category) {
   if (typeof filterState !== 'undefined') {
     filterState.category = category;
   }
+  let matchedStaticPill = false;
   document.querySelectorAll('.category-pill').forEach(pill => {
     if (pill.getAttribute('data-category') === category) {
       pill.classList.add('active');
+      matchedStaticPill = true;
     } else {
       pill.classList.remove('active');
     }
   });
+
+  // If a specialized category from the Products menu was selected (e.g. electronics, joining-kit, apparel)
+  if (typeof document !== 'undefined') {
+    const pillsContainer = document.querySelector('.category-pill')?.parentElement;
+    let dynamicPill = document.getElementById('dynamicCategoryPill');
+    if (!matchedStaticPill && category !== 'all' && pillsContainer) {
+      if (!dynamicPill) {
+        dynamicPill = document.createElement('button');
+        dynamicPill.id = 'dynamicCategoryPill';
+        dynamicPill.type = 'button';
+        dynamicPill.className = 'category-pill active';
+        dynamicPill.onclick = () => selectCatalogCategory(category);
+        pillsContainer.appendChild(dynamicPill);
+      }
+      const cleanLabel = category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+      dynamicPill.innerHTML = `<i class="fas fa-check text-xs mr-1"></i> ${cleanLabel}`;
+      dynamicPill.setAttribute('data-category', category);
+    } else if (matchedStaticPill && dynamicPill) {
+      dynamicPill.remove();
+    }
+  }
+
   if (typeof renderProducts === 'function') {
     renderProducts();
   }
