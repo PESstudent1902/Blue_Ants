@@ -307,6 +307,23 @@ p, .editorial-prose {
   }
 }
 
+@media (max-width: 400px) {
+  .brand-header {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    gap: 8px !important;
+  }
+  .brand-logo-img {
+    height: 28px !important;
+    max-width: 145px !important;
+  }
+  #openRfpCartBtn {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    font-size: 11px !important;
+  }
+}
+
 .brand-logo:hover {
   opacity: 0.95;
 }
@@ -4306,6 +4323,7 @@ footer a:hover {
   overflow: hidden;
   z-index: 2;
   font-family: 'Montserrat', sans-serif;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 @media (min-width: 1024px) {
@@ -4320,11 +4338,11 @@ footer a:hover {
 }
 
 .mobile-drawer-close-btn {
-  width: 36px;
-  height: 36px;
-  min-width: 36px;
-  min-height: 36px;
-  border-radius: 6px;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 8px;
   background: #1f6d68;
   color: #ffffff;
   display: flex;
@@ -4333,6 +4351,7 @@ footer a:hover {
   transition: background 0.15s ease, transform 0.15s ease;
   cursor: pointer;
   border: none;
+  touch-action: manipulation;
 }
 
 .mobile-drawer-close-btn:hover {
@@ -4340,11 +4359,16 @@ footer a:hover {
   transform: scale(1.05);
 }
 
+.mobile-drawer-close-btn:active {
+  transform: scale(0.92);
+}
+
 .mobile-nav-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  min-height: 48px;
   padding: 13px 20px;
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
@@ -4355,6 +4379,7 @@ footer a:hover {
   background: #ffffff;
   transition: color 0.15s ease, background-color 0.15s ease;
   cursor: pointer;
+  touch-action: manipulation;
 }
 
 .mobile-nav-item:hover,
