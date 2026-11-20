@@ -1,16 +1,22 @@
 {
-  "name": "The Blue Ants — Haute Corporate Gifting",
+  "name": "The Blue Ants — Curated Premium Gifts",
   "short_name": "The Blue Ants",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#fafbfb",
   "theme_color": "#fafbfb",
-  "description": "Bespoke luxury gifts and curated corporate packages for companies and executive teams.",
+  "description": "The Blue Ants delivers bespoke luxury gifting suites, master-crafted personalization, and dedicated concierge stewardship.",
   "icons": [
     {
-      "src": "assets/products/blueants_exec_leather.jpg",
-      "sizes": "192x192 512x512",
-      "type": "image/jpeg",
+      "src": "assets/brand/the_blue_ants_icon_192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/brand/the_blue_ants_icon_512.png",
+      "sizes": "512x512",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ]
