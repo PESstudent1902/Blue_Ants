@@ -266,37 +266,44 @@ p, .editorial-prose {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1.5rem;
   padding: 0 3.5rem;
   transition: all 0.3s var(--ease-editorial);
 }
 
 .brand-logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
+  flex-shrink: 0;
   text-decoration: none;
   min-height: 48px;
-  min-width: 48px;
   touch-action: manipulation;
 }
 
 .brand-logo-img {
-  height: 44px;
+  height: 38px;
   width: auto;
-  max-width: 260px;
+  max-width: 220px;
   object-fit: contain;
   display: block;
+  flex-shrink: 0;
   transition: transform 0.25s var(--ease-editorial);
 }
 
 .brand-logo:hover .brand-logo-img {
-  transform: scale(1.03);
+  transform: scale(1.02);
+}
+
+@media (max-width: 1024px) {
+  .brand-header {
+    padding: 0 1.5rem;
+  }
 }
 
 @media (max-width: 640px) {
   .brand-logo-img {
-    height: 36px;
-    max-width: 200px;
+    height: 32px;
+    max-width: 175px;
   }
 }
 
